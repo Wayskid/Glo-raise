@@ -34,20 +34,12 @@ export default function Nav() {
           <NavLink to="/about_us" className="py-2">
             About Us
           </NavLink>
-          <div className="flex gap-6">
-            <NavLink
-              to="/login"
-              className="px-4 py-2 border-[3px] border-Hero-Purple hidden lg:block"
-            >
-              Log In
-            </NavLink>
-            <NavLink
-              to="/get_started"
-              className="px-4 py-2 border-[1px] border-Hero-Purple bg-Hero-Purple rounded-[4px] text-white"
-            >
-              Get Started
-            </NavLink>
-          </div>
+          <NavLink
+            to="/get_started"
+            className="px-4 py-2 border-[1px] border-Hero-Purple bg-Hero-Purple rounded-[4px] text-white"
+          >
+            Get Started
+          </NavLink>
         </div>
         <button className="md:hidden">
           <svg

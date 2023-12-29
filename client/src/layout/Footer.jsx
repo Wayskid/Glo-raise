@@ -22,35 +22,23 @@ export default function Footer() {
               />
             </svg>
           </NavLink>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-12 md:gap-0 items-start w-full">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-0 items-start w-full">
             <div className="grid gap-[10px]">
-              <p className="text-Lime text-xl">About</p>
-              <NavLink to="/how_it_works" className="text-white">
-                How it Works
-              </NavLink>
-              <NavLink to="/about_us" className="text-white">
-                About Us
-              </NavLink>
-              <NavLink to="/legal" className="text-white">
-                Legal
-              </NavLink>
-            </div>
-            <div className="grid gap-[10px]">
-              <p className="text-Lime text-xl">Founders</p>
+              <p className="text-Lime text-xl">How it Works</p>
               <NavLink to="/get_started" className="text-white">
                 Get Started
-              </NavLink>
-              <NavLink to="/login" className="text-white">
-                Login
               </NavLink>
             </div>
             <div className="grid gap-[10px]">
               <p className="text-Lime text-xl">Funders</p>
-              <NavLink to="/funder" className="text-white">
-                Funder Portal
+              <NavLink to="/interest_radar" className="text-white">
+                Interest Radar
               </NavLink>
-              <NavLink to="/join" className="text-white">
-                Join
+            </div>
+            <div className="grid gap-[10px]">
+              <p className="text-Lime text-xl">About Us</p>
+              <NavLink to="/legal" className="text-white">
+                Legal
               </NavLink>
             </div>
           </div>
