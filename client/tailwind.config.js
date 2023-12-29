@@ -5,16 +5,26 @@ export default {
     extend: {
       colors: {
         Dark: "#051C09",
+        Light: "#F8F8F8",
         "Hero-Purple": "#5A43F0",
         Lime: "#CAFF87",
         Hazel: "#B79F71",
+        Lavender: "#E5DFFA",
+        Iceberg: "#C2DEEC",
+        Violet: "#2E2873",
       },
       screens: {
+        xs: "375px",
+        // => @media (min-width: 375px) { ... }
+
         sm: "640px",
         // => @media (min-width: 640px) { ... }
 
         md: "768px",
         // => @media (min-width: 768px) { ... }
+
+        base: "960px",
+        // => @media (min-width: 960px) { ... }
 
         lg: "1440px",
         // => @media (min-width: 1024px) { ... }

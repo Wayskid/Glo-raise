@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 
 export default function Nav() {
   return (
-    <div className="px-4 md:px-[40px] lg:px-[60px] bg-white ">
-      <div className="flex items-center py-[24px] w-[min(70rem,100%)] mx-auto [font-family:'Roboto',sans-serif;]">
+    <div className="fixed top-0 w-full z-40 [font-family:'Roboto',sans-serif;] bg-white">
+      <div className="flex items-center w-[min(80rem,100%)] mx-auto px-4 md:px-[60px] lg:px-[132px] py-[24px]">
         <NavLink to="/" className="mr-auto ">
           <svg
             xmlns="http://www.w3.org/2000/svg"

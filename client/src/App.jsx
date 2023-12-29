@@ -8,9 +8,11 @@ export default function App() {
   return (
     <div className="h-full">
       <Nav />
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-      </Routes>
+      <div className="mt-[93px]">
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+        </Routes>
+      </div>
       <Footer />
     </div>
   );
