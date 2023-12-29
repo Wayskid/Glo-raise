@@ -12,6 +12,8 @@ export default {
         Lavender: "#E5DFFA",
         Iceberg: "#C2DEEC",
         Violet: "#2E2873",
+        Nature: "#02B68A",
+        Emerald: "#024F4A",
       },
       screens: {
         xs: "375px",

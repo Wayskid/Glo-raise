@@ -233,6 +233,206 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="bg-Dark">
+        <div className="w-[min(80rem,100%)] mx-auto pt-[56px] pb-[72px] md:pt-[80px] md:pb-[100px] lg:py-[90px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px] grid gap-12 md:grid-cols-[1fr_min-content] md:justify-between">
+          <div className="text-white grid gap-12 md:col-span-2 base:col-span-1">
+            <p className="[font-family:'Instrument_Serif',serif;] text-[26px]">
+              Get started at any step
+            </p>
+            <p className="font-semibold text-[38px] md:text-[64px] leading-tight">
+              Scale your funding as your project evolves
+            </p>
+          </div>
+          <div className="md:order-3 base:order-[unset] w-[343px] h-[343px] md:w-[379px] md:h-[379px] border-Light border-[5px] md:border-[8px] border-dashed base:row-span-3 self-center relative grid">
+            <div className="w-[181px] h-[181px] md:w-[200px] md:h-[200px] bg-white self-end -ml-[5px] -mb-[5px] md:-ml-[8px] md:-mb-[8px]"></div>
+            <div className="absolute w-20 h-[9px] bg-white -rotate-45 place-self-center translate-x-12 -translate-y-12 grid justify-end">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="29"
+                height="50"
+                viewBox="0 0 29 50"
+                fill="none"
+                className="-translate-y-5"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M28.9613 21C17.4339 21 8.02539 11.3868 8.02539 0H0.0253906C0.0253906 10.4668 5.74264 19.8411 14.2853 24.9447C5.75536 29.9286 0.0253913 39.1741 0.0253927 50H8.02539C8.02539 38.1634 17.3816 29 28.9613 29L28.9613 21Z"
+                  fill="#ffffff"
+                />
+              </svg>
+            </div>
+          </div>
+          <div className="text-white grid gap-12 h-fit">
+            <p className="text-xl">
+              Regardless where you’re at in the process, Glo-raise will help
+              determine the best path to advance your business.
+            </p>
+            <button
+              onClick={() => navigate("/get_started")}
+              className="bg-white px-[36px] py-6 text-Dark rounded-[4px] [font-family:'Roboto',sans-serif;] mr-0 md:mr-auto"
+            >
+              Get Started
+            </button>
+          </div>
+        </div>
+      </section>
+      <section className="bg-White">
+        <div className="w-[min(80rem,100%)] mx-auto pt-[56px] pb-[72px] md:pt-[80px] md:pb-[100px] lg:py-[90px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px] grid gap-[60px] justify-center">
+          <h4 className="text-Dark text-center text-[38px] font-semibold">
+            How it works
+          </h4>
+          <div className="grid gap-8 text-Emerald">
+            <div className="grid gap-10">
+              <p className="[font-family:'Instrument_Serif',serif;] text-5xl text-center">
+                1.
+              </p>
+              <div className="relative grid items-center mx-auto">
+                <div className="absolute justify-self-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="47"
+                    height="47"
+                    viewBox="0 0 47 47"
+                    fill="none"
+                  >
+                    <circle cx="23.5" cy="23.499" r="23" fill="#02B68A" />
+                    <path
+                      d="M11.6035 23.4988L18.7414 30.6367L34.6035 14.7747"
+                      stroke="white"
+                      strokeWidth="4"
+                    />
+                  </svg>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="249"
+                  height="27"
+                  viewBox="0 0 249 27"
+                  fill="none"
+                >
+                  <circle
+                    cx="54.5"
+                    cy="13.4985"
+                    r="10.9995"
+                    stroke="#024F4A"
+                    strokeWidth="4"
+                  />
+                  <circle
+                    cx="8.99951"
+                    cy="13.9985"
+                    r="6.5"
+                    stroke="#024F4A"
+                    strokeWidth="4"
+                  />
+                  <circle
+                    cx="8.5"
+                    cy="8.5"
+                    r="6.5"
+                    transform="matrix(-1 0 0 1 248.5 5.49854)"
+                    stroke="#024F4A"
+                    strokeWidth="4"
+                  />
+                  <circle
+                    cx="195"
+                    cy="13.4985"
+                    r="10.9995"
+                    stroke="#024F4A"
+                    strokeWidth="4"
+                  />
+                  <path
+                    d="M65.4995 13.4985L92.4995 13.4985"
+                    stroke="#024F4A"
+                    strokeWidth="4"
+                  />
+                  <path
+                    d="M15.4995 13.4985L42.4995 13.4985"
+                    stroke="#024F4A"
+                    strokeWidth="4"
+                  />
+                  <path
+                    d="M233.5 13.4985L206.5 13.4985"
+                    stroke="#024F4A"
+                    strokeWidth="4"
+                  />
+                  <path
+                    d="M156.5 13.4985L183.5 13.4985"
+                    stroke="#024F4A"
+                    strokeWidth="4"
+                  />
+                  <path
+                    d="M206.5 13.4985L233.5 13.4985"
+                    stroke="#024F4A"
+                    strokeWidth="4"
+                  />
+                </svg>
+              </div>
+              <div className="w-[297px] h-[238px] border-Emerald border-[4px] grid justify-items-center items-center p-7 mx-auto">
+                <div className="w-[82px] h-[9px] bg-Emerald"></div>
+                <div className="w-full h-[9px] bg-Nature"></div>
+                <div className="grid gap-2 w-full">
+                  <div className="flex  items-center justify-between">
+                    <div className="w-[94px] h-[9px] bg-Emerald"></div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="29"
+                      height="30"
+                      viewBox="0 0 29 30"
+                      fill="none"
+                    >
+                      <circle cx="14.5" cy="14.999" r="14.5" fill="#02B68A" />
+                      <path
+                        d="M7 14.999L11.5 19.499L21.5 9.49902"
+                        stroke="white"
+                        strokeWidth="4"
+                      />
+                    </svg>
+                  </div>
+                  <div className="flex  items-center justify-between">
+                    <div className="w-[94px] h-[9px] bg-Emerald"></div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="29"
+                      height="30"
+                      viewBox="0 0 29 30"
+                      fill="none"
+                    >
+                      <circle cx="14.5" cy="14.999" r="14.5" fill="#02B68A" />
+                      <path
+                        d="M7 14.999L11.5 19.499L21.5 9.49902"
+                        stroke="white"
+                        strokeWidth="4"
+                      />
+                    </svg>
+                  </div>
+                  <div className="flex  items-center justify-between">
+                    <div className="w-[94px] h-[9px] bg-Emerald"></div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="29"
+                      height="30"
+                      viewBox="0 0 29 30"
+                      fill="none"
+                    >
+                      <circle cx="14.5" cy="14.999" r="14.5" fill="#02B68A" />
+                      <path
+                        d="M7 14.999L11.5 19.499L21.5 9.49902"
+                        stroke="white"
+                        strokeWidth="4"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <p className="text-xl text-center">
+                Sign up and complete the free assessment.
+              </p>
+            </div>
+            <div className="grid gap-10"></div>
+            <div className="grid gap-10"></div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
