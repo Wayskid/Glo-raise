@@ -203,11 +203,11 @@ export default function Home() {
         </div>
       </section>
       <section className="bg-Iceberg overflow-hidden">
-        <div className="w-[min(80rem,100%)] pt-[56px] pb-[72px] md:pt-[80px] md:pb-[100px] lg:py-[90px] lg:pb-[132px] grid gap-10 base:flex md:gap-[42px] lg:px-[132px]  mx-auto">
-          <div className="flex gap-5 mx-auto w-full justify-center items-center base:order-2">
-            <div className="w-[220px] md:w-[350px] h-[220px] md:h-[350px] border-[8px] border-Violet rounded-full shrink-0 relative ">
-              <div className="absolute w-[220px] md:w-[350px] h-[220px] md:h-[350px] bg-Violet rounded-full shrink-0 -left-[calc(220px+20px)] md:-left-[calc(350px+20px)] base:-top-[calc(350px+20px)] base:-left-[0]"></div>
-              <div className="absolute w-[220px] md:w-[350px] h-[220px] md:h-[350px] bg-Violet rounded-full shrink-0 -right-[calc(220px+20px)] md:-right-[calc(350px+20px)] base:-bottom-[calc(350px+20px)] base:-left-[0]"></div>
+        <div className="w-[min(80rem,100%)] pt-[56px] pb-[72px] md:pt-[80px] md:pb-[100px] lg:py-[90px] lg:pb-[132px] grid gap-10 base:flex md:gap-[42px] lg:px-[132px] mx-auto">
+          <div className="flex mx-auto w-full justify-center items-center base:order-2">
+            <div className="w-[220px] md:w-[350px] h-[220px] md:h-[350px] border-[8px] border-Violet rounded-full shrink-0 relative grid items-center justify-items-center">
+              <div className="absolute w-[220px] md:w-[350px] h-[220px] md:h-[350px] border-[8px] border-Violet bg-Violet rounded-full shrink-0 -left-[calc(220px+20px)]  md:-left-[calc(350px+20px)] base:-top-[calc(350px+20px)] base:left-[unset]"></div>
+              <div className="absolute w-[220px] md:w-[350px] h-[220px] md:h-[350px] border-[8px] border-Violet bg-Violet rounded-full shrink-0 -right-[calc(220px+20px)] md:-right-[calc(350px+20px)] base:-bottom-[calc(350px+20px)] base:right-[unset]"></div>
             </div>
           </div>
           <div className="grid gap-[23px] px-4 md:px-[60px] lg:px-0 w-[min(600px,100%)] md:w-[unset] mx-auto">
@@ -771,6 +771,61 @@ export default function Home() {
           >
             Start Assessment
           </button>
+        </div>
+      </section>
+      <section className="bg-Light">
+        <div className="w-[min(80rem,100%)] mx-auto pt-[56px] pb-[72px] md:pt-[80px] md:pb-[100px] lg:py-[90px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px] grid gap-8 md:gap-12 justify-center overflow-hidden">
+          <h4 className="text-[38px] font-semibold text-center text-Dark">
+            Glo-GROWTH sample excerpt
+          </h4>
+          <p className="text-xl text-center text-Dark">
+            Whether you're ready for funding or still need some more time,
+            Glo-raise offers resources and opportunities to continue to improve
+            the attractiveness of your business.
+          </p>
+          <div className="w-[min(946px,100%)] py-8 md:p-10 grid gap-8 md:flex  border-[4px] border-Lavender overflow-hidden leading-tight mx-auto">
+            <div className="grid gap-12 md:gap-8 p-4 md:p-0">
+              <div className="grid gap-5 md:gap-3">
+                <p className="text-[32px] md:text-[38px] font-semibold">
+                  You're Glo-GROWTH score is
+                </p>
+                <p className="text-[32px] md:text-[38px] text-Hero-Purple font-semibold">
+                  Level 3
+                </p>
+                <p className="md:text-xl">You're potentially ready for funding</p>
+              </div>
+              <div className="flex gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="35"
+                  height="26"
+                  viewBox="0 0 35 26"
+                  fill="none"
+                  className="shrink-0"
+                >
+                  <path
+                    d="M12.9127 12.7429C12.9127 13.658 12.8186 14.115 12.1689 14.115C11.4906 14.115 11.3835 13.6994 11.3835 12.8689V5.56379H6.11628V14.1436C6.11628 15.636 6.46819 16.8653 7.29276 17.8314C8.11717 18.7963 9.136 19.2793 10.4089 19.2793C11.2697 19.2793 12.1341 19.0095 13.0315 18.4677C12.5371 20.3808 11.4258 21.3373 9.75836 21.3373C9.23654 21.3373 8.73827 21.1878 7.91513 20.8883C7.91513 20.8883 7.13606 20.6356 6.11628 20.0296V24.4872C6.11628 24.4872 7.13065 25.1363 7.91513 25.4382C8.87604 25.8112 9.822 25.998 10.7745 25.998C12.9456 25.998 14.7613 25.1486 16.291 23.4506C17.5731 22.0229 18.18 20.1471 18.18 17.8244V5.56379H12.9127V12.7429ZM24.8549 0.0637079C18.604 0.638824 19.0291 7.46644 19.0291 7.46644V19.4061C22.4275 19.4061 24.1262 17.7397 24.1262 15.4323V13.8728H26.6329V8.67956H24.1262V7.98451C24.1262 7.17279 24.3366 6.54794 24.6893 6.10901C25.0345 5.68064 25.5388 5.46288 26.1674 5.45313C26.5866 5.458 27.3571 5.59987 27.5128 6.21724L27.5243 6.26632V11.6791C27.5243 13.6671 27.891 15.2628 28.679 16.4666C29.3013 17.409 30.1141 18.1552 31.1446 18.7065C32.175 19.2566 33.2587 19.5307 34.4225 19.5307C34.5509 19.5307 34.7841 19.527 35 19.5171V14.017C33.9226 14.017 33.4605 13.8135 33.1175 13.3929C32.7737 12.9732 32.6076 12.142 32.6076 11.103H34.4421V5.56379H32.7048C32.3779 3.48662 31.1568 0.357685 26.6272 0.00910514C26.6272 0.00910514 26.0909 -0.0115334 25.6705 0.00357987C25.3428 0.0156055 24.8549 0.0637079 24.8549 0.0637079ZM7.04728 18.9738L7.0511 18.9821C6.46485 19.3485 5.77646 19.6029 5.26705 19.7374V19.7657L5.24939 19.74C4.93741 19.8101 4.62813 19.8483 4.33063 19.8483C3.04676 19.8483 2.01808 19.3614 1.18698 18.3875C0.355729 17.4131 0 16.1733 0 14.6678V0.357847H5.26705V14.668C5.26705 16.1736 5.61848 17.4134 6.45037 18.3875C6.63169 18.6008 6.83147 18.7971 7.04728 18.9738Z"
+                    fill="#5A43F0"
+                  />
+                </svg>
+                <p className="text-Hero-Purple ">
+                  At this stage, Lyft had built initial momentum but was still
+                  searching for how to pivot from Zimride, it's long-distance
+                  intercity carpooling predecessor, to position for greater
+                  scale.
+                </p>
+              </div>
+            </div>
+            <div className="flex mx-auto w-full justify-center items-center">
+              <div className="w-[180px] h-[180px] border-[8px] border-Hero-Purple bg-Hero-Purple rounded-full shrink-0 relative grid items-center justify-items-center">
+                <span className="m-auto text-[92px] text-white font-semibold">
+                  3
+                </span>
+                <div className="absolute w-[180px] h-[180px] border-Hero-Purple border-[8px] rounded-full shrink-0 -left-[calc(180px+20px)] md:left-[unset] md:-top-[calc(180px+20px)]"></div>
+                <div className="absolute w-[180px] h-[180px] border-Hero-Purple border-[8px] rounded-full shrink-0 -right-[calc(180px+20px)] md:right-[unset] md:-bottom-[calc(180px+20px)]"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
