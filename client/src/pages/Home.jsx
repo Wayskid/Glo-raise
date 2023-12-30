@@ -210,7 +210,7 @@ export default function Home() {
               <div className="absolute w-[220px] md:w-[350px] h-[220px] md:h-[350px] bg-Violet rounded-full shrink-0 -right-[calc(220px+20px)] md:-right-[calc(350px+20px)] base:-bottom-[calc(350px+20px)] base:-left-[0]"></div>
             </div>
           </div>
-          <div className="grid gap-[23px] px-4 md:px-[60px] lg:px-0 w-[min(600px,100%)] md:w-[unset]">
+          <div className="grid gap-[23px] px-4 md:px-[60px] lg:px-0 w-[min(600px,100%)] md:w-[unset] mx-auto">
             <p className="text-[20px] md:text-[26px] text-Violet [font-family:'Instrument_Serif',serif;]">
               Matching Founders & Funders
             </p>
@@ -282,8 +282,8 @@ export default function Home() {
           <h4 className="text-Dark text-center text-[38px] font-semibold">
             How it works
           </h4>
-          <div className="grid gap-8 text-Emerald">
-            <div className="grid gap-10">
+          <div className="grid text-Emerald gap-y-12 base:grid-cols-2 base:gap-x-6 base:gap-y-8 lg:grid-cols-3">
+            <div className="grid gap-10 px-3">
               <p className="[font-family:'Instrument_Serif',serif;] text-5xl text-center">
                 1.
               </p>
@@ -428,9 +428,147 @@ export default function Home() {
                 Sign up and complete the free assessment.
               </p>
             </div>
-            <div className="grid gap-10"></div>
-            <div className="grid gap-10"></div>
+            <div className="grid gap-10 px-3">
+              <p className="[font-family:'Instrument_Serif',serif;] text-5xl text-center">
+                2.
+              </p>
+              <div className="flex mx-auto justify-center relative mt-[45px]">
+                <div className="w-[234px] h-[297px] border-Emerald border-[4px] absolute bg-white z-10 -bottom-[15px] px-5 py-7 grid gap-5 items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="185"
+                    height="58"
+                    viewBox="0 0 185 58"
+                    fill="none"
+                  >
+                    <path
+                      d="M0.5 31.499H35L58 54.499L109.5 2.99902L138 31.499L152 17.499L166 31.499H184.5"
+                      stroke="#024F4A"
+                      stroke-width="4"
+                    />
+                  </svg>
+                  <div className="flex justify-between items-center">
+                    <div className="grid self-stretch items-center">
+                      <div className="w-10 h-[4px] bg-Emerald self-start"></div>
+                      <div className="w-10 h-[4px] bg-Emerald"></div>
+                      <div className="w-10 h-[4px] bg-Emerald self-end"></div>
+                    </div>
+                    <div className="flex justify-evenly w-[112px] relative items-end">
+                      <div className="w-[8px] h-[18px] bg-Emerald"></div>
+                      <div className="w-[8px] h-[38px] bg-Emerald"></div>
+                      <div className="w-[8px] h-[58px] bg-Emerald"></div>
+                      <div className="w-[8px] h-[78px] bg-Emerald"></div>
+                      <div className="absolute w-full h-[5px] bottom-0 bg-Emerald"></div>
+                      <div className="absolute left-1 bottom-6">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="87"
+                          height="86"
+                          viewBox="0 0 87 86"
+                          fill="none"
+                        >
+                          <path
+                            d="M1.5 84.4321L77.5 8.43213"
+                            stroke="#02B68A"
+                            stroke-width="4"
+                          />
+                          <path
+                            d="M78.6382 7.46851C74.4799 11.6268 67.691 11.5799 63.6394 7.52827"
+                            stroke="#02B68A"
+                            stroke-width="4"
+                          />
+                          <path
+                            d="M78.6382 7.4685C74.4799 11.6268 74.3767 18.2656 78.5784 22.4673"
+                            stroke="#02B68A"
+                            stroke-width="4"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="w-full h-[7px] bg-Emerald"></div>
+                </div>
+                <div className="w-[292px] h-[238px] border-Emerald border-[4px]"></div>
+              </div>
+              <p className="text-xl text-center">
+                Receive a report including recommended steps to strengthen your
+                positioning.
+              </p>
+            </div>
+            <div className="grid gap-10 px-3 md:col-span-3 lg:col-span-1">
+              <p className="[font-family:'Instrument_Serif',serif;] text-5xl text-center">
+                3.
+              </p>
+              <div className="flex mx-auto justify-center relative mt-[45px]">
+                <div className="w-[234px] h-[297px] border-Emerald border-[4px] absolute bg-white z-10 -bottom-[15px] px-5 py-7 grid gap-5 items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="185"
+                    height="58"
+                    viewBox="0 0 185 58"
+                    fill="none"
+                  >
+                    <path
+                      d="M0.5 31.499H35L58 54.499L109.5 2.99902L138 31.499L152 17.499L166 31.499H184.5"
+                      stroke="#024F4A"
+                      stroke-width="4"
+                    />
+                  </svg>
+                  <div className="flex justify-between items-center">
+                    <div className="grid self-stretch items-center">
+                      <div className="w-10 h-[4px] bg-Emerald self-start"></div>
+                      <div className="w-10 h-[4px] bg-Emerald"></div>
+                      <div className="w-10 h-[4px] bg-Emerald self-end"></div>
+                    </div>
+                    <div className="flex justify-evenly w-[112px] relative items-end">
+                      <div className="w-[8px] h-[18px] bg-Emerald"></div>
+                      <div className="w-[8px] h-[38px] bg-Emerald"></div>
+                      <div className="w-[8px] h-[58px] bg-Emerald"></div>
+                      <div className="w-[8px] h-[78px] bg-Emerald"></div>
+                      <div className="absolute w-full h-[5px] bottom-0 bg-Emerald"></div>
+                      <div className="absolute left-1 bottom-6">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="87"
+                          height="86"
+                          viewBox="0 0 87 86"
+                          fill="none"
+                        >
+                          <path
+                            d="M1.5 84.4321L77.5 8.43213"
+                            stroke="#02B68A"
+                            stroke-width="4"
+                          />
+                          <path
+                            d="M78.6382 7.46851C74.4799 11.6268 67.691 11.5799 63.6394 7.52827"
+                            stroke="#02B68A"
+                            stroke-width="4"
+                          />
+                          <path
+                            d="M78.6382 7.4685C74.4799 11.6268 74.3767 18.2656 78.5784 22.4673"
+                            stroke="#02B68A"
+                            stroke-width="4"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="w-full h-[7px] bg-Emerald"></div>
+                </div>
+                <div className="w-[292px] h-[238px] border-Emerald border-[4px]"></div>
+              </div>
+              <p className="text-xl text-center">
+                Receive a report including recommended steps to strengthen your
+                positioning.
+              </p>
+            </div>
           </div>
+          <button
+            onClick={() => navigate("/get_started")}
+            className="bg-Dark px-9 py-6 text-white rounded-[4px] [font-family:'Roboto',sans-serif;] base:mx-auto"
+          >
+            Start Assessment
+          </button>
         </div>
       </section>
     </div>
