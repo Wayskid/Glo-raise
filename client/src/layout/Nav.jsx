@@ -31,7 +31,7 @@ export default function Nav() {
           <NavLink to="/for_funders" className="py-2">
             For Funders
           </NavLink>
-          <NavLink to="/about_us" className="py-2">
+          <NavLink to="/about" className="py-2">
             About Us
           </NavLink>
           <NavLink
