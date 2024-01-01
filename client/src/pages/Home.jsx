@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Carousel from "../components/Carousel";
+import SubscriberForm from "../components/SubscriberForm";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -794,7 +795,9 @@ export default function Home() {
                   Level 3
                 </p>
                 <p className="md:text-xl">
-                  Scores range from Level 1 (lowest) to Level 5 (highest) with Level 5 most closely aligning with the factors known to drive entrepreneurial success.
+                  Scores range from Level 1 (lowest) to Level 5 (highest) with
+                  Level 5 most closely aligning with the factors known to drive
+                  entrepreneurial success.
                 </p>
               </div>
               <div className="flex gap-2">
@@ -1624,6 +1627,109 @@ export default function Home() {
         </div>
       </section>
       <Carousel />
+      <section className="bg-Light">
+        <div className=" mx-auto pt-[56px] pb-[72px] md:pt-[80px] md:pb-[100px] lg:py-[90px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px] grid gap-10 md:gap-14 base:md:gap-[60px] overflow-hidden relative">
+          <p className="text-Dark text-[38px] font-semibold text-center leading-tight">
+            Oh yeah... did we mention?
+            <br /> Our assessment is{" "}
+            <span className="relative inline-block w-fit">
+              free{" "}
+              <span className="absolute w-full h-1 bg-Hero-Purple bottom-0"></span>
+            </span>
+            .
+          </p>
+          <p className="text-Dark text-xl text-center">
+            A leading-edge assessment, world-class resources to improve
+            <br /> your business, and a direct path to our funder network.{" "}
+            <br />
+            What're you waiting for?
+          </p>
+          <div className="w-full h-full absolute justify-self-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="73"
+              height="35"
+              viewBox="0 0 73 35"
+              fill="none"
+              className="absolute right-[74px]"
+            >
+              <ellipse
+                cx="36.0694"
+                cy="-1.329"
+                rx="36.0694"
+                ry="35.6349"
+                fill="#2E2873"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="47"
+              height="98"
+              viewBox="0 0 47 98"
+              fill="none"
+              className="absolute top-[190px] right-0"
+            >
+              <path
+                d="M46.7289 0.0361328L52.4806 31.0632L75.3711 9.34253L61.787 37.8247L93.0729 33.707L65.3417 48.7651L93.0729 63.8231L61.787 59.7054L75.3711 88.1876L52.4806 66.4669L46.7289 97.494L40.9773 66.4669L18.0868 88.1876L31.6709 59.7054L0.384964 63.8231L28.1161 48.7651L0.384964 33.707L31.6709 37.8247L18.0868 9.34253L40.9773 31.0632L46.7289 0.0361328Z"
+                fill="#024F4A"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="99"
+              height="134"
+              viewBox="0 0 99 134"
+              fill="none"
+              className="absolute top-[35%] md:top-[29%] left-0 sm:-left-[3%] md:left-0"
+            >
+              <path
+                d="M74.4307 26.2275L-14.1349 106.925"
+                stroke="#5A43F0"
+                stroke-width="5.29827"
+              />
+              <path
+                d="M72.4754 28.0092C57.8942 41.2951 35.1535 40.0805 22.2084 25.8733"
+                stroke="#5A43F0"
+                stroke-width="5.29827"
+              />
+              <path
+                d="M72.4754 28.0092C57.8942 41.2951 56.5145 63.5242 69.939 78.2576"
+                stroke="#5A43F0"
+                stroke-width="5.29827"
+              />
+            </svg>
+            <div className="w-8 h-8 bg-Energy absolute bottom-[5%] right-[7%] rotate-12"></div>
+          </div>
+        </div>
+      </section>
+      <section className="bg-Hero-Purple">
+        <div className="w-[min(80rem,100%)] mx-auto pt-[56px] pb-[72px] md:pt-[80px] md:pb-[100px] lg:py-[90px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px] grid gap-8 md:gap-12 base:md:gap-[60px]">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="101"
+            height="54"
+            viewBox="0 0 101 54"
+            fill="none"
+            className="justify-self-center"
+          >
+            <path
+              d="M0.722656 49.1933H50.4999M50.4999 49.1933L5.46335 30.1621M50.4999 49.1933L15.7348 14.3027M50.4999 49.1933L32.3273 3.20117M50.4999 49.1933V0.0292969M50.4999 49.1933H100.277M50.4999 49.1933L95.5365 30.1621M50.4999 49.1933L85.265 14.3027M50.4999 49.1933L68.6726 3.20117"
+              stroke="#C2DEEC"
+              stroke-width="8"
+            />
+          </svg>
+          <p className="text-Iceberg text-[38px] font-semibold text-center leading-tight">
+            Ready for your Glo-GROWTH score?
+          </p>
+          <button
+            onClick={() => navigate("/get_started")}
+            className="bg-Iceberg px-[36px] py-5 text-Hero-Purple rounded-[4px] [font-family:'Roboto',sans-serif;]  mx-auto"
+          >
+            Get Started
+          </button>
+        </div>
+      </section>
+      <SubscriberForm />
     </div>
   );
 }

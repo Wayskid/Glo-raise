@@ -14,6 +14,7 @@ export default {
         Violet: "#2E2873",
         Nature: "#02B68A",
         Emerald: "#024F4A",
+        Energy: "#FD542F",
       },
       screens: {
         xs: "375px",
