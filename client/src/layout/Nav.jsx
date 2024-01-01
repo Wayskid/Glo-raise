@@ -22,10 +22,7 @@ export default function Nav() {
           </svg>
         </NavLink>
         <div className="md:flex items-center gap-12 hidden">
-          <NavLink
-            to="/how_it_works"
-            className="py-2 border-b-[3px] border-Hero-Purple"
-          >
+          <NavLink to="/" className="py-2 border-b-[3px] border-Hero-Purple">
             How it Works
           </NavLink>
           <NavLink to="/for_funders" className="py-2">

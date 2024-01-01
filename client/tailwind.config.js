@@ -15,6 +15,7 @@ export default {
         Nature: "#02B68A",
         Emerald: "#024F4A",
         Energy: "#FD542F",
+        Sand: "#EBE6DC",
       },
       screens: {
         xs: "375px",
