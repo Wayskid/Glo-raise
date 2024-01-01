@@ -1635,7 +1635,7 @@ export default function Home() {
               free
               <span className="absolute w-full h-1 bg-Hero-Purple bottom-0 left-0"></span>
             </span>
-            <br /> GROWTH Assessent.
+            <br /> GROWTH Assessment.
           </p>
           <p className="text-Dark text-xl text-center">
             A leading-edge assessment, world-class resources to improve
