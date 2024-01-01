@@ -1630,13 +1630,12 @@ export default function Home() {
       <section className="bg-Light">
         <div className=" mx-auto pt-[56px] pb-[72px] md:pt-[80px] md:pb-[100px] lg:py-[90px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px] grid gap-10 md:gap-14 base:md:gap-[60px] overflow-hidden relative">
           <p className="text-Dark text-[38px] font-semibold text-center leading-tight">
-            Oh yeah... did we mention?
-            <br /> Our assessment is{" "}
-            <span className="relative inline-block w-fit">
-              free{" "}
-              <span className="absolute w-full h-1 bg-Hero-Purple bottom-0"></span>
+            Take the{" "}
+            <span className="relative">
+              free
+              <span className="absolute w-full h-1 bg-Hero-Purple bottom-0 left-0"></span>
             </span>
-            .
+            <br /> GROWTH Assessent.
           </p>
           <p className="text-Dark text-xl text-center">
             A leading-edge assessment, world-class resources to improve
