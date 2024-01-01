@@ -24,19 +24,19 @@ export default function Footer() {
           </NavLink>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-0 items-start w-full">
             <div className="grid gap-[10px]">
-              <p className="text-Lime text-xl">How it Works</p>
+              <NavLink to="/" className="text-Lime text-xl">How it Works</NavLink>
               <NavLink to="/get_started" className="text-white">
                 Get Started
               </NavLink>
             </div>
             <div className="grid gap-[10px]">
-              <p className="text-Lime text-xl">Funders</p>
+              <NavLink to="/for_funders" className="text-Lime text-xl">Funders</NavLink>
               <NavLink to="/interest_radar" className="text-white">
                 Interest Radar
               </NavLink>
             </div>
             <div className="grid gap-[10px]">
-              <p className="text-Lime text-xl">About Us</p>
+              <NavLink to="/about" className="text-Lime text-xl">About Us</NavLink>
               <NavLink to="/legal" className="text-white">
                 Legal
               </NavLink>
