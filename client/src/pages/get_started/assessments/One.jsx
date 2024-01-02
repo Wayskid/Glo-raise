@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setAssessmentProgress } from "../../../store/features/appSlice.js";
-import SelectOne from "../../../components/reuseable/SelectOne";
+import SelectOneRadio from "../../../components/reuseable/SelectOneRadio.jsx";
 
 export default function One() {
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ export default function One() {
 
   return (
     <div>
-      <SelectOne assessment={assessment} assessmentNumber="1" next="03" />
+      <SelectOneRadio assessment={assessment} assessmentNumber="1" next="03" />
     </div>
   );
 }

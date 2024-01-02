@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setAssessmentProgress } from "../../../store/features/appSlice.js";
 import { useNavigate } from "react-router-dom";
-import SelectOne from "../../../components/reuseable/selectOne.jsx";
+import SelectOneRadio from "../../../components/reuseable/SelectOneRadio.jsx";
 
 export default function Three() {
   const dispatch = useDispatch();
@@ -15,7 +15,7 @@ export default function Three() {
 
   return (
     <div>
-      <SelectOne assessment={assessment} assessmentNumber="3" next="04" />
+      <SelectOneRadio assessment={assessment} assessmentNumber="3" next="04" />
     </div>
   );
 }
