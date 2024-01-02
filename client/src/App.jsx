@@ -12,7 +12,7 @@ import Three from "./pages/get_started/assessments/Three";
 
 export default function App() {
   useEffect(() => {
-    scrollY(0, 0);
+    document.body.scrollTo(0, 0);
   }, []);
   return (
     <div className="h-full">
@@ -26,7 +26,11 @@ export default function App() {
         <Route path="/get_started" element={<Layout_Two />}>
           <Route index element={<Get_Started />}></Route>
           <Route path="01" element={<One />}></Route>
-          <Route path="03" element={<Three />}></Route>
+          <Route path={`03`} element={<Three />}></Route>
+          {/* <Route
+            path={`:0${assessmentIndex > 1 ? assessmentIndex + 1 : 3}`}
+            element={<Three />}
+          ></Route> */}
         </Route>
       </Routes>
     </div>
