@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setAssessmentProgress } from "../../../store/features/appSlice.js";
-import SelectOne from "../../../components/reuseable/selectOne";
+import SelectOne from "../../../components/reuseable/SelectOne";
 
 export default function One() {
   const dispatch = useDispatch();
