@@ -22,11 +22,7 @@ export default function ThreeToTwentyOne() {
         <SelectOneRadio
           assessment={assessment}
           assessmentNumber={assessmentIndex}
-          next={
-            assessmentIndex < 21
-              ? ("0" + (+assessmentIndex + 1)).slice(-2)
-              : "22"
-          }
+          next={("0" + (+assessmentIndex + 1)).slice(-2)}
         />
       </div>
     )

@@ -9,6 +9,13 @@ import Legal from "./pages/layout/Legal";
 import Layout from "./pages/layout/Layout";
 import Layout_Two from "./pages/get_started/Layout_Two";
 import ThreeToTwentyOne from "./pages/get_started/assessments/ThreeToTwentyOne";
+import TwentyTwo from "./pages/get_started/assessments/TwentyTwo";
+import TwentyThree from "./pages/get_started/assessments/TwentyThree";
+import Thirteen from "./pages/get_started/assessments/Thirteen";
+import TwentyFour from "./pages/get_started/assessments/TwentyFour";
+import TwentyFive from "./pages/get_started/assessments/TwentyFive";
+import TwentyEight from "./pages/get_started/assessments/TwentyEight";
+import TwentyNine from "./pages/get_started/assessments/TwentyNine";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -27,8 +34,14 @@ export default function App() {
         <Route path="/get_started" element={<Layout_Two />}>
           <Route index element={<Get_Started />}></Route>
           <Route path="01" element={<One />}></Route>
-          {/* <Route path={`03`} element={<Three />}></Route> */}
           <Route path=":assessmentIndex" element={<ThreeToTwentyOne />}></Route>
+          <Route path="13" element={<Thirteen />}></Route>
+          <Route path="22" element={<TwentyTwo />}></Route>
+          <Route path="23" element={<TwentyThree />}></Route>
+          <Route path="24" element={<TwentyFour />}></Route>
+          <Route path="25" element={<TwentyFive />}></Route>
+          <Route path="28" element={<TwentyEight />}></Route>
+          <Route path="29" element={<TwentyNine />}></Route>
         </Route>
       </Routes>
     </div>
