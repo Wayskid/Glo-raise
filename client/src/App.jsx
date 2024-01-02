@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Get_Started from "./pages/get_started/Get_Started";
 import One from "./pages/get_started/assessments/One";
 import Home from "./pages/layout/Home";
@@ -8,12 +8,13 @@ import About from "./pages/layout/About";
 import Legal from "./pages/layout/Legal";
 import Layout from "./pages/layout/Layout";
 import Layout_Two from "./pages/get_started/Layout_Two";
-import Three from "./pages/get_started/assessments/Three";
+import ThreeToTwentyOne from "./pages/get_started/assessments/ThreeToTwentyOne";
 
 export default function App() {
+  const { pathname } = useLocation();
   useEffect(() => {
-    document.body.scrollTo(0, 0);
-  }, []);
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <div className="h-full">
       <Routes>
@@ -26,11 +27,8 @@ export default function App() {
         <Route path="/get_started" element={<Layout_Two />}>
           <Route index element={<Get_Started />}></Route>
           <Route path="01" element={<One />}></Route>
-          <Route path={`03`} element={<Three />}></Route>
-          {/* <Route
-            path={`:0${assessmentIndex > 1 ? assessmentIndex + 1 : 3}`}
-            element={<Three />}
-          ></Route> */}
+          {/* <Route path={`03`} element={<Three />}></Route> */}
+          <Route path=":assessmentIndex" element={<ThreeToTwentyOne />}></Route>
         </Route>
       </Routes>
     </div>

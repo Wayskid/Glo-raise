@@ -13,7 +13,7 @@ export default function One() {
 
   return (
     <div>
-      <SelectOneRadio assessment={assessment} assessmentNumber="1" next="03" />
+      <SelectOneRadio assessment={assessment} assessmentNumber="01" next="03" />
     </div>
   );
 }
