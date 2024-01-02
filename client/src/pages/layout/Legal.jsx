@@ -1,5 +1,5 @@
 import React from "react";
-import SubscriberForm from "../components/SubscriberForm";
+import SubscriberForm from "../../components/SubscriberForm";
 
 export default function Legal() {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import SubscriberForm from "../components/SubscriberForm";
+import SubscriberForm from "../../components/SubscriberForm";
 
 export default function About() {
   return (
@@ -112,7 +112,7 @@ export default function About() {
           </p>
           <button
             onClick={() => navigate("/get_started")}
-            className="bg-Violet px-9 py-6 text-Iceberg rounded-[4px] mx-auto md:mr-auto md:ml-0"
+            className="bg-Violet px-9 py-6 text-Iceberg rounded-[4px] md:mr-auto md:ml-0"
           >
             Get Started
           </button>

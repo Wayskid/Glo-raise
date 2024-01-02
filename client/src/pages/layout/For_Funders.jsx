@@ -1,6 +1,6 @@
 import React from "react";
-import SubscriberForm from "../components/SubscriberForm";
-import star from "../assets/Icon/Star Six Points.png";
+import SubscriberForm from "../../components/SubscriberForm";
+import star from "../../assets/Icon/Star Six Points.png";
 
 export default function For_Funders() {
   return (

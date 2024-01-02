@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Carousel from "../components/Carousel";
-import SubscriberForm from "../components/SubscriberForm";
+import Carousel from "../../components/Carousel";
+import SubscriberForm from "../../components/SubscriberForm";
 
 export default function Home() {
   const navigate = useNavigate();
