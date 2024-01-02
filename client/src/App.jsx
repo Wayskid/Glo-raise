@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Get_Started from "./pages/get_started/Get_Started";
 import One from "./pages/get_started/assessments/One";
@@ -11,6 +11,9 @@ import Layout_Two from "./pages/get_started/Layout_Two";
 import Three from "./pages/get_started/assessments/Three";
 
 export default function App() {
+  useEffect(() => {
+    scrollY(0, 0);
+  }, []);
   return (
     <div className="h-full">
       <Routes>

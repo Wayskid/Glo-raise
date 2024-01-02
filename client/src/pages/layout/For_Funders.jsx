@@ -121,7 +121,7 @@ export default function For_Funders() {
             onClick={() => navigate("/get_started")}
             className="bg-Dark px-[36px] py-5 text-white [font-family:'Roboto',sans-serif;] mx-auto"
           >
-            Complete Interests Radar
+            Interests Radar
           </button>
         </div>
       </section>
