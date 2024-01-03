@@ -11,7 +11,7 @@ export default function Nav() {
     }
   }
 
-  const [mobileMenuShown, setMobileMenuShown] = useState(true);
+  const [mobileMenuShown, setMobileMenuShown] = useState(false);
 
   return (
     <div className="fixed top-0 w-full [font-family:'Roboto',sans-serif;] bg-white z-40">
