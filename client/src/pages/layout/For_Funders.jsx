@@ -12,7 +12,7 @@ export default function For_Funders() {
               The{" "}
               <span className="relative inline-block w-fit">
                 opportunity
-                <div className="absolute w-full h-1 md:h-2 bg-Lime bottom-0"></div>
+                <span className="absolute w-full h-1 md:h-2 bg-Lime bottom-0 left-0"></span>
               </span>
               discovery revolution is here
             </p>

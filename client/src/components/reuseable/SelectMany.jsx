@@ -39,7 +39,7 @@ export default function SelectMany({
           {assessment.options.map((option) => (
             <div
               key={option}
-              className="py-4 px-6 flex gap-4 bg-[#F8F8F8] rounded-[20px] relative overflow-hidden"
+              className="px-6 flex items-center gap-4 bg-[#F8F8F8] rounded-[20px] relative overflow-hidden"
             >
               <input
                 type="checkbox"
@@ -50,7 +50,7 @@ export default function SelectMany({
               <div className="w-6 h-6 bg-[#2222221A] peer-checked/radio:bg-Dark z-20"></div>
               <label
                 htmlFor={option}
-                className="text-Dark w-[calc(100%-2.5rem)] z-20"
+                className="py-4 text-Dark w-[calc(100%-2.5rem)] z-20"
               >
                 {option}
               </label>

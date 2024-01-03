@@ -1,10 +1,21 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 
 export default function Nav() {
+  const { pathname } = useLocation();
+  function matchRoute(route) {
+    if (pathname === route) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  const [mobileMenuShown, setMobileMenuShown] = useState(true);
+
   return (
-    <div className="fixed top-0 w-full z-40 [font-family:'Roboto',sans-serif;] bg-white">
-      <div className="flex items-center w-[min(80rem,100%)] mx-auto px-4 md:px-[60px] lg:px-[132px] py-[24px]">
+    <div className="fixed top-0 w-full [font-family:'Roboto',sans-serif;] bg-white z-40">
+      <div className="flex items-center w-[min(80rem,100%)] mx-auto px-4 md:px-[60px] lg:px-[132px] py-[24px] relative z-40 bg-white">
         <NavLink to="/" className="mr-auto ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +49,10 @@ export default function Nav() {
             Get Started
           </NavLink>
         </div>
-        <button className="md:hidden">
+        <button
+          className="md:hidden"
+          onClick={() => setMobileMenuShown(!mobileMenuShown)}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="45"
@@ -52,6 +66,48 @@ export default function Nav() {
             />
           </svg>
         </button>
+      </div>
+      <div
+        className={`absolute top-[93px] grid left-0 w-full bg-white md:hidden text-center text-xl [transition:0.9s_ease] z-30 ${
+          !mobileMenuShown ? "-translate-y-[200%]" : "translate-y-[0]"
+        }`}
+      >
+        <NavLink
+          onClick={() => setMobileMenuShown(false)}
+          to="/"
+          className={`${
+            matchRoute("/") && "font-semibold bg-Lavender"
+          }  p-4 relative`}
+        >
+          How it Works
+          {matchRoute("/") && (
+            <span className="w-[3px] h-full bg-Hero-Purple absolute left-0 top-0"></span>
+          )}
+        </NavLink>
+        <NavLink
+          onClick={() => setMobileMenuShown(false)}
+          to="/for_funders"
+          className={`${
+            matchRoute("/for_funders") && "font-semibold bg-Lavender"
+          } p-4 relative`}
+        >
+          For Funders
+          {matchRoute("/for_funders") && (
+            <span className="w-[3px] h-full bg-Hero-Purple absolute left-0 top-0"></span>
+          )}
+        </NavLink>
+        <NavLink
+          onClick={() => setMobileMenuShown(false)}
+          to="/about"
+          className={`${
+            matchRoute("/about") && "font-semibold bg-Lavender"
+          } p-4 relative`}
+        >
+          About Us
+          {matchRoute("/about") && (
+            <span className="w-[3px] h-full bg-Hero-Purple absolute left-0 top-0"></span>
+          )}
+        </NavLink>
       </div>
     </div>
   );

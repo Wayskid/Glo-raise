@@ -367,6 +367,97 @@ const initialState = {
         "Gray - We haven't done a competitor analysis",
       ],
     },
+    {
+      add_more: false,
+      number: "31",
+      qstn: "This best describes how our stakeholders view us",
+      qstns: [
+        {
+          qstn: "Customer",
+          options: [
+            "Essential",
+            "Important",
+            "Useful",
+            "Ambivalent",
+            "Harmful",
+          ],
+        },
+        {
+          qstn: "Employees",
+          options: [
+            "Essential",
+            "Important",
+            "Useful",
+            "Ambivalent",
+            "Harmful",
+          ],
+        },
+        {
+          qstn: "Partners",
+          options: [
+            "Essential",
+            "Important",
+            "Useful",
+            "Ambivalent",
+            "Harmful",
+          ],
+        },
+        {
+          qstn: "Community (social and regulatory)",
+          options: [
+            "Essential",
+            "Important",
+            "Useful",
+            "Ambivalent",
+            "Harmful",
+          ],
+        },
+      ],
+    },
+    {
+      add_more: false,
+      number: "32",
+      qstn: "This best describes our market",
+      options: [
+        "Fragmented — There is no clear leader with more than 10% market share",
+        "Consolidating — A few competitors are poised to exceed 10% market share",
+        "Concentrated — There is a strong leader with over 30% market share",
+        "Dominated — There is a dominant player with over 40% market share",
+      ],
+    },
+    {
+      add_more: false,
+      number: "33",
+      qstn: "We have social proof for our offering(s) in these forms",
+      options: [
+        "Awards",
+        "Certifications",
+        "Designations",
+        "Endorsements",
+        "Media Coverage",
+      ],
+    },
+    {
+      add_more: false,
+      number: "34",
+      qstn: "We've completed a third-party valuation of our venture in the last year",
+      options: ["Yes", "No"],
+    },
+    {
+      add_more: false,
+      number: "35",
+      qstn: "This is what we solve and for whom",
+    },
+    {
+      add_more: false,
+      number: "36",
+      qstn: "This best describes our purpose",
+      options: [
+        "Grow a sustainable business is built to last",
+        "Grow a business that provides a clear social benefit",
+        "Grow a business that is a great place to work",
+      ],
+    },
   ],
 };
 
