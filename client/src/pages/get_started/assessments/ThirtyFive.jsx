@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setAssessmentProgress } from "../../../store/features/appSlice.js";
 import { useNavigate } from "react-router-dom";
+import InputField from "../../../components/reuseable/InputField.jsx";
 
 export default function ThirtyFive() {
   const dispatch = useDispatch();
@@ -13,7 +14,7 @@ export default function ThirtyFive() {
   }, []);
   return (
     <div className="w-[min(740px,100%)] mx-auto pt-[56px] pb-[72px] md:pt-[80px] md:pb-[100px] lg:py-[90px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px]">
-      <div className="border-2 border-Dark rounded-[20px] py-[56px] px-2 md:px-[6px] lg:px-[12px] relative grid gap-10 md:gap-12">
+      <div className="border-2 border-Dark rounded-[20px] py-[56px] px-4 lg:px-[12px] relative grid gap-10 md:gap-12">
         <div className="absolute grid place-items-center -top-[32.3px] justify-self-center">
           <p className="[font-family:'Instrument_Serif',serif;] text-[26px] text-white absolute">
             {assessment.number}
@@ -40,7 +41,19 @@ export default function ThirtyFive() {
             is your target audience.
           </p>
         </div>
-        <ul className="grid gap-12"></ul>
+        <ul className="grid gap-8 ">
+          {assessment.qstns.map((option) => (
+            <InputField
+              key={option.qstn}
+              id={option.qstn}
+              name={option.qstn}
+              type="text"
+              placeholder={option.placeholder}
+              label={option.qstn}
+              onChange={() => {}}
+            />
+          ))}
+        </ul>
         <div className="flex mx-auto gap-4">
           <button
             onClick={() => navigate(-1)}

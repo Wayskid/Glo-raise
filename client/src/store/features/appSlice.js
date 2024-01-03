@@ -447,6 +447,20 @@ const initialState = {
       add_more: false,
       number: "35",
       qstn: "This is what we solve and for whom",
+      qstns: [
+        {
+          qstn: "In order to",
+          placeholder: "X - insert the problem",
+        },
+        {
+          qstn: "We",
+          placeholder: "Y - how do you solve the need",
+        },
+        {
+          qstn: "better than anyone else for",
+          placeholder: "Z - who is your target customer audience",
+        },
+      ],
     },
     {
       add_more: false,
@@ -456,6 +470,102 @@ const initialState = {
         "Grow a sustainable business is built to last",
         "Grow a business that provides a clear social benefit",
         "Grow a business that is a great place to work",
+      ],
+    },
+    {
+      add_more: false,
+      number: "37",
+      qstn: "This is how our model works",
+      qstns: [
+        {
+          qstn: "We offer A ",
+          placeholder: "what is your product or service?",
+        },
+        {
+          qstn: "to B",
+          placeholder: "who is your target customer?",
+        },
+        {
+          qstn: "that we produce by C",
+          placeholder: "how is it built?",
+        },
+        {
+          qstn: "and sell by D",
+          placeholder: "how is it distributed?",
+        },
+        {
+          qstn: "using E pay structure",
+          placeholder: "what is the revenue model?",
+        },
+        {
+          qstn: "resulting in F % return",
+          placeholder: "what is the sales margin?",
+        },
+        {
+          qstn: "while upholding G",
+          placeholder: "(what are three important values to your firm?",
+        },
+      ],
+    },
+    {
+      add_more: false,
+      number: "38",
+      qstn: "This is what people need to stop doing in order to start using our service",
+      options: [
+        "Using a competitor's product",
+        "Being loyal to a current supplier",
+        "Following a majority trend",
+        "Utilizing integrated support systems",
+        "Continuing current service agreements or subscriptions",
+        "Believing that there's not a better solution",
+        "Supporting certain cultural or social norms",
+      ],
+    },
+    {
+      add_more: true,
+      number: "39",
+      qstn: "This is what people need to stop doing in order to start using our service",
+      options: [
+        "Crowdfunding",
+        "Equity-based venture capital",
+        "Convertible Debt",
+        "Revenue Royalties",
+        "Loan (debt)",
+        "Private Equity",
+      ],
+    },
+    {
+      add_more: false,
+      number: "40",
+      qstn: "This is the amount of funding we're seeking",
+      options: [
+        "$50k - $100k",
+        "$100k - $500k",
+        "$500k - $2M",
+        "$2M - $5M",
+        "$5M - $10M",
+        "$10M-$49M",
+        "$50M+",
+      ],
+    },
+    {
+      add_more: false,
+      number: "41",
+      qstns: [
+        {
+          qstn: "What do you do?",
+          placeholder: "In 1-2 sentences describe what your business does",
+        },
+        {
+          qstn: "What challenges do your customers face?",
+          placeholder:
+            "In 1-2 sentences describe what challenge your business solves",
+        },
+        {
+          qstn: "How do you distinguish yourself?",
+          placeholder:
+            "In 1-2 sentences highlight how your business is distinct from others",
+        },
       ],
     },
   ],

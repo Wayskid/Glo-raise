@@ -20,6 +20,11 @@ import ThirtyOne from "./pages/get_started/assessments/ThirtyOne";
 import ThirtyTwo from "./pages/get_started/assessments/ThirtyThree";
 import ThirtyThree from "./pages/get_started/assessments/ThirtyThree";
 import ThirtyFive from "./pages/get_started/assessments/ThirtyFive";
+import ThirtySix from "./pages/get_started/assessments/ThirtySix";
+import ThirtySeven from "./pages/get_started/assessments/ThirtySeven";
+import ThirtyEight from "./pages/get_started/assessments/ThirtyEight";
+import ThirtyNine from "./pages/get_started/assessments/ThirtyNine";
+import FortyOne from "./pages/get_started/assessments/FortyOne";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -49,12 +54,11 @@ export default function App() {
           <Route path="31" element={<ThirtyOne />}></Route>
           <Route path="33" element={<ThirtyThree />}></Route>
           <Route path="35" element={<ThirtyFive />}></Route>
-          <Route path="36" element={<ThreeToTwentyOne />}></Route>
-          <Route path="37" element={<ThreeToTwentyOne />}></Route>
-          <Route path="38" element={<ThreeToTwentyOne />}></Route>
-          <Route path="39" element={<ThreeToTwentyOne />}></Route>
-          <Route path="40" element={<ThreeToTwentyOne />}></Route>
-          <Route path="41" element={<ThreeToTwentyOne />}></Route>
+          <Route path="36" element={<ThirtySix />}></Route>
+          <Route path="37" element={<ThirtySeven />}></Route>
+          <Route path="38" element={<ThirtyEight />}></Route>
+          <Route path="39" element={<ThirtyNine />}></Route>
+          <Route path="41" element={<FortyOne />}></Route>
         </Route>
       </Routes>
     </div>
