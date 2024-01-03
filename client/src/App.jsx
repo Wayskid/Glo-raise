@@ -25,6 +25,12 @@ import ThirtySeven from "./pages/get_started/assessments/ThirtySeven";
 import ThirtyEight from "./pages/get_started/assessments/ThirtyEight";
 import ThirtyNine from "./pages/get_started/assessments/ThirtyNine";
 import FortyOne from "./pages/get_started/assessments/FortyOne";
+import Plan from "./pages/get_started/Plan";
+import Prem_Checkout from "./pages/get_started/Prem_Checkout";
+import Free_Checkout from "./pages/get_started/Free_Checkout";
+import Free_Success from "./pages/get_started/Free_Success";
+import Interest_Radar from "./pages/funders/Interest_Radar";
+import OneAndMost from "./pages/funders/OneAndMost";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -43,6 +49,7 @@ export default function App() {
         <Route path="/get_started" element={<Layout_Two />}>
           <Route index element={<Get_Started />}></Route>
           <Route path="01" element={<One />}></Route>
+          {/*Remember to remove 1 */}
           <Route path=":assessmentIndex" element={<ThreeToTwentyOne />}></Route>
           <Route path="13" element={<Thirteen />}></Route>
           <Route path="22" element={<TwentyTwo />}></Route>
@@ -59,6 +66,17 @@ export default function App() {
           <Route path="38" element={<ThirtyEight />}></Route>
           <Route path="39" element={<ThirtyNine />}></Route>
           <Route path="41" element={<FortyOne />}></Route>
+          <Route path="plan" element={<Plan />}></Route>
+          <Route path="premium_checkout" element={<Prem_Checkout />}></Route>
+          <Route path="free_checkout" element={<Free_Checkout />}></Route>
+          <Route path="founders_success" element={<Free_Success />}></Route>
+          <Route path="funders">
+            <Route index element={<Interest_Radar />}></Route>
+            <Route
+              path=":fundersAssessmentIndex"
+              element={<OneAndMost />}
+            ></Route>
+          </Route>
         </Route>
       </Routes>
     </div>

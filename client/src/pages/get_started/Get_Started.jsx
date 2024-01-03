@@ -11,6 +11,7 @@ export default function Get_Started() {
   const navigate = useNavigate();
 
   useEffect(() => {
+    dispatch(setFoundersAssessmentStarted(false));
     dispatch(setAssessmentProgress(2.38));
   }, []);
 

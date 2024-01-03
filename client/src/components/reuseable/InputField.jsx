@@ -7,6 +7,7 @@ export default function InputField({
   id,
   onChange,
   placeholder,
+  required,
 }) {
   return (
     <div className="grid gap-2">
@@ -18,8 +19,9 @@ export default function InputField({
         name={name}
         id={id}
         onChange={onChange}
-        className="py-5 px-4 md:px-8 rounded-[20px] border-[3px] border-[#EAE5FA]"
+        className="py-4 px-4 md:px-8 rounded-[20px] border-[3px] border-[#EAE5FA]"
         placeholder={placeholder}
+        required={required}
       />
     </div>
   );

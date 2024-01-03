@@ -3,9 +3,11 @@ import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 export default function Nav_Two() {
-  const assessmentProgress = useSelector(
-    (state) => state.app.assessmentProgress
-  );
+  const {
+    assessmentProgress,
+    fundersAssessmentProgress,
+    fundersAssessmentStarted,
+  } = useSelector((state) => state.app);
   return (
     <div className="fixed top-0 w-full z-40 [font-family:'Roboto',sans-serif;] bg-white">
       <div className="grid gap-4 w-[min(82rem,100%)] mx-auto px-4 md:px-[60px] py-5">
@@ -30,7 +32,12 @@ export default function Nav_Two() {
         </div>
         <div className="bg-[#F8F8F8] grid h-2 rounded-lg overflow-x-hidden">
           <div
-            style={{ width: assessmentProgress + "%" }}
+            style={{
+              width:
+                (fundersAssessmentStarted
+                  ? fundersAssessmentProgress
+                  : assessmentProgress) + "%",
+            }}
             className={`bg-Hero-Purple rounded-lg`}
           ></div>
         </div>

@@ -2,7 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   assessmentProgress: 0,
+  fundersAssessmentProgress: 0,
   foundersAssessmentStarted: false,
+  fundersAssessmentStarted: false,
   assessmentFile: [
     {
       add_more: false,
@@ -569,6 +571,217 @@ const initialState = {
       ],
     },
   ],
+  fundersAssessmentFile: [
+    {
+      add_more: false,
+      number: "01",
+      qstn: "We fund",
+      options: [
+        "Pre-seed",
+        "Seed",
+        "Series A",
+        "Series B and beyond",
+        "Mezzanine Debt",
+        "Private Equity",
+      ],
+    },
+    {
+      add_more: false,
+      number: "02",
+      qstn: "Our business is in this stage",
+      options: [
+        "Early Prototype",
+        "Advanced Prototype",
+        "Early Revenue",
+        "Profitability",
+        "Scale",
+        "Middle Market",
+        "Maturity",
+      ],
+    },
+    {
+      add_more: false,
+      number: "03",
+      qstn: "Our business is in this stage",
+      options: [
+        "Early Prototype",
+        "Advanced Prototype",
+        "Early Revenue",
+        "Profitability",
+        "Scale",
+        "Middle Market",
+        "Maturity",
+      ],
+    },
+    {
+      add_more: false,
+      number: "04",
+      qstn: "Our business is in this stage",
+      options: [
+        "Early Prototype",
+        "Advanced Prototype",
+        "Early Revenue",
+        "Profitability",
+        "Scale",
+        "Middle Market",
+        "Maturity",
+      ],
+    },
+    {
+      add_more: false,
+      number: "05",
+      qstn: "Our business is in this stage",
+      options: [
+        "Early Prototype",
+        "Advanced Prototype",
+        "Early Revenue",
+        "Profitability",
+        "Scale",
+        "Middle Market",
+        "Maturity",
+      ],
+    },
+    {
+      add_more: false,
+      number: "06",
+      qstn: "Our business is in this stage",
+      options: [
+        "Early Prototype",
+        "Advanced Prototype",
+        "Early Revenue",
+        "Profitability",
+        "Scale",
+        "Middle Market",
+        "Maturity",
+      ],
+    },
+    {
+      add_more: false,
+      number: "07",
+      qstn: "Our business is in this stage",
+      options: [
+        "Early Prototype",
+        "Advanced Prototype",
+        "Early Revenue",
+        "Profitability",
+        "Scale",
+        "Middle Market",
+        "Maturity",
+      ],
+    },
+    {
+      add_more: false,
+      number: "08",
+      qstn: "Our business is in this stage",
+      options: [
+        "Early Prototype",
+        "Advanced Prototype",
+        "Early Revenue",
+        "Profitability",
+        "Scale",
+        "Middle Market",
+        "Maturity",
+      ],
+    },
+    {
+      add_more: false,
+      number: "09",
+      qstn: "Our business is in this stage",
+      options: [
+        "Early Prototype",
+        "Advanced Prototype",
+        "Early Revenue",
+        "Profitability",
+        "Scale",
+        "Middle Market",
+        "Maturity",
+      ],
+    },
+    {
+      add_more: false,
+      number: "10",
+      qstn: "Our business is in this stage",
+      options: [
+        "Early Prototype",
+        "Advanced Prototype",
+        "Early Revenue",
+        "Profitability",
+        "Scale",
+        "Middle Market",
+        "Maturity",
+      ],
+    },
+    {
+      add_more: false,
+      number: "11",
+      qstn: "Our business is in this stage",
+      options: [
+        "Early Prototype",
+        "Advanced Prototype",
+        "Early Revenue",
+        "Profitability",
+        "Scale",
+        "Middle Market",
+        "Maturity",
+      ],
+    },
+    {
+      add_more: false,
+      number: "12",
+      qstn: "Our business is in this stage",
+      options: [
+        "Early Prototype",
+        "Advanced Prototype",
+        "Early Revenue",
+        "Profitability",
+        "Scale",
+        "Middle Market",
+        "Maturity",
+      ],
+    },
+    {
+      add_more: false,
+      number: "13",
+      qstn: "Our business is in this stage",
+      options: [
+        "Early Prototype",
+        "Advanced Prototype",
+        "Early Revenue",
+        "Profitability",
+        "Scale",
+        "Middle Market",
+        "Maturity",
+      ],
+    },
+    {
+      add_more: false,
+      number: "14",
+      qstn: "Our business is in this stage",
+      options: [
+        "Early Prototype",
+        "Advanced Prototype",
+        "Early Revenue",
+        "Profitability",
+        "Scale",
+        "Middle Market",
+        "Maturity",
+      ],
+    },
+    {
+      add_more: false,
+      number: "15",
+      qstn: "Our business is in this stage",
+      options: [
+        "Early Prototype",
+        "Advanced Prototype",
+        "Early Revenue",
+        "Profitability",
+        "Scale",
+        "Middle Market",
+        "Maturity",
+      ],
+    },
+  ],
 };
 
 export const AppSlice = createSlice({
@@ -582,10 +795,24 @@ export const AppSlice = createSlice({
     },
     setFoundersAssessmentStarted: (state, action) => {
       state.foundersAssessmentStarted = action.payload;
+      state.fundersAssessmentStarted = false;
+    },
+    setFundersAssessmentProgress: (state, action) => {
+      if (state.fundersAssessmentProgress < 100) {
+        state.fundersAssessmentProgress = action.payload;
+      }
+    },
+    setFundersAssessmentStarted: (state, action) => {
+      state.fundersAssessmentStarted = action.payload;
+      state.foundersAssessmentStarted = false;
     },
   },
 });
 
-export const { setAssessmentProgress, setFoundersAssessmentStarted } =
-  AppSlice.actions;
+export const {
+  setAssessmentProgress,
+  setFoundersAssessmentStarted,
+  setFundersAssessmentProgress,
+  setFundersAssessmentStarted,
+} = AppSlice.actions;
 export default AppSlice.reducer;

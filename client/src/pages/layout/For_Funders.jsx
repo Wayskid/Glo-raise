@@ -1,8 +1,13 @@
 import React from "react";
 import SubscriberForm from "../../components/SubscriberForm";
 import star from "../../assets/Icon/Star Six Points.png";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setFundersAssessmentStarted } from "../../store/features/appSlice";
 
 export default function For_Funders() {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   return (
     <div className="">
       <section className="bg-Nature">
@@ -23,7 +28,10 @@ export default function For_Funders() {
               scholars
             </p>
             <button
-              onClick={() => navigate("/get_started")}
+              onClick={() => {
+                navigate("/get_started/funders");
+                dispatch(setFundersAssessmentStarted(true));
+              }}
               className="bg-Dark px-[36px] py-5 text-white [font-family:'Roboto',sans-serif;] mr-auto"
             >
               Complete Interests Radar
@@ -118,7 +126,10 @@ export default function For_Funders() {
             strategy globally
           </p>
           <button
-            onClick={() => navigate("/get_started")}
+            onClick={() => {
+              navigate("/get_started/funders");
+              dispatch(setFundersAssessmentStarted(true));
+            }}
             className="bg-Dark px-[36px] py-5 text-white [font-family:'Roboto',sans-serif;] mx-auto"
           >
             Interests Radar

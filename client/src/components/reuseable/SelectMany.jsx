@@ -7,6 +7,7 @@ export default function SelectMany({
   choice,
   answer,
   next,
+  forFunders,
 }) {
   const navigate = useNavigate();
   return (
@@ -16,18 +17,37 @@ export default function SelectMany({
           <p className="[font-family:'Instrument_Serif',serif;] text-[26px] text-white absolute">
             {assessmentNumber}
           </p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="62"
-            height="62"
-            viewBox="0 0 62 62"
-            fill="none"
-          >
-            <path
-              d="M28.1716 1.82842C29.7337 0.266327 32.2663 0.26633 33.8284 1.82843L60.1716 28.1716C61.7337 29.7337 61.7337 32.2663 60.1716 33.8284L33.8284 60.1716C32.2663 61.7337 29.7337 61.7337 28.1716 60.1716L1.82842 33.8284C0.266327 32.2663 0.26633 29.7337 1.82843 28.1716L28.1716 1.82842Z"
-              fill="#051C09"
-            />
-          </svg>
+          {forFunders ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="62"
+              height="46"
+              viewBox="0 0 62 46"
+              fill="none"
+            >
+              <ellipse
+                cx="31"
+                cy="23.0009"
+                rx="32"
+                ry="20"
+                transform="rotate(-24.5455 31 23.0009)"
+                fill="#051C09"
+              />
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="62"
+              height="62"
+              viewBox="0 0 62 62"
+              fill="none"
+            >
+              <path
+                d="M28.1716 1.82842C29.7337 0.266327 32.2663 0.26633 33.8284 1.82843L60.1716 28.1716C61.7337 29.7337 61.7337 32.2663 60.1716 33.8284L33.8284 60.1716C32.2663 61.7337 29.7337 61.7337 28.1716 60.1716L1.82842 33.8284C0.266327 32.2663 0.26633 29.7337 1.82843 28.1716L28.1716 1.82842Z"
+                fill="#051C09"
+              />
+            </svg>
+          )}
         </div>
         <div className="grid gap-4">
           <p className="text-2xl md:text-[38px] font-semibold text-Dark text-center leading-snug">
@@ -66,7 +86,11 @@ export default function SelectMany({
             Previous
           </button>
           <button
-            onClick={() => navigate(`../../get_started/${next}`)}
+            onClick={() =>
+              forFunders
+                ? navigate(`../../../get_started/funders/${next}`)
+                : navigate(`../../get_started/${next}`)
+            }
             className="py-2 px-4 bg-Dark text-white rounded-[4px] border-2 border-Dark"
           >
             Continue

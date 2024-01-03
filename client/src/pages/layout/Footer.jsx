@@ -1,7 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { setFundersAssessmentProgress } from "../../store/features/appSlice.js";
+import { useDispatch } from "react-redux";
 
 export default function Footer() {
+  const dispatch = useDispatch();
   return (
     <div className="bg-Dark">
       <div className="w-[min(80rem,100%)] py-20 px-4 md:px-[60px] lg:px-[132px] mx-auto">
@@ -24,19 +27,33 @@ export default function Footer() {
           </NavLink>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-0 items-start w-full">
             <div className="grid gap-[10px]">
-              <NavLink to="/" className="text-Lime text-xl">How it Works</NavLink>
-              <NavLink to="/get_started" className="text-white">
+              <NavLink to="/" className="text-Lime text-xl">
+                How it Works
+              </NavLink>
+              <NavLink
+                to="/get_started"
+                onClick={() => dispatch(setFoundersAssessmentStarted(true))}
+                className="text-white"
+              >
                 Get Started
               </NavLink>
             </div>
             <div className="grid gap-[10px]">
-              <NavLink to="/for_funders" className="text-Lime text-xl">Funders</NavLink>
-              <NavLink to="/interest_radar" className="text-white">
+              <NavLink to="/for_funders" className="text-Lime text-xl">
+                Funders
+              </NavLink>
+              <NavLink
+                to="/get_started/funders"
+                onClick={() => dispatch(setFundersAssessmentStarted(true))}
+                className="text-white"
+              >
                 Interest Radar
               </NavLink>
             </div>
             <div className="grid gap-[10px]">
-              <NavLink to="/about" className="text-Lime text-xl">About Us</NavLink>
+              <NavLink to="/about" className="text-Lime text-xl">
+                About Us
+              </NavLink>
               <NavLink to="/legal" className="text-white">
                 Legal
               </NavLink>
