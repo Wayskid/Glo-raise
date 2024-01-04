@@ -87,7 +87,7 @@ export default function SelectMany({
               />
               <div className="w-6 h-6 bg-[#2222221A] peer-checked/radio:bg-Dark z-20 shrink-0"></div>
               <input
-                className="py-2 px-4 rounded-[8px] bg-white text-gray-500"
+                className="py-2 px-4 rounded-[8px] bg-white text-gray-500 w-full"
                 placeholder="Other (please specify)"
               />
             </div>

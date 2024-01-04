@@ -23,16 +23,7 @@ const initialState = {
     {
       add_more: false,
       number: "02",
-      qstn: "Our business is in this stage",
-      options: [
-        "Early Prototype",
-        "Advanced Prototype",
-        "Early Revenue",
-        "Profitability",
-        "Scale",
-        "Middle Market",
-        "Maturity",
-      ],
+      qstn: "We're headquartered in",
     },
     {
       add_more: false,
@@ -588,16 +579,7 @@ const initialState = {
     {
       add_more: false,
       number: "02",
-      qstn: "Our business is in this stage",
-      options: [
-        "Early Prototype",
-        "Advanced Prototype",
-        "Early Revenue",
-        "Profitability",
-        "Scale",
-        "Middle Market",
-        "Maturity",
-      ],
+      qstn: "These are the geographies where we focus",
     },
     {
       add_more: false,
@@ -617,11 +599,7 @@ const initialState = {
       add_more: false,
       number: "04",
       qstn: "We prefer businesses that focus on",
-      options: [
-        "Volume - they work hard to charge less",
-        "Pemium - they work hard to charge more",
-        "Both",
-      ],
+      options: ["Totally like us", "Mostly like us", "Somewhat like us"],
     },
     {
       add_more: true,
@@ -691,18 +669,13 @@ const initialState = {
         "Convenience",
         "Choice",
         "Vertical Integration",
-        "Status",
       ],
     },
     {
       add_more: false,
       number: "10",
       qstn: "We're most interested in businesses that",
-      options: [
-        "Deliver the same value at a lower cost  ",
-        "Deliver more value for the same cost",
-        "Deliver much more value at a higher cost",
-      ],
+      options: ["Totally like us", "Mostly like us", "Somewhat like us"],
     },
     {
       add_more: false,
@@ -737,7 +710,7 @@ const initialState = {
         "Convenience",
         "Choice",
         "Vertical integration",
-        "Status",
+        "Don't know",
       ],
     },
     {
