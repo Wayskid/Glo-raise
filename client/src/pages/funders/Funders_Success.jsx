@@ -12,7 +12,7 @@ export default function Funders_Success() {
       <p className="text-[38px] md:text-[58px] text-Dark font-semibold leading-snug text-center">
         Thank You
       </p>
-      <div className="grid gap-6 w-[min(740px,100%)] mx-auto">
+      <div className="grid gap-6 w-[min(800px,100%)] mx-auto">
         <p className="text-xl">
           A member of the Glo-raise leadership team will reach out to you
           shortly for a brief virtual overview of the matching experience.

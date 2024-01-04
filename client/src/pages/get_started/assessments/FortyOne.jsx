@@ -14,7 +14,7 @@ export default function FortyOne() {
   }, []);
 
   return (
-    <div className="w-[min(740px,100%)] mx-auto pt-[40px] pb-[72px] md:pt-[60px] md:pb-[100px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px]">
+    <div className="w-[min(800px,100%)] mx-auto pt-[40px] pb-[72px] md:pt-[60px] md:pb-[100px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px]">
       <div className="border-2 border-Dark rounded-[20px] py-[60px] px-4 lg:px-[12px] relative grid gap-8 md:gap-12">
         <div className="absolute grid place-items-center -top-[32.3px] justify-self-center">
           <p className="[font-family:'Instrument_Serif',serif;] text-[26px] text-white absolute">
