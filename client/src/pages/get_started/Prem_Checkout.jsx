@@ -152,7 +152,7 @@ export default function Prem_Checkout() {
           </p>
         </div>
       </div>
-      <div className="border-2 border-Dark rounded-[20px] py-[60px] px-4 md:px-[48px] relative grid gap-8 md:gap-12">
+      <form className="border-2 border-Dark rounded-[20px] py-[60px] px-4 md:px-[48px] relative grid gap-8 md:gap-12">
         <div className="absolute grid place-items-center -top-[37px] justify-self-center">
           <p className="[font-family:'Instrument_Serif',serif;] text-[26px] text-white absolute">
             Premium
@@ -196,7 +196,7 @@ export default function Prem_Checkout() {
         >
           Proceed to checkout
         </button>
-      </div>
+      </form>
     </div>
   );
 }

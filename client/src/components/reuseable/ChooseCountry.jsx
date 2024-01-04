@@ -1,15 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
-export default function SelectMany({
+export default function ChooseCountry({
   assessmentNumber,
   assessment,
   choice,
-  answer,
   next,
   forFunders,
 }) {
   const navigate = useNavigate();
+  const [countries, setCountries] = useState([]);
+  const [countrySelected, setCountrySelected] = useState("");
+
+  useEffect(() => {
+    async function getCountries() {
+      const { data } = await axios.get(
+        "https://countriesnow.space/api/v0.1/countries/states"
+      );
+      setCountries(data.data);
+    }
+    getCountries();
+  }, []);
+
   return (
     <div className="w-[min(740px,100%)] mx-auto pt-[40px] pb-[72px] md:pt-[60px] md:pb-[100px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px]">
       <div className="border-2 border-Dark rounded-[20px] py-[56px] px-4 lg:px-[12px] relative grid gap-8 md:gap-12">
@@ -49,48 +62,32 @@ export default function SelectMany({
             </svg>
           )}
         </div>
+        <p className="text-2xl md:text-[38px] font-semibold text-Dark text-center leading-snug">
+          {assessment.qstn}
+        </p>
         <div className="grid gap-4">
-          <p className="text-2xl md:text-[38px] font-semibold text-Dark text-center leading-snug">
-            {assessment.qstn}
-          </p>
-          <p className="text-Dark text-center mb">select all that apply</p>
-        </div>
-        <div className="grid gap-4">
-          {assessment.options.map((option) => (
-            <div
-              key={option}
-              className="px-6 flex items-center gap-4 bg-[#F8F8F8] rounded-[20px] relative overflow-hidden"
-            >
-              <input
-                type="checkbox"
-                className="hidden peer/radio "
-                id={option}
-                name={assessment.qstn}
-              />
-              <div className="w-6 h-6 bg-[#2222221A] peer-checked/radio:bg-Dark z-20"></div>
-              <label
-                htmlFor={option}
-                className="py-4 text-Dark w-[calc(100%-2.5rem)] z-20"
-              >
-                {option}
-              </label>
-              <div className="absolute h-full w-full peer-checked/radio:bg-[#E5DFFA] z-10 top-0 left-0"></div>
-            </div>
-          ))}
-          {assessment.add_more === true && (
-            <div className="px-6 py-2 flex items-center gap-4 bg-[#F8F8F8] rounded-[20px] relative overflow-hidden">
-              <input
-                type="checkbox"
-                className="hidden peer/radio "
-                id="others"
-                name="others"
-              />
-              <div className="w-6 h-6 bg-[#2222221A] peer-checked/radio:bg-Dark z-20 shrink-0"></div>
-              <input
-                className="py-2 px-4 rounded-[8px] bg-white text-gray-500"
-                placeholder="Other (please specify)"
-              />
-            </div>
+          <select
+            name={assessment.qstn}
+            id={assessment.qstn}
+            onChange={(e) => setCountrySelected(e.target.value)}
+            className="w-full"
+          >
+            {countries.length &&
+              countries.map((oneCountry, index) => (
+                <option key={oneCountry.name + index} value={oneCountry.name}>
+                  {oneCountry.name}
+                </option>
+              ))}
+          </select>
+          {countrySelected === "United States" && (
+            <select name="USState" id="USState">
+              {countries.length &&
+                countries[232].states.map((usState, index) => (
+                  <option key={index} value={usState.name}>
+                    {usState.name}
+                  </option>
+                ))}
+            </select>
           )}
         </div>
         <div className="flex mx-auto gap-4">

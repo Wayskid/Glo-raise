@@ -110,7 +110,7 @@ export default function Free_Checkout() {
             />
           </svg>
         </div>
-        <div className="grid gap-12">
+        <form className="grid gap-12">
           <p className="text-[24px] md:text-[38px] text-center font-semibold border2 border-Dark">
             Fill in your info to get your raw score
           </p>
@@ -126,7 +126,7 @@ export default function Free_Checkout() {
               required="required"
             />
           ))}
-        </div>
+        </form>
         <button
           onClick={() => navigate(`../../get_started/founders_success`)}
           className="p-4 bg-Dark text-white rounded-[4px] border-2 border-Dark md:mx-auto mx-[unset]"

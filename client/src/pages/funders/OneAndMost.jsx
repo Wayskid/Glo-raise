@@ -26,7 +26,11 @@ export default function OneAndMost() {
           assessment={assessment}
           assessmentNumber={fundersAssessmentIndex}
           forFunders={true}
-          next={("0" + (+fundersAssessmentIndex + 1)).slice(-2)}
+          next={
+            fundersAssessmentIndex < 15
+              ? ("0" + (+fundersAssessmentIndex + 1)).slice(-2)
+              : "funders_form"
+          }
         />
       </div>
     )

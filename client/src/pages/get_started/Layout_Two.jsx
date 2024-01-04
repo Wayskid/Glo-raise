@@ -5,7 +5,7 @@ import Footer_Two from "./Footer_Two";
 
 export default function Layout_Two() {
   return (
-    <div>
+    <div className="h-full">
       <Nav_Two />
       <div className="mt-[93px]">
         <Outlet />

@@ -11,7 +11,7 @@ export default function SelectOneRadio({
 }) {
   const navigate = useNavigate();
   return (
-    <div className="w-[min(740px,100%)] mx-auto pt-[56px] pb-[72px] md:pt-[80px] md:pb-[100px] lg:py-[90px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px]">
+    <div className="w-[min(740px,100%)] mx-auto pt-[40px] pb-[72px] md:pt-[60px] md:pb-[100px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px]">
       <div className="border-2 border-Dark rounded-[20px] py-[56px] px-4 lg:px-[12px] relative grid gap-8 md:gap-12">
         <div className="absolute grid place-items-center -top-[32.3px] justify-self-center">
           <p className="[font-family:'Instrument_Serif',serif;] text-[26px] text-white absolute">
@@ -77,6 +77,21 @@ export default function SelectOneRadio({
               <div className="absolute h-full w-full peer-checked/radio:bg-[#E5DFFA] z-10 top-0 left-0"></div>
             </div>
           ))}
+          {assessment.add_more === true && (
+            <div className="px-6 py-2 flex items-center gap-4 bg-[#F8F8F8] rounded-[20px] relative overflow-hidden">
+              <input
+                type="checkbox"
+                className="hidden peer/radio "
+                id="others"
+                name="others"
+              />
+              <div className="w-6 h-6 bg-[#2222221A] peer-checked/radio:bg-Dark z-20 shrink-0"></div>
+              <input
+                className="py-2 px-4 rounded-[8px] bg-white text-gray-500"
+                placeholder="Other (please specify)"
+              />
+            </div>
+          )}
         </div>
         <div className="flex mx-auto gap-4">
           <button

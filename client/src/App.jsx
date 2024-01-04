@@ -12,12 +12,12 @@ import ThreeToTwentyOne from "./pages/get_started/assessments/ThreeToTwentyOne";
 import TwentyTwo from "./pages/get_started/assessments/TwentyTwo";
 import TwentyThree from "./pages/get_started/assessments/TwentyThree";
 import Thirteen from "./pages/get_started/assessments/Thirteen";
+import Thirteen2 from "./pages/funders/Thirteen";
 import TwentyFour from "./pages/get_started/assessments/TwentyFour";
 import TwentyFive from "./pages/get_started/assessments/TwentyFive";
 import TwentyEight from "./pages/get_started/assessments/TwentyEight";
 import TwentyNine from "./pages/get_started/assessments/TwentyNine";
 import ThirtyOne from "./pages/get_started/assessments/ThirtyOne";
-import ThirtyTwo from "./pages/get_started/assessments/ThirtyThree";
 import ThirtyThree from "./pages/get_started/assessments/ThirtyThree";
 import ThirtyFive from "./pages/get_started/assessments/ThirtyFive";
 import ThirtySix from "./pages/get_started/assessments/ThirtySix";
@@ -31,6 +31,13 @@ import Free_Checkout from "./pages/get_started/Free_Checkout";
 import Free_Success from "./pages/get_started/Free_Success";
 import Interest_Radar from "./pages/funders/Interest_Radar";
 import OneAndMost from "./pages/funders/OneAndMost";
+import Four from "./pages/funders/Four";
+import Ten from "./pages/funders/Ten";
+import Nine from "./pages/funders/Nine";
+import Funders_Form from "./pages/funders/Funders_Form";
+import Funders_Success from "./pages/funders/Funders_Success";
+import Two2 from "./pages/funders/Two";
+import Two from "./pages/get_started/assessments/Two";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -48,9 +55,10 @@ export default function App() {
         </Route>
         <Route path="/get_started" element={<Layout_Two />}>
           <Route index element={<Get_Started />}></Route>
-          <Route path="01" element={<One />}></Route>
+          {/* <Route path="01" element={<One />}></Route> */}
           {/*Remember to remove 1 */}
           <Route path=":assessmentIndex" element={<ThreeToTwentyOne />}></Route>
+          <Route path="02" element={<Two />}></Route>
           <Route path="13" element={<Thirteen />}></Route>
           <Route path="22" element={<TwentyTwo />}></Route>
           <Route path="23" element={<TwentyThree />}></Route>
@@ -76,6 +84,13 @@ export default function App() {
               path=":fundersAssessmentIndex"
               element={<OneAndMost />}
             ></Route>
+            <Route path="02" element={<Two2 />}></Route>
+            <Route path="04" element={<Four />}></Route>
+            <Route path="09" element={<Nine />}></Route>
+            <Route path="10" element={<Ten />}></Route>
+            <Route path="13" element={<Thirteen2 />}></Route>
+            <Route path="funders_form" element={<Funders_Form />}></Route>
+            <Route path="funders_success" element={<Funders_Success />}></Route>
           </Route>
         </Route>
       </Routes>

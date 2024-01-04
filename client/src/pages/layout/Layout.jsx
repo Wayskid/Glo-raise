@@ -15,7 +15,7 @@ export default function Layout() {
     dispatch(setFoundersAssessmentStarted(false));
   }, []);
   return (
-    <div>
+    <div className="h-full">
       <Nav />
       <div className="mt-[93px]">
         <Outlet />
