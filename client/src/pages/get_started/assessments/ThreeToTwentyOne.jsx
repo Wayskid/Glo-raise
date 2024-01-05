@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setAssessmentProgress } from "../../../store/features/appSlice.js";
 import { useParams } from "react-router-dom";
@@ -14,6 +14,7 @@ export default function ThreeToTwentyOne() {
   useEffect(() => {
     dispatch(setAssessmentProgress(2.38 * (+assessmentIndex + 1)));
   }, [assessmentIndex]);
+
 
   return (
     assessment && (

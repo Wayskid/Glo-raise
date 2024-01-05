@@ -50,8 +50,8 @@ export default function About() {
                 className="w-[15px] base:w-[29px]"
               >
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M3.48795e-07 21C11.5274 21 20.9359 11.3868 20.9359 0L28.9359 3.5059e-07C28.9359 10.4668 23.2186 19.8411 14.6759 24.9447C23.2059 29.9286 28.9359 39.1741 28.9359 50L20.9359 50C20.9359 38.1634 11.5796 29 0 29L3.48795e-07 21Z"
                   fill="#B79F71"
                 />
@@ -79,8 +79,8 @@ export default function About() {
                 className="w-[15px] base:w-[29px]"
               >
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M29.0001 21C17.4727 21 8.06421 11.3868 8.06421 0H0.064209C0.064209 10.4668 5.78146 19.8411 14.3242 24.9447C5.79418 29.9286 0.0642097 39.1741 0.064211 50H8.06421C8.06421 38.1634 17.4205 29 29.0001 29L29.0001 21Z"
                   fill="#B79F71"
                 />

@@ -1,15 +1,33 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setAssessmentEvaluation } from "../../store/features/appSlice";
+import appContext from "../../context/AppContext";
 
 export default function SelectOneRadio({
   assessmentNumber,
   assessment,
-  choice,
-  answer,
   next,
   forFunders,
 }) {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const assessmentEvaluation = useSelector(
+    (state) => state.app.assessmentEvaluation
+  );
+  const { choice, setChoice, handleChange } = useContext(appContext);
+
+  useEffect(() => {
+    function getValue() {
+      const value = assessmentEvaluation.find(
+        (v) => v.qstnNumber === assessmentNumber
+      );
+      console.log(value);
+      setChoice({ ...choice, answer: value?.answer });
+    }
+    getValue();
+  }, [assessment]);
+
   return (
     <div className="w-[min(800px,100%)] mx-auto pt-[40px] pb-[72px] md:pt-[60px] md:pb-[100px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px]">
       <div className="border-2 border-Dark rounded-[20px] py-[56px] px-4 lg:px-[12px] relative grid gap-8 md:gap-12">
@@ -66,6 +84,9 @@ export default function SelectOneRadio({
                 className="hidden peer/radio "
                 id={option}
                 name={assessment.qstn}
+                checked={choice.answer === option}
+                value={option}
+                onChange={(e) => handleChange(e, assessment)}
               />
               <div className="w-6 h-6 rounded-full bg-[#2222221A] peer-checked/radio:bg-Dark z-20"></div>
               <label
