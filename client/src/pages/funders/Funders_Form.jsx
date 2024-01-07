@@ -84,9 +84,9 @@ export default function Funders_Form() {
               <path
                 d="M8.63672 13.0734L11.802 16.2387L18.1324 9.9082"
                 stroke="white"
-                stroke-width="2.7449"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2.7449"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
             <label
@@ -121,9 +121,9 @@ export default function Funders_Form() {
               <path
                 d="M8.63672 13.0734L11.802 16.2387L18.1324 9.9082"
                 stroke="white"
-                stroke-width="2.7449"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2.7449"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
             <label
@@ -158,9 +158,9 @@ export default function Funders_Form() {
               <path
                 d="M8.63672 13.0734L11.802 16.2387L18.1324 9.9082"
                 stroke="white"
-                stroke-width="2.7449"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2.7449"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
             <label

@@ -1,7 +1,6 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { setAssessmentEvaluation } from "../../store/features/appSlice";
+import { useSelector } from "react-redux";
 import appContext from "../../context/AppContext";
 
 export default function SelectOneRadio({
@@ -11,7 +10,6 @@ export default function SelectOneRadio({
   forFunders,
 }) {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
   const assessmentEvaluation = useSelector(
     (state) => state.app.assessmentEvaluation
   );
@@ -22,8 +20,7 @@ export default function SelectOneRadio({
       const value = assessmentEvaluation.find(
         (v) => v.qstnNumber === assessmentNumber
       );
-      console.log(value);
-      setChoice({ ...choice, answer: value?.answer });
+      setChoice(value?.answer);
     }
     getValue();
   }, [assessment]);
@@ -77,25 +74,25 @@ export default function SelectOneRadio({
           {assessment.options.map((option) => (
             <div
               key={option}
-              className="px-6 flex items-center gap-4 bg-[#F8F8F8] rounded-[20px] relative overflow-hidden"
+              className="px-6 flex items-center gap-4 bg-[#F8F8F8] rounded-[20px] relative overflow-hidden cursor-pointer"
             >
               <input
                 type="radio"
                 className="hidden peer/radio "
                 id={option}
                 name={assessment.qstn}
-                checked={choice.answer === option}
+                checked={choice === option}
                 value={option}
                 onChange={(e) => handleChange(e, assessment)}
               />
               <div className="w-6 h-6 rounded-full bg-[#2222221A] peer-checked/radio:bg-Dark z-20"></div>
               <label
                 htmlFor={option}
-                className="py-4 text-Dark w-[calc(100%-2.5rem)] z-20"
+                className="py-4 text-Dark w-[calc(100%-2.5rem)] z-20 cursor-pointer"
               >
                 {option}
               </label>
-              <div className="absolute h-full w-full peer-checked/radio:bg-[#E5DFFA] z-10 top-0 left-0"></div>
+              <div className="absolute h-full w-full peer-checked/radio:bg-[#E5DFFA] z-10 top-0 left-0 cursor-pointer"></div>
             </div>
           ))}
           {assessment.add_more === true && (

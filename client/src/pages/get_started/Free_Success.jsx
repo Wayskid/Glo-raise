@@ -20,7 +20,7 @@ export default function Free_Success() {
         <path
           d="M15 339.225L170.772 183.452L326.545 339.225M15 184.772L170.772 29L326.545 184.772"
           stroke="#5A43F0"
-          stroke-width="40"
+          strokeWidth="40"
         />
       </svg>
       <p className="text-[38px] md:text-[58px] font-semibold">
@@ -35,21 +35,17 @@ export default function Free_Success() {
             viewBox="0 0 40 40"
             fill="none"
           >
-            <path d="M19.9961 0V40" stroke="#5A43F0" stroke-width="4" />
+            <path d="M19.9961 0V40" stroke="#5A43F0" strokeWidth="4" />
             <path
               d="M34.1094 5.88965L5.8251 34.1739"
               stroke="#5A43F0"
-              stroke-width="4"
+              strokeWidth="4"
             />
-            <path
-              d="M40 20L-1.10641e-06 20"
-              stroke="#5A43F0"
-              stroke-width="4"
-            />
+            <path d="M40 20L-1.10641e-06 20" stroke="#5A43F0" strokeWidth="4" />
             <path
               d="M34.1094 34.1104L5.8251 5.82608"
               stroke="#5A43F0"
-              stroke-width="4"
+              strokeWidth="4"
             />
           </svg>
           <p className="text-xl">
@@ -65,21 +61,17 @@ export default function Free_Success() {
             viewBox="0 0 40 40"
             fill="none"
           >
-            <path d="M19.9961 0V40" stroke="#5A43F0" stroke-width="4" />
+            <path d="M19.9961 0V40" stroke="#5A43F0" strokeWidth="4" />
             <path
               d="M34.1094 5.88965L5.8251 34.1739"
               stroke="#5A43F0"
-              stroke-width="4"
+              strokeWidth="4"
             />
-            <path
-              d="M40 20L-1.10641e-06 20"
-              stroke="#5A43F0"
-              stroke-width="4"
-            />
+            <path d="M40 20L-1.10641e-06 20" stroke="#5A43F0" strokeWidth="4" />
             <path
               d="M34.1094 34.1104L5.8251 5.82608"
               stroke="#5A43F0"
-              stroke-width="4"
+              strokeWidth="4"
             />
           </svg>
           <p className="text-xl">
@@ -95,21 +87,17 @@ export default function Free_Success() {
             viewBox="0 0 40 40"
             fill="none"
           >
-            <path d="M19.9961 0V40" stroke="#5A43F0" stroke-width="4" />
+            <path d="M19.9961 0V40" stroke="#5A43F0" strokeWidth="4" />
             <path
               d="M34.1094 5.88965L5.8251 34.1739"
               stroke="#5A43F0"
-              stroke-width="4"
+              strokeWidth="4"
             />
-            <path
-              d="M40 20L-1.10641e-06 20"
-              stroke="#5A43F0"
-              stroke-width="4"
-            />
+            <path d="M40 20L-1.10641e-06 20" stroke="#5A43F0" strokeWidth="4" />
             <path
               d="M34.1094 34.1104L5.8251 5.82608"
               stroke="#5A43F0"
-              stroke-width="4"
+              strokeWidth="4"
             />
           </svg>
           <p className="text-xl">
@@ -125,21 +113,17 @@ export default function Free_Success() {
             viewBox="0 0 40 40"
             fill="none"
           >
-            <path d="M19.9961 0V40" stroke="#5A43F0" stroke-width="4" />
+            <path d="M19.9961 0V40" stroke="#5A43F0" strokeWidth="4" />
             <path
               d="M34.1094 5.88965L5.8251 34.1739"
               stroke="#5A43F0"
-              stroke-width="4"
+              strokeWidth="4"
             />
-            <path
-              d="M40 20L-1.10641e-06 20"
-              stroke="#5A43F0"
-              stroke-width="4"
-            />
+            <path d="M40 20L-1.10641e-06 20" stroke="#5A43F0" strokeWidth="4" />
             <path
               d="M34.1094 34.1104L5.8251 5.82608"
               stroke="#5A43F0"
-              stroke-width="4"
+              strokeWidth="4"
             />
           </svg>
           <p className="text-xl">

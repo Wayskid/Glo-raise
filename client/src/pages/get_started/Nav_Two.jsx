@@ -28,7 +28,9 @@ export default function Nav_Two() {
               />
             </svg>
           </NavLink>
-          <p className="md:text-xl opacity-60 text-Dark">GROWTH Assessment</p>
+          <p className="md:text-xl opacity-60 text-Dark">
+            {fundersAssessmentStarted ? "INTERESTS RADAR" : "GROWTH Assessment"}
+          </p>
         </div>
         <div className="bg-[#F8F8F8] grid h-2 rounded-lg overflow-x-hidden">
           <div

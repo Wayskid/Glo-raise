@@ -446,7 +446,7 @@ export default function Home() {
                     <path
                       d="M0.5 31.499H35L58 54.499L109.5 2.99902L138 31.499L152 17.499L166 31.499H184.5"
                       stroke="#024F4A"
-                      stroke-width="4"
+                      strokeWidth="4"
                     />
                   </svg>
                   <div className="flex justify-between items-center">
@@ -472,17 +472,17 @@ export default function Home() {
                           <path
                             d="M1.5 84.4321L77.5 8.43213"
                             stroke="#02B68A"
-                            stroke-width="4"
+                            strokeWidth="4"
                           />
                           <path
                             d="M78.6382 7.46851C74.4799 11.6268 67.691 11.5799 63.6394 7.52827"
                             stroke="#02B68A"
-                            stroke-width="4"
+                            strokeWidth="4"
                           />
                           <path
                             d="M78.6382 7.4685C74.4799 11.6268 74.3767 18.2656 78.5784 22.4673"
                             stroke="#02B68A"
-                            stroke-width="4"
+                            strokeWidth="4"
                           />
                         </svg>
                       </div>
@@ -514,32 +514,32 @@ export default function Home() {
                     cy="94.0564"
                     r="89.0896"
                     stroke="#024F4A"
-                    stroke-width="8"
+                    strokeWidth="8"
                   />
                   <path
                     d="M93.0566 4.51367V4.51367C42.5767 53.5375 42.5767 134.576 93.0566 183.6V183.6"
                     stroke="#024F4A"
-                    stroke-width="8"
+                    strokeWidth="8"
                   />
                   <path
                     d="M93.0566 183.6V183.6C144.208 134.862 144.208 53.2517 93.0566 4.51354V4.51354"
                     stroke="#024F4A"
-                    stroke-width="8"
+                    strokeWidth="8"
                   />
                   <path
                     d="M6.17285 94.0566H182.6"
                     stroke="#024F4A"
-                    stroke-width="8"
+                    strokeWidth="8"
                   />
                   <path
                     d="M160.436 32.8833V32.8833C124.489 69.8015 65.1708 69.8015 29.2241 32.8833V32.8833"
                     stroke="#024F4A"
-                    stroke-width="8"
+                    strokeWidth="8"
                   />
                   <path
                     d="M29.2236 156.117V156.117C65.0274 118.861 124.632 118.861 160.436 156.117V156.117"
                     stroke="#024F4A"
-                    stroke-width="8"
+                    strokeWidth="8"
                   />
                 </svg>
                 <div className="absolute flex -top-12 -right-[3.4rem] items-center">
@@ -556,7 +556,7 @@ export default function Home() {
                       cy="16.7317"
                       r="14.1851"
                       stroke="#024F4A"
-                      stroke-width="4"
+                      strokeWidth="4"
                     />
                   </svg>
                   <svg
@@ -569,7 +569,7 @@ export default function Home() {
                     <path
                       d="M0.0146484 2.73145L91.3311 2.73144"
                       stroke="#024F4A"
-                      stroke-width="4"
+                      strokeWidth="4"
                     />
                   </svg>
                   <svg
@@ -614,7 +614,7 @@ export default function Home() {
                     <path
                       d="M0.0146484 2.73145L91.3311 2.73144"
                       stroke="#024F4A"
-                      stroke-width="4"
+                      strokeWidth="4"
                     />
                   </svg>
                   <svg
@@ -631,7 +631,7 @@ export default function Home() {
                       r="14.1851"
                       transform="rotate(135 16.7894 16.9023)"
                       stroke="#024F4A"
-                      stroke-width="4"
+                      strokeWidth="4"
                     />
                   </svg>
                 </div>
@@ -649,7 +649,7 @@ export default function Home() {
                       cy="16.7317"
                       r="14.1851"
                       stroke="#024F4A"
-                      stroke-width="4"
+                      strokeWidth="4"
                     />
                   </svg>
                   <svg
@@ -662,7 +662,7 @@ export default function Home() {
                     <path
                       d="M2.61768 0.242188L2.61768 93.3317"
                       stroke="#024F4A"
-                      stroke-width="4"
+                      strokeWidth="4"
                     />
                   </svg>
                   <svg
@@ -708,7 +708,7 @@ export default function Home() {
                       <path
                         d="M0.0146484 2.73145L91.3311 2.73144"
                         stroke="#024F4A"
-                        stroke-width="4"
+                        strokeWidth="4"
                       />
                     </svg>
                     <svg
@@ -724,7 +724,7 @@ export default function Home() {
                         cy="16.7317"
                         r="14.1851"
                         stroke="#024F4A"
-                        stroke-width="4"
+                        strokeWidth="4"
                       />
                     </svg>
                   </div>
@@ -742,7 +742,7 @@ export default function Home() {
                         cy="16.7317"
                         r="14.1851"
                         stroke="#024F4A"
-                        stroke-width="4"
+                        strokeWidth="4"
                       />
                     </svg>
                     <svg
@@ -755,7 +755,7 @@ export default function Home() {
                       <path
                         d="M2.26855 0.242188L2.26856 102.197"
                         stroke="#024F4A"
-                        stroke-width="4"
+                        strokeWidth="4"
                       />
                     </svg>
                   </div>
@@ -851,27 +851,27 @@ export default function Home() {
                 <path
                   d="M1 57.1763L28.5269 56.9706"
                   stroke="#5A43F0"
-                  stroke-width="8"
+                  strokeWidth="8"
                 />
                 <path
                   d="M32.3223 56.9424L59.5328 56.7391"
                   stroke="#5A43F0"
-                  stroke-width="8"
+                  strokeWidth="8"
                 />
                 <path
                   d="M63.6465 56.7109L90.857 56.5077"
                   stroke="#5A43F0"
-                  stroke-width="8"
+                  strokeWidth="8"
                 />
                 <path
                   d="M108.775 56.543C101.043 56.543 94.7754 50.1369 94.7754 42.543"
                   stroke="#5A43F0"
-                  stroke-width="8"
+                  strokeWidth="8"
                 />
                 <path
                   d="M108.775 56.543C101.043 56.543 94.7754 62.6678 94.7754 70.543"
                   stroke="#5A43F0"
-                  stroke-width="8"
+                  strokeWidth="8"
                 />
               </svg>
               <p className="text-[22px] text-Hero-Purple font-semibold">
@@ -932,8 +932,8 @@ export default function Home() {
                     cy="40.9982"
                     r="36.7355"
                     stroke="#5A43F0"
-                    stroke-width="8"
-                    stroke-dasharray="13.59 13.59"
+                    strokeWidth="8"
+                    strokeDasharray="13.59 13.59"
                   />
                 </svg>
               </div>
@@ -956,7 +956,7 @@ export default function Home() {
                 <path
                   d="M0 49.58H49.7773M49.7773 49.58L4.74069 30.5488M49.7773 49.58L15.0122 14.6894M49.7773 49.58L31.6046 3.58789M49.7773 49.58V0.416016M49.7773 49.58H99.5545M49.7773 49.58L94.8138 30.5488M49.7773 49.58L84.5423 14.6894M49.7773 49.58L67.9499 3.58789"
                   stroke="#5A43F0"
-                  stroke-width="8"
+                  strokeWidth="8"
                 />
               </svg>
               <p className="text-[22px] text-Hero-Purple font-semibold">
@@ -995,7 +995,7 @@ export default function Home() {
                   <path
                     d="M1 1.99756L172.5 106.583L344 1.99756"
                     stroke="#F8F8F8"
-                    stroke-width="2.75226"
+                    strokeWidth="2.75226"
                   />
                 </svg>
                 <svg
@@ -1009,7 +1009,7 @@ export default function Home() {
                   <path
                     d="M1 106.38L172.5 1.79413L344 106.38"
                     stroke="#F8F8F8"
-                    stroke-width="2.75226"
+                    strokeWidth="2.75226"
                   />
                 </svg>
                 <svg
@@ -1023,7 +1023,7 @@ export default function Home() {
                   <path
                     d="M1.8418 1.99902L287.707 176.328L573.573 1.99902"
                     stroke="#F8F8F8"
-                    stroke-width="4.58761"
+                    strokeWidth="4.58761"
                   />
                 </svg>
                 <svg
@@ -1037,7 +1037,7 @@ export default function Home() {
                   <path
                     d="M1.8418 177.681L287.707 3.35145L573.573 177.681"
                     stroke="#F8F8F8"
-                    stroke-width="4.58761"
+                    strokeWidth="4.58761"
                   />
                 </svg>
                 <svg
@@ -1051,7 +1051,7 @@ export default function Home() {
                   <path
                     d="M3 3.49902L501.5 307.499L1000 3.49902"
                     stroke="#F8F8F8"
-                    stroke-width="8"
+                    strokeWidth="8"
                   />
                 </svg>
                 <svg
@@ -1065,7 +1065,7 @@ export default function Home() {
                   <path
                     d="M3 309.499L501.5 5.49902L1000 309.499"
                     stroke="#F8F8F8"
-                    stroke-width="8"
+                    strokeWidth="8"
                   />
                 </svg>
               </div>
@@ -1086,8 +1086,8 @@ export default function Home() {
                     <path
                       d="M23.5493 9.25879L0.499164 9.25879"
                       stroke="#5A43F0"
-                      stroke-width="2.75226"
-                      stroke-dasharray="5.5 5.5"
+                      strokeWidth="2.75226"
+                      strokeDasharray="5.5 5.5"
                     />
                     <mask id="path-2-inside-1_316_31613" fill="white">
                       <path
@@ -1118,8 +1118,8 @@ export default function Home() {
                     <path
                       d="M74.1221 8.97363L0.499201 8.97364"
                       stroke="#5A43F0"
-                      stroke-width="2.75226"
-                      stroke-dasharray="5.5 5.5"
+                      strokeWidth="2.75226"
+                      strokeDasharray="5.5 5.5"
                     />
                     <mask id="path-2-inside-1_316_31603" fill="white">
                       <path
@@ -1205,8 +1205,8 @@ export default function Home() {
                     <path
                       d="M74.1221 8.97363L0.499201 8.97364"
                       stroke="#5A43F0"
-                      stroke-width="2.75226"
-                      stroke-dasharray="5.5 5.5"
+                      strokeWidth="2.75226"
+                      strokeDasharray="5.5 5.5"
                     />
                     <mask id="path-2-inside-1_316_31603" fill="white">
                       <path
@@ -1237,8 +1237,8 @@ export default function Home() {
                     <path
                       d="M23.5493 9.25879L0.499164 9.25879"
                       stroke="#5A43F0"
-                      stroke-width="2.75226"
-                      stroke-dasharray="5.5 5.5"
+                      strokeWidth="2.75226"
+                      strokeDasharray="5.5 5.5"
                     />
                     <mask id="path-2-inside-1_316_31613" fill="white">
                       <path
@@ -1278,7 +1278,7 @@ export default function Home() {
                   <path
                     d="M8.37891 60.3799L8.3789 0.862331"
                     stroke="#5A43F0"
-                    stroke-width="2.75226"
+                    strokeWidth="2.75226"
                   />
                   <mask id="path-2-inside-1_316_31584" fill="white">
                     <path
@@ -1310,7 +1310,7 @@ export default function Home() {
                   <path
                     d="M13.8301 99.6807L13.8301 0.473588"
                     stroke="#5A43F0"
-                    stroke-width="4.58761"
+                    strokeWidth="4.58761"
                   />
                   <mask id="path-2-inside-1_316_31921" fill="white">
                     <path
@@ -1342,7 +1342,7 @@ export default function Home() {
                   <path
                     d="M24 173.499L24 0.499016"
                     stroke="#5A43F0"
-                    stroke-width="8"
+                    strokeWidth="8"
                   />
                   <mask id="path-2-inside-1_182_29523" fill="white">
                     <path
@@ -1375,7 +1375,7 @@ export default function Home() {
                     <path
                       d="M8.98389 91.3804L8.98389 68.3302"
                       stroke="#5A43F0"
-                      stroke-width="2.75226"
+                      strokeWidth="2.75226"
                     />
                     <mask id="path-2-inside-1_316_31576" fill="white">
                       <path
@@ -1398,7 +1398,7 @@ export default function Home() {
                     <path
                       d="M8.98389 38.0552L8.98389 0.55568"
                       stroke="#5A43F0"
-                      stroke-width="2.75226"
+                      strokeWidth="2.75226"
                     />
                   </svg>
                   <svg
@@ -1412,7 +1412,7 @@ export default function Home() {
                     <path
                       d="M13.8472 151.681L13.8472 113.26"
                       stroke="#5A43F0"
-                      stroke-width="4.58761"
+                      strokeWidth="4.58761"
                     />
                     <mask id="path-2-inside-1_316_31913" fill="white">
                       <path
@@ -1435,7 +1435,7 @@ export default function Home() {
                     <path
                       d="M13.8477 62.7964L13.8477 0.290192"
                       stroke="#5A43F0"
-                      stroke-width="4.58761"
+                      strokeWidth="4.58761"
                     />
                   </svg>
                   <svg
@@ -1495,7 +1495,7 @@ export default function Home() {
                   <path
                     d="M8.37891 60.3799L8.3789 0.862331"
                     stroke="#5A43F0"
-                    stroke-width="2.75226"
+                    strokeWidth="2.75226"
                   />
                   <mask id="path-2-inside-1_316_31584" fill="white">
                     <path
@@ -1527,7 +1527,7 @@ export default function Home() {
                   <path
                     d="M13.8301 99.6807L13.8301 0.473588"
                     stroke="#5A43F0"
-                    stroke-width="4.58761"
+                    strokeWidth="4.58761"
                   />
                   <mask id="path-2-inside-1_316_31921" fill="white">
                     <path
@@ -1559,7 +1559,7 @@ export default function Home() {
                   <path
                     d="M24 173.499L24 0.499016"
                     stroke="#5A43F0"
-                    stroke-width="8"
+                    strokeWidth="8"
                   />
                   <mask id="path-2-inside-1_182_29523" fill="white">
                     <path
@@ -1684,17 +1684,17 @@ export default function Home() {
               <path
                 d="M74.4307 26.2275L-14.1349 106.925"
                 stroke="#5A43F0"
-                stroke-width="5.29827"
+                strokeWidth="5.29827"
               />
               <path
                 d="M72.4754 28.0092C57.8942 41.2951 35.1535 40.0805 22.2084 25.8733"
                 stroke="#5A43F0"
-                stroke-width="5.29827"
+                strokeWidth="5.29827"
               />
               <path
                 d="M72.4754 28.0092C57.8942 41.2951 56.5145 63.5242 69.939 78.2576"
                 stroke="#5A43F0"
-                stroke-width="5.29827"
+                strokeWidth="5.29827"
               />
             </svg>
             <div className="w-8 h-8 bg-Energy absolute bottom-[5%] right-[7%] rotate-12"></div>
@@ -1714,7 +1714,7 @@ export default function Home() {
             <path
               d="M0.722656 49.1933H50.4999M50.4999 49.1933L5.46335 30.1621M50.4999 49.1933L15.7348 14.3027M50.4999 49.1933L32.3273 3.20117M50.4999 49.1933V0.0292969M50.4999 49.1933H100.277M50.4999 49.1933L95.5365 30.1621M50.4999 49.1933L85.265 14.3027M50.4999 49.1933L68.6726 3.20117"
               stroke="#C2DEEC"
-              stroke-width="8"
+              strokeWidth="8"
             />
           </svg>
           <p className="text-Iceberg text-[38px] font-semibold text-center leading-tight">

@@ -34,9 +34,9 @@ export default function Legal() {
                 <path
                   d="M7.5 11.75L15 19.25L22.5 11.75"
                   stroke="#051C09"
-                  stroke-width="2.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </label>
@@ -127,9 +127,9 @@ export default function Legal() {
                 <path
                   d="M7.5 11.75L15 19.25L22.5 11.75"
                   stroke="#051C09"
-                  stroke-width="2.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </label>
@@ -220,9 +220,9 @@ export default function Legal() {
                 <path
                   d="M7.5 11.75L15 19.25L22.5 11.75"
                   stroke="#051C09"
-                  stroke-width="2.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </label>

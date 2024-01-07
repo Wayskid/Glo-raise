@@ -1,17 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import appContext from "../../context/AppContext";
+import { setAssessmentEvaluation } from "../../store/features/appSlice";
 
 export default function ChooseCountry({
   assessmentNumber,
   assessment,
-  choice,
   next,
   forFunders,
 }) {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [countries, setCountries] = useState([]);
-  const [countrySelected, setCountrySelected] = useState("");
+  const assessmentEvaluation = useSelector(
+    (state) => state.app.assessmentEvaluation
+  );
+  const [choice, setChoice] = useState({
+    country: "",
+    state: "",
+  });
 
   useEffect(() => {
     async function getCountries() {
@@ -22,6 +31,52 @@ export default function ChooseCountry({
     }
     getCountries();
   }, []);
+
+  //Country choice
+  function handleChange(e) {
+    dispatch(
+      setAssessmentEvaluation({
+        qstnNumber: "02",
+        qstn: assessment.qstn,
+        answer: {
+          country: e.target.value,
+          state: "",
+        },
+        score: 0,
+      })
+    );
+    setChoice({
+      country: e.target.value,
+      state: "",
+    });
+  }
+
+  //STate choice
+  function handleState(e) {
+    dispatch(
+      setAssessmentEvaluation({
+        qstnNumber: "02",
+        qstn: assessment.qstn,
+        answer: {
+          country: choice.country,
+          state: e.target.value,
+        },
+        score: 0,
+      })
+    );
+    setChoice({
+      country: choice.country,
+      state: e.target.value,
+    });
+  }
+
+  useEffect(() => {
+    function getValue() {
+      const value = assessmentEvaluation.find((v) => v.qstnNumber === "02");
+      setChoice({ country: value?.answer.country, state: value?.answer.state });
+    }
+    getValue();
+  }, [assessment]);
 
   return (
     <div className="w-[min(800px,100%)] mx-auto pt-[40px] pb-[72px] md:pt-[60px] md:pb-[100px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px]">
@@ -67,16 +122,15 @@ export default function ChooseCountry({
         </p>
         <div className="grid gap-4">
           <select
-            name={assessment.qstn}
-            id={assessment.qstn}
-            onChange={(e) => setCountrySelected(e.target.value)}
+            name="Country"
+            onChange={handleChange}
             className="w-full"
+            value={choice.country ? choice.country : "Select Country"}
           >
             <option
               key="-1"
-              value="none"
+              value="Select Country"
               disabled
-              selected
               className="text-gray-500"
             >
               Select Country
@@ -88,8 +142,21 @@ export default function ChooseCountry({
                 </option>
               ))}
           </select>
-          {countrySelected === "United States" && (
-            <select name="USState" id="USState">
+          {choice.country === "United States" && (
+            <select
+              name="State"
+              onChange={handleState}
+              className="w-full"
+              value={choice.state ? choice.state : "Select State"}
+            >
+              <option
+                key="-1"
+                value="Select State"
+                disabled
+                className="text-gray-500"
+              >
+                Select State
+              </option>
               {countries.length &&
                 countries[232].states.map((usState, index) => (
                   <option key={index} value={usState.name}>

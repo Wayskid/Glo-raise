@@ -66,8 +66,8 @@ export default function About() {
                 <path
                   d="M778 4.5L-1.37091e-05 4.5"
                   stroke="#B79F71"
-                  stroke-width="8"
-                  stroke-dasharray="16 16"
+                  strokeWidth="8"
+                  strokeDasharray="16 16"
                 />
               </svg>
               <svg

@@ -56,17 +56,17 @@ export default function Free_Checkout() {
             <path
               d="M20.5 7.93359L0.499999 7.93359"
               stroke="#051C09"
-              stroke-width="1.73913"
+              strokeWidth="1.73913"
             />
             <path
               d="M7.96875 15.4697C7.96875 11.201 4.76717 7.99937 0.498395 7.99937"
               stroke="#051C09"
-              stroke-width="1.73913"
+              strokeWidth="1.73913"
             />
             <path
               d="M7.96875 0.530273C7.96875 4.79905 4.76717 8.00063 0.498394 8.00063"
               stroke="#051C09"
-              stroke-width="1.73913"
+              strokeWidth="1.73913"
             />
           </svg>
           <p className="text-Dark">Back to option selection</p>
@@ -88,7 +88,7 @@ export default function Free_Checkout() {
           <path
             d="M146.5 0.875C146.5 107.188 131.922 119 0.71875 119C131.922 119 146.5 130.812 146.5 237.125C146.5 130.812 161.078 119 292.281 119C161.078 119 146.5 107.188 146.5 0.875Z"
             stroke="#051C09"
-            stroke-width="2"
+            strokeWidth="2"
           />
         </svg>
       </div>

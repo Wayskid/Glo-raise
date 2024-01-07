@@ -1,15 +1,30 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import appContext from "../../context/AppContext";
 
 export default function SelectMany({
   assessmentNumber,
   assessment,
-  choice,
-  answer,
   next,
   forFunders,
 }) {
   const navigate = useNavigate();
+  const assessmentEvaluation = useSelector(
+    (state) => state.app.assessmentEvaluation
+  );
+  const { setChoices, choices, handleSelectMany } = useContext(appContext);
+
+  useEffect(() => {
+    function getValue() {
+      const value = assessmentEvaluation.find(
+        (v) => v.qstnNumber === assessmentNumber
+      );
+      setChoices(value?.answer);
+    }
+    getValue();
+  }, [assessment]);
+
   return (
     <div className="w-[min(800px,100%)] mx-auto pt-[40px] pb-[72px] md:pt-[60px] md:pb-[100px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px]">
       <div className="border-2 border-Dark rounded-[20px] py-[56px] px-4 lg:px-[12px] relative grid gap-8 md:gap-12">
@@ -63,18 +78,21 @@ export default function SelectMany({
             >
               <input
                 type="checkbox"
-                className="hidden peer/radio "
+                className="hidden peer/radio"
                 id={option}
                 name={assessment.qstn}
+                checked={choices ? choices.includes(option) : false}
+                value={option}
+                onChange={(e) => handleSelectMany(e, assessment)}
               />
-              <div className="w-6 h-6 bg-[#2222221A] peer-checked/radio:bg-Dark z-20"></div>
+              <div className="w-6 h-6 bg-[#2222221A] peer-checked/radio:bg-Dark z-20 cursor-pointer"></div>
               <label
                 htmlFor={option}
-                className="py-4 text-Dark w-[calc(100%-2.5rem)] z-20"
+                className="py-4 text-Dark w-[calc(100%-2.5rem)] z-20 cursor-pointer"
               >
                 {option}
               </label>
-              <div className="absolute h-full w-full peer-checked/radio:bg-[#E5DFFA] z-10 top-0 left-0"></div>
+              <div className="absolute h-full w-full peer-checked/radio:bg-[#E5DFFA] z-10 top-0 left-0 cursor-pointer"></div>
             </div>
           ))}
           {assessment.add_more === true && (
