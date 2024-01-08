@@ -1,23 +1,79 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setAssessmentProgress } from "../../../store/features/appSlice.js";
+import {
+  setAssessmentEvaluation,
+  setAssessmentProgress,
+} from "../../../store/features/appSlice.js";
 import { useNavigate } from "react-router-dom";
 import InputField from "../../../components/reuseable/InputField.jsx";
 
 export default function ThirtyFive() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const assessment = useSelector((state) => state.app.assessmentFile[34]);
+  const { assessmentFile, assessmentEvaluation } = useSelector(
+    (state) => state.app
+  );
 
   useEffect(() => {
     dispatch(setAssessmentProgress(2.38 * 36));
   }, []);
+
+  const [time, setTime] = useState(0);
+  console.log(time);
+  useEffect(() => {
+    setTimeout(() => {
+      setTime(21);
+    }, 21000);
+  }, []);
+
+  const [values, setValues] = useState([
+    { qstn: "In order to", ans: "" },
+    { qstn: "We", ans: "" },
+    { qstn: "better than anyone else for", ans: "" },
+  ]);
+
+  function handleChange(e, option) {
+    setValues(
+      values.map((val) => {
+        if (val.qstn === option.qstn) {
+          return { qstn: val.qstn, ans: e.target.value };
+        }
+        return val;
+      })
+    );
+    dispatch(
+      setAssessmentEvaluation({
+        qstnNumber: assessmentFile[34].number,
+        qstn: assessmentFile[34].qstn,
+        answer: values.map((val) => {
+          if (val.qstn === option.qstn) {
+            return { qstn: val.qstn, ans: e.target.value };
+          }
+          return val;
+        }),
+        // score: values,
+      })
+    );
+  }
+
+  useEffect(() => {
+    function getValue() {
+      const value = assessmentEvaluation.find(
+        (v) => v.qstnNumber === assessmentFile[34].number
+      );
+      if (value?.answer.length) {
+        setValues(value.answer);
+      }
+    }
+    getValue();
+  }, [assessmentFile]);
+
   return (
     <div className="w-[min(800px,100%)] mx-auto pt-[40px] pb-[72px] md:pt-[60px] md:pb-[100px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px]">
       <div className="border-2 border-Dark rounded-[20px] py-[56px] px-4 lg:px-[12px] relative grid gap-10 md:gap-12">
         <div className="absolute grid place-items-center -top-[32.3px] justify-self-center">
           <p className="[font-family:'Instrument_Serif',serif;] text-[26px] text-white absolute">
-            {assessment.number}
+            {assessmentFile[34].number}
           </p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +90,7 @@ export default function ThirtyFive() {
         </div>
         <div className="grid gap-4">
           <p className="text-2xl md:text-[38px] font-semibold text-Dark text-center leading-snug">
-            {assessment.qstn}
+            {assessmentFile[34].qstn}
           </p>
           <p className="text-Dark text-center mb">
             Using this format, describe the primary challenge you solve and who
@@ -42,7 +98,7 @@ export default function ThirtyFive() {
           </p>
         </div>
         <ul className="grid gap-8 ">
-          {assessment.qstns.map((option) => (
+          {assessmentFile[34].qstns.map((option) => (
             <InputField
               key={option.qstn}
               id={option.qstn}
@@ -50,7 +106,8 @@ export default function ThirtyFive() {
               type="text"
               placeholder={option.placeholder}
               label={option.qstn}
-              onChange={() => {}}
+              value={values.find((val) => val.qstn === option.qstn).ans}
+              onChange={(e) => handleChange(e, option)}
             />
           ))}
         </ul>

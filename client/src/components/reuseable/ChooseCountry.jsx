@@ -123,8 +123,10 @@ export default function ChooseCountry({
         <div className="grid gap-4">
           <select
             name="Country"
+            id="Country"
             onChange={handleChange}
             className="w-full"
+            autoComplete="Country"
             value={choice.country ? choice.country : "Select Country"}
           >
             <option
@@ -145,8 +147,10 @@ export default function ChooseCountry({
           {choice.country === "United States" && (
             <select
               name="State"
+              id="State"
               onChange={handleState}
               className="w-full"
+              autoComplete="State"
               value={choice.state ? choice.state : "Select State"}
             >
               <option

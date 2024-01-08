@@ -18,6 +18,8 @@ export default function RankOrder({
 
   const dragOption = useRef(0);
   const draggedOverOption = useRef(0);
+  const clickedFirst = useRef();
+  const clickedSecond = useRef();
   const [optionsArray, setOptionsArray] = useState([]);
 
   function handleRanking() {
@@ -37,6 +39,38 @@ export default function RankOrder({
     );
   }
 
+  //For mobile
+  const [clicked, setClicked] = useState(true);
+  function handleClickRank(e, index) {
+    if (clicked === true) {
+      clickedFirst.current = index;
+      setTimeout(() => {
+        setClicked(false);
+      }, 10);
+    } else if (clicked === false) {
+      console.log("clicked");
+      clickedSecond.current = index;
+      const optionClone = [...optionsArray];
+      const temp = optionClone[clickedFirst.current];
+      optionClone[clickedFirst.current] = optionClone[clickedSecond.current];
+      optionClone[clickedSecond.current] = temp;
+      setOptionsArray(optionClone);
+      setTimeout(() => {
+        setClicked(true);
+        clickedFirst.current = "";
+        clickedSecond.current = "";
+      }, 10);
+      dispatch(
+        setAssessmentEvaluation({
+          qstnNumber: assessment.number,
+          qstn: assessment.qstn,
+          answer: optionClone,
+          score: 0,
+        })
+      );
+    }
+  }
+
   useEffect(() => {
     function getValue() {
       const value = assessmentEvaluation.find(
@@ -46,9 +80,6 @@ export default function RankOrder({
     }
     getValue();
   }, [assessment]);
-
-  console.log(optionsArray);
-  // console.log(ranking);
   return (
     <div className="w-[min(800px,100%)] mx-auto pt-[40px] pb-[72px] md:pt-[60px] md:pb-[100px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px]">
       <div className="border-2 border-Dark rounded-[20px] py-[56px] px-2 md:px-[6px] lg:px-[12px] relative grid gap-8 md:gap-12">
@@ -99,25 +130,24 @@ export default function RankOrder({
             <li
               key={option}
               className="py-4 px-6 flex gap-4 bg-[#F8F8F8] rounded-[20px] relative overflow-hidden cursor-pointer items-center"
+              style={{
+                fontStyle: clickedFirst.current === index ? "bold" : "normal",
+                backgroundColor:
+                  clickedFirst.current === index ? "#E5DFFA" : "",
+              }}
               draggable
+              onClick={(e) => handleClickRank(e, index)}
               onDragStart={() => (dragOption.current = index)}
               onDragEnter={() => (draggedOverOption.current = index)}
               onDragEnd={handleRanking}
               onDragOver={(e) => e.preventDefault()}
             >
-              {/* <input
-                type="checkbox"
-                className="hidden peer/radio cursor-pointer"
-                id={option}
-                name={assessment.qstn}
-              />
-              <div className="w-6 h-6 bg-[#2222221A] peer-checked/radio:bg-Dark z-20  cursor-pointer shrink-0"></div> */}
-              <label
-                htmlFor={option}
-                className="text-Dark w-[calc(100%-2.5rem)] z-20 cursor-pointer"
-              >
+              <p className="text-Dark w-[calc(100%-2.5rem)] z-20 cursor-pointer flex">
                 {option}
-              </label>
+                {!clicked && clickedFirst.current !== index && (
+                  <span className="ml-auto opacity-45">Replace me</span>
+                )}
+              </p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="23"
@@ -137,7 +167,6 @@ export default function RankOrder({
                   </clipPath>
                 </defs>
               </svg>
-              <div className="absolute h-full w-full peer-checked/radio:bg-[#E5DFFA] z-10 top-0 left-0"></div>
             </li>
           ))}
         </ul>
