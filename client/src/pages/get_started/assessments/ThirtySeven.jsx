@@ -1,23 +1,98 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setAssessmentProgress } from "../../../store/features/appSlice.js";
+import {
+  setAssessmentEvaluation,
+  setAssessmentProgress,
+} from "../../../store/features/appSlice.js";
 import { useNavigate } from "react-router-dom";
 import InputField from "../../../components/reuseable/InputField.jsx";
 
 export default function ThirtySeven() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const assessment = useSelector((state) => state.app.assessmentFile[36]);
+  const { assessmentFile, assessmentEvaluation } = useSelector(
+    (state) => state.app
+  );
 
   useEffect(() => {
     dispatch(setAssessmentProgress(2.38 * 38));
   }, []);
+
+  const [time, setTime] = useState(0);
+  useEffect(() => {
+    setTimeout(() => {
+      setTime(61);
+    }, 61000);
+  }, []);
+
+  const [values, setValues] = useState(
+    assessmentFile[36]?.qstns.map((assessment) => ({
+      qstn: assessment.qstn,
+      ans: "",
+    }))
+  );
+
+  function handleChange(e, option) {
+    setValues(
+      values.map((val) => {
+        if (val.qstn === option.qstn) {
+          return { qstn: val.qstn, ans: e.target.value };
+        }
+        return val;
+      })
+    );
+    console.log(
+      values.length - values.filter((val) => val.ans.length > 0).length
+    );
+
+    dispatch(
+      setAssessmentEvaluation({
+        qstnNumber: assessmentFile[36].number,
+        qstn: assessmentFile[36].qstn,
+        answer: values.map((val) => {
+          if (val.qstn === option.qstn) {
+            return { qstn: val.qstn, ans: e.target.value };
+          }
+          return val;
+        }),
+        score:
+          values.length - values.filter((val) => val.ans.length > 0).length ===
+            0 && time < 61
+            ? 4
+            : values.length -
+                values.filter((val) => val.ans.length > 0).length ===
+              0
+            ? 3
+            : values.length -
+                values.filter((val) => val.ans.length > 0).length ===
+              1
+            ? 2
+            : values.length -
+                values.filter((val) => val.ans.length > 0).length >
+              1
+            ? 1
+            : 0,
+      })
+    );
+  }
+
+  useEffect(() => {
+    function getValue() {
+      const value = assessmentEvaluation.find(
+        (v) => v.qstnNumber === assessmentFile[36].number
+      );
+      if (value?.answer.length) {
+        setValues(value.answer);
+      }
+    }
+    getValue();
+  }, [assessmentFile]);
   return (
     <div className="w-[min(800px,100%)] mx-auto pt-[40px] pb-[72px] md:pt-[60px] md:pb-[100px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px]">
       <div className="border-2 border-Dark rounded-[20px] py-[56px] px-4 lg:px-[12px] relative grid gap-10 md:gap-12">
         <div className="absolute grid place-items-center -top-[32.3px] justify-self-center">
           <p className="[font-family:'Instrument_Serif',serif;] text-[26px] text-white absolute">
-            {assessment.number}
+            {assessmentFile[36].number}
           </p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +109,7 @@ export default function ThirtySeven() {
         </div>
         <div className="grid gap-4">
           <p className="text-2xl md:text-[38px] font-semibold text-Dark text-center leading-snug">
-            {assessment.qstn}
+            {assessmentFile[36].qstn}
           </p>
           <p className="text-Dark text-center mb">
             Using this format, describe the primary challenge you solve and who
@@ -42,7 +117,7 @@ export default function ThirtySeven() {
           </p>
         </div>
         <ul className="grid gap-8 ">
-          {assessment.qstns.map((option) => (
+          {assessmentFile[36].qstns.map((option) => (
             <InputField
               key={option.qstn}
               id={option.qstn}
@@ -50,7 +125,8 @@ export default function ThirtySeven() {
               type="text"
               placeholder={option.placeholder}
               label={option.qstn}
-              onChange={() => {}}
+              value={values.find((val) => val.qstn === option.qstn).ans}
+              onChange={(e) => handleChange(e, option)}
             />
           ))}
         </ul>

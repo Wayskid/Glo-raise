@@ -19,18 +19,18 @@ export default function ThirtyFive() {
   }, []);
 
   const [time, setTime] = useState(0);
-  console.log(time);
   useEffect(() => {
     setTimeout(() => {
       setTime(21);
     }, 21000);
   }, []);
 
-  const [values, setValues] = useState([
-    { qstn: "In order to", ans: "" },
-    { qstn: "We", ans: "" },
-    { qstn: "better than anyone else for", ans: "" },
-  ]);
+  const [values, setValues] = useState(
+    assessmentFile[34]?.qstns.map((assessment) => ({
+      qstn: assessment.qstn,
+      ans: "",
+    }))
+  );
 
   function handleChange(e, option) {
     setValues(
@@ -41,6 +41,7 @@ export default function ThirtyFive() {
         return val;
       })
     );
+
     dispatch(
       setAssessmentEvaluation({
         qstnNumber: assessmentFile[34].number,
@@ -51,7 +52,23 @@ export default function ThirtyFive() {
           }
           return val;
         }),
-        // score: values,
+        score:
+          values.length - values.filter((val) => val.ans.length > 0).length ===
+            0 && time < 21
+            ? 4
+            : values.length -
+                values.filter((val) => val.ans.length > 0).length ===
+              0
+            ? 3
+            : values.length -
+                values.filter((val) => val.ans.length > 0).length ===
+              1
+            ? 2
+            : values.length -
+                values.filter((val) => val.ans.length > 0).length >
+              1
+            ? 1
+            : 0,
       })
     );
   }
