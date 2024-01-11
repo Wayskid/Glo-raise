@@ -41,9 +41,6 @@ export default function ThirtySeven() {
         return val;
       })
     );
-    console.log(
-      values.length - values.filter((val) => val.ans.length > 0).length
-    );
 
     dispatch(
       setAssessmentEvaluation({

@@ -85,6 +85,16 @@ export const AppContextProvider = ({ children }) => {
   }
 
   //Handle onchange
+  function handleOthers(e, assessment) {
+    dispatch(
+      setAssessmentEvaluation({
+        qstnNumber: assessment.number,
+        qstn: assessment.qstn,
+        answer: e.target.value,
+        score: scoring(e.target.value),
+      })
+    );
+  }
   function handleChange(e, assessment) {
     dispatch(
       setAssessmentEvaluation({
@@ -94,10 +104,9 @@ export const AppContextProvider = ({ children }) => {
         score: scoring(e.target.value),
       })
     );
-    setChoice(e.target.value);
   }
 
-  //SELECT MANY QUESTIONS
+  //SELECT MANY QUESTIONS===============================
   const [choices, setChoices] = useState([]);
   function handleSelectMany(e, assessment) {
     let answers;
@@ -142,8 +151,6 @@ export const AppContextProvider = ({ children }) => {
     );
   }
 
-  //RANK QUESTIONS
-
   return (
     <appContext.Provider
       value={{
@@ -154,9 +161,7 @@ export const AppContextProvider = ({ children }) => {
         choices,
         setChoices,
         handleSelectMany,
-        // setRanking,
-        // ranking,
-        // handleRanking,
+        handleOthers,
       }}
     >
       {children}

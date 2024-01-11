@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import appContext from "../../context/AppContext";
@@ -13,17 +13,14 @@ export default function SelectOneRadio({
   const assessmentEvaluation = useSelector(
     (state) => state.app.assessmentEvaluation
   );
-  const { choice, setChoice, handleChange } = useContext(appContext);
+  const { handleChange, handleOthers } = useContext(appContext);
 
-  useEffect(() => {
-    function getValue() {
-      const value = assessmentEvaluation.find(
-        (v) => v.qstnNumber === assessmentNumber
-      );
-      setChoice(value?.answer);
-    }
-    getValue();
-  }, [assessment]);
+  function getValue() {
+    const value = assessmentEvaluation.find(
+      (v) => v.qstnNumber === assessmentNumber
+    );
+    return value;
+  }
 
   return (
     <div className="w-[min(800px,100%)] mx-auto pt-[40px] pb-[72px] md:pt-[60px] md:pb-[100px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px]">
@@ -76,16 +73,18 @@ export default function SelectOneRadio({
               key={option}
               className="px-6 flex items-center gap-4 bg-[#F8F8F8] rounded-[20px] relative overflow-hidden cursor-pointer"
             >
-              <input
-                type="radio"
-                className="hidden peer/radio "
-                id={option}
-                name={assessment.qstn}
-                checked={choice === option}
-                value={option}
-                onChange={(e) => handleChange(e, assessment)}
-              />
-              <div className="w-6 h-6 rounded-full bg-[#2222221A] peer-checked/radio:bg-Dark z-20"></div>
+              <div className="relative">
+                <input
+                  type="radio"
+                  className="peer/radio absolute w-full h-full opacity-0 z-20"
+                  id={option}
+                  name={assessment.qstn}
+                  checked={getValue()?.answer === option}
+                  value={option}
+                  onChange={(e) => handleChange(e, assessment)}
+                />
+                <div className="w-6 h-6 rounded-full bg-[#2222221A] peer-checked/radio:bg-Dark"></div>
+              </div>
               <label
                 htmlFor={option}
                 className="py-4 text-Dark w-[calc(100%-2.5rem)] z-20 cursor-pointer"
@@ -98,16 +97,33 @@ export default function SelectOneRadio({
           {assessment.add_more === true && (
             <div className="px-6 py-2 flex items-center gap-4 bg-[#F8F8F8] rounded-[20px] relative overflow-hidden">
               <input
-                type="checkbox"
+                type="radio"
                 className="hidden peer/radio "
                 id="others"
-                name="others"
+                name={assessment.qstn}
+                checked={
+                  assessment.add_more &&
+                  getValue()?.answer.length &&
+                  !assessment.options.includes(getValue()?.answer)
+                }
+                value="others"
+                onChange={(e) => handleChange(e, assessment)}
               />
-              <div className="w-6 h-6 bg-[#2222221A] peer-checked/radio:bg-Dark z-20 shrink-0"></div>
-              <input
-                className="py-2 px-4 rounded-[8px] bg-white text-gray-500 w-full"
-                placeholder="Other (please specify)"
-              />
+              <div className="w-6 h-6 bg-[#2222221A] peer-checked/radio:bg-Dark z-20 shrink-0 rounded-full"></div>
+              <label htmlFor="others">
+                <input
+                  className="py-2 px-4 rounded-[8px] bg-white text-gray-500 w-full"
+                  placeholder="Other (please specify)"
+                  value={
+                    assessment.add_more &&
+                    getValue()?.answer.length &&
+                    !assessment.options.includes(getValue()?.answer)
+                      ? getValue()?.answer
+                      : ""
+                  }
+                  onChange={(e) => handleOthers(e, assessment)}
+                />
+              </label>
             </div>
           )}
         </div>

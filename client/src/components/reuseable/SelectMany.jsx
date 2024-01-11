@@ -107,6 +107,7 @@ export default function SelectMany({
               <input
                 className="py-2 px-4 rounded-[8px] bg-white text-gray-500 w-full"
                 placeholder="Other (please specify)"
+                onChange={(e) => handleSelectMany(e, assessment)}
               />
             </div>
           )}

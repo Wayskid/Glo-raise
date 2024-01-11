@@ -1,24 +1,74 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import InputField from "../../../components/reuseable/InputField";
 import { useDispatch, useSelector } from "react-redux";
-import { setAssessmentProgress } from "../../../store/features/appSlice.js";
+import {
+  setAssessmentEvaluation,
+  setAssessmentProgress,
+} from "../../../store/features/appSlice.js";
 
 export default function FortyOne() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const assessment = useSelector((state) => state.app.assessmentFile[40]);
+  // const assessment = useSelector((state) => state.app.assessmentFile[40]);
+  const { assessmentFile: assessment, assessmentEvaluation } = useSelector(
+    (state) => state.app
+  );
 
   useEffect(() => {
     dispatch(setAssessmentProgress(2.38 * 42));
   }, []);
+
+  const [values, setValues] = useState(
+    assessment[40]?.qstns.map((assessment) => ({
+      qstn: assessment.qstn,
+      ans: "",
+    }))
+  );
+
+  function handleChange(e, option) {
+    setValues(
+      values.map((val) => {
+        if (val.qstn === option.qstn) {
+          return { qstn: val.qstn, ans: e.target.value };
+        }
+        return val;
+      })
+    );
+
+    dispatch(
+      setAssessmentEvaluation({
+        qstnNumber: assessment[40].number,
+        qstn: assessment[40].qstn,
+        answer: values.map((val) => {
+          if (val.qstn === option.qstn) {
+            return { qstn: val.qstn, ans: e.target.value };
+          }
+          return val;
+        }),
+        score: 0,
+      })
+    );
+  }
+
+  useEffect(() => {
+    function getValue() {
+      const value = assessmentEvaluation.find(
+        (v) => v.qstnNumber === assessment[40].number
+      );
+      if (value?.answer.length) {
+        setValues(value.answer);
+      }
+    }
+    getValue();
+  }, [assessment]);
 
   return (
     <div className="w-[min(800px,100%)] mx-auto pt-[40px] pb-[72px] md:pt-[60px] md:pb-[100px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px]">
       <div className="border-2 border-Dark rounded-[20px] py-[60px] px-4 lg:px-[12px] relative grid gap-8 md:gap-12">
         <div className="absolute grid place-items-center -top-[32.3px] justify-self-center">
           <p className="[font-family:'Instrument_Serif',serif;] text-[26px] text-white absolute">
-            {assessment.number}
+            {assessment[40].number}
           </p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +84,7 @@ export default function FortyOne() {
           </svg>
         </div>
         <div className="grid gap-10">
-          {assessment.qstns.map((item) => (
+          {assessment[40].qstns.map((item) => (
             <div key={item.qstn} className="grid gap-2">
               <label
                 htmlFor=""
@@ -46,9 +96,10 @@ export default function FortyOne() {
                 type="text"
                 name={item.qstn}
                 id={item.qstn}
-                onChange={() => {}}
                 className="py-5 px-4 md:px-8 rounded-[20px] border-[3px] border-[#EAE5FA]"
                 placeholder={item.placeholder}
+                value={values.find((val) => val.qstn === item.qstn).ans}
+                onChange={(e) => handleChange(e, item)}
               />
             </div>
           ))}

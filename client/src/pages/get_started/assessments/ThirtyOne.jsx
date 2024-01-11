@@ -1,23 +1,81 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setAssessmentProgress } from "../../../store/features/appSlice.js";
+import {
+  setAssessmentEvaluation,
+  setAssessmentProgress,
+} from "../../../store/features/appSlice.js";
 import { useNavigate } from "react-router-dom";
+import appContext from "../../../context/AppContext.jsx";
 
 export default function ThirtyOne() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const assessment = useSelector((state) => state.app.assessmentFile[30]);
+  const { assessmentFile: assessment, assessmentEvaluation } = useSelector(
+    (state) => state.app
+  );
+  const { scoring } = useContext(appContext);
 
   useEffect(() => {
     dispatch(setAssessmentProgress(2.38 * 32));
   }, []);
+
+  function handleChangeA(e) {
+    dispatch(
+      setAssessmentEvaluation({
+        qstnNumber: "31A",
+        qstn: "This best describes how our stakeholders view us - Customer",
+        answer: e.target.value,
+        score: scoring(e.target.value),
+      })
+    );
+  }
+
+  function handleChangeB(e) {
+    dispatch(
+      setAssessmentEvaluation({
+        qstnNumber: "31B",
+        qstn: "This best describes how our stakeholders view us - Employees",
+        answer: e.target.value,
+        score: scoring(e.target.value),
+      })
+    );
+  }
+
+  function handleChangeC(e) {
+    dispatch(
+      setAssessmentEvaluation({
+        qstnNumber: "31C",
+        qstn: "This best describes how our stakeholders view us - Partners",
+        answer: e.target.value,
+        score: scoring(e.target.value),
+      })
+    );
+  }
+
+  function handleChangeD(e) {
+    dispatch(
+      setAssessmentEvaluation({
+        qstnNumber: "31D",
+        qstn: "This best describes how our stakeholders view us - Community",
+        answer: e.target.value,
+        score: scoring(e.target.value),
+      })
+    );
+  }
+
+  function getValue(assessmentNumbers) {
+    const value = assessmentEvaluation.find(
+      (v) => v.qstnNumber === assessmentNumbers
+    );
+    return value;
+  }
 
   return (
     <div className="w-[min(800px,100%)] mx-auto pt-[40px] pb-[72px] md:pt-[60px] md:pb-[100px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px]">
       <div className="border-2 border-Dark rounded-[20px] py-[56px] px-4 lg:px-[12px] relative grid gap-10 md:gap-12">
         <div className="absolute grid place-items-center -top-[32.3px] justify-self-center">
           <p className="[font-family:'Instrument_Serif',serif;] text-[26px] text-white absolute">
-            {assessment.number}
+            {assessment[30].number}
           </p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -33,10 +91,10 @@ export default function ThirtyOne() {
           </svg>
         </div>
         <p className="text-2xl md:text-[38px] font-semibold text-Dark text-center leading-snug">
-          {assessment.qstn}
+          {assessment[30].qstn}
         </p>
         <ul className="grid gap-12">
-          {assessment.qstns.map((item) => (
+          {assessment[30].qstns.map((item) => (
             <div key={item.qstn} className="grid gap-8 md:gap-12">
               <div className="grid gap-4">
                 <p className="text-[22px] md:text-[32px] font-semibold text-Dark text-center leading-snug">
@@ -55,6 +113,27 @@ export default function ThirtyOne() {
                       className="hidden peer/radio cursor-pointer"
                       id={item.qstn + option}
                       name={item.qstn}
+                      checked={
+                        getValue(
+                          item.qstn === "Customer"
+                            ? "31A"
+                            : item.qstn === "Employees"
+                            ? "31B"
+                            : item.qstn === "Partners"
+                            ? "31C"
+                            : "31D"
+                        )?.answer === option
+                      }
+                      value={option}
+                      onChange={(e) =>
+                        item.qstn === "Customer"
+                          ? handleChangeA(e)
+                          : item.qstn === "Employees"
+                          ? handleChangeB(e)
+                          : item.qstn === "Partners"
+                          ? handleChangeC(e)
+                          : handleChangeD(e)
+                      }
                     />
                     <div className="w-6 h-6 bg-[#2222221A] peer-checked/radio:bg-Dark z-20  cursor-pointer rounded-full"></div>
                     <label
