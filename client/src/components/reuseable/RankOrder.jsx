@@ -12,9 +12,8 @@ export default function RankOrder({
 }) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const assessmentEvaluation = useSelector(
-    (state) => state.app.assessmentEvaluation
-  );
+  const { assessmentEvaluation, fundersAssessment, fundersAssessmentStarted } =
+    useSelector((state) => state.app);
 
   const dragOption = useRef(0);
   const draggedOverOption = useRef(0);
@@ -48,7 +47,6 @@ export default function RankOrder({
         setClicked(false);
       }, 10);
     } else if (clicked === false) {
-      console.log("clicked");
       clickedSecond.current = index;
       const optionClone = [...optionsArray];
       const temp = optionClone[clickedFirst.current];
@@ -73,9 +71,11 @@ export default function RankOrder({
 
   useEffect(() => {
     function getValue() {
-      const value = assessmentEvaluation.find(
-        (v) => v.qstnNumber === assessmentNumber
-      );
+      const value = (
+        fundersAssessmentStarted === true
+          ? fundersAssessment
+          : assessmentEvaluation
+      ).find((v) => v.qstnNumber === assessmentNumber);
       setOptionsArray(value?.answer.length ? value.answer : assessment.options);
     }
     getValue();

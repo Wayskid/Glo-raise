@@ -5,7 +5,9 @@ import RankOrder from "../../components/reuseable/RankOrder.jsx";
 
 export default function Thirteen2() {
   const dispatch = useDispatch();
-  const assessment = useSelector((state) => state.app.assessmentFile[12]);
+  const assessment = useSelector(
+    (state) => state.app.fundersAssessmentFile[12]
+  );
 
   useEffect(() => {
     dispatch(setFundersAssessmentProgress(5.88 * 14));

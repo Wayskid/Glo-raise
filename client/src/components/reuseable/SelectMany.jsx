@@ -10,16 +10,17 @@ export default function SelectMany({
   forFunders,
 }) {
   const navigate = useNavigate();
-  const assessmentEvaluation = useSelector(
-    (state) => state.app.assessmentEvaluation
-  );
+  const { assessmentEvaluation, fundersAssessment, fundersAssessmentStarted } =
+    useSelector((state) => state.app);
   const { setChoices, choices, handleSelectMany } = useContext(appContext);
 
   useEffect(() => {
     function getValue() {
-      const value = assessmentEvaluation.find(
-        (v) => v.qstnNumber === assessmentNumber
-      );
+      const value = (
+        fundersAssessmentStarted === true
+          ? fundersAssessment
+          : assessmentEvaluation
+      ).find((v) => v.qstnNumber === assessmentNumber);
       setChoices(value?.answer);
     }
     getValue();
@@ -78,7 +79,7 @@ export default function SelectMany({
             >
               <input
                 type="checkbox"
-                className="hidden peer/radio"
+                className="peer/radio absolute w-full h-full opacity-0 z-20"
                 id={option}
                 name={assessment.qstn}
                 checked={choices ? choices.includes(option) : false}
@@ -125,7 +126,8 @@ export default function SelectMany({
                 ? navigate(`../../../get_started/funders/${next}`)
                 : navigate(`../../get_started/${next}`)
             }
-            className="py-2 px-4 bg-Dark text-white rounded-[4px] border-2 border-Dark"
+            className="py-2 px-4 bg-Dark text-white rounded-[4px] border-2 border-Dark disabled:opacity-30"
+            disabled={!choices?.length}
           >
             Continue
           </button>

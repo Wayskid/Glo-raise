@@ -5,7 +5,7 @@ import SelectOneRadio from "../../components/reuseable/SelectOneRadio.jsx";
 
 export default function Ten() {
   const dispatch = useDispatch();
-  const assessment = useSelector((state) => state.app.assessmentFile[0]);
+  const assessment = useSelector((state) => state.app.fundersAssessmentFile[9]);
 
   useEffect(() => {
     dispatch(setFundersAssessmentProgress(5.88 * 11));

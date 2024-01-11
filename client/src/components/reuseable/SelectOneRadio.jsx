@@ -10,15 +10,16 @@ export default function SelectOneRadio({
   forFunders,
 }) {
   const navigate = useNavigate();
-  const assessmentEvaluation = useSelector(
-    (state) => state.app.assessmentEvaluation
-  );
+  const { assessmentEvaluation, fundersAssessment, fundersAssessmentStarted } =
+    useSelector((state) => state.app);
   const { handleChange, handleOthers } = useContext(appContext);
 
   function getValue() {
-    const value = assessmentEvaluation.find(
-      (v) => v.qstnNumber === assessmentNumber
-    );
+    const value = (
+      fundersAssessmentStarted === true
+        ? fundersAssessment
+        : assessmentEvaluation
+    ).find((v) => v.qstnNumber === assessmentNumber);
     return value;
   }
 
@@ -140,7 +141,8 @@ export default function SelectOneRadio({
                 ? navigate(`../../../get_started/funders/${next}`)
                 : navigate(`../../get_started/${next}`)
             }
-            className="py-2 px-4 bg-Dark text-white rounded-[4px] border-2 border-Dark"
+            className="py-2 px-4 bg-Dark text-white rounded-[4px] border-2 border-Dark disabled:opacity-40"
+            disabled={!getValue()?.answer}
           >
             Continue
           </button>

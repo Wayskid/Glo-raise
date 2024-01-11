@@ -14,9 +14,8 @@ export default function ChooseCountry({
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [countries, setCountries] = useState([]);
-  const assessmentEvaluation = useSelector(
-    (state) => state.app.assessmentEvaluation
-  );
+  const { assessmentEvaluation, fundersAssessment, fundersAssessmentStarted } =
+    useSelector((state) => state.app);
   const [choice, setChoice] = useState({
     country: "",
     state: "",
@@ -72,7 +71,11 @@ export default function ChooseCountry({
 
   useEffect(() => {
     function getValue() {
-      const value = assessmentEvaluation.find((v) => v.qstnNumber === "02");
+      const value = (
+        fundersAssessmentStarted === true
+          ? fundersAssessment
+          : assessmentEvaluation
+      ).find((v) => v.qstnNumber === "02");
       setChoice({ country: value?.answer.country, state: value?.answer.state });
     }
     getValue();
@@ -183,7 +186,8 @@ export default function ChooseCountry({
                 ? navigate(`../../../get_started/funders/${next}`)
                 : navigate(`../../get_started/${next}`)
             }
-            className="py-2 px-4 bg-Dark text-white rounded-[4px] border-2 border-Dark"
+            className="py-2 px-4 bg-Dark text-white rounded-[4px] border-2 border-Dark disabled:opacity-30"
+            disabled={!choice.country}
           >
             Continue
           </button>

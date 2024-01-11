@@ -6,8 +6,8 @@ const appContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
   const dispatch = useDispatch();
-  const assessmentEvaluation = useSelector(
-    (state) => state.app.assessmentEvaluation
+  const { fundersAssessmentStarted, foundersAssessmentStarted } = useSelector(
+    (state) => state.app
   );
 
   //SELECT ONE QUESTIONS=================================
@@ -86,14 +86,25 @@ export const AppContextProvider = ({ children }) => {
 
   //Handle onchange
   function handleOthers(e, assessment) {
-    dispatch(
-      setAssessmentEvaluation({
-        qstnNumber: assessment.number,
-        qstn: assessment.qstn,
-        answer: e.target.value,
-        score: scoring(e.target.value),
-      })
-    );
+    if (fundersAssessmentStarted === true) {
+      dispatch(
+        setAssessmentEvaluation({
+          qstnNumber: assessment.number,
+          qstn: assessment.qstn,
+          answer: e.target.value,
+        })
+      );
+    }
+    if (foundersAssessmentStarted === true) {
+      dispatch(
+        setAssessmentEvaluation({
+          qstnNumber: assessment.number,
+          qstn: assessment.qstn,
+          answer: e.target.value,
+          score: scoring(e.target.value),
+        })
+      );
+    }
   }
   function handleChange(e, assessment) {
     dispatch(

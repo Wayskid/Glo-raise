@@ -1,7 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import InputField from "../../components/reuseable/InputField";
 import { useDispatch } from "react-redux";
-import { setFundersAssessmentProgress } from "../../store/features/appSlice.js";
+import {
+  setAssessmentEvaluation,
+  setFundersAssessmentProgress,
+} from "../../store/features/appSlice.js";
 import { useNavigate } from "react-router-dom";
 
 export default function Funders_Form() {
@@ -11,6 +14,7 @@ export default function Funders_Form() {
   useEffect(() => {
     dispatch(setFundersAssessmentProgress(100));
   }, []);
+
   const funders_form = [
     { label: "Name", id: "name", type: "text", placeholder: "Your Name" },
     {
@@ -40,6 +44,27 @@ export default function Funders_Form() {
     { label: "Email", id: "email", type: "email", placeholder: "Your email" },
   ];
 
+  const [fundersFormVal, setFundersFormVal] = useState({});
+  function handleChange(e) {
+    setFundersFormVal({
+      ...fundersFormVal,
+      [e.target.name]: e.target.value,
+    });
+  }
+
+  function onSubmitForm(e) {
+    e.preventDefault();
+    dispatch(
+      setAssessmentEvaluation({
+        qstnNumber: 100,
+        qstn: "Funders Form",
+        answer: fundersFormVal,
+        score: 0,
+      })
+    );
+    navigate(`../../../get_started/funders/funders_success`);
+  }
+
   return (
     <div className="w-[min(1176px,100%)] mx-auto pt-[40px] pb-[72px] md:pt-[60px] md:pb-[100px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px] grid gap-12">
       <p className="text-[38px] md:text-[58px] text-Dark font-semibold leading-snug text-center">
@@ -47,7 +72,10 @@ export default function Funders_Form() {
         <br />
         Fill in your info to begin to receive potential opportunity matches
       </p>
-      <form className="border-2 border-Dark rounded-[20px] py-[60px] px-4 md:px-[48px] grid gap-6 w-[min(548px,100%)] mx-auto">
+      <form
+        className="border-2 border-Dark rounded-[20px] py-[60px] px-4 md:px-[48px] grid gap-6 w-[min(548px,100%)] mx-auto"
+        onSubmit={onSubmitForm}
+      >
         {funders_form.map((field) => (
           <InputField
             key={field.id}
@@ -56,8 +84,8 @@ export default function Funders_Form() {
             type={field.type}
             placeholder={field.placeholder}
             label={field.label}
-            onChange={() => {}}
-            required="required"
+            onChange={handleChange}
+            required={true}
           />
         ))}
         <div className="grid gap-6 md:gap-12 mt-4">
@@ -171,12 +199,7 @@ export default function Funders_Form() {
             </label>
           </div>
         </div>
-        <button
-          onClick={() => {
-            navigate("../../../get_started/funders/funders_success");
-          }}
-          className="bg-Dark px-[36px] py-5 text-white md:mx-auto rounded-[4px]"
-        >
+        <button className="bg-Dark px-[36px] py-5 text-white md:mx-auto rounded-[4px]">
           Submit
         </button>
       </form>

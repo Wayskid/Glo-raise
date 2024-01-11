@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import InputField from "../../components/reuseable/InputField";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setAssessmentEvaluation } from "../../store/features/appSlice";
 
 export default function Free_Checkout() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const free_checkout_form = [
     { label: "Name", id: "name", type: "text", placeholder: "Your Name" },
     {
@@ -22,7 +25,7 @@ export default function Free_Checkout() {
       label: "Birth year",
       id: "birth_year",
       type: "text",
-      placeholder: "Your birth year",
+      placeholder: "MM/DD/YYYY",
     },
     {
       label: "Postal code",
@@ -34,10 +37,30 @@ export default function Free_Checkout() {
       label: "Phone number",
       id: "phone_number",
       type: "number",
-      placeholder: "Your phone number",
+      placeholder: "ex. 1 506 1234 789",
     },
     { label: "Email", id: "email", type: "email", placeholder: "Your email" },
   ];
+  const [freeFormVal, setFreeFormVal] = useState({});
+  function handleChange(e) {
+    setFreeFormVal({
+      ...freeFormVal,
+      [e.target.name]: e.target.value,
+    });
+  }
+
+  function onSubmitForm(e) {
+    e.preventDefault();
+    dispatch(
+      setAssessmentEvaluation({
+        qstnNumber: 100,
+        qstn: "Free Form",
+        answer: freeFormVal,
+        score: 0,
+      })
+    );
+    navigate(`../../get_started/founders_success`);
+  }
 
   return (
     <div className="grid gap-[50px] base:gap-[68px] base:grid-cols-[0.6fr_1fr] pb-[70px] md:pb-[90px] base:pb-[132px] py-[64px] w-[min(1176px,100%)] mx-auto px-4 md:px-[48px]">
@@ -92,7 +115,11 @@ export default function Free_Checkout() {
           />
         </svg>
       </div>
-      <div className="border-2 border-Dark rounded-[20px] py-[60px] px-4 md:px-[48px] relative grid gap-8 md:gap-12">
+      <form
+        onSubmit={onSubmitForm}
+        action=""
+        className="border-2 border-Dark rounded-[20px] py-[60px] px-4 md:px-[48px] relative grid gap-8 md:gap-12"
+      >
         <div className="absolute grid place-items-center -top-[37px] justify-self-center">
           <p className="[font-family:'Instrument_Serif',serif;] text-[26px] text-white absolute">
             Free
@@ -110,7 +137,7 @@ export default function Free_Checkout() {
             />
           </svg>
         </div>
-        <form className="grid gap-12">
+        <div className="grid gap-12">
           <p className="text-[24px] md:text-[38px] text-center font-semibold border2 border-Dark">
             Fill in your info to get your raw score
           </p>
@@ -122,18 +149,15 @@ export default function Free_Checkout() {
               type={field.type}
               placeholder={field.placeholder}
               label={field.label}
-              onChange={() => {}}
-              required="required"
+              onChange={handleChange}
+              required={true}
             />
           ))}
-        </form>
-        <button
-          onClick={() => navigate(`../../get_started/founders_success`)}
-          className="p-4 bg-Dark text-white rounded-[4px] border-2 border-Dark md:mx-auto mx-[unset]"
-        >
+        </div>
+        <button className="p-4 bg-Dark text-white rounded-[4px] border-2 border-Dark md:mx-auto mx-[unset]">
           Get it for free
         </button>
-      </div>
+      </form>
     </div>
   );
 }

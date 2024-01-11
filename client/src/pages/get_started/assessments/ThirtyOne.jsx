@@ -158,7 +158,13 @@ export default function ThirtyOne() {
           </button>
           <button
             onClick={() => navigate(`../../get_started/32`)}
-            className="py-2 px-4 bg-Dark text-white rounded-[4px] border-2 border-Dark"
+            className="py-2 px-4 bg-Dark text-white rounded-[4px] border-2 border-Dark disabled:opacity-30"
+            disabled={
+              !getValue("31A")?.answer ||
+              !getValue("31B")?.answer ||
+              !getValue("31C")?.answer ||
+              !getValue("31D")?.answer
+            }
           >
             Continue
           </button>

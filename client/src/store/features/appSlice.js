@@ -740,6 +740,7 @@ const initialState = {
     },
   ],
   assessmentEvaluation: [],
+  fundersAssessment: [],
 };
 
 export const AppSlice = createSlice({
@@ -766,15 +767,32 @@ export const AppSlice = createSlice({
     },
     setAssessmentEvaluation: (state, action) => {
       // Find and replace or add new
-      state.assessmentEvaluation.find(
-        (v) => action.payload.qstnNumber === v.qstnNumber
-      )
-        ? state.assessmentEvaluation.forEach((v, i) => {
-            if (v.qstnNumber === action.payload.qstnNumber) {
-              state.assessmentEvaluation[i] = action.payload;
-            }
-          })
-        : state.assessmentEvaluation.push(action.payload);
+      if (state.fundersAssessmentStarted === true) {
+        state.fundersAssessment.find(
+          (v) => action.payload.qstnNumber === v.qstnNumber
+        )
+          ? state.fundersAssessment.forEach((v, i) => {
+              if (v.qstnNumber === action.payload.qstnNumber) {
+                state.fundersAssessment[i] = action.payload;
+              }
+            })
+          : state.fundersAssessment.push(action.payload);
+      }
+      if (state.foundersAssessmentStarted === true) {
+        state.assessmentEvaluation.find(
+          (v) => action.payload.qstnNumber === v.qstnNumber
+        )
+          ? state.assessmentEvaluation.forEach((v, i) => {
+              if (v.qstnNumber === action.payload.qstnNumber) {
+                state.assessmentEvaluation[i] = action.payload;
+              }
+            })
+          : state.assessmentEvaluation.push(action.payload);
+      }
+    },
+    resetEvaluation: (state, action) => {
+      state.assessmentEvaluation = [];
+      state.fundersAssessment = [];
     },
   },
 });
@@ -785,5 +803,6 @@ export const {
   setFundersAssessmentProgress,
   setFundersAssessmentStarted,
   setAssessmentEvaluation,
+  resetEvaluation,
 } = AppSlice.actions;
 export default AppSlice.reducer;

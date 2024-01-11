@@ -5,7 +5,7 @@ import { setFundersAssessmentProgress } from "../../store/features/appSlice.js";
 
 export default function Four() {
   const dispatch = useDispatch();
-  const assessment = useSelector((state) => state.app.assessmentFile[3]);
+  const assessment = useSelector((state) => state.app.fundersAssessmentFile[3]);
 
   useEffect(() => {
     dispatch(setFundersAssessmentProgress(5.88 * 5));
