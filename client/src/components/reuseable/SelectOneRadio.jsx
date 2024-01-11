@@ -74,18 +74,16 @@ export default function SelectOneRadio({
               key={option}
               className="px-6 flex items-center gap-4 bg-[#F8F8F8] rounded-[20px] relative overflow-hidden cursor-pointer"
             >
-              <div className="relative">
-                <input
-                  type="radio"
-                  className="peer/radio absolute w-full h-full opacity-0 z-20"
-                  id={option}
-                  name={assessment.qstn}
-                  checked={getValue()?.answer === option}
-                  value={option}
-                  onChange={(e) => handleChange(e, assessment)}
-                />
-                <div className="w-6 h-6 rounded-full bg-[#2222221A] peer-checked/radio:bg-Dark"></div>
-              </div>
+              <input
+                type="radio"
+                className="peer/radio absolute w-full h-full opacity-0 z-30 cursor-pointer"
+                id={option}
+                name={assessment.qstn}
+                checked={getValue()?.answer === option}
+                value={option}
+                onChange={(e) => handleChange(e, assessment)}
+              />
+              <div className="w-6 h-6 rounded-full bg-[#2222221A] peer-checked/radio:bg-Dark z-20"></div>
               <label
                 htmlFor={option}
                 className="py-4 text-Dark w-[calc(100%-2.5rem)] z-20 cursor-pointer"
