@@ -6,7 +6,7 @@ const appContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
   const dispatch = useDispatch();
-  const { fundersAssessmentStarted, foundersAssessmentStarted } = useSelector(
+  const { fundersAssessmentStarted, foundersAssessmentStarted,assessmentEvaluation } = useSelector(
     (state) => state.app
   );
 
@@ -161,6 +161,8 @@ export const AppContextProvider = ({ children }) => {
       })
     );
   }
+
+  console.log(assessmentEvaluation)
 
   return (
     <appContext.Provider
