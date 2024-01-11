@@ -77,16 +77,18 @@ export default function SelectMany({
               key={option}
               className="px-6 flex items-center gap-4 bg-[#F8F8F8] rounded-[20px] relative overflow-hidden"
             >
-              <input
-                type="checkbox"
-                className="peer/radio absolute w-full h-full opacity-0 z-20"
-                id={option}
-                name={assessment.qstn}
-                checked={choices ? choices.includes(option) : false}
-                value={option}
-                onChange={(e) => handleSelectMany(e, assessment)}
-              />
-              <div className="w-6 h-6 bg-[#2222221A] peer-checked/radio:bg-Dark z-20 cursor-pointer"></div>
+              <div className="relative">
+                <input
+                  type="checkbox"
+                  className="peer/radio absolute w-full h-full opacity-0 z-20"
+                  id={option}
+                  name={assessment.qstn}
+                  checked={choices ? choices.includes(option) : false}
+                  value={option}
+                  onChange={(e) => handleSelectMany(e, assessment)}
+                />
+                <div className="w-6 h-6 bg-[#2222221A] peer-checked/radio:bg-Dark z-20 cursor-pointer"></div>
+              </div>
               <label
                 htmlFor={option}
                 className="py-4 text-Dark w-[calc(100%-2.5rem)] z-20 cursor-pointer"
