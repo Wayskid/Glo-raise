@@ -6,9 +6,11 @@ const appContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
   const dispatch = useDispatch();
-  const { fundersAssessmentStarted, foundersAssessmentStarted,assessmentEvaluation } = useSelector(
-    (state) => state.app
-  );
+  const {
+    fundersAssessmentStarted,
+    foundersAssessmentStarted,
+    assessmentEvaluation,
+  } = useSelector((state) => state.app);
 
   //SELECT ONE QUESTIONS=================================
   const [choice, setChoice] = useState("");
@@ -23,7 +25,7 @@ export const AppContextProvider = ({ children }) => {
       case "We're growing much faster than our closest competitors":
       case "Rapidly growing and global":
       case "Over 100M":
-      case "High acquisition cost and transactional":
+      case "Low acquisition cost and recurring":
       case "Completely - what we do is very different from anything they've experienced":
       case "Members of our team have successfully raised third-party funding":
       case "Orange - There's competition, but we know exactly how to win":
@@ -38,8 +40,7 @@ export const AppContextProvider = ({ children }) => {
       case "Moderately growing and global":
       case "50-99M":
       case "30-49M":
-      case "Medium acquisition cost and transactional":
-      case "Low acquisition cost and transactional":
+      case "Medium acquisition cost and recurring":
       case "Significantly - what we do completely re-imagines a familiar service":
       case "Members of our team have successfully built and harvested another company":
       case "Purple - High and increasing, but we know who they are":
@@ -54,6 +55,7 @@ export const AppContextProvider = ({ children }) => {
       case "Rapidly growing and regional":
       case "10-29M":
       case "High acquisition cost and recurring":
+      case "Low acquisition cost and transactional":
       case "Moderately - what we do brings new elements to their existing behaviors":
       case "Members of our team have successfully conducted M&A transactions":
       case "White - There's no competition":
@@ -63,6 +65,7 @@ export const AppContextProvider = ({ children }) => {
         break;
       case "Not like us":
       case "Not at all like us":
+      case "Not much like us":
       case "Don't know":
       case "Less than 100M":
       case "Less than 5%":
@@ -70,7 +73,7 @@ export const AppContextProvider = ({ children }) => {
       case "Moderately growing and regional":
       case "Market is still forming":
       case "Less than 10M":
-      case "Medium acquisition cost and recurring":
+      case "Medium acquisition cost and transactional":
       case "This is the first venture for all of us":
       case "Red - Intense and coming from all directions":
       case "Ambivalent":
@@ -162,7 +165,7 @@ export const AppContextProvider = ({ children }) => {
     );
   }
 
-  console.log(assessmentEvaluation)
+  console.log(assessmentEvaluation);
 
   return (
     <appContext.Provider
