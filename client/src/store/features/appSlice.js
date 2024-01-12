@@ -103,7 +103,7 @@ const initialState = {
       add_more: false,
       number: "09",
       qstn: "The value of our total addressable market is this size in USD ($)",
-      options: ["Over 10Billion", "1B - 9.99B ", "100M-999M", "Less than 100M"],
+      options: ["Over 10Billion", "1B - 9.99B", "100M-999M", "Less than 100M"],
     },
     {
       add_more: false,
@@ -741,6 +741,8 @@ const initialState = {
   ],
   assessmentEvaluation: [],
   fundersAssessment: [],
+  funderInfo: {},
+  founderInfo: {},
 };
 
 export const AppSlice = createSlice({
@@ -794,6 +796,12 @@ export const AppSlice = createSlice({
       state.assessmentEvaluation = [];
       state.fundersAssessment = [];
     },
+    setFunderInfo: (state, action) => {
+      state.funderInfo = action.payload;
+    },
+    setFounderInfo: (state, action) => {
+      state.founderInfo = action.payload;
+    },
   },
 });
 
@@ -804,5 +812,7 @@ export const {
   setFundersAssessmentStarted,
   setAssessmentEvaluation,
   resetEvaluation,
+  setFunderInfo,
+  setFounderInfo,
 } = AppSlice.actions;
 export default AppSlice.reducer;

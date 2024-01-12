@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import InputField from "../../components/reuseable/InputField";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
-  setAssessmentEvaluation,
+  setFunderInfo,
   setFundersAssessmentProgress,
 } from "../../store/features/appSlice.js";
 import { useNavigate } from "react-router-dom";
+import { useCreateFunderMutation } from "../../services/appApi.js";
 
 export default function Funders_Form() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const assessmentInfo = useSelector((state) => state.app.fundersAssessment);
 
   useEffect(() => {
     dispatch(setFundersAssessmentProgress(100));
@@ -52,17 +54,22 @@ export default function Funders_Form() {
     });
   }
 
+  const [createFunderApi] = useCreateFunderMutation();
   function onSubmitForm(e) {
     e.preventDefault();
-    dispatch(
-      setAssessmentEvaluation({
-        qstnNumber: 100,
-        qstn: "Funders Form",
-        answer: fundersFormVal,
-        score: 0,
-      })
-    );
-    navigate(`../../../get_started/funders/funders_success`);
+    // dispatch(setFunderInfo(fundersFormVal));
+    createFunderApi({
+      body: {
+        name: fundersFormVal.name,
+        email: fundersFormVal.email,
+        funderInfo: fundersFormVal,
+        assessmentInfo,
+      },
+    })
+      .unwrap()
+      .then((result) =>
+        navigate(`../../../get_started/funders/funders_success`)
+      ).catch;
   }
 
   return (
@@ -84,6 +91,7 @@ export default function Funders_Form() {
             type={field.type}
             placeholder={field.placeholder}
             label={field.label}
+            // value={fundersFormVal[field.id]}
             onChange={handleChange}
             required={true}
           />

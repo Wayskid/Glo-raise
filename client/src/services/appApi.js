@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const BASE_URL = `https://glo-raise.onrender.com/api`;
+const BASE_URL = `https://localhost:3000/api`;
 
 export const appApi = createApi({
   reducerPath: "AppAPI",
@@ -10,51 +10,14 @@ export const appApi = createApi({
   endpoints: (builder) => ({
     //PRODUCTS---------------------------------------
     //---  GET PRODUCTS  ---//
-    getProducts: builder.query({
-      query: ({ filter, sort, search }) => ({
-        url: `/product?filter_by=${filter}&sort_by=${sort}&search=${search}`,
-        method: "get",
+    createFunder: builder.mutation({
+      query: ({ body }) => ({
+        url: `/funders/funder_create`,
+        method: "post",
+        body,
       }),
-      async onCacheEntryAdded(
-        arg,
-        { cacheDataLoaded, cacheEntryRemoved, updateCachedData }
-      ) {
-        try {
-          await cacheDataLoaded;
-
-          socket.on("update_products", (arg) => {
-            updateCachedData((draft) => {
-              draft.push(arg);
-            });
-          });
-
-          await cacheEntryRemoved;
-        } catch {}
-      },
     }),
   }),
 });
 
-export const {
-  useGetProductsQuery,
-  useGetOneProductQuery,
-  useEditProductMutation,
-  useAddProductsMutation,
-  useDeleteProductMutation,
-  useRegisterUserMutation,
-  useLoginUserMutation,
-  useGetUserInfoQuery,
-  useSubscribeUserMutation,
-  useGetSubscribersQuery,
-  useCheckoutMutation,
-  useSessionQuery,
-  useGetOrdersQuery,
-  useGetOrderDetailsQuery,
-  useEditOrderMutation,
-  useGetUserOrdersQuery,
-  useGetProductReviewsQuery,
-  useGetUserReviewsQuery,
-  useAddReviewMutation,
-  useDeleteReviewMutation,
-  useFilterReviewMutation,
-} = appApi;
+export const { useCreateFunderMutation } = appApi;

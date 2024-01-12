@@ -1,6 +1,7 @@
 import React from "react";
 import InputField from "../../components/reuseable/InputField";
 import { useNavigate } from "react-router-dom";
+import { setFounderInfo } from "../../store/features/appSlice";
 
 export default function Prem_Checkout() {
   const navigate = useNavigate();
@@ -39,6 +40,20 @@ export default function Prem_Checkout() {
     },
     { label: "Email", id: "email", type: "email", placeholder: "Your email" },
   ];
+
+  const [foundersFormVal, setFoundersFormVal] = useState({});
+  function handleChange(e) {
+    setFoundersFormVal({
+      ...foundersFormVal,
+      [e.target.name]: e.target.value,
+    });
+  }
+
+  function onSubmitForm(e) {
+    e.preventDefault();
+    dispatch(setFounderInfo(foundersFormVal));
+    navigate(`../../../get_started/funders/funders_success`);
+  }
 
   return (
     <div className="grid gap-[50px] base:gap-[68px] base:grid-cols-[0.6fr_1fr] pb-[70px] md:pb-[90px] base:pb-[132px] py-[64px] w-[min(1176px,100%)] mx-auto px-4 md:px-[48px]">
@@ -152,7 +167,10 @@ export default function Prem_Checkout() {
           </p>
         </div>
       </div>
-      <form className="border-2 border-Dark rounded-[20px] py-[60px] px-4 md:px-[48px] relative grid gap-8 md:gap-12">
+      <form
+        onSubmit={onSubmitForm}
+        className="border-2 border-Dark rounded-[20px] py-[60px] px-4 md:px-[48px] relative grid gap-8 md:gap-12"
+      >
         <div className="absolute grid place-items-center -top-[37px] justify-self-center">
           <p className="[font-family:'Instrument_Serif',serif;] text-[26px] text-white absolute">
             Premium
@@ -182,8 +200,8 @@ export default function Prem_Checkout() {
               type={field.type}
               placeholder={field.placeholder}
               label={field.label}
-              onChange={() => {}}
-              required="required"
+              onChange={handleChange}
+              required={true}
             />
           ))}
         </div>
