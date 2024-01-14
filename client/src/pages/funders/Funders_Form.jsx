@@ -57,7 +57,6 @@ export default function Funders_Form() {
   const [createFunderApi] = useCreateFunderMutation();
   function onSubmitForm(e) {
     e.preventDefault();
-    // dispatch(setFunderInfo(fundersFormVal));
     createFunderApi({
       body: {
         name: fundersFormVal.name,
@@ -69,7 +68,8 @@ export default function Funders_Form() {
       .unwrap()
       .then((result) =>
         navigate(`../../../get_started/funders/funders_success`)
-      ).catch;
+      )
+      .catch((err) => console.log(err));
   }
 
   return (

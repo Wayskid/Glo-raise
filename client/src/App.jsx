@@ -28,7 +28,7 @@ import FortyOne from "./pages/get_started/assessments/FortyOne";
 import Plan from "./pages/get_started/Plan";
 import Prem_Checkout from "./pages/get_started/Prem_Checkout";
 import Free_Checkout from "./pages/get_started/Free_Checkout";
-import Free_Success from "./pages/get_started/Free_Success";
+import Founders_Success from "./pages/get_started/Founders_Success";
 import Interest_Radar from "./pages/funders/Interest_Radar";
 import OneAndMost from "./pages/funders/OneAndMost";
 import Four from "./pages/funders/Four";
@@ -64,7 +64,6 @@ export default function App() {
           <Route path="23" element={<TwentyThree />}></Route>
           <Route path="24" element={<TwentyFour />}></Route>
           <Route path="25" element={<TwentyFive />}></Route>
-          <Route path="28" element={<TwentyEight />}></Route>
           <Route path="29" element={<TwentyNine />}></Route>
           <Route path="31" element={<ThirtyOne />}></Route>
           <Route path="33" element={<ThirtyThree />}></Route>
@@ -77,7 +76,7 @@ export default function App() {
           <Route path="plan" element={<Plan />}></Route>
           <Route path="premium_checkout" element={<Prem_Checkout />}></Route>
           <Route path="free_checkout" element={<Free_Checkout />}></Route>
-          <Route path="founders_success" element={<Free_Success />}></Route>
+          <Route path="founders_success" element={<Founders_Success />}></Route>
           <Route path="funders">
             <Route index element={<Interest_Radar />}></Route>
             <Route

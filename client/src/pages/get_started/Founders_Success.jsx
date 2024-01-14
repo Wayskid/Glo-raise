@@ -5,11 +5,11 @@ import {
   setFoundersAssessmentStarted,
 } from "../../store/features/appSlice";
 
-export default function Free_Success() {
+export default function Founders_Success() {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(setFoundersAssessmentStarted(false));
-    dispatch(resetEvaluation());
+    // dispatch(setFoundersAssessmentStarted(false));
+    // dispatch(resetEvaluation());
   }, []);
   return (
     <div className="grid gap-12 pb-[70px] md:pb-[90px] base:pb-[132px] py-[64px] w-[min(800px,100%)] mx-auto px-4 md:px-[48px] text-Dark relative">

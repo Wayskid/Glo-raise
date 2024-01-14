@@ -1,12 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import InputField from "../../components/reuseable/InputField";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { setAssessmentEvaluation } from "../../store/features/appSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { useCreateFounderMutation } from "../../services/appApi";
+import appContext from "../../context/AppContext";
 
 export default function Free_Checkout() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const { assessmentEvaluation: assessmentInfo } = useSelector(
+    (state) => state.app
+  );
+  const { finalScore: score } = useContext(appContext);
   const free_checkout_form = [
     { label: "Name", id: "name", type: "text", placeholder: "Your Name" },
     {
@@ -49,17 +54,33 @@ export default function Free_Checkout() {
     });
   }
 
+  const [createFounderApi] = useCreateFounderMutation();
   function onSubmitForm(e) {
     e.preventDefault();
-    dispatch(
-      setAssessmentEvaluation({
-        qstnNumber: 100,
-        qstn: "Free Form",
-        answer: freeFormVal,
-        score: 0,
-      })
-    );
-    navigate(`../../get_started/founders_success`);
+    createFounderApi({
+      body: {
+        name: freeFormVal.name,
+        email: freeFormVal.email,
+        founderInfo: freeFormVal,
+        assessmentInfo,
+        score,
+        level:
+          score >= 104
+            ? 5
+            : score >= 90 && score < 104
+            ? 4
+            : score >= 70 && score < 90
+            ? 3
+            : score >= 60 && score < 70
+            ? 2
+            : score < 60
+            ? 1
+            : 0,
+      },
+    })
+      .unwrap()
+      .then((result) => navigate(`../../../get_started/founders_success`))
+      .catch((err) => console.log(err));
   }
 
   return (

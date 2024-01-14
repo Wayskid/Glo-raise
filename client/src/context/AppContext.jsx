@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setAssessmentEvaluation } from "../store/features/appSlice";
 
@@ -26,7 +26,7 @@ export const AppContextProvider = ({ children }) => {
       case "Rapidly growing and global":
       case "Over 100M":
       case "Low acquisition cost and recurring":
-      case "Completely - what we do is very different from anything they've experienced":
+      case "Moderately - what we do brings new elements to their existing behaviors":
       case "Members of our team have successfully raised third-party funding":
       case "Orange - There's competition, but we know exactly how to win":
       case "Essential":
@@ -56,7 +56,7 @@ export const AppContextProvider = ({ children }) => {
       case "10-29M":
       case "High acquisition cost and recurring":
       case "Low acquisition cost and transactional":
-      case "Moderately - what we do brings new elements to their existing behaviors":
+      case "Very Little - we give them another option to something that's very familiar to them":
       case "Members of our team have successfully conducted M&A transactions":
       case "White - There's no competition":
       case "Useful":
@@ -74,6 +74,7 @@ export const AppContextProvider = ({ children }) => {
       case "Market is still forming":
       case "Less than 10M":
       case "Medium acquisition cost and transactional":
+      case "Completely - what we do is very different from anything they've experienced":
       case "This is the first venture for all of us":
       case "Red - Intense and coming from all directions":
       case "Ambivalent":
@@ -154,6 +155,16 @@ export const AppContextProvider = ({ children }) => {
               : answers.length === 1
               ? 1
               : 0
+            : assessment.number === "29"
+            ? answers.includes("This is the first venture for all of us")
+              ? 0
+              : answers.length === 3
+              ? 4
+              : answers.length === 2
+              ? 3
+              : answers.length === 1
+              ? 2
+              : 1
             : assessment.number === "38"
             ? answers.length === 0
               ? 4
@@ -169,7 +180,20 @@ export const AppContextProvider = ({ children }) => {
     );
   }
 
+  //Calculate final score
+  const [finalScore, setFinalScore] = useState(0);
+  function getAssessmentScore() {
+    setFinalScore(assessmentEvaluation.reduce((a, c) => a + c?.score, 0));
+  }
+
+  useEffect(() => {
+    if (assessmentEvaluation.length) {
+      getAssessmentScore();
+    }
+  }, [assessmentEvaluation]);
+
   console.log(assessmentEvaluation);
+  console.log(finalScore);
 
   return (
     <appContext.Provider
@@ -182,6 +206,7 @@ export const AppContextProvider = ({ children }) => {
         setChoices,
         handleSelectMany,
         handleOthers,
+        finalScore,
       }}
     >
       {children}

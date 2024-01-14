@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const BASE_URL = `https://localhost:3000/api`;
+const BASE_URL = `http://localhost:3000/api`;
 
 export const appApi = createApi({
   reducerPath: "AppAPI",
@@ -8,8 +8,7 @@ export const appApi = createApi({
   refetchOnReconnect: true,
   keepUnusedDataFor: 5,
   endpoints: (builder) => ({
-    //PRODUCTS---------------------------------------
-    //---  GET PRODUCTS  ---//
+    //Funders---------------------------------------
     createFunder: builder.mutation({
       query: ({ body }) => ({
         url: `/funders/funder_create`,
@@ -17,7 +16,15 @@ export const appApi = createApi({
         body,
       }),
     }),
+    //Founders---------------------------------------
+    createFounder: builder.mutation({
+      query: ({ body }) => ({
+        url: `/founders/founder_create`,
+        method: "post",
+        body,
+      }),
+    }),
   }),
 });
 
-export const { useCreateFunderMutation } = appApi;
+export const { useCreateFunderMutation, useCreateFounderMutation } = appApi;

@@ -2,9 +2,13 @@ import React from "react";
 import InputField from "../../components/reuseable/InputField";
 import { useNavigate } from "react-router-dom";
 import { setFounderInfo } from "../../store/features/appSlice";
+import { useCreateFounderMutation } from "../../services/appApi";
 
 export default function Prem_Checkout() {
   const navigate = useNavigate();
+  const { assessmentEvaluation: assessmentInfo } = useSelector(
+    (state) => state.app
+  );
 
   const prem_checkout_form = [
     { label: "Name", id: "name", type: "text", placeholder: "Your Name" },
@@ -49,10 +53,22 @@ export default function Prem_Checkout() {
     });
   }
 
+  const [createFounderApi] = useCreateFounderMutation();
   function onSubmitForm(e) {
     e.preventDefault();
-    dispatch(setFounderInfo(foundersFormVal));
-    navigate(`../../../get_started/funders/funders_success`);
+    createFounderApi({
+      body: {
+        name: foundersFormVal.name,
+        email: foundersFormVal.email,
+        founderInfo: foundersFormVal,
+        assessmentInfo,
+      },
+    })
+      .unwrap()
+      .then((result) =>
+        navigate(`../../../get_started/founders/founders_success`)
+      )
+      .catch((err) => console.log(err));
   }
 
   return (
