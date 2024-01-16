@@ -144,9 +144,7 @@ export const AppContextProvider = ({ children }) => {
         answer: answers,
         score:
           (assessment.number === "13") | (assessment.number === "33")
-            ? answers.length === 5
-              ? 4
-              : answers.length === 4
+            ? answers.length > 3
               ? 4
               : answers.length === 3
               ? 3
