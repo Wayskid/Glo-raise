@@ -24,7 +24,18 @@ export const appApi = createApi({
         body,
       }),
     }),
+    checkout: builder.mutation({
+      query: ({ body }) => ({
+        url: "/stripe/create-checkout-session",
+        method: "post",
+        body,
+      }),
+    }),
   }),
 });
 
-export const { useCreateFunderMutation, useCreateFounderMutation } = appApi;
+export const {
+  useCreateFunderMutation,
+  useCreateFounderMutation,
+  useCheckoutMutation,
+} = appApi;

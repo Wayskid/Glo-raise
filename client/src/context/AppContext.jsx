@@ -184,14 +184,34 @@ export const AppContextProvider = ({ children }) => {
     setFinalScore(assessmentEvaluation.reduce((a, c) => a + c?.score, 0));
   }
 
+  //Calculate Level
+  const [level, setLevel] = useState(1);
+  function getLevel() {
+    setLevel(
+      finalScore >= 104
+        ? 5
+        : finalScore >= 90 && finalScore < 104
+        ? 4
+        : finalScore >= 70 && finalScore < 90
+        ? 3
+        : finalScore >= 60 && finalScore < 70
+        ? 2
+        : finalScore < 60
+        ? 1
+        : 0
+    );
+  }
+
   useEffect(() => {
     if (assessmentEvaluation.length) {
       getAssessmentScore();
+      getLevel();
     }
   }, [assessmentEvaluation]);
 
   console.log(assessmentEvaluation);
-  console.log(finalScore);
+  console.log("Gross Score: " + finalScore);
+  console.log("Level: " + level);
 
   return (
     <appContext.Provider
@@ -205,6 +225,7 @@ export const AppContextProvider = ({ children }) => {
         handleSelectMany,
         handleOthers,
         finalScore,
+        level,
       }}
     >
       {children}

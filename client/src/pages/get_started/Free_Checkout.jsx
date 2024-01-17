@@ -7,11 +7,11 @@ import appContext from "../../context/AppContext";
 
 export default function Free_Checkout() {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const { assessmentEvaluation: assessmentInfo } = useSelector(
     (state) => state.app
   );
-  const { finalScore: score } = useContext(appContext);
+  const { finalScore: score, level } = useContext(appContext);
   const free_checkout_form = [
     { label: "Name", id: "name", type: "text", placeholder: "Your Name" },
     {
@@ -64,23 +64,12 @@ export default function Free_Checkout() {
         founderInfo: freeFormVal,
         assessmentInfo,
         score,
-        level:
-          score >= 104
-            ? 5
-            : score >= 90 && score < 104
-            ? 4
-            : score >= 70 && score < 90
-            ? 3
-            : score >= 60 && score < 70
-            ? 2
-            : score < 60
-            ? 1
-            : 0,
+        level,
       },
-    })
-      .unwrap()
-      .then((result) => navigate(`../../../get_started/founders_success`))
-      .catch((err) => console.log(err));
+    });
+    // .unwrap()
+    // .then((result) => navigate(`../../../get_started/founders_success`))
+    // .catch((err) => console.log(err));
   }
 
   return (

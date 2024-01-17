@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import InputField from "../../components/reuseable/InputField";
+import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { setFounderInfo } from "../../store/features/appSlice";
-import { useCreateFounderMutation } from "../../services/appApi";
+import {
+  useCheckoutMutation,
+  useCreateFounderMutation,
+} from "../../services/appApi";
+import appContext from "../../context/AppContext";
 
 export default function Prem_Checkout() {
   const navigate = useNavigate();
   const { assessmentEvaluation: assessmentInfo } = useSelector(
     (state) => state.app
   );
+  const { finalScore: score, level } = useContext(appContext);
 
   const prem_checkout_form = [
     { label: "Name", id: "name", type: "text", placeholder: "Your Name" },
@@ -45,29 +50,39 @@ export default function Prem_Checkout() {
     { label: "Email", id: "email", type: "email", placeholder: "Your email" },
   ];
 
-  const [foundersFormVal, setFoundersFormVal] = useState({});
+  const [premiumFormVal, setPremiumFormVal] = useState({});
   function handleChange(e) {
-    setFoundersFormVal({
-      ...foundersFormVal,
+    setPremiumFormVal({
+      ...premiumFormVal,
       [e.target.name]: e.target.value,
     });
   }
 
+  const [checkoutApi] = useCheckoutMutation();
   const [createFounderApi] = useCreateFounderMutation();
   function onSubmitForm(e) {
     e.preventDefault();
     createFounderApi({
       body: {
-        name: foundersFormVal.name,
-        email: foundersFormVal.email,
-        founderInfo: foundersFormVal,
+        name: premiumFormVal.name,
+        email: premiumFormVal.email,
+        founderInfo: premiumFormVal,
         assessmentInfo,
+        score,
+        level,
+      },
+    });
+    checkoutApi({
+      body: {
+        name: premiumFormVal.name,
+        email: premiumFormVal.email,
+        founderInfo: premiumFormVal,
+        score,
+        level,
       },
     })
       .unwrap()
-      .then((result) =>
-        navigate(`../../../get_started/founders/founders_success`)
-      )
+      .then((result) => (window.location.href = result.url))
       .catch((err) => console.log(err));
   }
 
@@ -224,10 +239,7 @@ export default function Prem_Checkout() {
         <p className="[font-family:'Instrument_Serif',serif;] text-[26px] text-center">
           limited time just $29 ($300 value)
         </p>
-        <button
-          onClick={() => navigate(`../../get_started/stripe`)}
-          className="p-4 bg-Dark text-white rounded-[4px] border-2 border-Dark md:mx-auto mx-[unset]"
-        >
+        <button className="p-4 bg-Dark text-white rounded-[4px] border-2 border-Dark md:mx-auto mx-[unset]">
           Proceed to checkout
         </button>
       </form>
