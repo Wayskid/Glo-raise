@@ -29,7 +29,6 @@ app.use(
     preflightContinue: false,
   })
 );
-
 const server = http.createServer(app);
 
 //Api Routes
