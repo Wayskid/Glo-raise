@@ -120,39 +120,70 @@ export default function About() {
           </button>
         </div>
       </section>
-      <section className="bg-White">
-        <div className="w-[min(80rem,100%)] mx-auto pt-[56px] pb-[72px] md:pt-[80px] md:pb-[100px] lg:py-[90px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px] grid gap-8 md:gap-12 bg-slate-600">
-          <div>
-            <p className="text-[38px] font-semibold text-Dark">
-              James Tavita & Team
+      <section className="bg-white">
+        <div className="w-[min(80rem,100%)] mx-auto px-4 md:px-[60px] lg:px-[132px] grid gap-16 md:flex flex-row-reverse">
+          <div className="grid gap-8 md:gap-12 bg-slate-60 w-[min(500px,100%)] shrink-0 my-auto">
+            <div>
+              <p className="text-[38px] font-semibold text-Dark">
+                James Tavita & Team
+              </p>
+              <p className="text-2xl text-Dark">Chief Executive Officer</p>
+            </div>
+            <p className="text-xl w-[min(532px,100%)]">
+              Welcome to Glo-raise - the premier platform for assessing business
+              attractiveness and matching founders and funder globally. Our
+              approach radically shifts the game by improving access for
+              founders and increasing quality opportunities for funders.
+              <br />
+              <br />
+              Working closely with a world-class team of funders and scholars,
+              our team has developed the premier engine for assessing business
+              attractiveness to empower founders with next-level GROWTH insights
+              and to enhance opportunity sourcing for funders.
+              <br />
+              <br />
+              Not yet fundable? No worries. Glo-visor is a premier system led by
+              successful founders globally to improve business quality along the
+              six GROWTH attractiveness metrics.
+              <br />
+              <br />
+              For others, the RAISER Base-to-Seed approach is unrivaled for
+              providing value to founders while helping them to create more
+              value for their customers and potential funders.
+              <br />
+              <br />
+              Let's go - we've got you covered!
             </p>
-            <p className="text-2xl text-Dark">Chief Executive Officer</p>
           </div>
-          <p className="text-xl w-[min(532px,100%)]">
-            Welcome to Glo-raise - the premier platform for assessing business
-            attractiveness and matching founders and funder globally. Our
-            approach radically shifts the game by improving access for founders
-            and increasing quality opportunities for funders.
-            <br />
-            <br />
-            Working closely with a world-class team of funders and scholars, our
-            team has developed the premier engine for assessing business
-            attractiveness to empower founders with next-level GROWTH insights
-            and to enhance opportunity sourcing for funders.
-            <br />
-            <br />
-            Not yet fundable? No worries. Glo-visor is a premier system led by
-            successful founders globally to improve business quality along the
-            six GROWTH attractiveness metrics.
-            <br />
-            <br />
-            For others, the RAISER Base-to-Seed approach is unrivaled for
-            providing value to founders while helping them to create more value
-            for their customers and potential funders.
-            <br />
-            <br />
-            Let's go - we've got you covered!
-          </p>
+          <div className="grid place-items-center relative h-80 md:h-[1005px] md:my-auto md:w-[calc(100%-500px)] shrink-0 overflow-x-hidden">
+            <div className="grid w-full h-full place-items-center absolute overflow-hidden">
+              <div className="bg-Iceberg w-16 h-[66rem] absolute"></div>
+              <div className="bg-Iceberg w-16 h-[66rem] rotate-45 absolute"></div>
+              <div className="bg-Iceberg w-16 h-[66rem] -rotate-45 absolute"></div>
+              <div className="bg-Iceberg w-full h-16"></div>
+            </div>
+            <div className="grid w-32 h-32 place-items-center absolute">
+              <div className="bg-Energy w-[9px] h-full absolute"></div>
+              <div className="bg-Energy w-[9px] h-full rotate-45 absolute"></div>
+              <div className="bg-Energy w-[9px] h-full -rotate-45 absolute"></div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="214"
+                height="9"
+                viewBox="0 0 214 9"
+                fill="none"
+                className="absolute -left-[14.5rem]"
+              >
+                <path
+                  d="M214 4.23035L-519 4.23035"
+                  stroke="#FD542F"
+                  stroke-width="8"
+                  stroke-dasharray="18.96 18.96"
+                />
+              </svg>
+              <div className="bg-Energy w-full h-[9px]"></div>
+            </div>
+          </div>
         </div>
       </section>
       <SubscriberForm />
