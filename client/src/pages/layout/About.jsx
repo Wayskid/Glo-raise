@@ -121,7 +121,7 @@ export default function About() {
         </div>
       </section>
       <section className="bg-white">
-        <div className="w-[min(80rem,100%)] mx-auto px-4 md:px-[60px] lg:px-[132px] grid gap-16 md:flex flex-row-reverse">
+        <div className="w-[min(80rem,100%)] mx-auto pt-10 md:pt-0 px-4 md:px-[60px] lg:px-[132px] grid gap-16 md:flex flex-row-reverse">
           <div className="grid gap-8 md:gap-12 bg-slate-60 w-[min(500px,100%)] shrink-0 my-auto">
             <div>
               <p className="text-[38px] font-semibold text-Dark">
