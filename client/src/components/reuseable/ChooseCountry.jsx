@@ -140,6 +140,9 @@ export default function ChooseCountry({
             >
               Select Country
             </option>
+            <option value="United States">
+              United States
+            </option>
             {countries.length &&
               countries.map((oneCountry, index) => (
                 <option key={oneCountry.name + index} value={oneCountry.name}>

@@ -3,7 +3,8 @@ import Founders from "../models/foundersModel.js";
 
 export const addFounder = async (req, res) => {
   try {
-    const { name, email, founderInfo, assessmentInfo, score, level,plan } = req.body;
+    const { name, email, founderInfo, assessmentInfo, score, level, plan } =
+      req.body;
 
     const data = await Founders.create({
       name,

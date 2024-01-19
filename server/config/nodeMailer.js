@@ -1,5 +1,16 @@
 import nodeMailer from "nodemailer";
-import { oneFree, onePrem } from "../utils/emails/email.js";
+import {
+  fifthFree,
+  fifthPrem,
+  fourthFree,
+  fourthPrem,
+  oneFree,
+  onePrem,
+  thirdFree,
+  thirdPrem,
+  twoFree,
+  twoPrem,
+} from "../utils/emails/email.js";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -23,28 +34,28 @@ const NodeMailer = async ({ name, email, level, plan }) => {
       mail = onePrem;
       break;
     case level === 2 && plan === "Free":
-      mail = oneFree;
+      mail = twoFree;
       break;
     case level === 2 && plan === "Premium":
-      mail = oneFree;
+      mail = twoPrem;
       break;
     case level === 3 && plan === "Free":
-      mail = oneFree;
+      mail = thirdFree;
       break;
     case level === 3 && plan === "Premium":
-      mail = oneFree;
+      mail = thirdPrem;
       break;
     case level === 4 && plan === "Free":
-      mail = oneFree;
+      mail = fourthFree;
       break;
     case level === 4 && plan === "Premium":
-      mail = oneFree;
+      mail = fourthPrem;
       break;
     case level === 5 && plan === "Free":
-      mail = oneFree;
+      mail = fifthFree;
       break;
     case level === 5 && plan === "Premium":
-      mail = oneFree;
+      mail = fifthPrem;
       break;
     default:
       mail = "";

@@ -33,13 +33,28 @@ export default function Nav() {
           </svg>
         </NavLink>
         <div className="md:flex items-center gap-12 hidden">
-          <NavLink to="/" className="py-2 border-b-[3px] border-Hero-Purple">
+          <NavLink
+            to="/"
+            className={`py-2  ${
+              matchRoute("/") && "border-b-[3px] border-Hero-Purple"
+            }`}
+          >
             How it Works
           </NavLink>
-          <NavLink to="/for_funders" className="py-2">
+          <NavLink
+            to="/for_funders"
+            className={`py-2  ${
+              matchRoute("/for_funders") && "border-b-[3px] border-Hero-Purple"
+            }`}
+          >
             For Funders
           </NavLink>
-          <NavLink to="/about" className="py-2">
+          <NavLink
+            to="/about"
+            className={`py-2  ${
+              matchRoute("/about") && "border-b-[3px] border-Hero-Purple"
+            }`}
+          >
             About Us
           </NavLink>
           <NavLink
@@ -112,11 +127,11 @@ export default function Nav() {
           onClick={() => setMobileMenuShown(false)}
           to="/get_started"
           className={`${
-            matchRoute("/about") && "font-semibold bg-Lavender"
+            matchRoute("/get_started") && "font-semibold bg-Lavender"
           } p-4 relative`}
         >
           Get Started
-          {matchRoute("/about") && (
+          {matchRoute("/get_started") && (
             <span className="w-[3px] h-full bg-Hero-Purple absolute left-0 top-0"></span>
           )}
         </NavLink>

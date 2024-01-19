@@ -65,11 +65,12 @@ export default function Free_Checkout() {
         assessmentInfo,
         score,
         level,
+        plan: "Free",
       },
-    });
-    // .unwrap()
-    // .then((result) => navigate(`../../../get_started/founders_success`))
-    // .catch((err) => console.log(err));
+    })
+      .unwrap()
+      .then((result) => navigate(`../../../get_started/founders_success`))
+      .catch((err) => console.log(err));
   }
 
   return (

@@ -142,10 +142,10 @@ export default function RankOrder({
               onDragEnd={handleRanking}
               onDragOver={(e) => e.preventDefault()}
             >
-              <p className="text-Dark w-[calc(100%-2.5rem)] z-20 cursor-pointer flex">
+              <p className="text-Dark w-[calc(100%-2.5rem)] z-20 cursor-pointer flex items-center">
                 {option}
                 {!clicked && clickedFirst.current !== index && (
-                  <span className="ml-auto opacity-45">Replace me</span>
+                  <span className="ml-auto opacity-45 text-sm">Select to replace</span>
                 )}
               </p>
               <svg

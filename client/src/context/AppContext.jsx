@@ -51,7 +51,7 @@ export const AppContextProvider = ({ children }) => {
       case "Somewhat like us":
       case "100M-999M":
       case "5-19%":
-      case "We're growing at the same rate as a our closest competitors":
+      case "We're growing at the same rate as our closest competitors":
       case "Rapidly growing and regional":
       case "10-29M":
       case "High acquisition cost and recurring":
@@ -186,26 +186,26 @@ export const AppContextProvider = ({ children }) => {
 
   //Calculate Level
   const [level, setLevel] = useState(1);
-  function getLevel() {
-    setLevel(
-      finalScore >= 104
-        ? 5
-        : finalScore >= 90 && finalScore < 104
-        ? 4
-        : finalScore >= 70 && finalScore < 90
-        ? 3
-        : finalScore >= 60 && finalScore < 70
-        ? 2
-        : finalScore < 60
-        ? 1
-        : 0
-    );
-  }
+  // function getLevel() {
+
+  // }
 
   useEffect(() => {
     if (assessmentEvaluation.length) {
       getAssessmentScore();
-      getLevel();
+      setLevel(
+        finalScore >= 104
+          ? 5
+          : finalScore >= 90 && finalScore < 104
+          ? 4
+          : finalScore >= 70 && finalScore < 90
+          ? 3
+          : finalScore >= 60 && finalScore < 70
+          ? 2
+          : finalScore < 60
+          ? 1
+          : 0
+      );
     }
   }, [assessmentEvaluation]);
 
@@ -226,6 +226,8 @@ export const AppContextProvider = ({ children }) => {
         handleOthers,
         finalScore,
         level,
+        setFinalScore,
+        setLevel,
       }}
     >
       {children}

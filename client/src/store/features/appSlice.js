@@ -28,7 +28,7 @@ const initialState = {
     {
       add_more: false,
       number: "03",
-      qstn: "We solve a clear need many people have better than any other options",
+      qstn: "We solve a clear need many people have better than any other option",
       options: [
         "Totally like us",
         "Mostly like us",
@@ -147,7 +147,7 @@ const initialState = {
         "Developer (skilled in product innovation)",
         "Communicator (skilled in internal and external messaging)",
         "Seller (skilled in driving revenue)",
-        "Globtrotter (at least one founder has lived, worked or studied abroad)",
+        "Globetrotter (at least one founder has lived, worked or studied abroad)",
       ],
     },
     {
@@ -170,7 +170,7 @@ const initialState = {
       options: [
         "We're growing much faster than our closest competitors",
         "We're growing faster than our closest competitors",
-        "We're growing at the same rate as a our closest competitors",
+        "We're growing at the same rate as our closest competitors",
         "We're growing slower than our closest competitors",
       ],
     },

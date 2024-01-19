@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import appContext from "../../context/AppContext";
+import { FaCheck } from "react-icons/fa";
 
 export default function SelectMany({
   assessmentNumber,
@@ -86,7 +87,9 @@ export default function SelectMany({
                 value={option}
                 onChange={(e) => handleSelectMany(e, assessment)}
               />
-              <div className="w-6 h-6 bg-[#2222221A] peer-checked/radio:bg-Dark z-20 cursor-pointer"></div>
+              <div className="w-6 h-6 bg-[#2222221A] peer-checked/radio:bg-Dark z-20 cursor-pointer text-white grid place-items-center [&>*]:peer-checked/radio:opacity-100 [&>*]:opacity-0 border-4 peer-checked/radio:border-none bg-white rounded-[4px] text-sm">
+                <FaCheck />
+              </div>
               <label
                 htmlFor={option}
                 className="py-4 text-Dark w-[calc(100%-2.5rem)] z-20 cursor-pointer"
@@ -104,7 +107,9 @@ export default function SelectMany({
                 id="others"
                 name="others"
               />
-              <div className="w-6 h-6 bg-[#2222221A] peer-checked/radio:bg-Dark z-20 shrink-0"></div>
+              <div className="w-6 h-6 bg-[#2222221A] peer-checked/radio:bg-Dark z-20 cursor-pointer text-white grid place-items-center [&>*]:peer-checked/radio:opacity-100 [&>*]:opacity-0 border-4 peer-checked/radio:border-none bg-white rounded-[4px] text-sm shrink-0">
+                <FaCheck />
+              </div>
               <input
                 className="py-2 px-4 rounded-[8px] bg-white text-gray-500 w-full"
                 placeholder="Other (please specify)"

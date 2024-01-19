@@ -135,7 +135,7 @@ export default function ThirtyOne() {
                           : handleChangeD(e)
                       }
                     />
-                    <div className="w-6 h-6 bg-[#2222221A] peer-checked/radio:bg-Dark z-20  cursor-pointer rounded-full"></div>
+                    <div className="w-6 h-6 rounded-full border-4 bg-white peer-checked/radio:bg-Dark z-20"></div>
                     <label
                       htmlFor={item.qstn + option}
                       className="text-Dark w-[calc(100%-5.5rem)] z-20 cursor-pointer py-4"

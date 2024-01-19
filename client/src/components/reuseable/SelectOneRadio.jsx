@@ -83,7 +83,7 @@ export default function SelectOneRadio({
                 value={option}
                 onChange={(e) => handleChange(e, assessment)}
               />
-              <div className="w-6 h-6 rounded-full bg-[#2222221A] peer-checked/radio:bg-Dark z-20"></div>
+              <div className="w-6 h-6 rounded-full border-4 bg-white peer-checked/radio:bg-Dark z-20"></div>
               <label
                 htmlFor={option}
                 className="py-4 text-Dark w-[calc(100%-2.5rem)] z-20 cursor-pointer"
@@ -108,7 +108,7 @@ export default function SelectOneRadio({
                 value="others"
                 onChange={(e) => handleChange(e, assessment)}
               />
-              <div className="w-6 h-6 bg-[#2222221A] peer-checked/radio:bg-Dark z-20 shrink-0 rounded-full"></div>
+              <div className="w-6 h-6 rounded-full border-4 bg-white peer-checked/radio:bg-Dark z-20"></div>
               <label htmlFor="others">
                 <input
                   className="py-2 px-4 rounded-[8px] bg-white text-gray-500 w-full"

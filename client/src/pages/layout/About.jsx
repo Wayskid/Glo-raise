@@ -121,7 +121,7 @@ export default function About() {
         </div>
       </section>
       <section className="bg-White">
-        <div className="w-[min(80rem,100%)] mx-auto pt-[56px] pb-[72px] md:pt-[80px] md:pb-[100px] lg:py-[90px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px] grid gap-8 md:gap-12">
+        <div className="w-[min(80rem,100%)] mx-auto pt-[56px] pb-[72px] md:pt-[80px] md:pb-[100px] lg:py-[90px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px] grid gap-8 md:gap-12 bg-slate-600">
           <div>
             <p className="text-[38px] font-semibold text-Dark">
               James Tavita & Team
