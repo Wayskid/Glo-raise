@@ -110,7 +110,7 @@ export default function ThirtyOne() {
                   >
                     <input
                       type="radio"
-                      className="hidden peer/radio cursor-pointer"
+                      className="peer/radio absolute w-full h-full opacity-0 z-30 cursor-pointer"
                       id={item.qstn + option}
                       name={item.qstn}
                       checked={
@@ -142,7 +142,7 @@ export default function ThirtyOne() {
                     >
                       {option}
                     </label>
-                    <div className="absolute h-full w-full peer-checked/radio:bg-[#E5DFFA] z-10 top-0 left-0"></div>
+                    <div className="absolute h-full w-full peer-checked/radio:bg-[#E5DFFA] z-10 top-0 left-0 cursor-pointer"></div>
                   </li>
                 ))}
               </ul>
