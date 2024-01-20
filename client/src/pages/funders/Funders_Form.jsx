@@ -216,7 +216,6 @@ export default function Funders_Form() {
                     fundersFormVal?.["Co-investing"] === "Yes" ? "No" : "Yes",
                 })
               }
-              required
             />
             <div className="w-[27px] h-[27px] bg-white border-2 border-[#2222221A] rounded-[4px] peer-checked/radio:hidden"></div>
             <svg
