@@ -16,24 +16,32 @@ export default function Prem_Checkout() {
   const { finalScore: score, level } = useContext(appContext);
 
   const prem_checkout_form = [
-    { label: "Name", id: "name", type: "text", placeholder: "Your Name" },
+    {
+      label: "Name",
+      id: "name",
+      type: "text",
+      placeholder: "Your Name",
+      pattern: "[a-zA-Z ]+",
+    },
     {
       label: "Company name",
       id: "company_name",
       type: "text",
       placeholder: "Your company name",
+      pattern: "[a-zA-Z0-9 ]+",
     },
     {
       label: "Company website",
       id: "company_website",
       type: "text",
-      placeholder: "Your company website",
+      placeholder: "ex: www.companydomain.com",
+      pattern: "(https?://)?(www.)+.*",
     },
     {
       label: "Birth year",
       id: "birth_year",
       type: "text",
-      placeholder: "Your birth year",
+      placeholder: "MM/DD/YYYY",
     },
     {
       label: "Postal code",
@@ -233,6 +241,7 @@ export default function Prem_Checkout() {
               label={field.label}
               onChange={handleChange}
               required={true}
+              pattern={field.pattern}
             />
           ))}
         </div>

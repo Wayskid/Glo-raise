@@ -24,7 +24,7 @@ app.use(
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://elitegnosis.netlify.app"],
+    origin: ["http://localhost:5173", "https://glo-raise.netlify.app"],
     methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
     optionSuccessStatus: 204,
     preflightContinue: false,

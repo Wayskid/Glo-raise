@@ -13,18 +13,26 @@ export default function Free_Checkout() {
   );
   const { finalScore: score, level } = useContext(appContext);
   const free_checkout_form = [
-    { label: "Name", id: "name", type: "text", placeholder: "Your Name" },
+    {
+      label: "Name",
+      id: "name",
+      type: "text",
+      placeholder: "Your Name",
+      pattern: "[a-zA-Z ]+",
+    },
     {
       label: "Company name",
       id: "company_name",
       type: "text",
       placeholder: "Your company name",
+      pattern: "[a-zA-Z0-9 ]+",
     },
     {
       label: "Company website",
       id: "company_website",
       type: "text",
-      placeholder: "Your company website",
+      placeholder: "ex: www.companydomain.com",
+      pattern: "(https?://)?(www.)+.*",
     },
     {
       label: "Birth year",
@@ -42,7 +50,7 @@ export default function Free_Checkout() {
       label: "Phone number",
       id: "phone_number",
       type: "number",
-      placeholder: "ex. 1 506 1234 789",
+      placeholder: "Your phone number",
     },
     { label: "Email", id: "email", type: "email", placeholder: "Your email" },
   ];
@@ -162,6 +170,7 @@ export default function Free_Checkout() {
               label={field.label}
               onChange={handleChange}
               required={true}
+              pattern={field.pattern}
             />
           ))}
         </div>
