@@ -5,7 +5,7 @@ import ChooseCountry from "../../components/reuseable/ChooseCountry.jsx";
 
 export default function Two2() {
   const dispatch = useDispatch();
-  const assessment = useSelector((state) => state.app.assessmentFile[1]);
+  const assessment = useSelector((state) => state.app.fundersAssessmentFile[1]);
 
   useEffect(() => {
     dispatch(setFundersAssessmentProgress(5.88 * 3));

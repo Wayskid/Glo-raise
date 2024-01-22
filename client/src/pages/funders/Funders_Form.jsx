@@ -63,8 +63,10 @@ export default function Funders_Form() {
   }
 
   const [createFunderApi] = useCreateFunderMutation();
+  const [loading, setLoading] = useState(false);
   function onSubmitForm(e) {
     e.preventDefault();
+    setLoading(true);
     createFunderApi({
       body: {
         name: fundersFormVal.name.trim(),
@@ -74,10 +76,14 @@ export default function Funders_Form() {
       },
     })
       .unwrap()
-      .then((result) =>
-        navigate(`../../../get_started/funders/funders_success`)
-      )
-      .catch((err) => console.log(err));
+      .then((result) => {
+        navigate(`../../../get_started/funders/funders_success`);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setLoading(false);
+      });
   }
 
   return (
@@ -246,8 +252,11 @@ export default function Funders_Form() {
             </label>
           </div>
         </div>
-        <button className="bg-Dark px-[36px] py-5 text-white md:mx-auto rounded-[4px]">
-          Submit
+        <button
+          className="bg-Dark px-[36px] py-5 text-white md:mx-auto rounded-[4px]"
+          disabled={loading}
+        >
+          {loading ? "Processing..." : "Submit"}
         </button>
       </form>
     </div>

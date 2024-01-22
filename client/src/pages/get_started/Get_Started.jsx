@@ -5,6 +5,7 @@ import {
   setFoundersAssessmentStarted,
 } from "../../store/features/appSlice.js";
 import { useNavigate } from "react-router-dom";
+import crossArrows from "../../assets/Icon/Cross Arrows.png";
 
 export default function Get_Started() {
   const dispatch = useDispatch();
@@ -55,20 +56,11 @@ export default function Get_Started() {
       >
         Get Started
       </button>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="502"
-        height="502"
-        viewBox="0 0 502 502"
-        fill="none"
+      <img
+        src={crossArrows}
+        alt="cross arrows"
         className="absolute top-[300.53px] hidden lg:grid -right-3"
-      >
-        <path
-          d="M103.07 482.063L398.4 20.1031M103.07 482.063L184.725 464.096M103.07 482.063L85.1028 400.408M398.4 20.1031L316.745 38.0701M398.4 20.1031L416.367 101.758M463.748 317.093L481.715 398.748M481.715 398.748L400.06 416.715M481.715 398.748L19.7549 103.418M19.7549 103.418L37.7218 185.073M19.7549 103.418L101.41 85.4511"
-          stroke="#5A43F0"
-          strokeWidth="39.3715"
-        />
-      </svg>
+      />
     </div>
   );
 }

@@ -34,7 +34,7 @@ export default function For_Funders() {
               }}
               className="bg-Dark px-[36px] py-5 text-white [font-family:'Roboto',sans-serif;] mr-auto"
             >
-              Complete Interests Radar
+              Interests Radar
             </button>
           </div>
         </div>

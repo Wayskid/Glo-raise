@@ -4,6 +4,7 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import appContext from "../../context/AppContext";
 import { setAssessmentEvaluation } from "../../store/features/appSlice";
+import Select from "react-select";
 
 export default function ChooseCountry({
   assessmentNumber,
@@ -13,73 +14,62 @@ export default function ChooseCountry({
 }) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const [countries, setCountries] = useState([]);
+  const [options, setOptions] = useState([]);
+  const [usStates, setUsStates] = useState([]);
   const { assessmentEvaluation, fundersAssessment, fundersAssessmentStarted } =
     useSelector((state) => state.app);
-  const [choice, setChoice] = useState({
-    country: "",
-    state: "",
-  });
 
   useEffect(() => {
     async function getCountries() {
       const { data } = await axios.get(
         "https://countriesnow.space/api/v0.1/countries/states"
       );
-      setCountries(data.data);
+      setOptions(() => [
+        {
+          value: "United States",
+          label: "United States",
+        },
+        ...data.data.map((country) => ({
+          value: country.name,
+          label: country.name,
+        })),
+      ]);
+      setUsStates(
+        data.data
+          .find((country) => country.name === "United States")
+          .states.map((state) => ({
+            value: state.name,
+            label: state.name,
+          }))
+      );
     }
     getCountries();
   }, []);
 
+  function getValue() {
+    const value = (
+      fundersAssessmentStarted === true
+        ? fundersAssessment
+        : assessmentEvaluation
+    ).find((v) => v.qstnNumber === assessmentNumber);
+    return value;
+  }
   //Country choice
-  function handleChange(e) {
+  function handleChange(e, obj) {
     dispatch(
       setAssessmentEvaluation({
         qstnNumber: "02",
         qstn: assessment.qstn,
         answer: {
-          country: e.target.value,
-          state: "",
+          ...getValue()?.answer,
+          [obj.name]: e.value,
         },
         score: 0,
       })
     );
-    setChoice({
-      country: e.target.value,
-      state: "",
-    });
   }
 
-  //STate choice
-  function handleState(e) {
-    dispatch(
-      setAssessmentEvaluation({
-        qstnNumber: "02",
-        qstn: assessment.qstn,
-        answer: {
-          country: choice.country,
-          state: e.target.value,
-        },
-        score: 0,
-      })
-    );
-    setChoice({
-      country: choice.country,
-      state: e.target.value,
-    });
-  }
-
-  useEffect(() => {
-    function getValue() {
-      const value = (
-        fundersAssessmentStarted === true
-          ? fundersAssessment
-          : assessmentEvaluation
-      ).find((v) => v.qstnNumber === "02");
-      setChoice({ country: value?.answer.country, state: value?.answer.state });
-    }
-    getValue();
-  }, [assessment]);
+  console.log(options.find((obj) => obj.value === getValue()?.answer.country));
 
   return (
     <div className="w-[min(800px,100%)] mx-auto pt-[40px] pb-[72px] md:pt-[60px] md:pb-[100px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px]">
@@ -124,56 +114,25 @@ export default function ChooseCountry({
           {assessment.qstn}
         </p>
         <div className="grid gap-4">
-          <select
-            name="Country"
-            id="Country"
+          <Select
+            options={options}
             onChange={handleChange}
-            className="w-full"
-            autoComplete="Country"
-            value={choice.country ? choice.country : "Select Country"}
-          >
-            <option
-              key="-1"
-              value="Select Country"
-              disabled
-              className="text-gray-500"
-            >
-              Select Country
-            </option>
-            <option value="United States">
-              United States
-            </option>
-            {countries.length &&
-              countries.map((oneCountry, index) => (
-                <option key={oneCountry.name + index} value={oneCountry.name}>
-                  {oneCountry.name}
-                </option>
-              ))}
-          </select>
-          {choice.country === "United States" && (
-            <select
-              name="State"
-              id="State"
-              onChange={handleState}
-              className="w-full"
-              autoComplete="State"
-              value={choice.state ? choice.state : "Select State"}
-            >
-              <option
-                key="-1"
-                value="Select State"
-                disabled
-                className="text-gray-500"
-              >
-                Select State
-              </option>
-              {countries.length &&
-                countries[232].states.map((usState, index) => (
-                  <option key={index} value={usState.name}>
-                    {usState.name}
-                  </option>
-                ))}
-            </select>
+            name="country"
+            value={options.find(
+              (obj) => obj.value === getValue()?.answer.country
+            )}
+            placeholder="Select Country"
+          />
+          {getValue()?.answer.country === "United States" && (
+            <Select
+              options={usStates}
+              placeholder="Select State"
+              onChange={handleChange}
+              name="state"
+              value={usStates.find(
+                (obj) => obj.value === getValue()?.answer.state
+              )}
+            />
           )}
         </div>
         <div className="flex mx-auto gap-4">
@@ -190,7 +149,7 @@ export default function ChooseCountry({
                 : navigate(`../../get_started/${next}`)
             }
             className="py-2 px-4 bg-Dark text-white rounded-[4px] border-2 border-Dark disabled:opacity-30"
-            disabled={!choice.country}
+            disabled={!getValue()?.answer.country}
           >
             Continue
           </button>

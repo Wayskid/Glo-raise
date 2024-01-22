@@ -68,8 +68,10 @@ export default function Prem_Checkout() {
 
   const [checkoutApi] = useCheckoutMutation();
   const [createFounderApi] = useCreateFounderMutation();
+  const [loading, setLoading] = useState(false);
   function onSubmitForm(e) {
     e.preventDefault();
+    setLoading(true);
     createFounderApi({
       body: {
         name: premiumFormVal.name,
@@ -90,8 +92,14 @@ export default function Prem_Checkout() {
       },
     })
       .unwrap()
-      .then((result) => (window.location.href = result.url))
-      .catch((err) => console.log(err));
+      .then((result) => {
+        window.location.href = result.url;
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setLoading(false);
+      });
   }
 
   return (
@@ -248,8 +256,11 @@ export default function Prem_Checkout() {
         <p className="[font-family:'Instrument_Serif',serif;] text-[26px] text-center">
           limited time just $29 ($300 value)
         </p>
-        <button className="p-4 bg-Dark text-white rounded-[4px] border-2 border-Dark md:mx-auto mx-[unset]">
-          Proceed to checkout
+        <button
+          className="p-4 bg-Dark text-white rounded-[4px] border-2 border-Dark md:mx-auto mx-[unset]"
+          disabled={loading}
+        >
+          {loading ? "Processing..." : "Proceed to checkout"}
         </button>
       </form>
     </div>

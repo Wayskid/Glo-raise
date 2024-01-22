@@ -124,6 +124,7 @@ export default function RankOrder({
             {assessment.qstn}
           </p>
           <p className="text-Dark text-center mb">rank in order</p>
+          <p className="text-gray-500 text-center -mt-2">Select or Drag to rank</p>
         </div>
         <ul className="grid gap-4">
           {optionsArray?.map((option, index) => (

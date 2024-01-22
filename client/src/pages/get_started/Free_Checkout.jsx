@@ -7,7 +7,6 @@ import appContext from "../../context/AppContext";
 
 export default function Free_Checkout() {
   const navigate = useNavigate();
-  // const dispatch = useDispatch();
   const { assessmentEvaluation: assessmentInfo } = useSelector(
     (state) => state.app
   );
@@ -63,8 +62,10 @@ export default function Free_Checkout() {
   }
 
   const [createFounderApi] = useCreateFounderMutation();
+  const [loading, setLoading] = useState(false);
   function onSubmitForm(e) {
     e.preventDefault();
+    setLoading(true);
     createFounderApi({
       body: {
         name: freeFormVal.name,
@@ -77,8 +78,14 @@ export default function Free_Checkout() {
       },
     })
       .unwrap()
-      .then((result) => navigate(`../../../get_started/founders_success`))
-      .catch((err) => console.log(err));
+      .then((result) => {
+        navigate(`../../../get_started/founders_success`);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setLoading(false);
+      });
   }
 
   return (
@@ -174,8 +181,11 @@ export default function Free_Checkout() {
             />
           ))}
         </div>
-        <button className="p-4 bg-Dark text-white rounded-[4px] border-2 border-Dark md:mx-auto mx-[unset]">
-          Get it for free
+        <button
+          className="p-4 bg-Dark text-white rounded-[4px] border-2 border-Dark md:mx-auto mx-[unset]"
+          disabled={loading}
+        >
+          {loading ? "Processing..." : "Get it for free"}
         </button>
       </form>
     </div>
