@@ -1,6 +1,31 @@
-import React from 'react'
+import React, { useState } from "react";
+import { useAddSubscriberMutation } from "../services/appApi";
 
 export default function SubscriberForm() {
+  const [subscribeApi] = useAddSubscriberMutation();
+  const [subscriberEmail, setSubscriberEmail] = useState("");
+  const [subscribed, setSubscribed] = useState(false);
+  const [loading, setLoading] = useState(false);
+  function onSubmitForm(e) {
+    e.preventDefault();
+    setLoading(true);
+    subscribeApi({
+      body: {
+        email: subscriberEmail,
+      },
+    })
+      .unwrap()
+      .then((result) => {
+        setSubscribed(true);
+        setLoading(false);
+        console.log(result);
+      })
+      .catch((err) => {
+        console.log(err);
+        setSubscribed(false);
+        setLoading(false);
+      });
+  }
   return (
     <section className="bg-Hazel">
       <div className="w-[min(80rem,100%)] mx-auto pt-[56px] pb-[72px] md:pt-[80px] md:pb-[100px] lg:py-[90px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px] grid gap-8 md:gap-10 base:gap-[60px] base:flex base:justify-between items-center">
@@ -13,19 +38,23 @@ export default function SubscriberForm() {
             <br /> and access exclusive resources.
           </p>
         </div>
-        <div className="grid md:flex rounded-[4px] border-[3px] border-Dark mx-auto md:mr-auto md:ml-0 base:mr-0">
+        <form
+          onSubmit={onSubmitForm}
+          className="grid md:flex rounded-[4px] border-[3px] border-Dark mx-auto md:mr-auto md:ml-0 base:mr-0"
+        >
           <input
             type="text"
             className="p-5 text-[18px] outline-none font-semibold text-Hazel bg-white"
             placeholder="Email address"
+            required
           />
           <button
-            onClick={() => navigate("/get_started")}
             className="bg-Dark px-[36px] py-5 text-white [font-family:'Roboto',sans-serif;] shrink-0"
+            disabled={loading && !subscriberEmail}
           >
             Get Notified
           </button>
-        </div>
+        </form>
       </div>
     </section>
   );

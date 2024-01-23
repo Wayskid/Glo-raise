@@ -122,6 +122,15 @@ export default function ChooseCountry({
               (obj) => obj.value === getValue()?.answer.country
             )}
             placeholder="Select Country"
+            theme={(theme) => ({
+              ...theme,
+              borderRadius: 0,
+              colors: {
+                ...theme.colors,
+                primary: "black",
+                neutral20: "black",
+              },
+            })}
           />
           {getValue()?.answer.country === "United States" && (
             <Select

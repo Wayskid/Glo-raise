@@ -30,6 +30,14 @@ export const appApi = createApi({
         body,
       }),
     }),
+    //Stay Informed---------------------------------------
+    addSubscriber: builder.mutation({
+      query: ({ body }) => ({
+        url: `/subscribe/add`,
+        method: "post",
+        body,
+      }),
+    }),
   }),
 });
 
@@ -37,4 +45,5 @@ export const {
   useCreateFunderMutation,
   useCreateFounderMutation,
   useCheckoutMutation,
+  useAddSubscriberMutation,
 } = appApi;

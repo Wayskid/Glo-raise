@@ -36,6 +36,7 @@ const server = http.createServer(app);
 app.use("/api/funders", fundersRoute);
 app.use("/api/founders", foundersRoute);
 app.use("/api/stripe", stripeRouter);
+app.use("/api/subscribe",)
 
 const PORT = process.env.PORT;
 server.listen(PORT || 5000, console.log(`Server is running on ${PORT}`));
