@@ -45,12 +45,13 @@ export default function SubscriberForm() {
           <input
             type="email"
             className="p-5 text-[18px] outline-none font-semibold text-Hazel bg-white"
+            onChange={(e) => setSubscriberEmail(e.target.value)}
             placeholder="Email address"
             required
           />
           <button
             className="bg-Dark px-[36px] py-5 text-white [font-family:'Roboto',sans-serif;] shrink-0"
-            disabled={loading && !subscriberEmail}
+            disabled={loading && subscriberEmail}
           >
             Get Notified
           </button>

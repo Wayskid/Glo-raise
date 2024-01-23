@@ -1,5 +1,5 @@
 import express from "express";
-import { subscribe } from "../controllers/stayInformedController";
+import { subscribe } from "../controllers/stayInformedController.js";
 
 const stayInformedRoute = express.Router();
 

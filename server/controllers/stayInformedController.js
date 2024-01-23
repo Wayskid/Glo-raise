@@ -1,4 +1,4 @@
-import StayInformed from "../models/stayInformedModel";
+import StayInformed from "../models/stayInformedModel.js";
 
 export const subscribe = async (req, res) => {
   try {
