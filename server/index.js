@@ -7,6 +7,7 @@ import http from "http";
 import foundersRoute from "./routes/foundersRoute.js";
 import fundersRoute from "./routes/fundersRoute.js";
 import { stripeRouter } from "./config/stripe.js";
+import stayInformedRoute from "./routes/stayInformedRoute.js";
 
 dotenv.config();
 connectDB();
@@ -20,7 +21,6 @@ app.use(
     extended: true,
   })
 );
-
 
 app.use(
   cors({
@@ -36,7 +36,7 @@ const server = http.createServer(app);
 app.use("/api/funders", fundersRoute);
 app.use("/api/founders", foundersRoute);
 app.use("/api/stripe", stripeRouter);
-app.use("/api/subscribe",)
+app.use("/api/subscribe", stayInformedRoute);
 
 const PORT = process.env.PORT;
 server.listen(PORT || 5000, console.log(`Server is running on ${PORT}`));

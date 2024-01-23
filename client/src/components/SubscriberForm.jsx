@@ -43,7 +43,7 @@ export default function SubscriberForm() {
           className="grid md:flex rounded-[4px] border-[3px] border-Dark mx-auto md:mr-auto md:ml-0 base:mr-0"
         >
           <input
-            type="text"
+            type="email"
             className="p-5 text-[18px] outline-none font-semibold text-Hazel bg-white"
             placeholder="Email address"
             required
