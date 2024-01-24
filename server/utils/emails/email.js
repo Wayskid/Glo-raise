@@ -324,8 +324,7 @@ export const oneFree = ({ name }) => {
 			}
 
 			.heading-section-white h2 {
-				font-family:
-					line-height: 1;
+				line-height: 1;
 				padding-bottom: 0;
 			}
 
@@ -716,7 +715,7 @@ export const oneFree = ({ name }) => {
 								<tr>
 									<td width="40%" class="logo" style="text-align: left;">
 										<a style="font-size: 20px;" href="#">
-											<img src="https://res.cloudinary.com/diiohnshc/image/upload/v1705208413/Glo-Raise/akiwqnf5fdj77xfwoex5.png" </a>
+											<img src="https://res.cloudinary.com/diiohnshc/image/upload/v1706092583/Glo-Raise/Logo_gc5aqx.png" </a>
 									</td>
 									<td width="60%" class="logo" style="text-align: right;">
 										<ul class="navigation">
@@ -741,7 +740,7 @@ export const oneFree = ({ name }) => {
 											<h2 class="hero-heading">
 												Congratulations</h2>
 											<h2 class="name-heading"
-												style="font-size: 48px; line-height: 56px; font-weight: 400;">John Smith
+												style="font-size: 48px; line-height: 56px; font-weight: 400;">${name}
 											</h2>
 											<p
 												style="font-size: 20px; line-height: 28px; font-weight: 400; margin-bottom: 50px;">

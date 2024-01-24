@@ -38,24 +38,30 @@ export default function SubscriberForm() {
             <br /> and access exclusive resources.
           </p>
         </div>
-        <form
-          onSubmit={onSubmitForm}
-          className="grid md:flex rounded-[4px] border-[3px] border-Dark mx-auto md:mr-auto md:ml-0 base:mr-0"
-        >
-          <input
-            type="email"
-            className="p-5 text-[18px] outline-none font-semibold text-Hazel bg-white"
-            onChange={(e) => setSubscriberEmail(e.target.value)}
-            placeholder="Email address"
-            required
-          />
-          <button
-            className="bg-Dark px-[36px] py-5 text-white [font-family:'Roboto',sans-serif;] shrink-0"
-            disabled={loading && subscriberEmail}
+        {!subscribed ? (
+          <form
+            onSubmit={onSubmitForm}
+            className="grid md:flex rounded-[4px] border-[3px] border-Dark mx-auto md:mr-auto md:ml-0 base:mr-0"
           >
-            Get Notified
-          </button>
-        </form>
+            <input
+              type="email"
+              className="p-5 text-[18px] outline-none font-semibold text-Hazel bg-white"
+              onChange={(e) => setSubscriberEmail(e.target.value)}
+              placeholder="Email address"
+              required
+            />
+            <button
+              className="bg-Dark px-[36px] py-5 text-white [font-family:'Roboto',sans-serif;] shrink-0"
+              disabled={loading}
+            >
+              Get Notified
+            </button>
+          </form>
+        ) : (
+          <p className="text-3xl mx-auto md:mr-auto md:ml-0 base:mr-0">
+            Thank you!
+          </p>
+        )}
       </div>
     </section>
   );
