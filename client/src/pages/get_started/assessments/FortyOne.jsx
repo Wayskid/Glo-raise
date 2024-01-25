@@ -1,74 +1,53 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import InputField from "../../../components/reuseable/InputField";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import appContext from "../../../context/AppContext";
 import {
   setAssessmentEvaluation,
   setAssessmentProgress,
-} from "../../../store/features/appSlice.js";
+} from "../../../store/features/appSlice";
 
-export default function FortyOne() {
-  const dispatch = useDispatch();
+export default function FortyOne({}) {
   const navigate = useNavigate();
-  // const assessment = useSelector((state) => state.app.assessmentFile[40]);
-  const { assessmentFile: assessment, assessmentEvaluation } = useSelector(
-    (state) => state.app
-  );
+  const dispatch = useDispatch();
+  const {
+    assessmentEvaluation,
+    fundersAssessment,
+    fundersAssessmentStarted,
+    forFunders,
+    assessmentFile,
+  } = useSelector((state) => state.app);
 
   useEffect(() => {
     dispatch(setAssessmentProgress(2.38 * 42));
   }, []);
 
-  const [values, setValues] = useState(
-    assessment[40]?.qstns.map((assessment) => ({
-      qstn: assessment.qstn,
-      ans: "",
-    }))
-  );
-
-  function handleChange(e, option) {
-    setValues(
-      values.map((val) => {
-        if (val.qstn === option.qstn) {
-          return { qstn: val.qstn, ans: e.target.value };
-        }
-        return val;
-      })
-    );
-
+  function handleChange(e, firm_Name) {
     dispatch(
       setAssessmentEvaluation({
-        qstnNumber: assessment[40].number,
-        qstn: assessment[40].qstn,
-        answer: values.map((val) => {
-          if (val.qstn === option.qstn) {
-            return { qstn: val.qstn, ans: e.target.value };
-          }
-          return val;
-        }),
+        qstnNumber: "41",
+        qstn: assessmentFile[40].qstn,
+        answer: { choice: e, firm_Name },
         score: 0,
       })
     );
   }
 
-  useEffect(() => {
-    function getValue() {
-      const value = assessmentEvaluation.find(
-        (v) => v.qstnNumber === assessment[40].number
-      );
-      if (value?.answer.length) {
-        setValues(value.answer);
-      }
-    }
-    getValue();
-  }, [assessment]);
+  function getValue() {
+    const value = (
+      fundersAssessmentStarted === true
+        ? fundersAssessment
+        : assessmentEvaluation
+    ).find((v) => v.qstnNumber === "41");
+    return value;
+  }
 
   return (
     <div className="w-[min(800px,100%)] mx-auto pt-[40px] pb-[72px] md:pt-[60px] md:pb-[100px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px]">
-      <div className="border-2 border-Dark rounded-[20px] py-[60px] px-4 lg:px-[12px] relative grid gap-8 md:gap-12">
+      <div className="border-2 border-Dark rounded-[20px] py-[56px] px-4 lg:px-[12px] relative grid gap-8 md:gap-12">
         <div className="absolute grid place-items-center -top-[32.3px] justify-self-center">
           <p className="[font-family:'Instrument_Serif',serif;] text-[26px] text-white absolute">
-            {assessment[40].number}
+            41
           </p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -83,26 +62,48 @@ export default function FortyOne() {
             />
           </svg>
         </div>
-        <div className="grid gap-10">
-          {assessment[40].qstns.map((item) => (
-            <div key={item.qstn} className="grid gap-2">
-              <label
-                htmlFor=""
-                className="text-2xl md:text-[38px] font-semibold text-Dark text-center leading-snug"
-              >
-                {item.qstn}
-              </label>
+        <div className="grid gap-4">
+          <p className="text-2xl md:text-[38px] font-semibold text-Dark text-center leading-snug">
+            {assessmentFile[40].qstn}
+          </p>
+          <p className="text-Dark text-center mb">select one</p>
+        </div>
+        <div className="grid gap-4">
+          {assessmentFile[40].options.map((option) => (
+            <div
+              key={option}
+              className="px-6 flex items-center gap-4 bg-[#F8F8F8] rounded-[20px] relative overflow-hidden cursor-pointer"
+            >
               <input
-                type="text"
-                name={item.qstn}
-                id={item.qstn}
-                className="py-5 px-4 md:px-8 rounded-[20px] border-[3px] border-[#EAE5FA]"
-                placeholder={item.placeholder}
-                value={values.find((val) => val.qstn === item.qstn).ans}
-                onChange={(e) => handleChange(e, item)}
+                type="radio"
+                className="peer/radio absolute w-full h-full opacity-0 z-30 cursor-pointer"
+                id={option}
+                name={assessmentFile[40].qstn}
+                checked={getValue()?.answer.choice === option}
+                value={option}
+                onChange={(e) => handleChange(e.target.value, "")}
               />
+              <div className="w-6 h-6 rounded-full border-4 bg-white peer-checked/radio:bg-Dark z-20"></div>
+              <label
+                htmlFor={option}
+                className="py-4 text-Dark w-[calc(100%-2.5rem)] z-20 cursor-pointer"
+              >
+                {option}
+              </label>
+              <div className="absolute h-full w-full peer-checked/radio:bg-[#E5DFFA] z-10 top-0 left-0 cursor-pointer"></div>
             </div>
           ))}
+          <div className="bg-[#F8F8F8] rounded-[20px] overflow-hidden focus-within:border-2 focus-within:border-gray-600 border-2 border-transparent">
+            <input
+              type="text"
+              className="text-xl py-2 px-5 bg-transparent w-full outline-none"
+              placeholder="If yes, firm name"
+              value={getValue()?.answer.firm_Name}
+              onChange={(e) =>
+                handleChange(getValue()?.answer.choice, e.target.value)
+              }
+            />
+          </div>
         </div>
         <div className="flex mx-auto gap-4">
           <button
@@ -112,8 +113,9 @@ export default function FortyOne() {
             Previous
           </button>
           <button
-            onClick={() => navigate(`../../get_started/plan`)}
-            className="py-2 px-4 bg-Dark text-white rounded-[4px] border-2 border-Dark"
+            onClick={() => navigate(`../../get_started/42`)}
+            className="py-2 px-4 bg-Dark text-white rounded-[4px] border-2 border-Dark disabled:opacity-40"
+            disabled={!getValue()?.answer.choice}
           >
             Continue
           </button>

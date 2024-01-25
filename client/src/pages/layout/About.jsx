@@ -147,7 +147,7 @@ export default function About() {
               six GROWTH attractiveness metrics.
               <br />
               <br />
-              For others, the RAISER Base-to-Seed approach is unrivaled for
+              For others, the RAISER Foundations approach is unrivaled for
               providing value to founders while helping them to create more
               value for their customers and potential funders.
               <br />
@@ -177,7 +177,7 @@ export default function About() {
                 <path
                   d="M214 4.23035L-519 4.23035"
                   stroke="#FD542F"
-                  stroke-width="8"
+                  strokeWidth="8"
                   stroke-dasharray="18.96 18.96"
                 />
               </svg>

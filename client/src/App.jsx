@@ -38,6 +38,7 @@ import Funders_Form from "./pages/funders/Funders_Form";
 import Funders_Success from "./pages/funders/Funders_Success";
 import Two2 from "./pages/funders/Two";
 import Two from "./pages/get_started/assessments/Two";
+import FortyTwo from "./pages/get_started/assessments/FortyTwo";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -73,6 +74,7 @@ export default function App() {
           <Route path="38" element={<ThirtyEight />}></Route>
           <Route path="39" element={<ThirtyNine />}></Route>
           <Route path="41" element={<FortyOne />}></Route>
+          <Route path="42" element={<FortyTwo />}></Route>
           <Route path="plan" element={<Plan />}></Route>
           <Route path="premium_checkout" element={<Prem_Checkout />}></Route>
           <Route path="free_checkout" element={<Free_Checkout />}></Route>

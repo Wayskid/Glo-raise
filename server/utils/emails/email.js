@@ -699,7 +699,7 @@ export const oneFree = ({ name }) => {
 
 	<body width="100%"
 		style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">
-		<center style="width: 100%; background-color: #f1f1f1;">
+		<div style="width: 100%; background-color: #f1f1f1;">
 			<div
 				style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
 				&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
@@ -785,17 +785,12 @@ export const oneFree = ({ name }) => {
 										</div>
 
 			</div>
-			</td>
-			</tr>
-			</table>
+			
 			<img class="desktop" style="position: absolute; z-index: -1;	margin-top: -379px;	left: -30px;"
 				src="https://res.cloudinary.com/diiohnshc/image/upload/v1705208412/Glo-Raise/nclvi80wjdhp9ndrs3cq.png" />
 			<img class="mobile" style="position: absolute; z-index: -1;	width: 100%;margin-top: -100px;"
 				src="https://res.cloudinary.com/diiohnshc/image/upload/v1705208412/Glo-Raise/k8uhugcfo7hoovmqczkx.png" />
-			</td>
-			</tr><!-- end tr -->
-			</table>
-			</div>
+			
 			<div class="convered-img" style="height: 620px; overflow: hidden;     filter: blur(5px);">
 				<img src="https://res.cloudinary.com/diiohnshc/image/upload/v1705208413/Glo-Raise/t889kzzvtxoriigi6dxx.png" style="width: 100%;" />
 			</div>

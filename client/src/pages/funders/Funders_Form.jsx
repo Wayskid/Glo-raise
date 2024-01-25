@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import InputField from "../../components/reuseable/InputField";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  setFunderInfo,
   setFundersAssessmentProgress,
 } from "../../store/features/appSlice.js";
 import { useNavigate } from "react-router-dom";

@@ -79,7 +79,7 @@ export default function Free_Checkout() {
     })
       .unwrap()
       .then((result) => {
-        navigate(`../../../get_started/founders_success`);
+        // navigate(`../../../get_started/founders_success`);
         setLoading(false);
       })
       .catch((err) => {

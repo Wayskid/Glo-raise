@@ -199,7 +199,7 @@ const initialState = {
         "Ecommerce",
         "Energy",
         "Entertainment",
-        "Finance (Fintech",
+        "Finance (Fintech)",
         "Food & Beverage",
         "Healthcare",
         "Hospitality",
@@ -283,7 +283,7 @@ const initialState = {
         "Service responsiveness",
         "Process precision",
         "User functionality",
-        "Placement accessibility",
+        "Product accessibility",
         "Operating agility",
         "Product integration",
         "Social prestige",
@@ -460,7 +460,7 @@ const initialState = {
       number: "36",
       qstn: "This best describes our purpose",
       options: [
-        "Grow a sustainable business is built to last",
+        "Grow a sustainable business that is built to last",
         "Grow a business that provides a clear social benefit",
         "Grow a business that is a great place to work",
       ],
@@ -545,6 +545,15 @@ const initialState = {
     {
       add_more: false,
       number: "41",
+      qstn: "Do you have a firm or angle you'd most like to work with?",
+      options: [
+        "Yes",
+        "No",
+      ],
+    },
+    {
+      add_more: false,
+      number: "42",
       qstns: [
         {
           qstn: "What do you do?",
@@ -617,7 +626,7 @@ const initialState = {
         "Ecommerce",
         "Energy",
         "Entertainment",
-        "Finance (Fintech",
+        "Finance (Fintech)",
         "Food & Beverage",
         "Healthcare",
         "Hospitality",
@@ -741,8 +750,6 @@ const initialState = {
   ],
   assessmentEvaluation: [],
   fundersAssessment: [],
-  funderInfo: {},
-  founderInfo: {},
 };
 
 export const AppSlice = createSlice({
@@ -796,12 +803,6 @@ export const AppSlice = createSlice({
       state.assessmentEvaluation = [];
       state.fundersAssessment = [];
     },
-    setFunderInfo: (state, action) => {
-      state.funderInfo = action.payload;
-    },
-    setFounderInfo: (state, action) => {
-      state.founderInfo = action.payload;
-    },
   },
 });
 
@@ -812,7 +813,5 @@ export const {
   setFundersAssessmentStarted,
   setAssessmentEvaluation,
   resetEvaluation,
-  setFunderInfo,
-  setFounderInfo,
 } = AppSlice.actions;
 export default AppSlice.reducer;
