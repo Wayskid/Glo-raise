@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import appContext from "../../context/AppContext";
 import { useDispatch, useSelector } from "react-redux";
 import { setAssessmentEvaluation } from "../../store/features/appSlice";
 
@@ -124,7 +123,9 @@ export default function RankOrder({
             {assessment.qstn}
           </p>
           <p className="text-Dark text-center mb">rank in order</p>
-          <p className="text-gray-500 text-center -mt-2">Select or Drag to rank</p>
+          <p className="text-gray-500 text-center -mt-2">
+            Select or Drag to rank
+          </p>
         </div>
         <ul className="grid gap-4">
           {optionsArray?.map((option, index) => (
@@ -146,7 +147,9 @@ export default function RankOrder({
               <p className="text-Dark w-[calc(100%-2.5rem)] z-20 cursor-pointer flex items-center">
                 {option}
                 {!clicked && clickedFirst.current !== index && (
-                  <span className="ml-auto opacity-45 text-sm">Select to replace</span>
+                  <span className="ml-auto opacity-45 text-sm">
+                    Select to replace
+                  </span>
                 )}
               </p>
               <svg

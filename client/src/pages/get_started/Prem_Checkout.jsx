@@ -40,7 +40,7 @@ export default function Prem_Checkout() {
     {
       label: "Birth year",
       id: "birth_year",
-      type: "text",
+      type: "date",
       placeholder: "MM/DD/YYYY",
     },
     {

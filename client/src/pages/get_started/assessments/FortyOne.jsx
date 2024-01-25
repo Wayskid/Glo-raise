@@ -1,7 +1,6 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import appContext from "../../../context/AppContext";
 import {
   setAssessmentEvaluation,
   setAssessmentProgress,
@@ -72,7 +71,9 @@ export default function FortyOne({}) {
           {assessmentFile[40].options.map((option) => (
             <div
               key={option}
-              className="px-6 flex items-center gap-4 bg-[#F8F8F8] rounded-[20px] relative overflow-hidden cursor-pointer"
+              className={`px-6 flex items-center gap-4 bg-[#F8F8F8] rounded-[20px] relative overflow-hidden cursor-pointer ${
+                option === "No" && "order-3"
+              }`}
             >
               <input
                 type="radio"
@@ -93,17 +94,20 @@ export default function FortyOne({}) {
               <div className="absolute h-full w-full peer-checked/radio:bg-[#E5DFFA] z-10 top-0 left-0 cursor-pointer"></div>
             </div>
           ))}
-          <div className="bg-[#F8F8F8] rounded-[20px] overflow-hidden focus-within:border-2 focus-within:border-gray-600 border-2 border-transparent">
-            <input
-              type="text"
-              className="text-xl py-2 px-5 bg-transparent w-full outline-none"
-              placeholder="If yes, firm name"
-              value={getValue()?.answer.firm_Name}
-              onChange={(e) =>
-                handleChange(getValue()?.answer.choice, e.target.value)
-              }
-            />
-          </div>
+          {getValue()?.answer.choice === "Yes" && (
+            <div className="bg-[#F8F8F8] rounded-[20px] overflow-hidden focus-within:border-2 focus-within:border-gray-600 border-2 border-transparent">
+              <input
+                type="text"
+                className="text-xl py-2 px-5 bg-transparent w-full outline-none"
+                placeholder="Please specify the name of the firm or angle"
+                value={getValue()?.answer.firm_Name}
+                onChange={(e) =>
+                  handleChange(getValue()?.answer.choice, e.target.value)
+                }
+                autoFocus
+              />
+            </div>
+          )}
         </div>
         <div className="flex mx-auto gap-4">
           <button

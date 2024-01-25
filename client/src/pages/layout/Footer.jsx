@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { setFundersAssessmentProgress } from "../../store/features/appSlice.js";
 import { useDispatch } from "react-redux";
 
 export default function Footer() {

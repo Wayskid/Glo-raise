@@ -3,7 +3,6 @@ import { appApi } from "../services/appApi.js";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import storage from "redux-persist/lib/storage";
 import { persistReducer } from "redux-persist";
-// import { setupListeners } from "@reduxjs/toolkit/dist/query/index.js";
 
 const persistConfig = {
   key: "root",
@@ -26,5 +25,3 @@ export const store = configureStore({
       serializableCheck: false,
     }).concat([appApi.middleware]),
 });
-
-// setupListeners(store.dispatch);

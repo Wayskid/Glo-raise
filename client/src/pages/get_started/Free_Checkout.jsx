@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import InputField from "../../components/reuseable/InputField";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useCreateFounderMutation } from "../../services/appApi";
 import appContext from "../../context/AppContext";
 
@@ -36,7 +36,7 @@ export default function Free_Checkout() {
     {
       label: "Birth year",
       id: "birth_year",
-      type: "text",
+      type: "date",
       placeholder: "MM/DD/YYYY",
     },
     {
@@ -79,7 +79,7 @@ export default function Free_Checkout() {
     })
       .unwrap()
       .then((result) => {
-        // navigate(`../../../get_started/founders_success`);
+        navigate(`../../../get_started/founders_success`);
         setLoading(false);
       })
       .catch((err) => {

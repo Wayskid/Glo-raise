@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Get_Started from "./pages/get_started/Get_Started";
-import One from "./pages/get_started/assessments/One";
 import Home from "./pages/layout/Home";
 import For_Funders from "./pages/layout/For_Funders";
 import About from "./pages/layout/About";
@@ -15,7 +14,6 @@ import Thirteen from "./pages/get_started/assessments/Thirteen";
 import Thirteen2 from "./pages/funders/Thirteen";
 import TwentyFour from "./pages/get_started/assessments/TwentyFour";
 import TwentyFive from "./pages/get_started/assessments/TwentyFive";
-import TwentyEight from "./pages/get_started/assessments/TwentyEight";
 import TwentyNine from "./pages/get_started/assessments/TwentyNine";
 import ThirtyOne from "./pages/get_started/assessments/ThirtyOne";
 import ThirtyThree from "./pages/get_started/assessments/ThirtyThree";
@@ -78,7 +76,10 @@ export default function App() {
           <Route path="plan" element={<Plan />}></Route>
           <Route path="premium_checkout" element={<Prem_Checkout />}></Route>
           <Route path="free_checkout" element={<Free_Checkout />}></Route>
-          <Route path="founders_success" element={<Founders_Success />}></Route>
+          <Route
+            path={import.meta.env.VITE_founder_success_url}
+            element={<Founders_Success />}
+          ></Route>
           <Route path="funders">
             <Route index element={<Interest_Radar />}></Route>
             <Route
@@ -91,7 +92,10 @@ export default function App() {
             <Route path="10" element={<Ten />}></Route>
             <Route path="13" element={<Thirteen2 />}></Route>
             <Route path="funders_form" element={<Funders_Form />}></Route>
-            <Route path="funders_success" element={<Funders_Success />}></Route>
+            <Route
+              path={import.meta.env.VITE_funder_success_url}
+              element={<Funders_Success />}
+            ></Route>
           </Route>
         </Route>
       </Routes>

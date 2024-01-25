@@ -1,7 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const BASE_URL = `http://localhost:3000/api`;
-// const BASE_URL = `https://glo-raise.onrender.com/api`;
+const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 export const appApi = createApi({
   reducerPath: "AppAPI",
