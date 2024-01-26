@@ -40,7 +40,9 @@ export default function Nav_Two() {
                   ? fundersAssessmentProgress
                   : assessmentProgress) + "%",
             }}
-            className={`bg-Hero-Purple rounded-lg`}
+            className={`${
+              fundersAssessmentStarted ? "bg-Nature" : "bg-Hero-Purple"
+            } rounded-lg`}
           ></div>
         </div>
       </div>

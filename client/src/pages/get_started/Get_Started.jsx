@@ -45,7 +45,7 @@ export default function Get_Started() {
         customized GROWTH actions to advance your business.
       </p>
       <p className="text-[#051C09CC] w-[min(640px,100%)]">
-        There are 41 questions and the assessment should take about 10 minutes.
+        There are 42 questions and the assessment should take about 10 minutes.
       </p>
       <button
         onClick={() => {

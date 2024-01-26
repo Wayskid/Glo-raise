@@ -67,7 +67,7 @@ export default function FortyTwo() {
       <div className="border-2 border-Dark rounded-[20px] py-[60px] px-4 lg:px-[12px] relative grid gap-8 md:gap-12">
         <div className="absolute grid place-items-center -top-[32.3px] justify-self-center">
           <p className="[font-family:'Instrument_Serif',serif;] text-[26px] text-white absolute">
-            {assessment[40].number}
+            {assessment[41].number}
           </p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
