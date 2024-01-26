@@ -90,7 +90,13 @@ export default function SelectOneRadio({
               >
                 {option}
               </label>
-              <div className="absolute h-full w-full peer-checked/radio:bg-[#E5DFFA] z-10 top-0 left-0 cursor-pointer"></div>
+              <div
+                className={`absolute h-full w-full ${
+                  fundersAssessment
+                    ? "peer-checked/radio:bg-[#D7F5EE]"
+                    : "peer-checked/radio:bg-[#E5DFFA]"
+                } z-10 top-0 left-0 cursor-pointer`}
+              ></div>
             </div>
           ))}
           {assessment.add_more === true && (

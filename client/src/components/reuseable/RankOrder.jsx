@@ -135,7 +135,11 @@ export default function RankOrder({
               style={{
                 fontStyle: clickedFirst.current === index ? "bold" : "normal",
                 backgroundColor:
-                  clickedFirst.current === index ? "#E5DFFA" : "",
+                  clickedFirst.current === index
+                    ? fundersAssessment
+                      ? "#D7F5EE"
+                      : "#E5DFFA"
+                    : "",
               }}
               draggable
               onClick={(e) => handleClickRank(e, index)}
