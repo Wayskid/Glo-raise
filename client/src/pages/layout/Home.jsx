@@ -9,8 +9,8 @@ export default function Home() {
     <div className="">
       <section className="bg-Light">
         <div className="w-[min(80rem,100%)] mx-auto">
-          <div className="grid gap-8 md:gap-12 w-[min(1200px,100%)] h-fit pt-[56px] pb-[72px] md:py-[80px] md:pb-[100px] lg:py-[90px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px]">
-            <h1 className="text-[32px] xs:text-[50px] sm:text-[92px] font-medium leading-snug">
+          <div className="grid gap-8 md:gap-12 w-[min(1260px,100%)] h-fit pt-[56px] pb-[72px] md:py-[80px] md:pb-[100px] lg:py-[90px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px]">
+            <h1 className="text-[32px] xs:text-[50px] sm:text-[92px] font-semibold leading-tight">
               The{" "}
               <span className="relative">
                 simplest
@@ -108,8 +108,24 @@ export default function Home() {
                   strokeWidth="4"
                 />
               </svg>{" "}
-              right{" "}
-              <span className="inline-flex items-center gap-4 lg:ml-[24rem] w-fit">
+              <span className="inline-flex items-center gap-4 w-fit">
+                right{" "}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="90"
+                  height="67"
+                  viewBox="0 0 90 67"
+                  fill="none"
+                  className="hidden lg:inline"
+                >
+                  <path
+                    d="M3 34.898L28.9138 60.8118L86.5 3.22559"
+                    stroke="#02B68A"
+                    strokeWidth="8"
+                  />
+                </svg>
+              </span>{" "}
+              <span className="inline-flex items-center gap-4 lg:ml-[24rem] w-fit lg:flex-row-reverse lg:-translate-y-5">
                 funding{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
