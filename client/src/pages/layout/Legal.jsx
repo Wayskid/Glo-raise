@@ -466,7 +466,7 @@ export default function Legal() {
                 interactive experiences. In particular, we use data to:
                 <br />
                 <br />
-                <ul className="list-inside">
+                <ul className="list-inside list-disc">
                   <li>
                     Provide our services, which includes updating, securing, and
                     troubleshooting, as well as providing support. It also
