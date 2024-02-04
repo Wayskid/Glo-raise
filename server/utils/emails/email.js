@@ -1,884 +1,2374 @@
 export const oneFree = ({ name }) => {
-  return `<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
-	xmlns:o="urn:schemas-microsoft-com:office:office">
-
-	<head>
-		<meta charset="utf-8"> <!-- utf-8 works for most cases -->
-		<meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<!-- Use the latest (edge) version of IE rendering engine -->
-		<meta name="x-apple-disable-message-reformatting"> <!-- Disable auto-scale in iOS 10 Mail entirely -->
-		<title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
-
-		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-
-		<!-- CSS Reset : BEGIN -->
-		<style>
-			html,
-			body {
-				margin: 0 auto !important;
-				padding: 0 !important;
-				height: 100% !important;
-				width: 100% !important;
-				background: #f1f1f1;
-			}
-
-			/* What it does: Stops email clients resizing small text. */
-			* {
-				-ms-text-size-adjust: 100%;
-				-webkit-text-size-adjust: 100%;
-			}
-
-			/* What it does: Centers email on Android 4.4 */
-			div[style*="margin: 16px 0"] {
-				margin: 0 !important;
-			}
-
-			/* What it does: Stops Outlook from adding extra spacing to tables. */
-			table,
-			td {
-				mso-table-lspace: 0pt !important;
-				mso-table-rspace: 0pt !important;
-			}
-
-			/* What it does: Fixes webkit padding issue. */
-			table {
-				border-spacing: 0 !important;
-				border-collapse: collapse !important;
-				table-layout: fixed !important;
-				margin: 0 auto !important;
-			}
-
-			/* What it does: Uses a better rendering method when resizing images in IE. */
-			img {
-				-ms-interpolation-mode: bicubic;
-			}
-
-			/* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
-			a {
-				text-decoration: none;
-			}
-
-			/* What it does: A work-around for email clients meddling in triggered links. */
-			*[x-apple-data-detectors],
-			/* iOS */
-			.unstyle-auto-detected-links *,
-			.aBn {
-				border-bottom: 0 !important;
-				cursor: default !important;
-				color: inherit !important;
-				text-decoration: none !important;
-				font-size: inherit !important;
-				font-family: inherit !important;
-				font-weight: inherit !important;
-				line-height: inherit !important;
-			}
-
-			/* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
-			.a6S {
-				display: none !important;
-				opacity: 0.01 !important;
-			}
-
-			/* What it does: Prevents Gmail from changing the text color in conversation threads. */
-			.im {
-				color: inherit !important;
-			}
-
-			/* If the above doesn't work, add a .g-img class to any image in question. */
-			img.g-img+div {
-				display: none !important;
-			}
-
-			/* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
-			/* Create one of these media queries for each additional viewport size you'd like to fix */
-
-			/* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
-			@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
-				u~div .email-container {
-					min-width: 320px !important;
-				}
-			}
-
-			/* iPhone 6, 6S, 7, 8, and X */
-			@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
-				u~div .email-container {
-					min-width: 375px !important;
-				}
-			}
-
-			/* iPhone 6+, 7+, and 8+ */
-			@media only screen and (min-device-width: 414px) {
-				u~div .email-container {
-					min-width: 414px !important;
-				}
-			}
-		</style>
-
-		<!-- CSS Reset : END -->
-
-		<!-- Progressive Enhancements : BEGIN -->
-		<style>
-			.primary {
-				background: #0d0cb5;
-			}
-
-			.blur {
-				/* background: url(img/Blur.png); */
-				background-color: #222222;
-				opacity: 0.98;
-			}
-
-			.bg_white {
-				background: #ffffff;
-			}
-
-			.bg_light {
-				background: #fafafa;
-			}
-
-			.bg_black {
-				background: #000000;
-			}
-
-			.bg_dark {
-				background: rgba(0, 0, 0, .8);
-			}
-
-			.email-section {
-				padding: 2.5em;
-			}
-
-			/*BUTTON*/
-			.btn {
-				padding: 5px 15px;
-				display: inline-block;
-			}
-
-			.btn.btn-primary {
-				border-radius: 5px;
-				background: #0d0cb5;
-				color: #ffffff;
-			}
-
-			.btn.btn-white {
-				border-radius: 5px;
-				background: #ffffff;
-				color: #000000;
-			}
-
-			.btn.btn-white-outline {
-				border-radius: 5px;
-				background: #CAFF87;
-				border: 1px solid #fff;
-				color: black;
-				padding: 24px 36px;
-			}
-
-			h1,
-			h2,
-			h3,
-			h4,
-			h5,
-			h6 {
-				font-family: 'Poppins', sans-serif;
-				color: #000000;
-				margin-top: 0;
-			}
-
-			body {
-				font-family: 'Poppins', sans-serif;
-				font-weight: 400;
-				font-size: 15px;
-				line-height: 1.8;
-				color: rgba(0, 0, 0, .4);
-			}
-
-			a {
-				color: #0d0cb5;
-			}
-
-			table {}
-
-			.box-table {
-				max-width: 560px;
-			}
-
-			.hero-table {
-				max-width: 838px;
-				height: 250px;
-			}
-
-			.hero-table td {
-				background-color: white;
-			}
-
-			.box-table td:first-child {
-				width: 180px;
-			}
-
-			/*LOGO*/
-
-			.logo h1 {
-				margin: 0;
-			}
-
-			.logo h1 a {
-				color: #000000;
-				font-size: 20px;
-				font-weight: 700;
-				text-transform: uppercase;
-				font-family: 'Poppins', sans-serif;
-			}
-
-			.navigation {
-				padding: 0;
-			}
-
-			.navigation li {
-				list-style: none;
-				display: inline-block;
-				;
-				margin-left: 5px;
-				font-size: 13px;
-				font-weight: 500;
-			}
-
-			.navigation li a {
-				color: rgba(0, 0, 0, .4);
-			}
-
-			/*HERO*/
-			.hero {
-				position: relative;
-				z-index: 0;
-			}
-
-			.hero .overlay {
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				content: '';
-				width: 100%;
-				background: #02B68A;
-				z-index: -1;
-				height: 735px;
-			}
-
-			.hero .icon {}
-
-			.hero .icon a {
-				display: block;
-				width: 60px;
-				margin: 0 auto;
-			}
-
-			.hero .text {
-				color: rgba(255, 255, 255, .8);
-			}
-
-			.hero .text h2 {
-				color: #ffffff;
-				margin-bottom: 0;
-			}
-
-
-			/*HEADING SECTION*/
-			.heading-section {}
-
-			.heading-section h2 {
-				color: #000000;
-				font-size: 20px;
-				margin-top: 0;
-				line-height: 1.4;
-				font-weight: 700;
-				text-transform: uppercase;
-			}
-
-			.heading-section .subheading {
-				margin-bottom: 20px !important;
-				display: inline-block;
-				font-size: 13px;
-				text-transform: uppercase;
-				letter-spacing: 2px;
-				color: rgba(0, 0, 0, .4);
-				position: relative;
-			}
-
-			.heading-section .subheading::after {
-				position: absolute;
-				left: 0;
-				right: 0;
-				bottom: -10px;
-				content: '';
-				width: 100%;
-				height: 2px;
-				background: #0d0cb5;
-				margin: 0 auto;
-			}
-
-			.heading-section-white {
-				color: rgba(255, 255, 255, .8);
-			}
-
-			.heading-section-white h2 {
-				line-height: 1;
-				padding-bottom: 0;
-			}
-
-			.heading-section-white h2 {
-				color: #ffffff;
-			}
-
-			.heading-section-white .subheading {
-				margin-bottom: 0;
-				display: inline-block;
-				font-size: 13px;
-				text-transform: uppercase;
-				letter-spacing: 2px;
-				color: rgba(255, 255, 255, .4);
-			}
-
-
-			.icon {
-				text-align: center;
-			}
-
-			.icon img {}
-
-
-			/*SERVICES*/
-			.services {
-				background: rgba(0, 0, 0, .03);
-			}
-
-			.text-services {
-				padding: 10px 10px 0;
-				text-align: center;
-			}
-
-			.text-services h3 {
-				font-size: 16px;
-				font-weight: 600;
-			}
-
-			.services-list {
-				padding: 0;
-				margin: 0 0 20px 0;
-				width: 100%;
-				float: left;
-			}
-
-			.services-list img {
-				float: left;
-			}
-
-			.services-list .text {
-				width: calc(100% - 60px);
-				float: right;
-			}
-
-			.services-list h3 {
-				margin-top: 0;
-				margin-bottom: 0;
-			}
-
-			.services-list p {
-				margin: 0;
-			}
-
-			/*BLOG*/
-			.text-services .meta {
-				text-transform: uppercase;
-				font-size: 14px;
-			}
-
-			/*TESTIMONY*/
-			.text-testimony .name {
-				margin: 0;
-			}
-
-			.text-testimony p {
-				font-size: 20px;
-				font-weight: 400;
-				line-height: 28px;
-				text-align: left;
-			}
-
-			.text-testimony .position {
-				color: rgba(0, 0, 0, .3);
-
-			}
-
-
-			/*VIDEO*/
-			.img {
-				width: 100%;
-				height: auto;
-				position: relative;
-			}
-
-			.img .icon {
-				position: absolute;
-				top: 50%;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				margin-top: -25px;
-			}
-
-			.img .icon a {
-				display: block;
-				width: 60px;
-				position: absolute;
-				top: 0;
-				left: 50%;
-				margin-left: -25px;
-			}
-
-
-
-			/*COUNTER*/
-			.counter {
-				width: 100%;
-				position: relative;
-				z-index: 0;
-			}
-
-			.counter .overlay {
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				content: '';
-				width: 100%;
-				background: #000000;
-				z-index: -1;
-				opacity: .3;
-			}
-
-			.counter-text {
-				text-align: center;
-			}
-
-			.counter-text .num {
-				display: block;
-				color: #ffffff;
-				font-size: 34px;
-				font-weight: 700;
-			}
-
-			.counter-text .name {
-				display: block;
-				color: rgba(255, 255, 255, .9);
-				font-size: 13px;
-			}
-
-			@media screen and (max-width: 500px) {
-
-				.icon {
-					text-align: left;
-				}
-
-				.text-services {
-					padding-left: 0;
-					padding-right: 20px;
-					text-align: left;
-				}
-
-			}
-		</style>
-		<style>
-			.img-text-box {
-				display: inline-block;
-				margin: 20px;
-				width: 45%;
-			}
-
-			.img-text-box div {
-				display: inline-grid;
-				vertical-align: middle;
-				margin: 10px;
-			}
-
-			.img-text-box div:last-child {
-				width: 50%;
-			}
-
-			h2.hero-heading {
-				font-size: 92px !important;
-				line-height: 112px !important;
-				font-weight: 600 !important;
-			}
-
-			h3.score-heading {
-				font-size: 58px;
-				line-height: 64px;
-				font-weight: 600;
-				margin-bottom: 30px;
-			}
-
-			h2.price-heading {
-				font-size: 48px !important;
-				line-height: 56px !important;
-				font-weight: 400 !important;
-			}
-
-			h2.unlock-heading {
-				font-size: 58px !important;
-				line-height: 64px !important;
-				font-weight: 600 !important;
-			}
-
-			.cover {
-				top: 574px !important;
-			}
-
-			.desktop {
-				display: block !important;
-			}
-
-			.mobile {
-				display: none !important;
-			}
-
-			@media screen and (max-width: 768px) {
-				.desktop {
-					display: block !important;
-				}
-
-				h2.hero-heading {
-					font-size: 58px !important;
-					line-height: 64px !important;
-					font-weight: 600 !important;
-					margin-top: 20px !important;
-					margin-bottom: 30px !important;
-				}
-
-				h3.score-heading {
-					font-size: 38px !important;
-					line-height: 48px !important;
-					font-weight: 600 !important;
-					margin-bottom: 0px !important;
-				}
-
-				h2.price-heading {
-					font-size: 26px !important;
-					line-height: 32px !important;
-					font-weight: 400 !important;
-				}
-
-				h2.unlock-heading {
-					font-size: 38px !important;
-					line-height: 48px !important;
-					font-weight: 600 !important;
-				}
-
-				.schore-text {
-					font-size: 14px !important;
-				}
-
-				.text-testimony p {
-					font-size: 16px !important;
-				}
-			}
-
-
-			@media screen and (max-width: 450px) {
-				.desktop {
-					display: none !important;
-				}
-
-				.mobile {
-					display: block !important;
-				}
-
-				.logo img {
-					width: 100px !important;
-				}
-
-				.text {
-					padding: 0px !important;
-				}
-
-				.text p {
-					font-size: 16px !important;
-					line-height: 24px !important;
-					margin-left: 0px !important;
-					margin-bottom: 0px !important;
-					padding: 0px 10px !important;
-				}
-
-				.logo a {
-					font-size: 16px !important;
-				}
-
-				.hero-table {
-					height: 344px !important;
-					margin: 20px !important;
-				}
-
-				h2.hero-heading {
-					font-size: 38px !important;
-					line-height: 48px !important;
-					font-weight: 600 !important;
-					margin-top: 20px !important;
-					margin-bottom: 10px !important;
-				}
-
-				h2.name-heading {
-					font-size: 26px !important;
-					line-height: 32px in !important;
-				}
-
-				h3.score-heading {
-					font-size: 32px !important;
-					line-height: 40px !important;
-					font-weight: 600 !important;
-					margin-bottom: 0px !important;
-					margin: 10px 0px !important;
-				}
-
-				.convered-img {
-					margin-top: 80px !important;
-				}
-
-				.cover {
-					top: 586px !important;
-				}
-
-				.heading-section-white {
-					padding: 0px !important;
-				}
-
-				h2.price-heading {
-					font-size: 26px !important;
-					line-height: 32px !important;
-					font-weight: 400 !important;
-				}
-
-				h2.unlock-heading {
-					font-size: 18px !important;
-					line-height: 24px !important;
-					font-weight: 600 !important;
-					padding-top: 15px;
-				}
-
-				.schore-text {
-					font-size: 14px !important;
-				}
-
-				.text-testimony p {
-					font-size: 16px !important;
-					text-align: center !important;
-				}
-
-				.img-text-box {
-					width: 90% !important;
-				}
-
-				.img-text-box div:last-child {
-					width: 100% !important;
-				}
-
-				.btn.btn-white-outline {
-					width: 75% !important;
-				}
-
-				.email-section {
-					padding: 0px !important;
-				}
-			}
-		</style>
-
-
-	</head>
-
-	<body width="100%"
-		style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">
-		<div style="width: 100%; background-color: #f1f1f1;">
-			<div
-				style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
-				&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
-			</div>
-			<div style="max-width: 1440px; margin: 0 auto; height: 815px;" class="email-container">
-				<!-- BEGIN BODY -->
-				<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
-					style="margin: auto;">
-					<tr>
-						<td valign="top" class="bg_white"
-							style="padding: 0em 2.5em; height: 80px;     vertical-align: middle;">
-							<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
-								<tr>
-									<td width="40%" class="logo" style="text-align: left;">
-										<a style="font-size: 20px;" href="#">
-											<img src="https://res.cloudinary.com/diiohnshc/image/upload/v1706092583/Glo-Raise/Logo_gc5aqx.png" </a>
-									</td>
-									<td width="60%" class="logo" style="text-align: right;">
-										<ul class="navigation">
-											<li><a href="#"
-													style=" font-size: 20px; line-height: 28px; font-weight: 400;">GROWTH
-													Assessment</a></li>
-										</ul>
-									</td>
-								</tr>
-							</table>
-						</td>
-					</tr><!-- end tr -->
-					<tr>
-						<td valign="middle" class="hero bg_white"
-							style="background-image: url(../images/bg_1.jpg); background-size: cover; height: 400px;">
-							<div class="overlay"></div>
-							<table>
-								<tr>
-									<td>
-										<div class="text"
-											style="padding: 0 3em; text-align: center; padding-top: 65px;">
-											<h2 class="hero-heading">
-												Congratulations</h2>
-											<h2 class="name-heading"
-												style="font-size: 48px; line-height: 56px; font-weight: 400;">${name}
-											</h2>
-											<p
-												style="font-size: 20px; line-height: 28px; font-weight: 400; margin-bottom: 50px;">
-												on completing the Glo-raise GROWTH assessment<br />
-												– the premier business attractiveness assessment globally.</p>
-
-											<table class="hero-table desktop"
-												style="border-collapse: collapse; border-radius: 10px;">
-												<tr>
-													<td class="text-testimony heading-section-white"
-														style="text-align: center; vertical-align: top; padding-top: 40px;">
-														<h3 class="score-heading">
-															Your score is</h3>
-														<p class="schore-text"
-															style="    margin-left: 50px; font-size: 16px; line-height: 24px; color: black; padding:0px;">
-															Scores range from Level 1 (lowest) to Level 5 (highest) with
-															Level 5 most closely aligning with the factors known to
-															drive entrepreneurial success.</p>
-													</td>
-													<td>
-														<img src="https://res.cloudinary.com/diiohnshc/image/upload/v1705208411/Glo-Raise/xft1jduvrxyx8r7mhxi2.png">
-													</td>
-
-												</tr>
-											</table>
-											<table style="display: none" class="hero-table mobile">
-												<tbody>
-													<tr>
-														<td>
-															<h3 class="score-heading">Your score is</h3>
-															<img src="https://res.cloudinary.com/diiohnshc/image/upload/v1705208411/Glo-Raise/kxxghaopzc9lw3dtvowr.png">
-															<p class="schore-text"
-																style="    margin-left: 50px; font-size: 16px; line-height: 24px; color: black; padding:0px;">
-																Scores range from Level 1 (lowest) to Level 5 (highest)
-																with
-																Level 5 most closely aligning with the factors known to
-																drive entrepreneurial success.</p>
-														</td>
-													</tr>
-												</tbody>
-
-										</div>
-
-			</div>
-			
-			<img class="desktop" style="position: absolute; z-index: -1;	margin-top: -379px;	left: -30px;"
-				src="https://res.cloudinary.com/diiohnshc/image/upload/v1705208412/Glo-Raise/nclvi80wjdhp9ndrs3cq.png" />
-			<img class="mobile" style="position: absolute; z-index: -1;	width: 100%;margin-top: -100px;"
-				src="https://res.cloudinary.com/diiohnshc/image/upload/v1705208412/Glo-Raise/k8uhugcfo7hoovmqczkx.png" />
-			
-			<div class="convered-img" style="height: 620px; overflow: hidden;     filter: blur(5px);">
-				<img src="https://res.cloudinary.com/diiohnshc/image/upload/v1705208413/Glo-Raise/t889kzzvtxoriigi6dxx.png" style="width: 100%;" />
-			</div>
-			<div class="cover" style=" position: absolute; top: 657px; left: -1px; opacity: 0.95;"
-				class="email-container">
-				<table>
-					<tr>
-						<td>
-							<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-
-
-								<tr>
-									<td class="blur email-section" style="text-align:center;">
-										<div class="heading-section heading-section-white"
-											style="text-align: center; padding: 0 30px;">
-											<h2 class="unlock-heading">
-												Unlock your complete Glo-raise GROWTH™ score</h2>
-
-										</div>
-										<div class="img-text-box">
-											<div>
-												<img src="https://res.cloudinary.com/diiohnshc/image/upload/v1705208481/Glo-Raise/puthwgqaqamt7nfiy0oq.png" alt=""
-													style="width: 100%; max-width: 110px; height: auto; margin: auto; margin-bottom: 20px; display: block;">
-											</div>
-											<div class="text-testimony heading-section-white"
-												style="text-align: center;">
-
-												<p>visualization breakdown of the % of founders per region</p>
-											</div>
-										</div>
-
-										<div class="img-text-box">
-											<div>
-												<img src="https://res.cloudinary.com/diiohnshc/image/upload/v1705208481/Glo-Raise/gdbeij9e7o8qxybwc4kn.png" alt=""
-													style="width: 100%; max-width: 110px; height: auto; margin: auto; margin-bottom: 20px; display: block;">
-											</div>
-											<div class="text-testimony heading-section-white"
-												style="text-align: center;">
-												<p>examples of eventual unicorns from each level</p>
-
-											</div>
-										</div>
-
-										<div class="img-text-box">
-											<div>
-												<img src="https://res.cloudinary.com/diiohnshc/image/upload/v1705208481/Glo-Raise/rld2rlq7oatvz41elabl.png" alt=""
-													style="width: 100%; max-width: 110px; height: auto; margin: auto; margin-bottom: 20px; display: block;">
-											</div>
-											<div class="text-testimony heading-section-white"
-												style="text-align: center;">
-												<p>personalized action report based on your responses to help you drive
-													next-level GROWTH</p>
-
-											</div>
-										</div>
-
-										<div class="img-text-box">
-											<div>
-												<img src="https://res.cloudinary.com/diiohnshc/image/upload/v1705208481/Glo-Raise/jkvez4vyzzgfwj7haxgr.png" alt=""
-													style="width: 100%; max-width: 110px; height: auto; margin: auto; margin-bottom: 20px; display: block;">
-											</div>
-											<div class="text-testimony heading-section-white"
-												style="text-align: center;">
-
-												<p>overall level for all founders globally and the % of founders scoring
-													in each level</p>
-											</div>
-										</div>
-										<div class="heading-section heading-section-white">
-											<h2 class="price-heading">limited time just $29 ($300 value)</h2>
-											<p><a href="#" class="btn btn-white-outline"
-													style="font-size: 20px; line-height: 28px; font-weight: 400;">Unlock</a>
-											</p>
-										</div>
-									</td>
-								</tr>
-							</table>
-
-						</td>
-					</tr><!-- end:tr -->
-					<!-- 1 Column Text + Button : END -->
-				</table>
-			</div>
-			</div>
-
-		</center>
-	</body>
-
+  return `<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:v="urn:schemas-microsoft-com:vml"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+>
+  <head>
+    <!--[if gte mso 9]>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG />
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+    <![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <!--[if !mso]><!-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--<![endif]-->
+    <title></title>
+
+    <style type="text/css">
+      @media only screen and (min-width: 620px) {
+        .u-row {
+          width: 600px !important;
+        }
+        .u-row .u-col {
+          vertical-align: top;
+        }
+
+        .u-row .u-col-33p33 {
+          width: 199.98px !important;
+        }
+
+        .u-row .u-col-50 {
+          width: 300px !important;
+        }
+
+        .u-row .u-col-66p67 {
+          width: 400.02px !important;
+        }
+
+        .u-row .u-col-100 {
+          width: 600px !important;
+        }
+      }
+
+      @media (max-width: 620px) {
+        .u-row-container {
+          max-width: 100% !important;
+          padding-left: 0px !important;
+          padding-right: 0px !important;
+        }
+        .u-row .u-col {
+          min-width: 320px !important;
+          max-width: 100% !important;
+          display: block !important;
+        }
+        .u-row {
+          width: 100% !important;
+        }
+        .u-col {
+          width: 100% !important;
+        }
+        .u-col > div {
+          margin: 0 auto;
+        }
+        #u_row_35 .v-row-background-image--inner {
+          background: unset !important;
+        }
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      table,
+      tr,
+      td {
+        vertical-align: top;
+        border-collapse: collapse;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .ie-container table,
+      .mso-container table {
+        table-layout: fixed;
+      }
+
+      * {
+        line-height: inherit;
+      }
+
+      a[x-apple-data-detectors='true'] {
+        color: inherit !important;
+        text-decoration: none !important;
+      }
+
+      table,
+      td {
+        color: #000000;
+      }
+      #u_body a {
+        color: #0000ee;
+        text-decoration: underline;
+      }
+      @media (max-width: 480px) {
+        #u_content_image_6 .v-text-align {
+          text-align: center !important;
+        }
+        #u_content_text_11 .v-text-align {
+          text-align: center !important;
+        }
+        #u_row_35 .v-row-background-image--outer {
+          background-position: -11% 100% !important;
+          background-repeat: no-repeat !important;
+        }
+        #u_row_35.v-row-background-image--outer {
+          background-position: -11% 100% !important;
+          background-repeat: no-repeat !important;
+        }
+        #u_content_heading_26 .v-font-size {
+          font-size: 35px !important;
+        }
+        #u_content_heading_28 .v-font-size {
+          font-size: 14px !important;
+        }
+        #u_content_heading_11 .v-font-size {
+          font-size: 35px !important;
+        }
+        #u_content_heading_12 .v-container-padding-padding {
+          padding: 10px 27px 20px 28px !important;
+        }
+        #u_content_image_9 .v-src-width {
+          width: auto !important;
+        }
+        #u_content_image_9 .v-src-max-width {
+          max-width: 70% !important;
+        }
+        #u_content_text_14 .v-font-size {
+          font-size: 15px !important;
+        }
+        #u_content_heading_29 .v-container-padding-padding {
+          padding: 12px 10px 10px !important;
+        }
+        #u_content_heading_29 .v-text-align {
+          text-align: center !important;
+        }
+        #u_content_heading_16 .v-container-padding-padding {
+          padding: 12px 10px 10px !important;
+        }
+        #u_content_heading_16 .v-text-align {
+          text-align: center !important;
+        }
+        #u_content_heading_17 .v-text-align {
+          text-align: center !important;
+        }
+        #u_content_heading_18 .v-container-padding-padding {
+          padding: 12px 10px 10px !important;
+        }
+        #u_content_heading_18 .v-text-align {
+          text-align: center !important;
+        }
+        #u_content_heading_24 .v-font-size {
+          font-size: 26px !important;
+        }
+        #u_content_button_3 .v-size-width {
+          width: 90% !important;
+        }
+      }
+    </style>
+
+    <!--[if !mso]><!-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Cabin:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!--<![endif]-->
+  </head>
+
+  <body
+    class="clean-body u_body"
+    style="
+      margin: 0;
+      padding: 0;
+      -webkit-text-size-adjust: 100%;
+      background-color: #f9f9f9;
+      color: #000000;
+    "
+  >
+    <!--[if IE]><div class="ie-container"><![endif]-->
+    <!--[if mso]><div class="mso-container"><![endif]-->
+    <table
+      id="u_body"
+      style="
+        border-collapse: collapse;
+        table-layout: fixed;
+        border-spacing: 0;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+        vertical-align: top;
+        min-width: 320px;
+        margin: 0 auto;
+        background-color: #f9f9f9;
+        width: 100%;
+      "
+      cellpadding="0"
+      cellspacing="0"
+    >
+      <tbody>
+        <tr style="vertical-align: top">
+          <td
+            style="
+              word-break: break-word;
+              border-collapse: collapse !important;
+              vertical-align: top;
+            "
+          >
+            <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color: #f9f9f9;"><![endif]-->
+
+            <div
+              class="u-row-container v-row-background-image--outer"
+              style="padding: 10px 0px; background-color: transparent"
+            >
+              <div
+                class="u-row"
+                style="
+                  margin: 0 auto;
+                  min-width: 320px;
+                  max-width: 600px;
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  word-break: break-word;
+                  background-color: transparent;
+                "
+              >
+                <div
+                  class="v-row-background-image--inner"
+                  style="
+                    border-collapse: collapse;
+                    display: table;
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                  "
+                >
+                  <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="v-row-background-image--outer" style="padding: 10px 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr class="v-row-background-image--inner" style="background-color: transparent;"><![endif]-->
+
+                  <!--[if (mso)|(IE)]><td align="center" width="300" style="width: 300px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
+                  <div
+                    class="u-col u-col-50"
+                    style="
+                      max-width: 320px;
+                      min-width: 300px;
+                      display: table-cell;
+                      vertical-align: top;
+                    "
+                  >
+                    <div
+                      style="
+                        height: 100%;
+                        width: 100% !important;
+                        border-radius: 0px;
+                        -webkit-border-radius: 0px;
+                        -moz-border-radius: 0px;
+                      "
+                    >
+                      <!--[if (!mso)&(!IE)]><!--><div
+                        style="
+                          box-sizing: border-box;
+                          height: 100%;
+                          padding: 0px;
+                          border-top: 0px solid transparent;
+                          border-left: 0px solid transparent;
+                          border-right: 0px solid transparent;
+                          border-bottom: 0px solid transparent;
+                          border-radius: 0px;
+                          -webkit-border-radius: 0px;
+                          -moz-border-radius: 0px;
+                        "
+                      ><!--<![endif]-->
+                        <table
+                          id="u_content_image_6"
+                          class="header-image"
+                          style="font-family: 'Cabin', sans-serif"
+                          role="presentation"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          border="0"
+                        >
+                          <tbody>
+                            <tr>
+                              <td
+                                class="v-container-padding-padding"
+                                style="
+                                  overflow-wrap: break-word;
+                                  word-break: break-word;
+                                  padding: 10px;
+                                  font-family: 'Cabin', sans-serif;
+                                "
+                                align="left"
+                              >
+                                <table
+                                  width="100%"
+                                  cellpadding="0"
+                                  cellspacing="0"
+                                  border="0"
+                                >
+                                  <tr>
+                                    <td
+                                      class="v-text-align"
+                                      style="
+                                        padding-right: 0px;
+                                        padding-left: 0px;
+                                      "
+                                      align="left"
+                                    >
+                                      <img
+                                        align="left"
+                                        border="0"
+                                        src="https://res.cloudinary.com/diiohnshc/image/upload/v1705208413/Glo-Raise/akiwqnf5fdj77xfwoex5.png"
+                                        alt=""
+                                        title=""
+                                        style="
+                                          outline: none;
+                                          text-decoration: none;
+                                          -ms-interpolation-mode: bicubic;
+                                          clear: both;
+                                          display: inline-block !important;
+                                          border: none;
+                                          height: auto;
+                                          float: none;
+                                          width: 48%;
+                                          max-width: 134.4px;
+                                        "
+                                        width="134.4"
+                                        class="v-src-width v-src-max-width"
+                                      />
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <!--[if (!mso)&(!IE)]><!-->
+                      </div>
+                      <!--<![endif]-->
+                    </div>
+                  </div>
+                  <!--[if (mso)|(IE)]></td><![endif]-->
+                  <!--[if (mso)|(IE)]><td align="center" width="300" style="width: 300px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
+                  <div
+                    class="u-col u-col-50"
+                    style="
+                      max-width: 320px;
+                      min-width: 300px;
+                      display: table-cell;
+                      vertical-align: top;
+                    "
+                  >
+                    <div
+                      style="
+                        height: 100%;
+                        width: 100% !important;
+                        border-radius: 0px;
+                        -webkit-border-radius: 0px;
+                        -moz-border-radius: 0px;
+                      "
+                    >
+                      <!--[if (!mso)&(!IE)]><!--><div
+                        style="
+                          box-sizing: border-box;
+                          height: 100%;
+                          padding: 0px;
+                          border-top: 0px solid transparent;
+                          border-left: 0px solid transparent;
+                          border-right: 0px solid transparent;
+                          border-bottom: 0px solid transparent;
+                          border-radius: 0px;
+                          -webkit-border-radius: 0px;
+                          -moz-border-radius: 0px;
+                        "
+                      ><!--<![endif]-->
+                        <table
+                          id="u_content_text_11"
+                          class="header-text"
+                          style="font-family: 'Cabin', sans-serif"
+                          role="presentation"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          border="0"
+                        >
+                          <tbody>
+                            <tr>
+                              <td
+                                class="v-container-padding-padding"
+                                style="
+                                  overflow-wrap: break-word;
+                                  word-break: break-word;
+                                  padding: 10px;
+                                  font-family: 'Cabin', sans-serif;
+                                "
+                                align="left"
+                              >
+                                <div
+                                  class="v-text-align v-font-size"
+                                  style="
+                                    font-size: 20px;
+                                    color: #999999;
+                                    line-height: 140%;
+                                    text-align: right;
+                                    word-wrap: break-word;
+                                  "
+                                >
+                                  <p style="line-height: 140%">
+                                    GROWTH Assessment
+                                  </p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <!--[if (!mso)&(!IE)]><!-->
+                      </div>
+                      <!--<![endif]-->
+                    </div>
+                  </div>
+                  <!--[if (mso)|(IE)]></td><![endif]-->
+                  <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+                </div>
+              </div>
+            </div>
+
+            <!--[if gte mso 9]>
+      <table cellpadding="0" cellspacing="0" border="0" style="margin: 0 auto;min-width: 320px;max-width: 600px;">
+        <tr>
+          <td background="https://res.cloudinary.com/diiohnshc/image/upload/v1705208412/Glo-Raise/nclvi80wjdhp9ndrs3cq.png" valign="top" width="100%">
+      <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width: 600px;">
+        <v:fill type="frame" src="https://res.cloudinary.com/diiohnshc/image/upload/v1705208412/Glo-Raise/nclvi80wjdhp9ndrs3cq.png" /><v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">
+      <![endif]-->
+
+            <div
+              id="u_row_35"
+              class="u-row-container m v-row-background-image--outer"
+              style="padding: 0px; background-color: transparent"
+            >
+              <div
+                class="u-row"
+                style="
+                  margin: 0 auto;
+                  min-width: 320px;
+                  max-width: 600px;
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  word-break: break-word;
+                  background-color: #02b68a;
+                "
+              >
+                <div
+                  class="v-row-background-image--inner"
+                  style="
+                    border-collapse: collapse;
+                    display: table;
+                    width: 100%;
+                    height: 100%;
+                    background-image: url('https://res.cloudinary.com/diiohnshc/image/upload/v1705208412/Glo-Raise/nclvi80wjdhp9ndrs3cq.png');
+                    background-repeat: no-repeat;
+                    background-position: -11% 100%;
+                    background-color: transparent;
+                    background-size: 140px;
+                  "
+                >
+                  <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="v-row-background-image--outer" style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr class="v-row-background-image--inner" style="background-image: url('https://res.cloudinary.com/diiohnshc/image/upload/v1705208412/Glo-Raise/nclvi80wjdhp9ndrs3cq.png');background-repeat: no-repeat;background-position: -11% 100%;background-color: #02b68a;background-size: 140px;"><![endif]-->
+
+                  <!--[if (mso)|(IE)]><td align="center" width="600" style="width: 600px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
+                  <div
+                    class="u-col u-col-100"
+                    style="
+                      max-width: 320px;
+                      min-width: 600px;
+                      display: table-cell;
+                      vertical-align: top;
+                    "
+                  >
+                    <div style="height: 100%; width: 100% !important">
+                      <!--[if (!mso)&(!IE)]><!--><div
+                        style="
+                          box-sizing: border-box;
+                          height: 100%;
+                          padding: 0px;
+                          border-top: 0px solid transparent;
+                          border-left: 0px solid transparent;
+                          border-right: 0px solid transparent;
+                          border-bottom: 0px solid transparent;
+                        "
+                      ><!--<![endif]-->
+                        <table
+                          id="u_content_heading_26"
+                          class="heading-1"
+                          style="font-family: 'Cabin', sans-serif"
+                          role="presentation"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          border="0"
+                        >
+                          <tbody>
+                            <tr>
+                              <td
+                                class="v-container-padding-padding"
+                                style="
+                                  overflow-wrap: break-word;
+                                  word-break: break-word;
+                                  padding: 20px 10px 0px;
+                                  font-family: 'Cabin', sans-serif;
+                                "
+                                align="left"
+                              >
+                                <!--[if mso]><table width="100%"><tr><td><![endif]-->
+                                <h1
+                                  class="v-text-align v-font-size"
+                                  style="
+                                    margin: 0px;
+                                    color: #ffffff;
+                                    line-height: 140%;
+                                    text-align: center;
+                                    word-wrap: break-word;
+                                    font-family: 'Raleway', sans-serif;
+                                    font-size: 40px;
+                                    font-weight: 700;
+                                  "
+                                >
+                                  <span
+                                    ><span
+                                      ><span
+                                        ><span
+                                          ><span
+                                            ><span
+                                              ><span
+                                                ><span
+                                                  ><span
+                                                    ><span
+                                                      ><span
+                                                        >Congratulations</span
+                                                      ></span
+                                                    ></span
+                                                  ></span
+                                                ></span
+                                              ></span
+                                            ></span
+                                          ></span
+                                        ></span
+                                      ></span
+                                    ></span
+                                  >
+                                </h1>
+                                <!--[if mso]></td></tr></table><![endif]-->
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <table
+                          class="heading-2"
+                          style="font-family: 'Cabin', sans-serif"
+                          role="presentation"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          border="0"
+                        >
+                          <tbody>
+                            <tr>
+                              <td
+                                class="v-container-padding-padding"
+                                style="
+                                  overflow-wrap: break-word;
+                                  word-break: break-word;
+                                  padding: 5px;
+                                  font-family: 'Cabin', sans-serif;
+                                "
+                                align="left"
+                              >
+                                <!--[if mso]><table width="100%"><tr><td><![endif]-->
+                                <h2
+                                  class="v-text-align v-font-size"
+                                  style="
+                                    margin: 0px;
+                                    color: #ffffff;
+                                    line-height: 140%;
+                                    text-align: center;
+                                    word-wrap: break-word;
+                                    font-family: 'Raleway', sans-serif;
+                                    font-size: 30px;
+                                    font-weight: 400;
+                                  "
+                                >
+                                  <span
+                                    ><span
+                                      ><span
+                                        ><span
+                                          ><span
+                                            ><span
+                                              ><span
+                                                ><span
+                                                  ><span
+                                                    ><span
+                                                      ><span
+                                                        ><span
+                                                          ><span
+                                                            >Jhon Smith</span
+                                                          ></span
+                                                        ></span
+                                                      ></span
+                                                    ></span
+                                                  ></span
+                                                ></span
+                                              ></span
+                                            ></span
+                                          ></span
+                                        ></span
+                                      ></span
+                                    ></span
+                                  >
+                                </h2>
+                                <!--[if mso]></td></tr></table><![endif]-->
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <table
+                          id="u_content_heading_28"
+                          class="heading-3"
+                          style="font-family: 'Cabin', sans-serif"
+                          role="presentation"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          border="0"
+                        >
+                          <tbody>
+                            <tr>
+                              <td
+                                class="v-container-padding-padding"
+                                style="
+                                  overflow-wrap: break-word;
+                                  word-break: break-word;
+                                  padding: 10px 20px 20px;
+                                  font-family: 'Cabin', sans-serif;
+                                "
+                                align="left"
+                              >
+                                <!--[if mso]><table width="100%"><tr><td><![endif]-->
+                                <h3
+                                  class="v-text-align v-font-size"
+                                  style="
+                                    margin: 0px;
+                                    color: #ffffff;
+                                    line-height: 160%;
+                                    text-align: center;
+                                    word-wrap: break-word;
+                                    font-family: 'Raleway', sans-serif;
+                                    font-size: 15px;
+                                    font-weight: 400;
+                                  "
+                                >
+                                  <span
+                                    ><span
+                                      ><span style="line-height: 24px"
+                                        ><span style="line-height: 24px"
+                                          ><span style="line-height: 24px"
+                                            ><span style="line-height: 24px"
+                                              ><span style="line-height: 24px"
+                                                ><span style="line-height: 24px"
+                                                  ><span
+                                                    style="line-height: 24px"
+                                                    ><span
+                                                      style="line-height: 24px"
+                                                      ><span
+                                                        style="
+                                                          line-height: 24px;
+                                                        "
+                                                        ><span
+                                                          style="
+                                                            line-height: 24px;
+                                                          "
+                                                          ><span
+                                                            style="
+                                                              line-height: 24px;
+                                                            "
+                                                            ><span
+                                                              style="
+                                                                line-height: 24px;
+                                                              "
+                                                              ><span
+                                                                style="
+                                                                  line-height: 24px;
+                                                                "
+                                                                ><span
+                                                                  style="
+                                                                    line-height: 24px;
+                                                                  "
+                                                                  ><span
+                                                                    style="
+                                                                      line-height: 24px;
+                                                                    "
+                                                                    ><span
+                                                                      style="
+                                                                        line-height: 24px;
+                                                                      "
+                                                                      ><span
+                                                                        style="
+                                                                          line-height: 24px;
+                                                                        "
+                                                                        >on
+                                                                        completing
+                                                                        the
+                                                                        Glo-raise
+                                                                        GROWTH
+                                                                        assessment<br />–
+                                                                        the
+                                                                        premier
+                                                                        business
+                                                                        attractiveness
+                                                                        assessment
+                                                                        globally.</span
+                                                                      ></span
+                                                                    ></span
+                                                                  ></span
+                                                                ></span
+                                                              ></span
+                                                            ></span
+                                                          ></span
+                                                        ></span
+                                                      ></span
+                                                    ></span
+                                                  ></span
+                                                ></span
+                                              ></span
+                                            ></span
+                                          ></span
+                                        ></span
+                                      ></span
+                                    ></span
+                                  >
+                                </h3>
+                                <!--[if mso]></td></tr></table><![endif]-->
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <!--[if (!mso)&(!IE)]><!-->
+                      </div>
+                      <!--<![endif]-->
+                    </div>
+                  </div>
+                  <!--[if (mso)|(IE)]></td><![endif]-->
+                  <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+                </div>
+              </div>
+            </div>
+
+            <!--[if gte mso 9]>
+      </v:textbox></v:rect>
+    </td>
+    </tr>
+    </table>
+    <![endif]-->
+
+            <div
+              class="u-row-container m v-row-background-image--outer"
+              style="padding: 0px; background-color: transparent"
+            >
+              <div
+                class="u-row"
+                style="
+                  margin: 0 auto;
+                  min-width: 320px;
+                  max-width: 600px;
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  word-break: break-word;
+                  background-color: #ffffff;
+                "
+              >
+                <div
+                  class="v-row-background-image--inner"
+                  style="
+                    border-collapse: collapse;
+                    display: table;
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                  "
+                >
+                  <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="v-row-background-image--outer" style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr class="v-row-background-image--inner" style="background-color: #ffffff;"><![endif]-->
+
+                  <!--[if (mso)|(IE)]><td align="center" width="400" style="width: 400px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
+                  <div
+                    class="u-col u-col-66p67"
+                    style="
+                      max-width: 320px;
+                      min-width: 400px;
+                      display: table-cell;
+                      vertical-align: top;
+                    "
+                  >
+                    <div
+                      style="
+                        height: 100%;
+                        width: 100% !important;
+                        border-radius: 0px;
+                        -webkit-border-radius: 0px;
+                        -moz-border-radius: 0px;
+                      "
+                    >
+                      <!--[if (!mso)&(!IE)]><!--><div
+                        style="
+                          box-sizing: border-box;
+                          height: 100%;
+                          padding: 0px;
+                          border-top: 0px solid transparent;
+                          border-left: 0px solid transparent;
+                          border-right: 0px solid transparent;
+                          border-bottom: 0px solid transparent;
+                          border-radius: 0px;
+                          -webkit-border-radius: 0px;
+                          -moz-border-radius: 0px;
+                        "
+                      ><!--<![endif]-->
+                        <table
+                          id="u_content_heading_11"
+                          class="heading-1"
+                          style="font-family: 'Cabin', sans-serif"
+                          role="presentation"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          border="0"
+                        >
+                          <tbody>
+                            <tr>
+                              <td
+                                class="v-container-padding-padding"
+                                style="
+                                  overflow-wrap: break-word;
+                                  word-break: break-word;
+                                  padding: 10px 10px 0px 20px;
+                                  font-family: 'Cabin', sans-serif;
+                                "
+                                align="left"
+                              >
+                                <!--[if mso]><table width="100%"><tr><td><![endif]-->
+                                <h1
+                                  class="v-text-align v-font-size"
+                                  style="
+                                    margin: 0px;
+                                    color: #000000;
+                                    line-height: 140%;
+                                    text-align: left;
+                                    word-wrap: break-word;
+                                    font-family: 'Raleway', sans-serif;
+                                    font-size: 40px;
+                                    font-weight: 700;
+                                  "
+                                >
+                                  <span
+                                    ><span
+                                      ><span
+                                        ><span
+                                          ><span
+                                            ><span
+                                              style="color: #1f1f1f; text-align: left; -wrap; background-color: #ffffff; float: none; display: inline;"
+                                              >Your score is</span
+                                            ></span
+                                          ></span
+                                        ></span
+                                      ></span
+                                    ></span
+                                  >
+                                </h1>
+                                <!--[if mso]></td></tr></table><![endif]-->
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <table
+                          id="u_content_heading_12"
+                          class="heading-3"
+                          style="font-family: 'Cabin', sans-serif"
+                          role="presentation"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          border="0"
+                        >
+                          <tbody>
+                            <tr>
+                              <td
+                                class="v-container-padding-padding"
+                                style="
+                                  overflow-wrap: break-word;
+                                  word-break: break-word;
+                                  padding: 10px 10px 10px 20px;
+                                  font-family: 'Cabin', sans-serif;
+                                "
+                                align="left"
+                              >
+                                <!--[if mso]><table width="100%"><tr><td><![endif]-->
+                                <h3
+                                  class="v-text-align v-font-size"
+                                  style="
+                                    margin: 0px;
+                                    color: #000000;
+                                    line-height: 150%;
+                                    text-align: left;
+                                    word-wrap: break-word;
+                                    font-family: 'Raleway', sans-serif;
+                                    font-size: 15px;
+                                    font-weight: 400;
+                                  "
+                                >
+                                  <span
+                                    ><span
+                                      ><span
+                                        ><span style="line-height: 22.5px"
+                                          ><span
+                                            style="
+                                              color: #000000;
+                                              text-align: left;
+                                              white-space: normal;
+                                              background-color: #ffffff;
+                                              float: none;
+                                              display: inline;
+                                              line-height: 22.5px;
+                                            "
+                                            >Scores range from Level 1 (lowest)
+                                            to Level 5 (highest) with Level 5
+                                            most closely aligning with the
+                                            factors known to drive
+                                            entrepreneurial success.</span
+                                          ></span
+                                        ></span
+                                      ></span
+                                    ></span
+                                  >
+                                </h3>
+                                <!--[if mso]></td></tr></table><![endif]-->
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <!--[if (!mso)&(!IE)]><!-->
+                      </div>
+                      <!--<![endif]-->
+                    </div>
+                  </div>
+                  <!--[if (mso)|(IE)]></td><![endif]-->
+                  <!--[if (mso)|(IE)]><td align="center" width="200" style="width: 200px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
+                  <div
+                    class="u-col u-col-33p33"
+                    style="
+                      max-width: 320px;
+                      min-width: 200px;
+                      display: table-cell;
+                      vertical-align: top;
+                    "
+                  >
+                    <div
+                      style="
+                        height: 100%;
+                        width: 100% !important;
+                        border-radius: 0px;
+                        -webkit-border-radius: 0px;
+                        -moz-border-radius: 0px;
+                      "
+                    >
+                      <!--[if (!mso)&(!IE)]><!--><div
+                        style="
+                          box-sizing: border-box;
+                          height: 100%;
+                          padding: 0px;
+                          border-top: 0px solid transparent;
+                          border-left: 0px solid transparent;
+                          border-right: 0px solid transparent;
+                          border-bottom: 0px solid transparent;
+                          border-radius: 0px;
+                          -webkit-border-radius: 0px;
+                          -moz-border-radius: 0px;
+                        "
+                      ><!--<![endif]-->
+                        <table
+                          id="u_content_image_9"
+                          style="font-family: 'Cabin', sans-serif"
+                          role="presentation"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          border="0"
+                        >
+                          <tbody>
+                            <tr>
+                              <td
+                                class="v-container-padding-padding"
+                                style="
+                                  overflow-wrap: break-word;
+                                  word-break: break-word;
+                                  padding: 0px;
+                                  font-family: 'Cabin', sans-serif;
+                                "
+                                align="left"
+                              >
+                                <table
+                                  width="100%"
+                                  cellpadding="0"
+                                  cellspacing="0"
+                                  border="0"
+                                >
+                                  <tr>
+                                    <td
+                                      class="v-text-align"
+                                      style="
+                                        padding-right: 0px;
+                                        padding-left: 0px;
+                                      "
+                                      align="center"
+                                    >
+                                      <img
+                                        align="center"
+                                        border="0"
+                                        src="https://res.cloudinary.com/diiohnshc/image/upload/v1705208411/Glo-Raise/xft1jduvrxyx8r7mhxi2.png"
+                                        alt=""
+                                        title=""
+                                        style="
+                                          outline: none;
+                                          text-decoration: none;
+                                          -ms-interpolation-mode: bicubic;
+                                          clear: both;
+                                          display: inline-block !important;
+                                          border: none;
+                                          height: auto;
+                                          float: none;
+                                          width: 100%;
+                                          max-width: 200px;
+                                        "
+                                        width="200"
+                                        class="v-src-width v-src-max-width"
+                                      />
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <!--[if (!mso)&(!IE)]><!-->
+                      </div>
+                      <!--<![endif]-->
+                    </div>
+                  </div>
+                  <!--[if (mso)|(IE)]></td><![endif]-->
+                  <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="u-row-container v-row-background-image--outer"
+              style="padding: 0px; background-color: transparent"
+            >
+              <div
+                class="u-row"
+                style="
+                  margin: 0 auto;
+                  min-width: 320px;
+                  max-width: 600px;
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  word-break: break-word;
+                  background-color: #222222;
+                "
+              >
+                <div
+                  class="v-row-background-image--inner"
+                  style="
+                    border-collapse: collapse;
+                    display: table;
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                  "
+                >
+                  <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="v-row-background-image--outer" style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr class="v-row-background-image--inner" style="background-color: #222222;"><![endif]-->
+
+                  <!--[if (mso)|(IE)]><td align="center" width="600" style="width: 600px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
+                  <div
+                    class="u-col u-col-100"
+                    style="
+                      max-width: 320px;
+                      min-width: 600px;
+                      display: table-cell;
+                      vertical-align: top;
+                    "
+                  >
+                    <div
+                      style="
+                        height: 100%;
+                        width: 100% !important;
+                        border-radius: 0px;
+                        -webkit-border-radius: 0px;
+                        -moz-border-radius: 0px;
+                      "
+                    >
+                      <!--[if (!mso)&(!IE)]><!--><div
+                        style="
+                          box-sizing: border-box;
+                          height: 100%;
+                          padding: 0px;
+                          border-top: 0px solid transparent;
+                          border-left: 0px solid transparent;
+                          border-right: 0px solid transparent;
+                          border-bottom: 0px solid transparent;
+                          border-radius: 0px;
+                          -webkit-border-radius: 0px;
+                          -moz-border-radius: 0px;
+                        "
+                      ><!--<![endif]-->
+                        <table
+                          id="u_content_text_14"
+                          style="font-family: 'Cabin', sans-serif"
+                          role="presentation"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          border="0"
+                        >
+                          <tbody>
+                            <tr>
+                              <td
+                                class="v-container-padding-padding"
+                                style="
+                                  overflow-wrap: break-word;
+                                  word-break: break-word;
+                                  padding: 10px;
+                                  font-family: 'Cabin', sans-serif;
+                                "
+                                align="left"
+                              >
+                                <div
+                                  class="v-text-align v-font-size"
+                                  style="
+                                    font-family: 'Raleway', sans-serif;
+                                    font-size: 20px;
+                                    color: #ffffff;
+                                    line-height: 230%;
+                                    text-align: center;
+                                    word-wrap: break-word;
+                                  "
+                                >
+                                  <h2>
+                                    UNLOCK YOUR COMPLETE GLO-RAISE GROWTH™ SCORE
+                                  </h2>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <!--[if (!mso)&(!IE)]><!-->
+                      </div>
+                      <!--<![endif]-->
+                    </div>
+                  </div>
+                  <!--[if (mso)|(IE)]></td><![endif]-->
+                  <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="u-row-container v-row-background-image--outer"
+              style="padding: 0px; background-color: transparent"
+            >
+              <div
+                class="u-row"
+                style="
+                  margin: 0 auto;
+                  min-width: 320px;
+                  max-width: 600px;
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  word-break: break-word;
+                  background-color: #222222;
+                "
+              >
+                <div
+                  class="v-row-background-image--inner"
+                  style="
+                    border-collapse: collapse;
+                    display: table;
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                  "
+                >
+                  <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="v-row-background-image--outer" style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr class="v-row-background-image--inner" style="background-color: #222222;"><![endif]-->
+
+                  <!--[if (mso)|(IE)]><td align="center" width="300" style="width: 300px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
+                  <div
+                    class="u-col u-col-50"
+                    style="
+                      max-width: 320px;
+                      min-width: 300px;
+                      display: table-cell;
+                      vertical-align: top;
+                    "
+                  >
+                    <div
+                      style="
+                        height: 100%;
+                        width: 100% !important;
+                        border-radius: 0px;
+                        -webkit-border-radius: 0px;
+                        -moz-border-radius: 0px;
+                      "
+                    >
+                      <!--[if (!mso)&(!IE)]><!--><div
+                        style="
+                          box-sizing: border-box;
+                          height: 100%;
+                          padding: 0px;
+                          border-top: 0px solid transparent;
+                          border-left: 0px solid transparent;
+                          border-right: 0px solid transparent;
+                          border-bottom: 0px solid transparent;
+                          border-radius: 0px;
+                          -webkit-border-radius: 0px;
+                          -moz-border-radius: 0px;
+                        "
+                      ><!--<![endif]-->
+                        <table
+                          style="font-family: 'Cabin', sans-serif"
+                          role="presentation"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          border="0"
+                        >
+                          <tbody>
+                            <tr>
+                              <td
+                                class="v-container-padding-padding"
+                                style="
+                                  overflow-wrap: break-word;
+                                  word-break: break-word;
+                                  padding: 20px 10px;
+                                  font-family: 'Cabin', sans-serif;
+                                "
+                                align="left"
+                              >
+                                <table
+                                  width="100%"
+                                  cellpadding="0"
+                                  cellspacing="0"
+                                  border="0"
+                                >
+                                  <tr>
+                                    <td
+                                      class="v-text-align"
+                                      style="
+                                        padding-right: 0px;
+                                        padding-left: 0px;
+                                      "
+                                      align="center"
+                                    >
+                                      <img
+                                        align="center"
+                                        border="0"
+                                        src="https://res.cloudinary.com/diiohnshc/image/upload/v1705208481/Glo-Raise/puthwgqaqamt7nfiy0oq.png"
+                                        alt=""
+                                        title=""
+                                        style="
+                                          outline: none;
+                                          text-decoration: none;
+                                          -ms-interpolation-mode: bicubic;
+                                          clear: both;
+                                          display: inline-block !important;
+                                          border: none;
+                                          height: auto;
+                                          float: none;
+                                          width: 40%;
+                                          max-width: 112px;
+                                        "
+                                        width="112"
+                                        class="v-src-width v-src-max-width"
+                                      />
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <!--[if (!mso)&(!IE)]><!-->
+                      </div>
+                      <!--<![endif]-->
+                    </div>
+                  </div>
+                  <!--[if (mso)|(IE)]></td><![endif]-->
+                  <!--[if (mso)|(IE)]><td align="center" width="300" style="width: 300px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
+                  <div
+                    class="u-col u-col-50"
+                    style="
+                      max-width: 320px;
+                      min-width: 300px;
+                      display: table-cell;
+                      vertical-align: top;
+                    "
+                  >
+                    <div
+                      style="
+                        height: 100%;
+                        width: 100% !important;
+                        border-radius: 0px;
+                        -webkit-border-radius: 0px;
+                        -moz-border-radius: 0px;
+                      "
+                    >
+                      <!--[if (!mso)&(!IE)]><!--><div
+                        style="
+                          box-sizing: border-box;
+                          height: 100%;
+                          padding: 0px;
+                          border-top: 0px solid transparent;
+                          border-left: 0px solid transparent;
+                          border-right: 0px solid transparent;
+                          border-bottom: 0px solid transparent;
+                          border-radius: 0px;
+                          -webkit-border-radius: 0px;
+                          -moz-border-radius: 0px;
+                        "
+                      ><!--<![endif]-->
+                        <table
+                          id="u_content_heading_29"
+                          class="heading-3"
+                          style="font-family: 'Cabin', sans-serif"
+                          role="presentation"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          border="0"
+                        >
+                          <tbody>
+                            <tr>
+                              <td
+                                class="v-container-padding-padding"
+                                style="
+                                  overflow-wrap: break-word;
+                                  word-break: break-word;
+                                  padding: 32px 10px 10px;
+                                  font-family: 'Cabin', sans-serif;
+                                "
+                                align="left"
+                              >
+                                <!--[if mso]><table width="100%"><tr><td><![endif]-->
+                                <h3
+                                  class="v-text-align v-font-size"
+                                  style="
+                                    margin: 0px;
+                                    color: #ffffff;
+                                    line-height: 160%;
+                                    text-align: left;
+                                    word-wrap: break-word;
+                                    font-family: 'Raleway', sans-serif;
+                                    font-size: 20px;
+                                    font-weight: 400;
+                                  "
+                                >
+                                  <span
+                                    ><span
+                                      ><span
+                                        >visualization breakdown of the % of
+                                        founders per region</span
+                                      ></span
+                                    ></span
+                                  >
+                                </h3>
+                                <!--[if mso]></td></tr></table><![endif]-->
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <!--[if (!mso)&(!IE)]><!-->
+                      </div>
+                      <!--<![endif]-->
+                    </div>
+                  </div>
+                  <!--[if (mso)|(IE)]></td><![endif]-->
+                  <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="u-row-container v-row-background-image--outer"
+              style="padding: 0px; background-color: transparent"
+            >
+              <div
+                class="u-row"
+                style="
+                  margin: 0 auto;
+                  min-width: 320px;
+                  max-width: 600px;
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  word-break: break-word;
+                  background-color: #222222;
+                "
+              >
+                <div
+                  class="v-row-background-image--inner"
+                  style="
+                    border-collapse: collapse;
+                    display: table;
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                  "
+                >
+                  <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="v-row-background-image--outer" style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr class="v-row-background-image--inner" style="background-color: #222222;"><![endif]-->
+
+                  <!--[if (mso)|(IE)]><td align="center" width="300" style="width: 300px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
+                  <div
+                    class="u-col u-col-50"
+                    style="
+                      max-width: 320px;
+                      min-width: 300px;
+                      display: table-cell;
+                      vertical-align: top;
+                    "
+                  >
+                    <div
+                      style="
+                        height: 100%;
+                        width: 100% !important;
+                        border-radius: 0px;
+                        -webkit-border-radius: 0px;
+                        -moz-border-radius: 0px;
+                      "
+                    >
+                      <!--[if (!mso)&(!IE)]><!--><div
+                        style="
+                          box-sizing: border-box;
+                          height: 100%;
+                          padding: 0px;
+                          border-top: 0px solid transparent;
+                          border-left: 0px solid transparent;
+                          border-right: 0px solid transparent;
+                          border-bottom: 0px solid transparent;
+                          border-radius: 0px;
+                          -webkit-border-radius: 0px;
+                          -moz-border-radius: 0px;
+                        "
+                      ><!--<![endif]-->
+                        <table
+                          style="font-family: 'Cabin', sans-serif"
+                          role="presentation"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          border="0"
+                        >
+                          <tbody>
+                            <tr>
+                              <td
+                                class="v-container-padding-padding"
+                                style="
+                                  overflow-wrap: break-word;
+                                  word-break: break-word;
+                                  padding: 20px 10px;
+                                  font-family: 'Cabin', sans-serif;
+                                "
+                                align="left"
+                              >
+                                <table
+                                  width="100%"
+                                  cellpadding="0"
+                                  cellspacing="0"
+                                  border="0"
+                                >
+                                  <tr>
+                                    <td
+                                      class="v-text-align"
+                                      style="
+                                        padding-right: 0px;
+                                        padding-left: 0px;
+                                      "
+                                      align="center"
+                                    >
+                                      <img
+                                        align="center"
+                                        border="0"
+                                        src="https://res.cloudinary.com/diiohnshc/image/upload/v1705208481/Glo-Raise/gdbeij9e7o8qxybwc4kn.png"
+                                        alt=""
+                                        title=""
+                                        style="
+                                          outline: none;
+                                          text-decoration: none;
+                                          -ms-interpolation-mode: bicubic;
+                                          clear: both;
+                                          display: inline-block !important;
+                                          border: none;
+                                          height: auto;
+                                          float: none;
+                                          width: 40%;
+                                          max-width: 112px;
+                                        "
+                                        width="112"
+                                        class="v-src-width v-src-max-width"
+                                      />
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <!--[if (!mso)&(!IE)]><!-->
+                      </div>
+                      <!--<![endif]-->
+                    </div>
+                  </div>
+                  <!--[if (mso)|(IE)]></td><![endif]-->
+                  <!--[if (mso)|(IE)]><td align="center" width="300" style="width: 300px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
+                  <div
+                    class="u-col u-col-50"
+                    style="
+                      max-width: 320px;
+                      min-width: 300px;
+                      display: table-cell;
+                      vertical-align: top;
+                    "
+                  >
+                    <div
+                      style="
+                        height: 100%;
+                        width: 100% !important;
+                        border-radius: 0px;
+                        -webkit-border-radius: 0px;
+                        -moz-border-radius: 0px;
+                      "
+                    >
+                      <!--[if (!mso)&(!IE)]><!--><div
+                        style="
+                          box-sizing: border-box;
+                          height: 100%;
+                          padding: 0px;
+                          border-top: 0px solid transparent;
+                          border-left: 0px solid transparent;
+                          border-right: 0px solid transparent;
+                          border-bottom: 0px solid transparent;
+                          border-radius: 0px;
+                          -webkit-border-radius: 0px;
+                          -moz-border-radius: 0px;
+                        "
+                      ><!--<![endif]-->
+                        <table
+                          id="u_content_heading_16"
+                          class="heading-3"
+                          style="font-family: 'Cabin', sans-serif"
+                          role="presentation"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          border="0"
+                        >
+                          <tbody>
+                            <tr>
+                              <td
+                                class="v-container-padding-padding"
+                                style="
+                                  overflow-wrap: break-word;
+                                  word-break: break-word;
+                                  padding: 32px 10px 10px;
+                                  font-family: 'Cabin', sans-serif;
+                                "
+                                align="left"
+                              >
+                                <!--[if mso]><table width="100%"><tr><td><![endif]-->
+                                <h3
+                                  class="v-text-align v-font-size"
+                                  style="
+                                    margin: 0px;
+                                    color: #ffffff;
+                                    line-height: 160%;
+                                    text-align: left;
+                                    word-wrap: break-word;
+                                    font-family: 'Raleway', sans-serif;
+                                    font-size: 20px;
+                                    font-weight: 400;
+                                  "
+                                >
+                                  <span
+                                    >examples of eventual unicorns from each
+                                    level</span
+                                  >
+                                </h3>
+                                <!--[if mso]></td></tr></table><![endif]-->
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <!--[if (!mso)&(!IE)]><!-->
+                      </div>
+                      <!--<![endif]-->
+                    </div>
+                  </div>
+                  <!--[if (mso)|(IE)]></td><![endif]-->
+                  <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="u-row-container v-row-background-image--outer"
+              style="padding: 0px; background-color: transparent"
+            >
+              <div
+                class="u-row"
+                style="
+                  margin: 0 auto;
+                  min-width: 320px;
+                  max-width: 600px;
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  word-break: break-word;
+                  background-color: #222222;
+                "
+              >
+                <div
+                  class="v-row-background-image--inner"
+                  style="
+                    border-collapse: collapse;
+                    display: table;
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                  "
+                >
+                  <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="v-row-background-image--outer" style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr class="v-row-background-image--inner" style="background-color: #222222;"><![endif]-->
+
+                  <!--[if (mso)|(IE)]><td align="center" width="300" style="width: 300px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
+                  <div
+                    class="u-col u-col-50"
+                    style="
+                      max-width: 320px;
+                      min-width: 300px;
+                      display: table-cell;
+                      vertical-align: top;
+                    "
+                  >
+                    <div
+                      style="
+                        height: 100%;
+                        width: 100% !important;
+                        border-radius: 0px;
+                        -webkit-border-radius: 0px;
+                        -moz-border-radius: 0px;
+                      "
+                    >
+                      <!--[if (!mso)&(!IE)]><!--><div
+                        style="
+                          box-sizing: border-box;
+                          height: 100%;
+                          padding: 0px;
+                          border-top: 0px solid transparent;
+                          border-left: 0px solid transparent;
+                          border-right: 0px solid transparent;
+                          border-bottom: 0px solid transparent;
+                          border-radius: 0px;
+                          -webkit-border-radius: 0px;
+                          -moz-border-radius: 0px;
+                        "
+                      ><!--<![endif]-->
+                        <table
+                          style="font-family: 'Cabin', sans-serif"
+                          role="presentation"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          border="0"
+                        >
+                          <tbody>
+                            <tr>
+                              <td
+                                class="v-container-padding-padding"
+                                style="
+                                  overflow-wrap: break-word;
+                                  word-break: break-word;
+                                  padding: 20px 10px;
+                                  font-family: 'Cabin', sans-serif;
+                                "
+                                align="left"
+                              >
+                                <table
+                                  width="100%"
+                                  cellpadding="0"
+                                  cellspacing="0"
+                                  border="0"
+                                >
+                                  <tr>
+                                    <td
+                                      class="v-text-align"
+                                      style="
+                                        padding-right: 0px;
+                                        padding-left: 0px;
+                                      "
+                                      align="center"
+                                    >
+                                      <img
+                                        align="center"
+                                        border="0"
+                                        src="https://res.cloudinary.com/diiohnshc/image/upload/v1705208481/Glo-Raise/rld2rlq7oatvz41elabl.png"
+                                        alt=""
+                                        title=""
+                                        style="
+                                          outline: none;
+                                          text-decoration: none;
+                                          -ms-interpolation-mode: bicubic;
+                                          clear: both;
+                                          display: inline-block !important;
+                                          border: none;
+                                          height: auto;
+                                          float: none;
+                                          width: 40%;
+                                          max-width: 112px;
+                                        "
+                                        width="112"
+                                        class="v-src-width v-src-max-width"
+                                      />
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <!--[if (!mso)&(!IE)]><!-->
+                      </div>
+                      <!--<![endif]-->
+                    </div>
+                  </div>
+                  <!--[if (mso)|(IE)]></td><![endif]-->
+                  <!--[if (mso)|(IE)]><td align="center" width="300" style="width: 300px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
+                  <div
+                    class="u-col u-col-50"
+                    style="
+                      max-width: 320px;
+                      min-width: 300px;
+                      display: table-cell;
+                      vertical-align: top;
+                    "
+                  >
+                    <div
+                      style="
+                        height: 100%;
+                        width: 100% !important;
+                        border-radius: 0px;
+                        -webkit-border-radius: 0px;
+                        -moz-border-radius: 0px;
+                      "
+                    >
+                      <!--[if (!mso)&(!IE)]><!--><div
+                        style="
+                          box-sizing: border-box;
+                          height: 100%;
+                          padding: 0px;
+                          border-top: 0px solid transparent;
+                          border-left: 0px solid transparent;
+                          border-right: 0px solid transparent;
+                          border-bottom: 0px solid transparent;
+                          border-radius: 0px;
+                          -webkit-border-radius: 0px;
+                          -moz-border-radius: 0px;
+                        "
+                      ><!--<![endif]-->
+                        <table
+                          id="u_content_heading_17"
+                          class="heading-3"
+                          style="font-family: 'Cabin', sans-serif"
+                          role="presentation"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          border="0"
+                        >
+                          <tbody>
+                            <tr>
+                              <td
+                                class="v-container-padding-padding"
+                                style="
+                                  overflow-wrap: break-word;
+                                  word-break: break-word;
+                                  padding: 32px 10px 10px;
+                                  font-family: 'Cabin', sans-serif;
+                                "
+                                align="left"
+                              >
+                                <!--[if mso]><table width="100%"><tr><td><![endif]-->
+                                <h3
+                                  class="v-text-align v-font-size"
+                                  style="
+                                    margin: 0px;
+                                    color: #ffffff;
+                                    line-height: 160%;
+                                    text-align: left;
+                                    word-wrap: break-word;
+                                    font-family: 'Raleway', sans-serif;
+                                    font-size: 20px;
+                                    font-weight: 400;
+                                  "
+                                >
+                                  <span
+                                    >personalized action report based on your
+                                    responses to help you drive next-level
+                                    GROWTH</span
+                                  >
+                                </h3>
+                                <!--[if mso]></td></tr></table><![endif]-->
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <!--[if (!mso)&(!IE)]><!-->
+                      </div>
+                      <!--<![endif]-->
+                    </div>
+                  </div>
+                  <!--[if (mso)|(IE)]></td><![endif]-->
+                  <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="u-row-container v-row-background-image--outer"
+              style="padding: 0px; background-color: transparent"
+            >
+              <div
+                class="u-row"
+                style="
+                  margin: 0 auto;
+                  min-width: 320px;
+                  max-width: 600px;
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  word-break: break-word;
+                  background-color: #222222;
+                "
+              >
+                <div
+                  class="v-row-background-image--inner"
+                  style="
+                    border-collapse: collapse;
+                    display: table;
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                  "
+                >
+                  <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="v-row-background-image--outer" style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr class="v-row-background-image--inner" style="background-color: #222222;"><![endif]-->
+
+                  <!--[if (mso)|(IE)]><td align="center" width="300" style="width: 300px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
+                  <div
+                    class="u-col u-col-50"
+                    style="
+                      max-width: 320px;
+                      min-width: 300px;
+                      display: table-cell;
+                      vertical-align: top;
+                    "
+                  >
+                    <div
+                      style="
+                        height: 100%;
+                        width: 100% !important;
+                        border-radius: 0px;
+                        -webkit-border-radius: 0px;
+                        -moz-border-radius: 0px;
+                      "
+                    >
+                      <!--[if (!mso)&(!IE)]><!--><div
+                        style="
+                          box-sizing: border-box;
+                          height: 100%;
+                          padding: 0px;
+                          border-top: 0px solid transparent;
+                          border-left: 0px solid transparent;
+                          border-right: 0px solid transparent;
+                          border-bottom: 0px solid transparent;
+                          border-radius: 0px;
+                          -webkit-border-radius: 0px;
+                          -moz-border-radius: 0px;
+                        "
+                      ><!--<![endif]-->
+                        <table
+                          style="font-family: 'Cabin', sans-serif"
+                          role="presentation"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          border="0"
+                        >
+                          <tbody>
+                            <tr>
+                              <td
+                                class="v-container-padding-padding"
+                                style="
+                                  overflow-wrap: break-word;
+                                  word-break: break-word;
+                                  padding: 20px 10px;
+                                  font-family: 'Cabin', sans-serif;
+                                "
+                                align="left"
+                              >
+                                <table
+                                  width="100%"
+                                  cellpadding="0"
+                                  cellspacing="0"
+                                  border="0"
+                                >
+                                  <tr>
+                                    <td
+                                      class="v-text-align"
+                                      style="
+                                        padding-right: 0px;
+                                        padding-left: 0px;
+                                      "
+                                      align="center"
+                                    >
+                                      <img
+                                        align="center"
+                                        border="0"
+                                        src="https://res.cloudinary.com/diiohnshc/image/upload/v1705208481/Glo-Raise/jkvez4vyzzgfwj7haxgr.png"
+                                        alt=""
+                                        title=""
+                                        style="
+                                          outline: none;
+                                          text-decoration: none;
+                                          -ms-interpolation-mode: bicubic;
+                                          clear: both;
+                                          display: inline-block !important;
+                                          border: none;
+                                          height: auto;
+                                          float: none;
+                                          width: 40%;
+                                          max-width: 112px;
+                                        "
+                                        width="112"
+                                        class="v-src-width v-src-max-width"
+                                      />
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <!--[if (!mso)&(!IE)]><!-->
+                      </div>
+                      <!--<![endif]-->
+                    </div>
+                  </div>
+                  <!--[if (mso)|(IE)]></td><![endif]-->
+                  <!--[if (mso)|(IE)]><td align="center" width="300" style="width: 300px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
+                  <div
+                    class="u-col u-col-50"
+                    style="
+                      max-width: 320px;
+                      min-width: 300px;
+                      display: table-cell;
+                      vertical-align: top;
+                    "
+                  >
+                    <div
+                      style="
+                        height: 100%;
+                        width: 100% !important;
+                        border-radius: 0px;
+                        -webkit-border-radius: 0px;
+                        -moz-border-radius: 0px;
+                      "
+                    >
+                      <!--[if (!mso)&(!IE)]><!--><div
+                        style="
+                          box-sizing: border-box;
+                          height: 100%;
+                          padding: 0px;
+                          border-top: 0px solid transparent;
+                          border-left: 0px solid transparent;
+                          border-right: 0px solid transparent;
+                          border-bottom: 0px solid transparent;
+                          border-radius: 0px;
+                          -webkit-border-radius: 0px;
+                          -moz-border-radius: 0px;
+                        "
+                      ><!--<![endif]-->
+                        <table
+                          id="u_content_heading_18"
+                          class="heading-3"
+                          style="font-family: 'Cabin', sans-serif"
+                          role="presentation"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          border="0"
+                        >
+                          <tbody>
+                            <tr>
+                              <td
+                                class="v-container-padding-padding"
+                                style="
+                                  overflow-wrap: break-word;
+                                  word-break: break-word;
+                                  padding: 32px 10px 10px;
+                                  font-family: 'Cabin', sans-serif;
+                                "
+                                align="left"
+                              >
+                                <!--[if mso]><table width="100%"><tr><td><![endif]-->
+                                <h3
+                                  class="v-text-align v-font-size"
+                                  style="
+                                    margin: 0px;
+                                    color: #ffffff;
+                                    line-height: 160%;
+                                    text-align: left;
+                                    word-wrap: break-word;
+                                    font-family: 'Raleway', sans-serif;
+                                    font-size: 20px;
+                                    font-weight: 400;
+                                  "
+                                >
+                                  <span
+                                    ><span
+                                      >overall level for all founders globally
+                                      and the % of founders scoring in each
+                                      level</span
+                                    ></span
+                                  >
+                                </h3>
+                                <!--[if mso]></td></tr></table><![endif]-->
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <!--[if (!mso)&(!IE)]><!-->
+                      </div>
+                      <!--<![endif]-->
+                    </div>
+                  </div>
+                  <!--[if (mso)|(IE)]></td><![endif]-->
+                  <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="u-row-container v-row-background-image--outer"
+              style="padding: 0px; background-color: transparent"
+            >
+              <div
+                class="u-row"
+                style="
+                  margin: 0 auto;
+                  min-width: 320px;
+                  max-width: 600px;
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  word-break: break-word;
+                  background-color: #222222;
+                "
+              >
+                <div
+                  class="v-row-background-image--inner"
+                  style="
+                    border-collapse: collapse;
+                    display: table;
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                  "
+                >
+                  <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="v-row-background-image--outer" style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr class="v-row-background-image--inner" style="background-color: #222222;"><![endif]-->
+
+                  <!--[if (mso)|(IE)]><td align="center" width="600" style="width: 600px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
+                  <div
+                    class="u-col u-col-100"
+                    style="
+                      max-width: 320px;
+                      min-width: 600px;
+                      display: table-cell;
+                      vertical-align: top;
+                    "
+                  >
+                    <div
+                      style="
+                        height: 100%;
+                        width: 100% !important;
+                        border-radius: 0px;
+                        -webkit-border-radius: 0px;
+                        -moz-border-radius: 0px;
+                      "
+                    >
+                      <!--[if (!mso)&(!IE)]><!--><div
+                        style="
+                          box-sizing: border-box;
+                          height: 100%;
+                          padding: 0px;
+                          border-top: 0px solid transparent;
+                          border-left: 0px solid transparent;
+                          border-right: 0px solid transparent;
+                          border-bottom: 0px solid transparent;
+                          border-radius: 0px;
+                          -webkit-border-radius: 0px;
+                          -moz-border-radius: 0px;
+                        "
+                      ><!--<![endif]-->
+                        <table
+                          id="u_content_heading_24"
+                          style="font-family: 'Cabin', sans-serif"
+                          role="presentation"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          border="0"
+                        >
+                          <tbody>
+                            <tr>
+                              <td
+                                class="v-container-padding-padding"
+                                style="
+                                  overflow-wrap: break-word;
+                                  word-break: break-word;
+                                  padding: 10px;
+                                  font-family: 'Cabin', sans-serif;
+                                "
+                                align="left"
+                              >
+                                <!--[if mso]><table width="100%"><tr><td><![endif]-->
+                                <h1
+                                  class="v-text-align v-font-size"
+                                  style="
+                                    margin: 0px;
+                                    color: #ffffff;
+                                    line-height: 140%;
+                                    text-align: center;
+                                    word-wrap: break-word;
+                                    font-family: 'Raleway', sans-serif;
+                                    font-size: 28px;
+                                    font-weight: 700;
+                                  "
+                                >
+                                  <span
+                                    ><span
+                                      >LIMITED TIME JUST $29 ($300 VALUE)</span
+                                    ></span
+                                  >
+                                </h1>
+                                <!--[if mso]></td></tr></table><![endif]-->
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <!--[if (!mso)&(!IE)]><!-->
+                      </div>
+                      <!--<![endif]-->
+                    </div>
+                  </div>
+                  <!--[if (mso)|(IE)]></td><![endif]-->
+                  <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="u-row-container v-row-background-image--outer"
+              style="padding: 0px; background-color: transparent"
+            >
+              <div
+                class="u-row"
+                style="
+                  margin: 0 auto;
+                  min-width: 320px;
+                  max-width: 600px;
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  word-break: break-word;
+                  background-color: #222222;
+                "
+              >
+                <div
+                  class="v-row-background-image--inner"
+                  style="
+                    border-collapse: collapse;
+                    display: table;
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                  "
+                >
+                  <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td class="v-row-background-image--outer" style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:600px;"><tr class="v-row-background-image--inner" style="background-color: #222222;"><![endif]-->
+
+                  <!--[if (mso)|(IE)]><td align="center" width="600" style="width: 600px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
+                  <div
+                    class="u-col u-col-100"
+                    style="
+                      max-width: 320px;
+                      min-width: 600px;
+                      display: table-cell;
+                      vertical-align: top;
+                    "
+                  >
+                    <div
+                      style="
+                        height: 100%;
+                        width: 100% !important;
+                        border-radius: 0px;
+                        -webkit-border-radius: 0px;
+                        -moz-border-radius: 0px;
+                      "
+                    >
+                      <!--[if (!mso)&(!IE)]><!--><div
+                        style="
+                          box-sizing: border-box;
+                          height: 100%;
+                          padding: 0px;
+                          border-top: 0px solid transparent;
+                          border-left: 0px solid transparent;
+                          border-right: 0px solid transparent;
+                          border-bottom: 0px solid transparent;
+                          border-radius: 0px;
+                          -webkit-border-radius: 0px;
+                          -moz-border-radius: 0px;
+                        "
+                      ><!--<![endif]-->
+                        <table
+                          id="u_content_button_3"
+                          style="font-family: 'Cabin', sans-serif"
+                          role="presentation"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          border="0"
+                        >
+                          <tbody>
+                            <tr>
+                              <td
+                                class="v-container-padding-padding"
+                                style="
+                                  overflow-wrap: break-word;
+                                  word-break: break-word;
+                                  padding: 20px 10px;
+                                  font-family: 'Cabin', sans-serif;
+                                "
+                                align="left"
+                              >
+                                <!--[if mso
+                                  ]><style>
+                                    .v-button {
+                                      background: transparent !important;
+                                    }
+                                  </style><!
+                                [endif]-->
+                                <div class="v-text-align" align="center">
+                                  <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="" style="height:68px; v-text-anchor:middle; width:133px;" arcsize="12%"  stroke="f" fillcolor="#caff87"><w:anchorlock/><center style="color:#222222;font-family: 'Raleway',sans-serif; "><![endif]-->
+                                  <a
+                                    href=""
+                                    target="_blank"
+                                    class="v-button v-size-width v-font-size"
+                                    style="
+                                      box-sizing: border-box;
+                                      display: inline-block;
+                                      text-decoration: none;
+                                      -webkit-text-size-adjust: none;
+                                      text-align: center;
+                                      color: #222222;
+                                      background-color: #caff87;
+                                      border-radius: 8px;
+                                      -webkit-border-radius: 8px;
+                                      -moz-border-radius: 8px;
+                                      width: 23%;
+                                      max-width: 100%;
+                                      overflow-wrap: break-word;
+                                      word-break: break-word;
+                                      word-wrap: break-word;
+                                      mso-border-alt: none;
+                                      font-family: 'Raleway', sans-serif;
+                                      font-size: 17px;
+                                      font-weight: 700;
+                                    "
+                                  >
+                                    <span
+                                      style="
+                                        display: block;
+                                        padding: 24px 36px;
+                                        line-height: 120%;
+                                      "
+                                      ><span style="line-height: 20.4px"
+                                        ><span style="line-height: 20.4px"
+                                          >Unlock</span
+                                        ></span
+                                      ></span
+                                    >
+                                  </a>
+                                  <!--[if mso]></center></v:roundrect><![endif]-->
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <!--[if (!mso)&(!IE)]><!-->
+                      </div>
+                      <!--<![endif]-->
+                    </div>
+                  </div>
+                  <!--[if (mso)|(IE)]></td><![endif]-->
+                  <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+                </div>
+              </div>
+            </div>
+
+            <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!--[if mso]></div><![endif]-->
+    <!--[if IE]></div><![endif]-->
+  </body>
 </html>`;
 };
 export const onePrem = ({ name }) => {
