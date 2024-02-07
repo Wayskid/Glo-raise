@@ -129,7 +129,7 @@ display: none !important;
 text-align: center !important;
 }
 .em_pad_top {
-padding-top: 20px !important;
+padding-top: 10px !important;
 }
 .em_side_space {
 padding-left: 20px !important;
@@ -150,7 +150,7 @@ padding: 0 !important;
 .text{font-size: 16px !important;line-height: 24px !important;}  
 #text{font-size: 16px !important;line-height: 24px !important;padding-left: 16px;padding-right: 16px;}  
 #heading{font-size: 32px !important;line-height: 40px !important;padding-left: 16px;padding-right: 16px;}  
- 
+.cusbg{background:url('https://mcusercontent.com/91d753cf1db5228f650c8546a/images/e1f5fddd-3305-a215-c5d9-9da0bf780306.jpg') !important;background-position: bottom !important;background-repeat: no-repeat !important;background-color: #02B68A !important;} 
 .logotwo{width:90px !important;max-width: 90px;height: auto !important;}
 .percent {
 font-size: 12px !important;
@@ -181,11 +181,11 @@ width: 100vw !important;
 } 
 </style>
 </head>
-<body class="em_body"  style="min-width: 100%;  background-color:#f9f9f9;margin:0 auto !important;padding:0;">
+<body class="em_body"  style="min-width: 100%;  background-color:#ffffff;margin:0 auto !important;padding:0;">
 <span class="preheader" style="font-size:1px;color:#f9f9f9;">
 <!-- Preview texts here --> &nbsp;&zwnj;
 </span>
-<table class="em_full_wrap" width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="background-color:#f9f9f9;">
+<table class="em_full_wrap" width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="background-color:#ffffff;">
 <tr>
 <td align="center" valign="top">
 <table align="center" class="em_main_table" width="770" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed;" >
@@ -200,10 +200,10 @@ width: 100vw !important;
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td height="11" class="em_hide"  style="line-height:1px;font-size:1px;">&nbsp;</td>
-        </tr>
+        </tr> 
         <tr>
-          <td height="14" style="line-height:1px;font-size:1px;">&nbsp;</td>
-        </tr>
+            <td id="tip"   height="14" style="line-height:1px;font-size:1px;"><a name="tip"   style="text-decoration: none;color: #1c1c1c;" href="tip" alias="tip"></a>&nbsp;</td>
+          </tr>
         <tr>
           <td>
             <table width="100%"  border="0" cellspacing="0" cellpadding="0">
@@ -236,10 +236,10 @@ width: 100vw !important;
 <td>
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
   <tr>
-    <td  style="background:url('https://mcusercontent.com/91d753cf1db5228f650c8546a/images/6fa8fae0-b39b-048e-98bc-2db1f7f54e94.jpg');background-color: #02B68A;-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;background-position: top center;background-repeat: no-repeat;"  valign="top" background="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/6fa8fae0-b39b-048e-98bc-2db1f7f54e94.jpg" align="center" class="cusbg">
+    <td  style="background:url('https://mcusercontent.com/91d753cf1db5228f650c8546a/images/beeb309a-cd8a-e9f1-ce8c-fdf101156552.jpg');background-color: #02B68A;-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;background-position: top center;background-repeat: no-repeat;"  valign="top" background="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/beeb309a-cd8a-e9f1-ce8c-fdf101156552.jpg" align="center" class="cusbg">
       <!--[if gte mso 9]>
-      <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:770px;height:967px;">
-        <v:fill type="tile" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/6fa8fae0-b39b-048e-98bc-2db1f7f54e94.jpg" color="#02B68A" />
+      <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:770px;height:803px;">
+        <v:fill type="tile" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/beeb309a-cd8a-e9f1-ce8c-fdf101156552.jpg" color="#02B68A" />
         <v:textbox inset="0,0,0,0">
           <![endif]-->
           <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
@@ -288,7 +288,7 @@ width: 100vw !important;
                           <td class="em_hide"  style="line-height:1px;font-size:1px;" height="15">&nbsp;</td>
                         </tr>
                         <tr>
-                          <td bgcolor="#ffffff" style="border-radius: 8px 8px 0px 0px;">
+                          <td bgcolor="#ffffff" style="border-radius: 8px;">
                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                               <tr>
                                 <td width="48" class="em_hide">&nbsp;</td>
@@ -336,7 +336,7 @@ width: 100vw !important;
                                             <td valign="top" class="em_hide" width="180">
                                               <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
                                                 <tr>
-                                                  <td> <img alt="Image" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/6f1dbe8c-a1b9-78a6-1085-9286f574bb4c.png" width="180" height="233" style="max-width:180px;" /> </td>
+                                                  <td> <img alt="Image" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/15abb4a1-58e5-5d63-6216-bdabb8740ff8.png" width="180" height="270" style="max-width:180px;" /> </td>
                                                 </tr>
                                               </table>
                                             </td>
@@ -350,7 +350,10 @@ width: 100vw !important;
                               </tr>
                             </table>
                           </td>
-                        </tr> 
+                        </tr>
+                        <tr>
+                          <td style="font-size:0px; line-height:0px; mso-line-height-rule: exactly;" height="100">&nbsp;</td>
+                        </tr>
                       </table>
                     </td>
                     <td width="60" class="em_hide">&nbsp;</td>
@@ -368,282 +371,623 @@ width: 100vw !important;
 </table>
 </td>
 </tr>
-
 
 
 <tr>
 <td>
-<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<table width="100%" bgcolor="#024F4A" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td  style="background:url('https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d6efb5f0-a3d1-38e3-7f2e-0b7eb547adfd.jpg');background-color: #121D1C;-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;background-position: top center;background-repeat: no-repeat;"  valign="top" background="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d6efb5f0-a3d1-38e3-7f2e-0b7eb547adfd.jpg" align="center"  >
-      <!--[if gte mso 9]>
-      <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:770px;height:703px;">
-        <v:fill type="tile" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d6efb5f0-a3d1-38e3-7f2e-0b7eb547adfd.jpg" color="#02B68A" />
-        <v:textbox inset="0,0,0,0">
-          <![endif]-->
-          <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
-            <tr>
-              <td>
-                <table width="100%"  border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td width="60" class="em_hide">&nbsp;</td>
-                    <td valign="top" class="em_side_space">
-                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                        <tr>
-                          <td style="font-size:0px; line-height:0px; mso-line-height-rule: exactly;" height="56">&nbsp;</td>
-                        </tr>
-                        <tr>
-                          <td  class="em_hide"  style="font-size:0px; line-height:0px; mso-line-height-rule: exactly;" height="20">&nbsp;</td>
-                        </tr>
-                        <tr>
-                          <td  class="headingtwo"  style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:38px;text-align:center;color:#ffffff;font-weight:700;line-height: 48px;">
-                            Unlock your complete Glo-raise GROWTH™ score
-                          </td>
-                        </tr>
-                        <tr>
-                          <td height="48" style="line-height:1px;font-size:1px;">&nbsp;</td>
-                        </tr>
-                        
-                        
-                        <tr>
-                            <td>
-                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                    <tr>
-                                        <td valign="top" class="em_wrapper_two" width="316">
-                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
-                                                      
-                                        <tr>
-                                          <td><table width="80" class="em_wrapper" border="0" cellspacing="0" cellpadding="0" align="left">
-                                                                                      <tr>
-                                          <td><table width="80" border="0" cellspacing="0" cellpadding="0" align="center">
-                                               <tr>
-                                        <td> <img alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/3155009a-fdcd-3bbf-5109-91628e256230.png" width="80" height="80" style="max-width:80px;display:block;" /> </td>
-                                        </tr>
-                                              </table>
-                                          </td>
-                                        </tr>   
-                                              </table>
-                                          </td>
-                                        </tr>    
-                                               
-                                                  
-                                                   
-                                                <tr>
-                                                <td height="24" style="line-height:1px;font-size:1px;">&nbsp;</td>
-                                                </tr>
-                                                
-                                                    
-                                                    <tr>
-                                                  <td  id="text" class="em_align_center" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:left;color:#ffffff;font-weight:400;line-height: 28px;">
-                                                    visualization breakdown of the % of founders per region
-                                                  </td>
-                                                </tr>        
-                                                          
-                                            </table>
-                                        </td>
-                                                          
-                                        <td class="em_wrapper_two" width="16">&nbsp;</td>
-                                                          
-                                        <td valign="top" class="em_wrapper_two" width="316">
-                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
-                                                  
-                                                          
-                                                                                  
-                                        <tr>
-                                          <td><table width="80" class="em_wrapper" border="0" cellspacing="0" cellpadding="0" align="left">
-                                                                                      <tr>
-                                          <td class="em_pad_top"><table width="80" border="0" cellspacing="0" cellpadding="0" align="center">
-                                               <tr>
-                                                <td> <img alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/953097f3-3eaa-4dd3-c3d2-a36971416100.png" width="80" height="80" style="max-width:80px;display:block;" /> </td>
-                                            </tr>
-                                             
-                                              </table>
-                                          </td>
-                                        </tr>   
-                                              </table>
-                                          </td>
-                                        </tr>    
-                                                       
-                                   
-                                                  
-                                                   
-                                                <tr>
-                                                <td height="24" style="line-height:1px;font-size:1px;">&nbsp;</td>
-                                                </tr>
-                                                
-                                                    
-                                                    <tr>
-                                                  <td  id="text" class="em_align_center" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:left;color:#ffffff;font-weight:400;line-height: 28px;">
-                                                    overall level for all founders globally and the % of founders scoring in each level
-                                                  </td>
-                                                </tr>   
-                                                          
-                                            </table>
-                                        </td>
-                                                          
-                                                           
-                                                          
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        
-                        
-                        
-                        
-                         <tr>
-                          <td height="32" style="line-height:1px;font-size:1px;">&nbsp;</td>
-                        </tr>
-                         
-                    
-                         
-                        <tr>
-                            <td>
-                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                    <tr>
-                                        <td valign="top" class="em_wrapper_two" width="316">
-                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
-                                                 
-                                                             <tr>
-                                          <td><table width="80" class="em_wrapper" border="0" cellspacing="0" cellpadding="0" align="left">
-                                                                                      <tr>
-                                          <td  class="em_pad_top"><table width="80" border="0" cellspacing="0" cellpadding="0" align="center">
-                                               <tr>
-                                                <td> <img alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/04ff4897-14a6-5118-c3d9-1ff24e57ec2d.png" width="80" height="80" style="max-width:80px;display:block;" /> </td>
-                                            </tr>
-                                             
-                                              </table>
-                                          </td>
-                                        </tr>   
-                                              </table>
-                                          </td>
-                                        </tr>    
-                                                                            
-                                                
-                                                  
-                                                   
-                                                <tr>
-                                                <td height="24" style="line-height:1px;font-size:1px;">&nbsp;</td>
-                                                </tr>
-                                                
-                                                    
-                                                    <tr>
-                                                  <td  id="text" class="em_align_center" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:left;color:#ffffff;font-weight:400;line-height: 28px;">
-                                                  examples of eventual unicorns from each level
-                                                  </td>
-                                                </tr>        
-                                                          
-                                            </table>
-                                        </td>
-                                                          
-                                        <td class="em_wrapper_two" width="16">&nbsp;</td>
-                                                          
-                                        <td valign="top" class="em_wrapper_two" width="316">
-                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
-                                                
-                                                          
-                                                                     <tr>
-                                          <td><table width="80" class="em_wrapper" border="0" cellspacing="0" cellpadding="0" align="left">
-                                                                                      <tr>
-                                          <td><table width="80" border="0" cellspacing="0" cellpadding="0" align="center">
-                                               <tr>
-                                                <td  class="em_pad_top"> <img alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/c5c77211-fdf5-cf3b-e9a2-f1aa4e217144.png" width="80" height="80" style="max-width:80px;display:block;" /> </td>
-                                            </tr>
-                                             
-                                              </table>
-                                          </td>
-                                        </tr>   
-                                              </table>
-                                          </td>
-                                        </tr>    
-                                                         
-                                     
-                                                  
-                                                   
-                                                <tr>
-                                                <td height="24" style="line-height:1px;font-size:1px;">&nbsp;</td>
-                                                </tr>
-                                                
-                                                    
-                                                    <tr>
-                                                  <td  id="text" class="em_align_center" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:left;color:#ffffff;font-weight:400;line-height: 28px;">
-                                                   personalized action report based on your responses to help you drive next-level GROWTH
-                                                  </td>
-                                                </tr>   
-                                                          
-                                            </table>
-                                        </td>
-                                                          
-                                                           
-                                                          
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        
-                        
-                        <tr>
-                        <td height="48" style="line-height:1px;font-size:1px;">&nbsp;</td>
-                        </tr>
-                        
-                                 
-                            <tr>
-                          <td   style="font-family:'Playfair Display', Times, Georgia, serif;font-size:26px;text-align:center;color:#ffffff;font-weight:400;line-height: 32px;">
-                        limited time just $29 ($300 value)
-                          </td>
-                        </tr>   
-                        
-                        
-                        <tr>
-                        <td height="48" style="line-height:1px;font-size:1px;">&nbsp;</td>
-                        </tr>
-                        
-                        
-                        
-                        <tr>
-                            <td><table width="179" border="0" cellspacing="0" cellpadding="0" align="center">
-                                <tr>
-                                  <td  valign="middle" bgcolor="#CAFF87" height="76" style="padding-left: 10px;padding-right: 10px;font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:center;border-radius:4px;color:#051C09; font-weight:400;">
-                                      <a href="https://example.com/" target="_blank" style="text-decoration:none;color:#051C09;display:block;line-height: 76px;"> 
-                                   Unlock
-                                      </a>
-                                  </td>
-                                </tr>
-                              </table></td>
-                           </tr>
-                        
-                            
-                        
-                        <tr>
-                        <td height="100" style="line-height:1px;font-size:1px;">&nbsp;</td>
-                        </tr>
-                        
-                            
-                        
-                        
-                        
-                      </table>
-                    </td>
-                    <td width="60" class="em_hide">&nbsp;</td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-          <!--[if gte mso 9]>
-        </v:textbox>
-      </v:rect>
-      <![endif]-->
+    <td width="50" class="em_hide">&nbsp;</td>
+    <td valign="top" class="em_side_space">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="56" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="24" class="em_hide"  style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="heading" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:58px;text-align:center;color:#ffffff;font-weight:700;line-height: 64px;">
+            Global Standing
+          </td>
+        </tr>
+        <tr>
+          <td height="22" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="text"  style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:center; color:#ffffff;line-height:28px;font-weight:400;">
+            Here is information for all participants globally. You'll see the % of founders per region, the overall average score for all founders, and the % of founders scoring in each level.
+          </td>
+        </tr>
+        <tr>
+          <td height="48" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td> <img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/b4fb51fe-7ebc-c941-5479-7e0558901a33.png" alt="Image" aria-hidden="true" width="670"  height="442" class="em_full_width" style="display:block;max-width:670px;width:100%;height:auto;" border="0" /> </td>
+        </tr>
+        <tr>
+          <td height="48" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td>
+            <table class="logotwo" width="180" border="0" cellspacing="0" cellpadding="0" align="center">
+              <tr>
+                <td> <img  class="logotwo"  alt="Level 2" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/7c284c43-bbb7-4f44-ca5d-bec63c841d7b.png" width="180" height="180" style="max-width:180px;display:block;" /> </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height="24" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td  class="text"  style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:center; color:#ffffff;line-height:28px;font-weight:400;">
+            Average score of total founders
+          </td>
+        </tr>
+        <tr>
+          <td height="48" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+      </table>
     </td>
+    <td width="50" class="em_hide">&nbsp;</td>
   </tr>
 </table>
 </td>
 </tr>
 
 
+<tr>
+<td>
+<table width="100%" bgcolor="#024F4A" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="32" class="em_hide">&nbsp;</td>
+    <td valign="top" class="em_side_space">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="1" bgcolor="#ffffff" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="48" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="112">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="levels" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:16px;text-align:left; color:#ffffff;line-height:24px;font-weight:400;">
+                        Level 1
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="15" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td class="percent" bgcolor="#02B68A" height="64" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:24px;text-align:center; color:#ffffff;line-height:64px;font-weight:700;">
+                        12%
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td width="191">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="levels"  style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:16px;text-align:left; color:#ffffff;line-height:24px;font-weight:400;">
+                        Level 2
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="15" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td class="percent"  bgcolor="#CAFF87" height="64" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:24px;text-align:center; color:#051C09;line-height:64px;font-weight:700;">
+                        36%
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td width="209">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="levels"  style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:16px;text-align:left; color:#ffffff;line-height:24px;font-weight:400;">
+                        Level 3
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="15" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td class="percent"  bgcolor="#5A43F0" height="64" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:24px;text-align:center; color:#051C09;line-height:64px;font-weight:700;">
+                        31%
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td width="122">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td  class="levels" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:16px;text-align:left; color:#ffffff;line-height:24px;font-weight:400;">
+                        Level 4
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="15" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td class="percent"  bgcolor="#C2DEEC" height="64" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:24px;text-align:center; color:#051C09;line-height:64px;font-weight:700;">
+                        14%
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td width="70">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td class="levels"  style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:16px;text-align:left; color:#ffffff;line-height:24px;font-weight:400;">
+                        Level 5
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="15" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td class="percent"  bgcolor="#FD542F" height="64" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:24px;text-align:center; color:#051C09;line-height:64px;font-weight:700;">
+                        7%
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height="24" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="text" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:center; color:#ffffff;line-height:28px;font-weight:400;">
+            % of founders scoring in each level
+          </td>
+        </tr>
+        <tr>
+          <td height="72" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="28" class="em_hide"  style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+    <td width="32" class="em_hide">&nbsp;</td>
+  </tr>
+</table>
+</td>
+</tr>
 
- 
-  
+
+<tr>
+<td>
+<table width="100%" bgcolor="#C2DEEC" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="60" class="em_hide">&nbsp;</td>
+    <td valign="top" class="em_side_space">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="56" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="24" class="em_hide"  style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="heading" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:58px;text-align:center;color:#051C09;font-weight:700;line-height: 64px;">
+            Unicorns from <br class="em_hide"> Each Level
+          </td>
+        </tr>
+        <tr>
+          <td height="40" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="8" class="em_hide"  style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="name" style="font-family:'Playfair Display', Avenir, Arial, sans-serif;font-size:32px;text-align:center; color:#051C09;line-height:37px;font-weight:400;">
+            Level 5 usually requires continuous improvement over time to achieve.
+          </td>
+        </tr>
+        <tr>
+          <td height="24" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="text" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:center; color:#051C09;line-height:28px;font-weight:400;">
+            Here are examples of Unicorns that were once below Level 5.
+          </td>
+        </tr>
+        <tr>
+          <td height="56" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="24" class="em_hide"  style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td valign="top" class="em_wrapper_two" width="47%">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                    <tr>
+                      <td class="unicornshead" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:left; color:#2E2873;line-height:28px;font-weight:700;">
+                        Level 4 — LYFT 
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="10" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td class="unicornstext" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:13px;text-align:left; color:#2E2873;line-height:18px;font-weight:400;">
+                        Logan Green starts a company called “Zimride” to offer long-distance ride-sharing between college campuses. Green got the idea when he was traveling in Zimbabwe and saw locals using crowdsourced carpool networks to get around. <br><br>
+                        Green was using Greyhound and Craigslist to hitch rides between Santa Barbara, California, and Los Angeles to see his girlfriend, and decided to use the ride-sharing model to fill up seats. Zimride/Lyft raises $15 million in funding based on its GROWTH trajectory and expands regionally then globally. 
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td class="em_wrapper_two" width="6%">&nbsp;</td>
+                <td valign="top" class="em_wrapper_two" width="47%">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                    <tr>
+                      <td class="em_pad_top"> <img class="em_full_width" alt="Image" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/91d67213-8a39-7812-9f9e-2234eb703866.png" width="305" height="267" style="max-width:305px;" /> </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height="70" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="10" class="em_hide"  style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+    <td width="60" class="em_hide">&nbsp;</td>
+  </tr>
+</table>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<table width="100%" bgcolor="#E5DFFA" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="60" class="em_hide">&nbsp;</td>
+    <td valign="top" class="em_side_space">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="70" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="10" class="em_hide"  style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td>
+            <table dir="rtl" width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td valign="middle" class="em_wrapper_two" width="47%">
+                  <table dir="ltr" width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                    <tr>
+                      <td class="unicornshead" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:left; color:#051C09;line-height:28px;font-weight:700;">
+                        Level 3 — RAPPI
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="10" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td class="unicornstext" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:13px;text-align:left; color:#051C09;line-height:18px;font-weight:400;">
+                        The app was seen as a digital pantry store and a small group of people promoted it by giving away donuts in exchange for downloads. Then, its big differentiator was to include the "Rappi Antojo" button and with this option, anyone with the app could order anything.
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td class="em_wrapper_two" width="6%">&nbsp;</td>
+                <td valign="top" class="em_wrapper_two" width="47%">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                    <tr>
+                      <td  class="em_pad_top"> <img  class="em_full_width" alt="Image" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/be91fdcf-b041-546c-b6de-e7fb9ea58823.png" width="305" height="267" style="max-width:305px;" /> </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height="70" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="10" class="em_hide"  style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+    <td width="60" class="em_hide">&nbsp;</td>
+  </tr>
+</table>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<table width="100%" bgcolor="#F4D4D5" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="60" class="em_hide">&nbsp;</td>
+    <td valign="top" class="em_side_space">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="70" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="10" class="em_hide"  style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td valign="top" class="em_wrapper_two" width="47%">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                    <tr>
+                      <td class="unicornshead" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:left; color:#051C09;line-height:28px;font-weight:700;">
+                        Level 2 — AirBNB 
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="10" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td class="unicornstext" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:13px;text-align:left; color:#051C09;line-height:18px;font-weight:400;">
+                        Long before Airbnb persuaded strangers to sleep in one another's homes and became a 31 billion company, it was just an idea to earn a bit of extra money to make rent.
+                        <br><br>
+                        After their first guests, Airbnb's founders realized they were on to something bigger than a stopgap for rent. They faced rejection plenty of times — and created their own version of Obama O's cereal — but the three founders of Airbnb have built a big business in the past nine years.
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td class="em_wrapper_two" width="6%">&nbsp;</td>
+                <td valign="top" class="em_wrapper_two" width="47%">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                    <tr>
+                      <td  class="em_pad_top"> <img  class="em_full_width" alt="Image" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/523bdf9b-fb04-fe20-6c6d-70d57bd3027d.png" width="305" height="267" style="max-width:305px;" /> </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height="70" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="10" class="em_hide"  style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+    <td width="60" class="em_hide">&nbsp;</td>
+  </tr>
+</table>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<table width="100%" bgcolor="#EBE6DC" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="60" class="em_hide">&nbsp;</td>
+    <td valign="top" class="em_side_space">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="70" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="10" class="em_hide"  style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td>
+            <table dir="rtl" width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td valign="middle" class="em_wrapper_two" width="47%">
+                  <table dir="ltr" width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                    <tr>
+                      <td class="unicornshead" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:left; color:#051C09;line-height:28px;font-weight:700;">
+                        Level 1 — Canva 
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="10" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td class="unicornstext" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:13px;text-align:left; color:#051C09;line-height:18px;font-weight:400;">
+                        Founder Melanie Perkins was told “no” by more than 100 investors over several years while continuously improving her offering — before securing funding.  
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td class="em_wrapper_two" width="6%">&nbsp;</td>
+                <td valign="top" class="em_wrapper_two" width="47%">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                    <tr>
+                      <td  class="em_pad_top"> <img class="em_full_width" alt="Image" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/281dbbcf-df82-0384-4b3f-0e70d366cb87.png" width="305" height="267" style="max-width:305px;" /> </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height="70" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="10" class="em_hide"  style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+    <td width="60" class="em_hide">&nbsp;</td>
+  </tr>
+</table>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="em_hide" > <img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/16b93774-57c2-35bc-96c1-d30e31a3ce6b.png" alt="Image" aria-hidden="true" width="770"  height="1767" class="em_full_width" style="display:block;max-width:770px;width:100%;height:auto;" border="0" /> </td>
+  </tr>
+  <!--[if !mso]><!-- -->
+  <tr>
+    <td id="showphone" style="display: none;mso-hide:all;"> <img  id="showphone" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/c6634c47-7a8d-4464-f1ac-1de45cf63f06.png" alt="Image" aria-hidden="true" width="770"  height="1767" class="em_full_width" style="display:block;max-width:770px;width:100%;height:auto;display: none;mso-hide:all;" border="0" /> </td>
+  </tr>
+  <tr>
+    <td  id="showphone"  style="display: none;mso-hide:all;" > <img  id="showphone" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/b53bbe5e-42cc-d600-2d15-d658beb2af8a.png" alt="Image" aria-hidden="true" width="770"  height="1767" class="em_full_width" style="display:block;max-width:770px;width:100%;height:auto;display: none;mso-hide:all;" border="0" /> </td>
+  </tr>
+  <!--<![endif]-->
+  <tr>
+    <td class="em_hide" > <img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d41e5e40-9ea1-1ffd-8154-7b5e27ae1ec6.png" alt="Image" aria-hidden="true" width="770"  height="1862" class="em_full_width" style="display:block;max-width:770px;width:100%;height:auto;" border="0" /> </td>
+  </tr>
+</table>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<table width="100%" bgcolor="#FD542F" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="20" >&nbsp;</td>
+    <td width="10" class="em_hide">&nbsp;</td>
+    <td class="cuslogo" width="90" style="padding-bottom: 50px;"  valign="bottom"> 
+      <img class="cuslogo" alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/b717ab66-dffa-37a3-b12c-e4d7117aacd0.png" width="90" height="90" style="max-width:90px;display:block;" />
+    </td>
+    <td width="20" class="em_hide" >&nbsp;</td>
+    <td valign="top" class="em_side_space">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="50" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="30" class="em_hide"  style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="headingtwo" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:38px;text-align:center;color:#ffffff;font-weight:700;line-height: 48px;">
+            Congratulations on your interest in building  a business
+          </td>
+        </tr>
+        <tr>
+          <td height="25" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td  class="text"  style="font-family:'Open Sans', Avenir, Arial, sans-serif;font-size:20px;text-align:center;padding-left:0px;padding-right:0px;color:#ffffff;line-height:28px;font-weight:400;">
+            We encourage you to implement the suggested GROWTH actions and take the assessment  again to chart improvement.
+          </td>
+        </tr>
+        <tr>
+          <td height="50" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="30" class="em_hide"  style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+    <td width="20" class="em_hide" >&nbsp;</td>
+    <td class="cuslogo" width="90" style="padding-top: 50px;" valign="top"> 
+      <img class="cuslogo" alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/100af0e8-df08-03d6-78de-a1e485936542.png" width="90" height="90" style="max-width:90px;display:block;" />
+    </td>
+    <td width="10" class="em_hide">&nbsp;</td>
+    <td width="20" >&nbsp;</td>
+  </tr>
+</table>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<table width="100%" bgcolor="#2E2873" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="50" class="em_hide">&nbsp;</td>
+    <td valign="top" class="em_side_space">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="56" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="24" class="em_hide"  style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td>
+            <table width="124" border="0" cellspacing="0" cellpadding="0" align="center">
+              <tr>
+                <td> <img alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/9979e968-7080-caa9-51b2-9b0bd818c8a4.png" width="124" height="132" style="max-width:124px;display:block;" /> </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height="48" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="headingtwo" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:38px;text-align:center;color:#ffffff;font-weight:700;line-height: 48px;">
+            Know others who could benefit from this assessment?
+          </td>
+        </tr>
+        <tr>
+          <td height="48" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td class="text" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:center;color:#ffffff;font-weight:400;line-height: 28px;">
+            Spread the word
+          </td>
+        </tr>
+        <tr>
+          <td height="48" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td>
+            <table align="center" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="56" height="56" class="social"><a target="_blank" href=""  style="color:#ffffff;"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/4a122115-3211-bd71-70bf-f941ab0d78e9.png"  class="social" width="56" height="56" style="max-width:56px;display:block; border: none;" border="0" alt="fb" /></a></td>
+                <td width="44"></td>
+                <td class="em_hide"  width="34"></td>
+                <td width="56" height="56"  class="social" ><a target="_blank" href=""  style="color:#ffffff;"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/9513273f-c383-866c-016a-7eafeeaa8e9e.png" width="56" height="56" style="max-width:56px;display:block; border: none;" border="0" alt="tw"  class="social" /></a></td>
+                <td width="44"></td>
+                <td class="em_hide"  width="34"></td>
+                <td width="56" height="56"  class="social"><a target="_blank" href=""  style="color:#ffffff;"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/c5dbe026-2cbe-f2ca-5a24-bd791869a1a7.png" width="56" height="56" style="max-width:56px;display:block; border: none;" border="0" alt="ins" class="social" /></a></td>
+                <td width="44"></td>
+                <td class="em_hide"  width="34"></td>
+                <td width="56" height="56"  class="social"><a target="_blank" href=""  style="color:#ffffff;"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d064ec22-1f64-ae3c-a1b5-8edd61c00787.png" width="56" height="56" style="max-width:56px;display:block; border: none;" border="0" alt="in"  class="social"/></a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height="70" style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td height="30" class="em_hide"  style="line-height:1px;font-size:1px;">&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+    <td width="50" class="em_hide">&nbsp;</td>
+  </tr>
+</table>
+</td>
+</tr>
 
 
 <tr>
@@ -680,19 +1024,51 @@ width: 100vw !important;
         <tr>
           <td height="24" style="line-height:1px;font-size:1px;">&nbsp;</td>
         </tr>
-      <tr>
-      <td class="em_align_center" id="footercopyone"  style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:16px;text-align:center;color:#ffffff;font-weight:400;line-height: 24px;">
-        Copyright © 2024 Glo-raise. All rights reserved.
-      </td>
-    </tr>
-    <tr>
-      <td height="12" style="line-height:1px;font-size:1px;">&nbsp;</td>
-    </tr>
-    <tr>
-      <td  class="em_align_center" id="footercoptwo"  style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:12px;text-align:center;color:#ffffff;font-weight:400;line-height: 16px;">
-        All trademarks are the property of their respective owners.
-      </td>
-    </tr>
+        <tr>
+          <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td valign="top" class="em_wrapper_two"  >
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                    <tr>
+                      <td class="em_align_center" id="footercopyone"  style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:16px;text-align:left;color:#ffffff;font-weight:400;line-height: 24px;">
+                        Copyright © 2024 Glo-raise. All rights reserved.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="12" style="line-height:1px;font-size:1px;">&nbsp;</td>
+                    </tr>
+                    <tr>
+                      <td  class="em_align_center" id="footercoptwo"  style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:12px;text-align:left;color:#ffffff;font-weight:400;line-height: 16px;">
+                        All trademarks are the property of their respective owners.
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <td class="em_wrapper_two" width="30">&nbsp;</td>
+                <td valign="top" class="em_wrapper_two" width="180">
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+                    <tr>
+                      <td>
+                        <table   border="0" cellspacing="0" cellpadding="0" align="center">
+                          <tr>
+                            <td style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:left;color:#ffffff;font-weight:400;line-height: 28px;">
+                                <a alias="tip"  target="_self" href="#tip"   style="text-decoration:none;color:#ffffff;display:block;">   Back to top </a>
+                            </td>
+                            <td width="23"> &nbsp;</td>
+                            <td> 
+                                <a alias="tip"  target="_self" href="#tip"   style="text-decoration:none;color:#ffffff;display:block;">  <img alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/8cd6bbf0-a959-6368-886d-8bdcc5385840.png" width="42" height="42" style="max-width:42px;display:block;" /> </a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
         <tr>
           <td height="72" style="line-height:1px;font-size:1px;">&nbsp;</td>
         </tr>
