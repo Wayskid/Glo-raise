@@ -316,11 +316,13 @@ width: 100vw !important;
                                                   <td id="showphone" style="display: none;mso-hide:all;">
                                                     <table  style="display: none;mso-hide:all;" id="showphone" width="327" class="em_wrapper" border="0" cellspacing="0" cellpadding="0" align="center">
                                                       <tr>
-                                                        <td  id="showphone" style="display: none;mso-hide:all;padding-top: 12px;padding-bottom: 16px;"> <img  id="showphone" class="em_full_width" alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/3029c3c2-9234-e4c6-253d-b1a4876ec48e.png" width="203" height="48" style="max-width:203px;display:block;display: none;mso-hide:all;" /> </td>
+                                                        <td  id="showphone" style="display: none;mso-hide:all;padding-top: 12px;padding-bottom: 16px;"> <img  id="showphone" class="em_full_width" alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/3029c3c2-9234-e4c6-253d-b1a4876ec48e.png"    style="height: auto;display:block;display: none;mso-hide:all;width:100%;height:auto;" /> </td>
                                                       </tr>
                                                     </table>
                                                   </td>
                                                 </tr>
+                                                
+                                                
                                                 <!--<![endif]-->
                                                 <tr>
                                                   <td  id="text"  class="em_align_center"   style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:16px;text-align:left;color:#051C09;font-weight:400;line-height: 24px;">
@@ -635,8 +637,10 @@ width: 100vw !important;
                 <td valign="top" class="em_wrapper_two" width="47%">
                   <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
                     <tr>
-                      <td class="em_pad_top"> <img class="em_full_width" alt="Image" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/91d67213-8a39-7812-9f9e-2234eb703866.png" width="305" height="267" style="max-width:305px;" /> </td>
+                      <td class="em_pad_top"> <img class="em_full_width" alt="Image" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/91d67213-8a39-7812-9f9e-2234eb703866.png" width="305" height="267" style="max-width:305px;width:100%;height:auto;display: block;" /> </td>
                     </tr>
+                    
+                    
                   </table>
                 </td>
               </tr>
@@ -696,7 +700,7 @@ width: 100vw !important;
                 <td valign="top" class="em_wrapper_two" width="47%">
                   <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
                     <tr>
-                      <td  class="em_pad_top"> <img  class="em_full_width" alt="Image" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/be91fdcf-b041-546c-b6de-e7fb9ea58823.png" width="305" height="267" style="max-width:305px;" /> </td>
+                      <td  class="em_pad_top"> <img  class="em_full_width" alt="Image" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/be91fdcf-b041-546c-b6de-e7fb9ea58823.png" width="305" height="267" style="max-width:305px;width:100%;height:auto;display: block;" /> </td>
                     </tr>
                   </table>
                 </td>
@@ -759,7 +763,7 @@ width: 100vw !important;
                 <td valign="top" class="em_wrapper_two" width="47%">
                   <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
                     <tr>
-                      <td  class="em_pad_top"> <img  class="em_full_width" alt="Image" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/523bdf9b-fb04-fe20-6c6d-70d57bd3027d.png" width="305" height="267" style="max-width:305px;" /> </td>
+                      <td  class="em_pad_top"> <img  class="em_full_width" alt="Image" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/523bdf9b-fb04-fe20-6c6d-70d57bd3027d.png" width="305" height="267" style="max-width:305px;width:100%;height:auto;display: block;" /> </td>
                     </tr>
                   </table>
                 </td>
@@ -820,7 +824,7 @@ width: 100vw !important;
                 <td valign="top" class="em_wrapper_two" width="47%">
                   <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
                     <tr>
-                      <td  class="em_pad_top"> <img class="em_full_width" alt="Image" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/281dbbcf-df82-0384-4b3f-0e70d366cb87.png" width="305" height="267" style="max-width:305px;" /> </td>
+                      <td  class="em_pad_top"> <img class="em_full_width" alt="Image" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/281dbbcf-df82-0384-4b3f-0e70d366cb87.png" width="305" height="267" style="max-width:305px;width:100%;height:auto;display: block;" /> </td>
                     </tr>
                   </table>
                 </td>
@@ -846,13 +850,9 @@ width: 100vw !important;
 <tr>
 <td>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td class="em_hide" > <img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/16b93774-57c2-35bc-96c1-d30e31a3ce6b.png" alt="Image" aria-hidden="true" width="770"  height="1767" class="em_full_width" style="display:block;max-width:770px;width:100%;height:auto;" border="0" /> </td>
-  </tr>
+  
   <!--[if !mso]><!-- -->
-  <tr>
-    <td id="showphone" style="display: none;mso-hide:all;"> <img  id="showphone" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/c6634c47-7a8d-4464-f1ac-1de45cf63f06.png" alt="Image" aria-hidden="true" width="770"  height="1767" class="em_full_width" style="display:block;max-width:770px;width:100%;height:auto;display: none;mso-hide:all;" border="0" /> </td>
-  </tr>
+   
   <tr>
     <td  id="showphone"  style="display: none;mso-hide:all;" > <img  id="showphone" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/b53bbe5e-42cc-d600-2d15-d658beb2af8a.png" alt="Image" aria-hidden="true" width="770"  height="1767" class="em_full_width" style="display:block;max-width:770px;width:100%;height:auto;display: none;mso-hide:all;" border="0" /> </td>
   </tr>
@@ -916,79 +916,7 @@ width: 100vw !important;
 </tr>
 
 
-<tr>
-<td>
-<table width="100%" bgcolor="#2E2873" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td width="50" class="em_hide">&nbsp;</td>
-    <td valign="top" class="em_side_space">
-      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <td height="56" style="line-height:1px;font-size:1px;">&nbsp;</td>
-        </tr>
-        <tr>
-          <td height="24" class="em_hide"  style="line-height:1px;font-size:1px;">&nbsp;</td>
-        </tr>
-        <tr>
-          <td>
-            <table width="124" border="0" cellspacing="0" cellpadding="0" align="center">
-              <tr>
-                <td> <img alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/9979e968-7080-caa9-51b2-9b0bd818c8a4.png" width="124" height="132" style="max-width:124px;display:block;" /> </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td height="48" style="line-height:1px;font-size:1px;">&nbsp;</td>
-        </tr>
-        <tr>
-          <td class="headingtwo" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:38px;text-align:center;color:#ffffff;font-weight:700;line-height: 48px;">
-            Know others who could benefit from this assessment?
-          </td>
-        </tr>
-        <tr>
-          <td height="48" style="line-height:1px;font-size:1px;">&nbsp;</td>
-        </tr>
-        <tr>
-          <td class="text" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:center;color:#ffffff;font-weight:400;line-height: 28px;">
-            Spread the word
-          </td>
-        </tr>
-        <tr>
-          <td height="48" style="line-height:1px;font-size:1px;">&nbsp;</td>
-        </tr>
-        <tr>
-          <td>
-            <table align="center" border="0" cellpadding="0" cellspacing="0">
-              <tr>
-                <td width="56" height="56" class="social"><a target="_blank" href=""  style="color:#ffffff;"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/4a122115-3211-bd71-70bf-f941ab0d78e9.png"  class="social" width="56" height="56" style="max-width:56px;display:block; border: none;" border="0" alt="fb" /></a></td>
-                <td width="44"></td>
-                <td class="em_hide"  width="34"></td>
-                <td width="56" height="56"  class="social" ><a target="_blank" href=""  style="color:#ffffff;"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/9513273f-c383-866c-016a-7eafeeaa8e9e.png" width="56" height="56" style="max-width:56px;display:block; border: none;" border="0" alt="tw"  class="social" /></a></td>
-                <td width="44"></td>
-                <td class="em_hide"  width="34"></td>
-                <td width="56" height="56"  class="social"><a target="_blank" href=""  style="color:#ffffff;"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/c5dbe026-2cbe-f2ca-5a24-bd791869a1a7.png" width="56" height="56" style="max-width:56px;display:block; border: none;" border="0" alt="ins" class="social" /></a></td>
-                <td width="44"></td>
-                <td class="em_hide"  width="34"></td>
-                <td width="56" height="56"  class="social"><a target="_blank" href=""  style="color:#ffffff;"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d064ec22-1f64-ae3c-a1b5-8edd61c00787.png" width="56" height="56" style="max-width:56px;display:block; border: none;" border="0" alt="in"  class="social"/></a></td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td height="70" style="line-height:1px;font-size:1px;">&nbsp;</td>
-        </tr>
-        <tr>
-          <td height="30" class="em_hide"  style="line-height:1px;font-size:1px;">&nbsp;</td>
-        </tr>
-      </table>
-    </td>
-    <td width="50" class="em_hide">&nbsp;</td>
-  </tr>
-</table>
-</td>
-</tr>
-
+ 
 
 <tr>
 <td>
