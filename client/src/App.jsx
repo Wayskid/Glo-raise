@@ -77,7 +77,7 @@ export default function App() {
           <Route path="premium_checkout" element={<Prem_Checkout />}></Route>
           <Route path="free_checkout" element={<Free_Checkout />}></Route>
           <Route
-            path={import.meta.env.VITE_founder_success_url}
+            path={`${import.meta.env.VITE_founder_success_url}`}
             element={<Founders_Success />}
           ></Route>
           <Route path="funders">
