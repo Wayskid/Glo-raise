@@ -5,8 +5,10 @@ import {
   setFoundersAssessmentStarted,
 } from "../../store/features/appSlice";
 import appContext from "../../context/AppContext";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 export default function Founders_Success() {
+  useDocumentTitle("Success!");
   const dispatch = useDispatch();
   const { setFinalScore, setLevel } = useContext(appContext);
   useEffect(() => {

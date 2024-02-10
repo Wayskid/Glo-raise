@@ -1,8 +1,10 @@
 import React from "react";
 import SubscriberForm from "../../components/SubscriberForm";
 import { useNavigate } from "react-router-dom";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 export default function About() {
+  useDocumentTitle("About Us");
   const navigate = useNavigate();
   return (
     <div>

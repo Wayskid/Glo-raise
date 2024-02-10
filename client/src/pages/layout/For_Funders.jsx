@@ -4,8 +4,10 @@ import star from "../../assets/Icon/Star Six Points.png";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setFundersAssessmentStarted } from "../../store/features/appSlice";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 export default function For_Funders() {
+  useDocumentTitle("For Funder");
   const navigate = useNavigate();
   const dispatch = useDispatch();
   return (

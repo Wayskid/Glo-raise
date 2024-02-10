@@ -6,8 +6,10 @@ import {
 } from "../../store/features/appSlice.js";
 import { useNavigate } from "react-router-dom";
 import crossArrows from "../../assets/Icon/Cross Arrows.png";
+import useDocumentTitle from "../../hooks/useDocumentTitle.js";
 
 export default function Get_Started() {
+  useDocumentTitle("Founder Assessment");
   const dispatch = useDispatch();
   const navigate = useNavigate();
 

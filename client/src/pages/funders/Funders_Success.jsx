@@ -4,8 +4,10 @@ import {
   resetEvaluation,
   setFundersAssessmentStarted,
 } from "../../store/features/appSlice";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 export default function Funders_Success() {
+  useDocumentTitle("Success!")
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(setFundersAssessmentStarted(false));

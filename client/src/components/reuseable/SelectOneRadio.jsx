@@ -92,7 +92,7 @@ export default function SelectOneRadio({
               </label>
               <div
                 className={`absolute h-full w-full ${
-                  fundersAssessment
+                  fundersAssessmentStarted
                     ? "peer-checked/radio:bg-[#D7F5EE]"
                     : "peer-checked/radio:bg-[#E5DFFA]"
                 } z-10 top-0 left-0 cursor-pointer`}

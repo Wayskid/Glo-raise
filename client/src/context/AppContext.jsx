@@ -186,10 +186,7 @@ export const AppContextProvider = ({ children }) => {
 
   //Calculate Level
   const [level, setLevel] = useState(1);
-  // function getLevel() {
-
-  // }
-
+  
   useEffect(() => {
     if (assessmentEvaluation.length) {
       getAssessmentScore();

@@ -1,8 +1,8 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
-import appContext from "../../context/AppContext";
+import { useDispatch, useSelector } from "react-redux";
 import { FaCheck } from "react-icons/fa";
+import { setAssessmentEvaluation } from "../../store/features/appSlice";
 
 export default function SelectMany({
   assessmentNumber,
@@ -10,22 +10,139 @@ export default function SelectMany({
   next,
   forFunders,
 }) {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const { assessmentEvaluation, fundersAssessment, fundersAssessmentStarted } =
     useSelector((state) => state.app);
-  const { setChoices, choices, handleSelectMany } = useContext(appContext);
 
-  useEffect(() => {
-    function getValue() {
-      const value = (
-        fundersAssessmentStarted === true
-          ? fundersAssessment
-          : assessmentEvaluation
-      ).find((v) => v.qstnNumber === assessmentNumber);
-      setChoices(value?.answer);
+  function getValue() {
+    const value = (
+      fundersAssessmentStarted === true
+        ? fundersAssessment
+        : assessmentEvaluation
+    ).find((v) => v.qstnNumber === assessmentNumber);
+    return value;
+  }
+
+  function handleSelectMany(e, others, assessment) {
+    const answers = getValue()?.answer?.choices?.length
+      ? !getValue()?.answer?.choices?.includes(e.target.value)
+        ? { choices: [...getValue().answer.choices, e.target.value], others }
+        : {
+            choices: getValue().answer?.choices?.filter(
+              (val) => val !== e.target.value
+            ),
+            others,
+          }
+      : { choices: [e.target.value], others };
+
+    dispatch(
+      setAssessmentEvaluation({
+        qstnNumber: assessment.number,
+        qstn: assessment.qstn,
+        answer: answers,
+        score:
+          (assessment.number === "13") | (assessment.number === "33")
+            ? answers.choices?.length > 3
+              ? 4
+              : answers.choices?.length === 3
+              ? 3
+              : answers.choices?.length === 2
+              ? 2
+              : answers.choices?.length === 1
+              ? 1
+              : 0
+            : assessment.number === "29"
+            ? answers.choices?.includes(
+                "This is the first venture for all of us"
+              )
+              ? 0
+              : answers.choices?.length === 3
+              ? 4
+              : answers.choices?.length === 2
+              ? 3
+              : answers.choices?.length === 1
+              ? 2
+              : 1
+            : assessment.number === "38"
+            ? answers.choices?.length === 0
+              ? 4
+              : answers.choices?.length === 1
+              ? 4
+              : answers.choices?.length === 2
+              ? 3
+              : answers.choices?.length === 3
+              ? 2
+              : 1
+            : 0,
+      })
+    );
+  }
+
+  //Handle select others
+  const [isOthers, setIsOthers] = useState(false);
+  function handleSelectOthers(others, assessment) {
+    let answers;
+    if (isOthers) {
+      answers = getValue()?.answer?.choices?.length
+        ? { choices: [...getValue().answer.choices], others }
+        : { choices: [], others };
+    } else {
+      answers = getValue()?.answer?.choices?.length
+        ? { choices: [...getValue().answer.choices], others: "" }
+        : { choices: [], others: "" };
     }
-    getValue();
-  }, [assessment]);
+
+    dispatch(
+      setAssessmentEvaluation({
+        qstnNumber: assessment.number,
+        qstn: assessment.qstn,
+        answer: answers,
+        score:
+          (assessment.number === "13") | (assessment.number === "33")
+            ? answers.choices?.length > 3
+              ? 4
+              : answers.choices?.length === 3
+              ? 3
+              : answers.choices?.length === 2
+              ? 2
+              : answers.choices?.length === 1
+              ? 1
+              : 0
+            : assessment.number === "29"
+            ? answers.choices?.includes(
+                "This is the first venture for all of us"
+              )
+              ? 0
+              : answers.choices?.length === 3
+              ? 4
+              : answers.choices?.length === 2
+              ? 3
+              : answers.choices?.length === 1
+              ? 2
+              : 1
+            : assessment.number === "38"
+            ? answers.choices?.length === 0
+              ? 4
+              : answers.choices?.length === 1
+              ? 4
+              : answers.choices?.length === 2
+              ? 3
+              : answers.choices?.length === 3
+              ? 2
+              : 1
+            : 0,
+      })
+    );
+  }
+
+  //Focus others
+  const inputRef = useRef(null);
+  useEffect(() => {
+    if (isOthers) {
+      inputRef.current.focus();
+    }
+  }, [isOthers]);
 
   return (
     <div className="w-[min(800px,100%)] mx-auto pt-[40px] pb-[72px] md:pt-[60px] md:pb-[100px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px]">
@@ -83,9 +200,11 @@ export default function SelectMany({
                 className="peer/radio absolute w-full h-full opacity-0 z-30 cursor-pointer"
                 id={option}
                 name={assessment.qstn}
-                checked={choices ? choices.includes(option) : false}
+                checked={
+                  getValue()?.answer?.choices?.includes(option) ? true : false
+                }
                 value={option}
-                onChange={(e) => handleSelectMany(e, assessment)}
+                onChange={(e) => handleSelectMany(e, "", assessment)}
               />
               <div className="w-6 h-6 bg-[#2222221A] peer-checked/radio:bg-Dark z-20 cursor-pointer text-white grid place-items-center [&>*]:peer-checked/radio:opacity-100 [&>*]:opacity-0 border-4 peer-checked/radio:border-none bg-white rounded-[4px] text-sm">
                 <FaCheck />
@@ -98,7 +217,7 @@ export default function SelectMany({
               </label>
               <div
                 className={`absolute h-full w-full ${
-                  fundersAssessment
+                  fundersAssessmentStarted
                     ? "peer-checked/radio:bg-[#D7F5EE]"
                     : "peer-checked/radio:bg-[#E5DFFA]"
                 } z-10 top-0 left-0 cursor-pointer`}
@@ -112,15 +231,31 @@ export default function SelectMany({
                 className="hidden peer/radio "
                 id="others"
                 name="others"
+                onChange={() => setIsOthers(!isOthers)}
+                checked={
+                  isOthers || getValue()?.answer?.others?.length ? true : false
+                }
               />
-              <div className="w-6 h-6 bg-[#2222221A] peer-checked/radio:bg-Dark z-20 cursor-pointer text-white grid place-items-center [&>*]:peer-checked/radio:opacity-100 [&>*]:opacity-0 border-4 peer-checked/radio:border-none bg-white rounded-[4px] text-sm shrink-0">
+              <div
+                onClick={() => setIsOthers(!isOthers)}
+                className="w-6 h-6 bg-[#2222221A] peer-checked/radio:bg-Dark z-20 cursor-pointer text-white grid place-items-center [&>*]:peer-checked/radio:opacity-100 [&>*]:opacity-0 border-4 peer-checked/radio:border-none bg-white rounded-[4px] text-sm shrink-0"
+              >
                 <FaCheck />
               </div>
               <input
-                className="py-2 px-4 rounded-[8px] bg-white text-gray-500 w-full"
+                className="py-2 px-4 rounded-[8px] bg-white text-gray-500 w-full z-20 focus:placeholder-transparent"
                 placeholder="Other (please specify)"
-                onChange={(e) => handleSelectMany(e, assessment)}
+                ref={inputRef}
+                onChange={(e) => handleSelectOthers(e.target.value, assessment)}
+                value={getValue()?.answer?.others}
               />
+              <div
+                className={`absolute h-full w-full ${
+                  fundersAssessmentStarted
+                    ? "peer-checked/radio:bg-[#D7F5EE]"
+                    : "peer-checked/radio:bg-[#E5DFFA]"
+                } z-10 top-0 left-0 cursor-pointer`}
+              ></div>
             </div>
           )}
         </div>
@@ -138,7 +273,12 @@ export default function SelectMany({
                 : navigate(`../../get_started/${next}`)
             }
             className="py-2 px-4 bg-Dark text-white rounded-[4px] border-2 border-Dark disabled:opacity-30"
-            disabled={!choices?.length}
+            disabled={
+              getValue()?.answer?.choices?.length ||
+              getValue()?.answer?.others?.length
+                ? false
+                : true
+            }
           >
             Continue
           </button>

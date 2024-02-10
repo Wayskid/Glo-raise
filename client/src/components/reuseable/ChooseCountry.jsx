@@ -68,8 +68,6 @@ export default function ChooseCountry({
     );
   }
 
-  console.log(options.find((obj) => obj.value === getValue()?.answer.country));
-
   return (
     <div className="w-[min(800px,100%)] mx-auto pt-[40px] pb-[72px] md:pt-[60px] md:pb-[100px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px]">
       <div className="border-2 border-Dark rounded-[20px] py-[56px] px-4 lg:px-[12px] relative grid gap-8 md:gap-12">

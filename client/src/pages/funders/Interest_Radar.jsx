@@ -5,8 +5,10 @@ import {
   setFundersAssessmentStarted,
 } from "../../store/features/appSlice.js";
 import { useNavigate } from "react-router-dom";
+import useDocumentTitle from "../../hooks/useDocumentTitle.js";
 
 export default function Interest_Radar() {
+  useDocumentTitle("Funder Assessment");
   const dispatch = useDispatch();
   const navigate = useNavigate();
 

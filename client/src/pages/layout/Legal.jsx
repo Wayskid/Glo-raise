@@ -1,7 +1,9 @@
 import React from "react";
 import SubscriberForm from "../../components/SubscriberForm";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 export default function Legal() {
+  useDocumentTitle("Legal");
   return (
     <div>
       <section className="bg-Hazel">

@@ -2,8 +2,10 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setAssessmentProgress } from "../../store/features/appSlice.js";
+import useDocumentTitle from "../../hooks/useDocumentTitle.js";
 
 export default function Plan() {
+  useDocumentTitle("Choose Plan");
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
