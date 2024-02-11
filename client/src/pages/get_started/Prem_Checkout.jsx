@@ -7,6 +7,7 @@ import {
   useCreateFounderMutation,
 } from "../../services/appApi";
 import appContext from "../../context/AppContext";
+import DateInput from "../../components/reuseable/DateInput";
 
 export default function Prem_Checkout() {
   const navigate = useNavigate();
@@ -38,12 +39,6 @@ export default function Prem_Checkout() {
       pattern: "(https?://)?(www.)+.*",
     },
     {
-      label: "Birth year",
-      id: "birth_year",
-      type: "date",
-      placeholder: "MM/DD/YYYY",
-    },
-    {
       label: "Postal code",
       id: "postal_code",
       type: "text",
@@ -58,7 +53,9 @@ export default function Prem_Checkout() {
     { label: "Email", id: "email", type: "email", placeholder: "Your email" },
   ];
 
-  const [premiumFormVal, setPremiumFormVal] = useState({});
+  const [premiumFormVal, setPremiumFormVal] = useState({
+    birth_year: new Date(),
+  });
   function handleChange(e) {
     setPremiumFormVal({
       ...premiumFormVal,
@@ -102,6 +99,7 @@ export default function Prem_Checkout() {
       });
   }
 
+  console.log(premiumFormVal);
   return (
     <div className="grid gap-[50px] base:gap-[68px] base:grid-cols-[0.6fr_1fr] pb-[70px] md:pb-[90px] base:pb-[132px] py-[64px] w-[min(1176px,100%)] mx-auto px-4 md:px-[48px]">
       <div className="grid gap-12 order-2 base:order-[unset] self-start">
@@ -248,10 +246,20 @@ export default function Prem_Checkout() {
               placeholder={field.placeholder}
               label={field.label}
               onChange={handleChange}
+              value={premiumFormVal[field.id]}
               required={true}
               pattern={field.pattern}
             />
           ))}
+          <DateInput
+            name="birth_year"
+            label="Birth year"
+            onChange={(e) =>
+              setPremiumFormVal({ ...premiumFormVal, birth_year: e })
+            }
+            value={premiumFormVal.birth_year}
+            order="5"
+          />
         </div>
         <p className="[font-family:'Instrument_Serif',serif;] text-[26px] text-center">
           limited time just $29 ($300 value)

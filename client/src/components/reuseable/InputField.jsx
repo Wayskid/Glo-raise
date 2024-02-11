@@ -12,8 +12,8 @@ export default function InputField({
   pattern,
 }) {
   return (
-    <div className="grid gap-2">
-      <label htmlFor="" className="text-Dark text-xl font-semibold">
+    <div className={`grid gap-2`}>
+      <label htmlFor={name} className="text-Dark text-xl font-semibold">
         {label}
       </label>
       <input

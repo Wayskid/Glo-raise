@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useCreateFounderMutation } from "../../services/appApi";
 import appContext from "../../context/AppContext";
+import DateInput from "../../components/reuseable/DateInput";
 
 export default function Free_Checkout() {
   const navigate = useNavigate();
@@ -34,12 +35,6 @@ export default function Free_Checkout() {
       pattern: "(https?://)?(www.)+.*",
     },
     {
-      label: "Birth year",
-      id: "birth_year",
-      type: "date",
-      placeholder: "MM/DD/YYYY",
-    },
-    {
       label: "Postal code",
       id: "postal_code",
       type: "text",
@@ -53,7 +48,7 @@ export default function Free_Checkout() {
     },
     { label: "Email", id: "email", type: "email", placeholder: "Your email" },
   ];
-  const [freeFormVal, setFreeFormVal] = useState({});
+  const [freeFormVal, setFreeFormVal] = useState({ birth_year: new Date() });
   function handleChange(e) {
     setFreeFormVal({
       ...freeFormVal,
@@ -176,10 +171,18 @@ export default function Free_Checkout() {
               placeholder={field.placeholder}
               label={field.label}
               onChange={handleChange}
+              value={freeFormVal[field.id]}
               required={true}
               pattern={field.pattern}
             />
           ))}
+          <DateInput
+            name="birth_year"
+            label="Birth year"
+            onChange={(e) => setFreeFormVal({ ...freeFormVal, birth_year: e })}
+            value={freeFormVal.birth_year}
+            order="5"
+          />
         </div>
         <button
           className="p-4 bg-Dark text-white rounded-[4px] border-2 border-Dark md:mx-auto mx-[unset]"
