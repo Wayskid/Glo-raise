@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-export default function DateInput({ name, onChange, value, order, label }) {
+export default function DateInput({ name, onChange, value, label }) {
   return (
-    <div className={`grid gap-2 row-start-${order}`}>
+    <div className={`grid gap-2 row-start-5`}>
       <label htmlFor={name} className="text-Dark text-xl font-semibold">
         {label}
       </label>

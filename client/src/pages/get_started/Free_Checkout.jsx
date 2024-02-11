@@ -181,7 +181,6 @@ export default function Free_Checkout() {
             label="Birth year"
             onChange={(e) => setFreeFormVal({ ...freeFormVal, birth_year: e })}
             value={freeFormVal.birth_year}
-            order="5"
           />
         </div>
         <button

@@ -258,7 +258,6 @@ export default function Prem_Checkout() {
               setPremiumFormVal({ ...premiumFormVal, birth_year: e })
             }
             value={premiumFormVal.birth_year}
-            order="5"
           />
         </div>
         <p className="[font-family:'Instrument_Serif',serif;] text-[26px] text-center">
