@@ -1,16 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import {
   resetEvaluation,
   setFundersAssessmentStarted,
 } from "../../store/features/appSlice";
 import { Helmet } from "react-helmet-async";
+import appContext from "../../context/AppContext";
 
 export default function Funders_Success() {
   const dispatch = useDispatch();
+  const { setFinalScore, setLevel } = useContext(appContext);
   useEffect(() => {
     dispatch(setFundersAssessmentStarted(false));
     dispatch(resetEvaluation());
+    setFinalScore(0);
+    setLevel(1);
   }, []);
   return (
     <div className="w-[min(1176px,100%)] mx-auto pt-[40px] pb-[72px] md:pt-[60px] md:pb-[100px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px] grid gap-12 overflow-hidden relative">
