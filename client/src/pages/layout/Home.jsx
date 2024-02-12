@@ -2,11 +2,21 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Carousel from "../../components/Carousel";
 import SubscriberForm from "../../components/SubscriberForm";
+import { Helmet } from "react-helmet-async";
 
 export default function Home() {
   const navigate = useNavigate();
   return (
     <div className="">
+      <Helmet>
+        <title>Glo Raise - Home</title>
+        <meta
+          name="description"
+          content="Get connected with a Funder or Founder. Take the Readiness Assessment and get matched with a funder who best matches your needs and interests."
+          data-rh="true"
+        />
+        <link rel="canonical" href="http://localhost:5173" />
+      </Helmet>
       <section className="bg-Light">
         <div className="w-[min(80rem,100%)] mx-auto">
           <div className="grid gap-8 md:gap-12 w-[min(1260px,100%)] h-fit pt-[56px] pb-[72px] md:py-[80px] md:pb-[100px] lg:py-[90px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px]">

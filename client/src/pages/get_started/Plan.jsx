@@ -2,10 +2,9 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setAssessmentProgress } from "../../store/features/appSlice.js";
-import useDocumentTitle from "../../hooks/useDocumentTitle.js";
+import { Helmet } from "react-helmet-async";
 
 export default function Plan() {
-  useDocumentTitle("Choose Plan");
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -15,6 +14,15 @@ export default function Plan() {
 
   return (
     <div className="pb-[70px] md:pb-[90px] base:pb-[132px] grid">
+      <Helmet>
+        <title>Glo Raise - Choose Plan</title>
+        <meta
+          name="description"
+          content="Get connected with a Funder or Founder. Take the Readiness Assessment and get matched with a funder who best matches your needs and interests."
+          data-rh="true"
+        />
+        <link rel="canonical" href="http://localhost:5173/get_started/plan" />
+      </Helmet>
       <p className="py-[64px] text-[38px] md:text-[58px] base:text-[92px] w-[min(754px,100%)] text-center justify-self-center font-semibold">
         Choose one and you're set
       </p>

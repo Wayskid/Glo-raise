@@ -229,8 +229,8 @@ export default function SelectMany({
               <input
                 type="checkbox"
                 className="hidden peer/radio "
-                id="others"
-                name="others"
+                // id="others"
+                // name="others"
                 onChange={() => setIsOthers(!isOthers)}
                 checked={
                   isOthers || getValue()?.answer?.others?.length ? true : false

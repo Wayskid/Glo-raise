@@ -8,6 +8,7 @@ import { store } from "./store/store.js";
 import { PersistGate } from "redux-persist/integration/react";
 import { persistStore } from "redux-persist";
 import { AppContextProvider } from "./context/AppContext.jsx";
+import { HelmetProvider } from "react-helmet-async";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -15,7 +16,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <PersistGate persistor={persistStore(store)}>
         <AppContextProvider>
           <Router>
-            <App />
+            <HelmetProvider>
+              <App />
+            </HelmetProvider>
           </Router>
         </AppContextProvider>
       </PersistGate>

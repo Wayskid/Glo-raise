@@ -75,10 +75,20 @@ export default function RankOrder({
           ? fundersAssessment
           : assessmentEvaluation
       ).find((v) => v.qstnNumber === assessmentNumber);
+      if (!value)
+        dispatch(
+          setAssessmentEvaluation({
+            qstnNumber: assessment.number,
+            qstn: assessment.qstn,
+            answer: [...assessment.options],
+            score: 0,
+          })
+        );
       setOptionsArray(value?.answer.length ? value.answer : assessment.options);
     }
     getValue();
   }, [assessment]);
+
   return (
     <div className="w-[min(800px,100%)] mx-auto pt-[40px] pb-[72px] md:pt-[60px] md:pb-[100px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px]">
       <div className="border-2 border-Dark rounded-[20px] py-[56px] px-2 md:px-[6px] lg:px-[12px] relative grid gap-8 md:gap-12">

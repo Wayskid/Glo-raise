@@ -18,10 +18,8 @@ export default function SubscriberForm() {
       .then((result) => {
         setSubscribed(true);
         setLoading(false);
-        console.log(result);
       })
       .catch((err) => {
-        console.log(err);
         setSubscribed(false);
         setLoading(false);
       });

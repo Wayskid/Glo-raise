@@ -21,7 +21,7 @@ export default function OneAndMost() {
 
   return (
     assessment && (
-      <div>
+      <div key={fundersAssessmentIndex}>
         <SelectMany
           assessment={assessment}
           assessmentNumber={fundersAssessmentIndex}

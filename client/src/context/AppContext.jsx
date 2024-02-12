@@ -10,6 +10,7 @@ export const AppContextProvider = ({ children }) => {
     fundersAssessmentStarted,
     foundersAssessmentStarted,
     assessmentEvaluation,
+    fundersAssessment,
   } = useSelector((state) => state.app);
 
   //SELECT ONE QUESTIONS=================================
@@ -186,7 +187,7 @@ export const AppContextProvider = ({ children }) => {
 
   //Calculate Level
   const [level, setLevel] = useState(1);
-  
+
   useEffect(() => {
     if (assessmentEvaluation.length) {
       getAssessmentScore();
@@ -207,6 +208,7 @@ export const AppContextProvider = ({ children }) => {
   }, [assessmentEvaluation]);
 
   console.log(assessmentEvaluation);
+  console.log(fundersAssessment);
   console.log("Gross Score: " + finalScore);
   console.log("Level: " + level);
 

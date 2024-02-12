@@ -1,13 +1,21 @@
 import React from "react";
 import SubscriberForm from "../../components/SubscriberForm";
 import { useNavigate } from "react-router-dom";
-import useDocumentTitle from "../../hooks/useDocumentTitle";
+import { Helmet } from "react-helmet-async";
 
 export default function About() {
-  useDocumentTitle("About Us");
   const navigate = useNavigate();
   return (
     <div>
+      <Helmet>
+        <title>Glo Raise - About us</title>
+        <meta
+          name="description"
+          content="Get connected with a Funder or Founder. Take the Readiness Assessment and get matched with a funder who best matches your needs and interests."
+          data-rh="true"
+        />
+        <link rel="canonical" href="http://localhost:5173/about" />
+      </Helmet>
       <section className="bg-Sand">
         <div className="w-[min(80rem,100%)] mx-auto pt-[56px] pb-[72px] md:pt-[80px] md:pb-[100px] lg:py-[90px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px] grid gap-10 md:gap-[60px]">
           <div className="grid gap-8 md:gap-10 base:gap-12">

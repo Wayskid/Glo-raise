@@ -37,6 +37,7 @@ import Funders_Success from "./pages/funders/Funders_Success";
 import Two2 from "./pages/funders/Two";
 import Two from "./pages/get_started/assessments/Two";
 import FortyTwo from "./pages/get_started/assessments/FortyTwo";
+import NotFound from "./pages/NotFound";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -54,8 +55,6 @@ export default function App() {
         </Route>
         <Route path="/get_started" element={<Layout_Two />}>
           <Route index element={<Get_Started />}></Route>
-          {/* <Route path="01" element={<One />}></Route> */}
-          {/*Remember to remove 1 */}
           <Route path=":assessmentIndex" element={<ThreeToTwentyOne />}></Route>
           <Route path="02" element={<Two />}></Route>
           <Route path="13" element={<Thirteen />}></Route>
@@ -76,10 +75,7 @@ export default function App() {
           <Route path="plan" element={<Plan />}></Route>
           <Route path="premium_checkout" element={<Prem_Checkout />}></Route>
           <Route path="free_checkout" element={<Free_Checkout />}></Route>
-          <Route
-            path={`${import.meta.env.VITE_founder_success_url}`}
-            element={<Founders_Success />}
-          ></Route>
+          <Route path="founders_success" element={<Founders_Success />}></Route>
           <Route path="funders">
             <Route index element={<Interest_Radar />}></Route>
             <Route
@@ -92,12 +88,10 @@ export default function App() {
             <Route path="10" element={<Ten />}></Route>
             <Route path="13" element={<Thirteen2 />}></Route>
             <Route path="funders_form" element={<Funders_Form />}></Route>
-            <Route
-              path={import.meta.env.VITE_funder_success_url}
-              element={<Funders_Success />}
-            ></Route>
+            <Route path="funders_success" element={<Funders_Success />}></Route>
           </Route>
         </Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </div>
   );

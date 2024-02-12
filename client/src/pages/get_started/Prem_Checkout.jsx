@@ -94,12 +94,9 @@ export default function Prem_Checkout() {
         setLoading(false);
       })
       .catch((err) => {
-        console.log(err);
         setLoading(false);
       });
   }
-
-  console.log(premiumFormVal);
   return (
     <div className="grid gap-[50px] base:gap-[68px] base:grid-cols-[0.6fr_1fr] pb-[70px] md:pb-[90px] base:pb-[132px] py-[64px] w-[min(1176px,100%)] mx-auto px-4 md:px-[48px]">
       <div className="grid gap-12 order-2 base:order-[unset] self-start">

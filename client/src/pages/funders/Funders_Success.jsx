@@ -4,10 +4,9 @@ import {
   resetEvaluation,
   setFundersAssessmentStarted,
 } from "../../store/features/appSlice";
-import useDocumentTitle from "../../hooks/useDocumentTitle";
+import { Helmet } from "react-helmet-async";
 
 export default function Funders_Success() {
-  useDocumentTitle("Success!")
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(setFundersAssessmentStarted(false));
@@ -15,6 +14,18 @@ export default function Funders_Success() {
   }, []);
   return (
     <div className="w-[min(1176px,100%)] mx-auto pt-[40px] pb-[72px] md:pt-[60px] md:pb-[100px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px] grid gap-12 overflow-hidden relative">
+      <Helmet>
+        <title>Glo Raise - Success!</title>
+        <meta
+          name="description"
+          content="Get connected with a Funder or Founder. Take the Readiness Assessment and get matched with a funder who best matches your needs and interests."
+          data-rh="true"
+        />
+        <link
+          rel="canonical"
+          href="http://localhost:5173/get_started/funders_success"
+        />
+      </Helmet>
       <p className="text-[38px] md:text-[58px] text-Dark font-semibold leading-snug text-center">
         Thank You
       </p>

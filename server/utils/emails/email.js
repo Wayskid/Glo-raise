@@ -209,7 +209,7 @@ width: 100vw !important;
           <td>
             <table width="100%"  border="0" cellspacing="0" cellpadding="0">
               <tr>
-                <td class="logo" width="160" ><a href="https://example.com/" target="_blank"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d77a4f4d-e165-cea8-f5a9-573dde16526e.png" alt="Image" aria-hidden="true" width="160"  height="29" class="em_full_width" style="display:block;max-width:160px;width:100%;height:auto;" border="0"  class="logo"  /></a></td>
+                <td class="logo" width="160" ><a href="https://gloraise.com" target="_blank"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d77a4f4d-e165-cea8-f5a9-573dde16526e.png" alt="Image" aria-hidden="true" width="160"  height="29" class="em_full_width" style="display:block;max-width:160px;width:100%;height:auto;" border="0"  class="logo"  /></a></td>
                 <td>&nbsp;</td>
                 <td class="headertop" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:right; color:#6C766C;line-height:28px;font-weight:400;">
                   GROWTH Assessment
@@ -607,7 +607,7 @@ width: 100vw !important;
                             <td class="em_full_width"><table class="em_wrapper" width="179" border="0" cellspacing="0" cellpadding="0" align="center">
                                 <tr>
                                   <td  valign="middle" bgcolor="#CAFF87" height="76" style="padding-left: 10px;padding-right: 10px;font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:center;border-radius:4px;color:#051C09; font-weight:400;">
-                                      <a href="http://localhost:5173/get_started/premium_checkout" target="_blank" style="text-decoration:none;color:#051C09;display:block;line-height: 76px;"> 
+                                      <a href="https://gloraise.com/get_started/premium_checkout" target="_blank" style="text-decoration:none;color:#051C09;display:block;line-height: 76px;"> 
                                    Unlock
                                       </a>
                                   </td>
@@ -666,7 +666,7 @@ width: 100vw !important;
           <td>
             <table class="footerlogo" width="160" border="0" cellspacing="0" cellpadding="0" align="center">
               <tr>
-                <td><a target="_blank" style="text-decoration:none;color:#333333;" href="https://example.com"><img class="footerlogo" alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/2ab4decb-40fd-876e-4a54-400c04da24f3.png" width="160" height="30" style="max-width:160px;display:block;" /></a></td>
+                <td><a target="_blank" style="text-decoration:none;color:#333333;" href="https://gloraise.com"><img class="footerlogo" alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/2ab4decb-40fd-876e-4a54-400c04da24f3.png" width="160" height="30" style="max-width:160px;display:block;" /></a></td>
               </tr>
             </table>
           </td>
@@ -931,7 +931,7 @@ width: 100vw !important;
           <td>
             <table width="100%"  border="0" cellspacing="0" cellpadding="0">
               <tr>
-                <td class="logo" width="160" ><a href="https://example.com/" target="_blank"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d77a4f4d-e165-cea8-f5a9-573dde16526e.png" alt="Image" aria-hidden="true" width="160"  height="29" class="em_full_width" style="display:block;max-width:160px;width:100%;height:auto;" border="0"  class="logo"  /></a></td>
+                <td class="logo" width="160" ><a href="https://gloraise.com" target="_blank"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d77a4f4d-e165-cea8-f5a9-573dde16526e.png" alt="Image" aria-hidden="true" width="160"  height="29" class="em_full_width" style="display:block;max-width:160px;width:100%;height:auto;" border="0"  class="logo"  /></a></td>
                 <td>&nbsp;</td>
                 <td class="headertop" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:right; color:#6C766C;line-height:28px;font-weight:400;">
                   GROWTH Assessment
@@ -1658,7 +1658,7 @@ width: 100vw !important;
           <td>
             <table class="footerlogo" width="160" border="0" cellspacing="0" cellpadding="0" align="center">
               <tr>
-                <td><a target="_blank" style="text-decoration:none;color:#333333;" href="https://example.com"><img class="footerlogo" alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/2ab4decb-40fd-876e-4a54-400c04da24f3.png" width="160" height="30" style="max-width:160px;display:block;" /></a></td>
+                <td><a target="_blank" style="text-decoration:none;color:#333333;" href="https://gloraise.com"><img class="footerlogo" alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/2ab4decb-40fd-876e-4a54-400c04da24f3.png" width="160" height="30" style="max-width:160px;display:block;" /></a></td>
               </tr>
             </table>
           </td>
@@ -1955,7 +1955,7 @@ width: 100vw !important;
           <td>
             <table width="100%"  border="0" cellspacing="0" cellpadding="0">
               <tr>
-                <td class="logo" width="160" ><a href="https://example.com/" target="_blank"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d77a4f4d-e165-cea8-f5a9-573dde16526e.png" alt="Image" aria-hidden="true" width="160"  height="29" class="em_full_width" style="display:block;max-width:160px;width:100%;height:auto;" border="0"  class="logo"  /></a></td>
+                <td class="logo" width="160" ><a href="https://gloraise.com" target="_blank"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d77a4f4d-e165-cea8-f5a9-573dde16526e.png" alt="Image" aria-hidden="true" width="160"  height="29" class="em_full_width" style="display:block;max-width:160px;width:100%;height:auto;" border="0"  class="logo"  /></a></td>
                 <td>&nbsp;</td>
                 <td class="headertop" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:right; color:#6C766C;line-height:28px;font-weight:400;">
                   GROWTH Assessment
@@ -2353,7 +2353,7 @@ width: 100vw !important;
                             <td><table class="em_wrapper" width="179" border="0" cellspacing="0" cellpadding="0" align="center">
                                 <tr>
                                   <td  valign="middle" bgcolor="#CAFF87" height="76" style="padding-left: 10px;padding-right: 10px;font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:center;border-radius:4px;color:#051C09; font-weight:400;">
-                                      <a href="http://localhost:5173/get_started/premium_checkout" target="_blank" style="text-decoration:none;color:#051C09;display:block;line-height: 76px;"> 
+                                      <a href="https://gloraise.com/get_started/premium_checkout" target="_blank" style="text-decoration:none;color:#051C09;display:block;line-height: 76px;"> 
                                    Unlock
                                       </a>
                                   </td>
@@ -2412,7 +2412,7 @@ width: 100vw !important;
           <td>
             <table class="footerlogo" width="160" border="0" cellspacing="0" cellpadding="0" align="center">
               <tr>
-                <td><a target="_blank" style="text-decoration:none;color:#333333;" href="https://example.com"><img class="footerlogo" alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/2ab4decb-40fd-876e-4a54-400c04da24f3.png" width="160" height="30" style="max-width:160px;display:block;" /></a></td>
+                <td><a target="_blank" style="text-decoration:none;color:#333333;" href="https://gloraise.com"><img class="footerlogo" alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/2ab4decb-40fd-876e-4a54-400c04da24f3.png" width="160" height="30" style="max-width:160px;display:block;" /></a></td>
               </tr>
             </table>
           </td>
@@ -2679,7 +2679,7 @@ width: 100vw !important;
           <td>
             <table width="100%"  border="0" cellspacing="0" cellpadding="0">
               <tr>
-                <td class="logo" width="160" ><a href="https://example.com/" target="_blank"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d77a4f4d-e165-cea8-f5a9-573dde16526e.png" alt="Image" aria-hidden="true" width="160"  height="29" class="em_full_width" style="display:block;max-width:160px;width:100%;height:auto;" border="0"  class="logo"  /></a></td>
+                <td class="logo" width="160" ><a href="https://gloraise.com" target="_blank"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d77a4f4d-e165-cea8-f5a9-573dde16526e.png" alt="Image" aria-hidden="true" width="160"  height="29" class="em_full_width" style="display:block;max-width:160px;width:100%;height:auto;" border="0"  class="logo"  /></a></td>
                 <td>&nbsp;</td>
                 <td class="headertop" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:right; color:#6C766C;line-height:28px;font-weight:400;">
                   GROWTH Assessment
@@ -3484,7 +3484,7 @@ Additionally, you’ll have the opportunity to network with other founders at a 
           <td>
             <table class="footerlogo" width="160" border="0" cellspacing="0" cellpadding="0" align="center">
               <tr>
-                <td><a target="_blank" style="text-decoration:none;color:#333333;" href="https://example.com"><img class="footerlogo" alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/2ab4decb-40fd-876e-4a54-400c04da24f3.png" width="160" height="30" style="max-width:160px;display:block;" /></a></td>
+                <td><a target="_blank" style="text-decoration:none;color:#333333;" href="https://gloraise.com"><img class="footerlogo" alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/2ab4decb-40fd-876e-4a54-400c04da24f3.png" width="160" height="30" style="max-width:160px;display:block;" /></a></td>
               </tr>
             </table>
           </td>
@@ -3781,7 +3781,7 @@ width: 100vw !important;
           <td>
             <table width="100%"  border="0" cellspacing="0" cellpadding="0">
               <tr>
-                <td class="logo" width="160" ><a href="https://example.com/" target="_blank"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d77a4f4d-e165-cea8-f5a9-573dde16526e.png" alt="Image" aria-hidden="true" width="160"  height="29" class="em_full_width" style="display:block;max-width:160px;width:100%;height:auto;" border="0"  class="logo"  /></a></td>
+                <td class="logo" width="160" ><a href="https://gloraise.com" target="_blank"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d77a4f4d-e165-cea8-f5a9-573dde16526e.png" alt="Image" aria-hidden="true" width="160"  height="29" class="em_full_width" style="display:block;max-width:160px;width:100%;height:auto;" border="0"  class="logo"  /></a></td>
                 <td>&nbsp;</td>
                 <td class="headertop" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:right; color:#6C766C;line-height:28px;font-weight:400;">
                   GROWTH Assessment
@@ -4179,7 +4179,7 @@ width: 100vw !important;
                             <td><table class="em_wrapper" width="179" border="0" cellspacing="0" cellpadding="0" align="center">
                                 <tr>
                                   <td  valign="middle" bgcolor="#CAFF87" height="76" style="padding-left: 10px;padding-right: 10px;font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:center;border-radius:4px;color:#051C09; font-weight:400;">
-                                      <a href="http://localhost:5173/get_started/premium_checkout" target="_blank" style="text-decoration:none;color:#051C09;display:block;line-height: 76px;"> 
+                                      <a href="https://gloraise.com/get_started/premium_checkout" target="_blank" style="text-decoration:none;color:#051C09;display:block;line-height: 76px;"> 
                                    Unlock
                                       </a>
                                   </td>
@@ -4238,7 +4238,7 @@ width: 100vw !important;
           <td>
             <table class="footerlogo" width="160" border="0" cellspacing="0" cellpadding="0" align="center">
               <tr>
-                <td><a target="_blank" style="text-decoration:none;color:#333333;" href="https://example.com"><img class="footerlogo" alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/2ab4decb-40fd-876e-4a54-400c04da24f3.png" width="160" height="30" style="max-width:160px;display:block;" /></a></td>
+                <td><a target="_blank" style="text-decoration:none;color:#333333;" href="https://gloraise.com"><img class="footerlogo" alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/2ab4decb-40fd-876e-4a54-400c04da24f3.png" width="160" height="30" style="max-width:160px;display:block;" /></a></td>
               </tr>
             </table>
           </td>
@@ -4505,7 +4505,7 @@ width: 100vw !important;
           <td>
             <table width="100%"  border="0" cellspacing="0" cellpadding="0">
               <tr>
-                <td class="logo" width="160" ><a href="https://example.com/" target="_blank"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d77a4f4d-e165-cea8-f5a9-573dde16526e.png" alt="Image" aria-hidden="true" width="160"  height="29" class="em_full_width" style="display:block;max-width:160px;width:100%;height:auto;" border="0"  class="logo"  /></a></td>
+                <td class="logo" width="160" ><a href="https://gloraise.com" target="_blank"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d77a4f4d-e165-cea8-f5a9-573dde16526e.png" alt="Image" aria-hidden="true" width="160"  height="29" class="em_full_width" style="display:block;max-width:160px;width:100%;height:auto;" border="0"  class="logo"  /></a></td>
                 <td>&nbsp;</td>
                 <td class="headertop" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:right; color:#6C766C;line-height:28px;font-weight:400;">
                   GROWTH Assessment
@@ -5310,7 +5310,7 @@ Additionally, you’ll have the opportunity to network with other founders at a 
           <td>
             <table class="footerlogo" width="160" border="0" cellspacing="0" cellpadding="0" align="center">
               <tr>
-                <td><a target="_blank" style="text-decoration:none;color:#333333;" href="https://example.com"><img class="footerlogo" alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/2ab4decb-40fd-876e-4a54-400c04da24f3.png" width="160" height="30" style="max-width:160px;display:block;" /></a></td>
+                <td><a target="_blank" style="text-decoration:none;color:#333333;" href="https://gloraise.com"><img class="footerlogo" alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/2ab4decb-40fd-876e-4a54-400c04da24f3.png" width="160" height="30" style="max-width:160px;display:block;" /></a></td>
               </tr>
             </table>
           </td>
@@ -5607,7 +5607,7 @@ width: 100vw !important;
           <td>
             <table width="100%"  border="0" cellspacing="0" cellpadding="0">
               <tr>
-                <td class="logo" width="160" ><a href="https://example.com/" target="_blank"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d77a4f4d-e165-cea8-f5a9-573dde16526e.png" alt="Image" aria-hidden="true" width="160"  height="29" class="em_full_width" style="display:block;max-width:160px;width:100%;height:auto;" border="0"  class="logo"  /></a></td>
+                <td class="logo" width="160" ><a href="https://gloraise.com" target="_blank"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d77a4f4d-e165-cea8-f5a9-573dde16526e.png" alt="Image" aria-hidden="true" width="160"  height="29" class="em_full_width" style="display:block;max-width:160px;width:100%;height:auto;" border="0"  class="logo"  /></a></td>
                 <td>&nbsp;</td>
                 <td class="headertop" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:right; color:#6C766C;line-height:28px;font-weight:400;">
                   GROWTH Assessment
@@ -6005,7 +6005,7 @@ width: 100vw !important;
                             <td><table class="em_wrapper" width="179" border="0" cellspacing="0" cellpadding="0" align="center">
                                 <tr>
                                   <td  valign="middle" bgcolor="#CAFF87" height="76" style="padding-left: 10px;padding-right: 10px;font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:center;border-radius:4px;color:#051C09; font-weight:400;">
-                                      <a href="http://localhost:5173/get_started/premium_checkout" target="_blank" style="text-decoration:none;color:#051C09;display:block;line-height: 76px;"> 
+                                      <a href="https://gloraise.com/get_started/premium_checkout" target="_blank" style="text-decoration:none;color:#051C09;display:block;line-height: 76px;"> 
                                    Unlock
                                       </a>
                                   </td>
@@ -6064,7 +6064,7 @@ width: 100vw !important;
           <td>
             <table class="footerlogo" width="160" border="0" cellspacing="0" cellpadding="0" align="center">
               <tr>
-                <td><a target="_blank" style="text-decoration:none;color:#333333;" href="https://example.com"><img class="footerlogo" alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/2ab4decb-40fd-876e-4a54-400c04da24f3.png" width="160" height="30" style="max-width:160px;display:block;" /></a></td>
+                <td><a target="_blank" style="text-decoration:none;color:#333333;" href="https://gloraise.com"><img class="footerlogo" alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/2ab4decb-40fd-876e-4a54-400c04da24f3.png" width="160" height="30" style="max-width:160px;display:block;" /></a></td>
               </tr>
             </table>
           </td>
@@ -6331,7 +6331,7 @@ width: 100vw !important;
           <td>
             <table width="100%"  border="0" cellspacing="0" cellpadding="0">
               <tr>
-                <td class="logo" width="160" ><a href="https://example.com/" target="_blank"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d77a4f4d-e165-cea8-f5a9-573dde16526e.png" alt="Image" aria-hidden="true" width="160"  height="29" class="em_full_width" style="display:block;max-width:160px;width:100%;height:auto;" border="0"  class="logo"  /></a></td>
+                <td class="logo" width="160" ><a href="https://gloraise.com" target="_blank"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d77a4f4d-e165-cea8-f5a9-573dde16526e.png" alt="Image" aria-hidden="true" width="160"  height="29" class="em_full_width" style="display:block;max-width:160px;width:100%;height:auto;" border="0"  class="logo"  /></a></td>
                 <td>&nbsp;</td>
                 <td class="headertop" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:right; color:#6C766C;line-height:28px;font-weight:400;">
                   GROWTH Assessment
@@ -7136,7 +7136,7 @@ Additionally, you’ll have the opportunity to network with other founders at a 
           <td>
             <table class="footerlogo" width="160" border="0" cellspacing="0" cellpadding="0" align="center">
               <tr>
-                <td><a target="_blank" style="text-decoration:none;color:#333333;" href="https://example.com"><img class="footerlogo" alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/2ab4decb-40fd-876e-4a54-400c04da24f3.png" width="160" height="30" style="max-width:160px;display:block;" /></a></td>
+                <td><a target="_blank" style="text-decoration:none;color:#333333;" href="https://gloraise.com"><img class="footerlogo" alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/2ab4decb-40fd-876e-4a54-400c04da24f3.png" width="160" height="30" style="max-width:160px;display:block;" /></a></td>
               </tr>
             </table>
           </td>
@@ -7433,7 +7433,7 @@ width: 100vw !important;
           <td>
             <table width="100%"  border="0" cellspacing="0" cellpadding="0">
               <tr>
-                <td class="logo" width="160" ><a href="https://example.com/" target="_blank"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d77a4f4d-e165-cea8-f5a9-573dde16526e.png" alt="Image" aria-hidden="true" width="160"  height="29" class="em_full_width" style="display:block;max-width:160px;width:100%;height:auto;" border="0"  class="logo"  /></a></td>
+                <td class="logo" width="160" ><a href="https://gloraise.com" target="_blank"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d77a4f4d-e165-cea8-f5a9-573dde16526e.png" alt="Image" aria-hidden="true" width="160"  height="29" class="em_full_width" style="display:block;max-width:160px;width:100%;height:auto;" border="0"  class="logo"  /></a></td>
                 <td>&nbsp;</td>
                 <td class="headertop" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:right; color:#6C766C;line-height:28px;font-weight:400;">
                   GROWTH Assessment
@@ -7831,7 +7831,7 @@ width: 100vw !important;
                             <td class="em_full_width"><table class="em_wrapper" width="179" border="0" cellspacing="0" cellpadding="0" align="center">
                                 <tr>
                                   <td  valign="middle" bgcolor="#CAFF87" height="76" style="padding-left: 10px;padding-right: 10px;font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:center;border-radius:4px;color:#051C09; font-weight:400;">
-                                      <a href="http://localhost:5173/get_started/premium_checkout" target="_blank" style="text-decoration:none;color:#051C09;display:block;line-height: 76px;"> 
+                                      <a href="https://gloraise.com/get_started/premium_checkout" target="_blank" style="text-decoration:none;color:#051C09;display:block;line-height: 76px;"> 
                                    Unlock
                                       </a>
                                   </td>
@@ -7890,7 +7890,7 @@ width: 100vw !important;
           <td>
             <table class="footerlogo" width="160" border="0" cellspacing="0" cellpadding="0" align="center">
               <tr>
-                <td><a target="_blank" style="text-decoration:none;color:#333333;" href="https://example.com"><img class="footerlogo" alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/2ab4decb-40fd-876e-4a54-400c04da24f3.png" width="160" height="30" style="max-width:160px;display:block;" /></a></td>
+                <td><a target="_blank" style="text-decoration:none;color:#333333;" href="https://gloraise.com"><img class="footerlogo" alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/2ab4decb-40fd-876e-4a54-400c04da24f3.png" width="160" height="30" style="max-width:160px;display:block;" /></a></td>
               </tr>
             </table>
           </td>
@@ -8155,7 +8155,7 @@ width: 100vw !important;
           <td>
             <table width="100%"  border="0" cellspacing="0" cellpadding="0">
               <tr>
-                <td class="logo" width="160" ><a href="https://example.com/" target="_blank"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d77a4f4d-e165-cea8-f5a9-573dde16526e.png" alt="Image" aria-hidden="true" width="160"  height="29" class="em_full_width" style="display:block;max-width:160px;width:100%;height:auto;" border="0"  class="logo"  /></a></td>
+                <td class="logo" width="160" ><a href="https://gloraise.com" target="_blank"><img src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/d77a4f4d-e165-cea8-f5a9-573dde16526e.png" alt="Image" aria-hidden="true" width="160"  height="29" class="em_full_width" style="display:block;max-width:160px;width:100%;height:auto;" border="0"  class="logo"  /></a></td>
                 <td>&nbsp;</td>
                 <td class="headertop" style="font-family:'Poppins', Avenir, Arial, sans-serif;font-size:20px;text-align:right; color:#6C766C;line-height:28px;font-weight:400;">
                   GROWTH Assessment
@@ -8925,7 +8925,7 @@ width: 100vw !important;
           <td>
             <table class="footerlogo" width="160" border="0" cellspacing="0" cellpadding="0" align="center">
               <tr>
-                <td><a target="_blank" style="text-decoration:none;color:#333333;" href="https://example.com"><img class="footerlogo" alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/2ab4decb-40fd-876e-4a54-400c04da24f3.png" width="160" height="30" style="max-width:160px;display:block;" /></a></td>
+                <td><a target="_blank" style="text-decoration:none;color:#333333;" href="https://gloraise.com"><img class="footerlogo" alt="logo" src="https://mcusercontent.com/91d753cf1db5228f650c8546a/images/2ab4decb-40fd-876e-4a54-400c04da24f3.png" width="160" height="30" style="max-width:160px;display:block;" /></a></td>
               </tr>
             </table>
           </td>

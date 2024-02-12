@@ -78,7 +78,6 @@ export default function Free_Checkout() {
         setLoading(false);
       })
       .catch((err) => {
-        console.log(err);
         setLoading(false);
       });
   }

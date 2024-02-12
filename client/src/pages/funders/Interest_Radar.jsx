@@ -5,10 +5,9 @@ import {
   setFundersAssessmentStarted,
 } from "../../store/features/appSlice.js";
 import { useNavigate } from "react-router-dom";
-import useDocumentTitle from "../../hooks/useDocumentTitle.js";
+import { Helmet } from "react-helmet-async";
 
 export default function Interest_Radar() {
-  useDocumentTitle("Funder Assessment");
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -19,6 +18,15 @@ export default function Interest_Radar() {
 
   return (
     <div className="w-[min(82rem,100%)] mx-auto pt-[44px] pb-[72px] md:pt-[60px] md:pb-[100px] lg:pb-[132px] px-4 md:px-[60px] lg:px-[132px] grid gap-10 md:gap-[60px] relative">
+      <Helmet>
+        <title>Glo Raise - Funder Assessment</title>
+        <meta
+          name="description"
+          content="Get connected with a Funder or Founder. Take the Readiness Assessment and get matched with a funder who best matches your needs and interests."
+          data-rh="true"
+        />
+        <link rel="canonical" href="http://localhost:5173/funders" />
+      </Helmet>
       <p className="text-Dark text-[48px] md:text-[58px] base:text-[92px] font-semibold leading-tight">
         Funder Interests Radar
       </p>

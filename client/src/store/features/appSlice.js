@@ -546,10 +546,7 @@ const initialState = {
       add_more: false,
       number: "41",
       qstn: "Do you have a firm or angle you'd most like to work with?",
-      options: [
-        "Yes",
-        "No",
-      ],
+      options: ["Yes", "No"],
     },
     {
       add_more: false,
@@ -802,6 +799,10 @@ export const AppSlice = createSlice({
     resetEvaluation: (state, action) => {
       state.assessmentEvaluation = [];
       state.fundersAssessment = [];
+      state.assessmentProgress = 0;
+      state.fundersAssessmentProgress = 0;
+      state.foundersAssessmentStarted = false;
+      state.fundersAssessmentStarted = false;
     },
   },
 });
