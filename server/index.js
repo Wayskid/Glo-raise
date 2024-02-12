@@ -24,7 +24,7 @@ app.use(
 
 app.use(
   cors({
-    origin: [process.env.CLIENT_URL],
+    origin: [process.env.CLIENT_URL, "https://gloraise.netlify.app"],
     methods: ["GET", "POST", "DELETE", "UPDATE", "PUT", "PATCH"],
     optionSuccessStatus: 204,
     preflightContinue: false,
