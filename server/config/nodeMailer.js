@@ -16,6 +16,7 @@ dotenv.config();
 
 const NodeMailer = async ({ name, email, level, plan }) => {
   const transporter = nodeMailer.createTransport({
+    name: "Gmail",
     host: process.env.MAILER_HOST,
     secureConnection: true,
     port: 465,
