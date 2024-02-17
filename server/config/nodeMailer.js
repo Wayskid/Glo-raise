@@ -16,7 +16,6 @@ dotenv.config();
 
 const NodeMailer = async ({ name, email, level, plan }) => {
   const transporter = nodeMailer.createTransport({
-    name: "Gmail",
     host: process.env.MAILER_HOST,
     secureConnection: true,
     port: 465,
@@ -64,9 +63,9 @@ const NodeMailer = async ({ name, email, level, plan }) => {
   }
 
   const info = await transporter.sendMail({
-    from: `Glo-Raise <${process.env.GLO_RAISE_EMAIL}>`,
+    from: `Glo-raise <${process.env.GLO_RAISE_EMAIL}>`,
     to: email,
-    subject: "Glo_Raise Assessment",
+    subject: "Glo-raise Assessment",
     html: mail({ name }),
   });
 

@@ -207,11 +207,6 @@ export const AppContextProvider = ({ children }) => {
     }
   }, [assessmentEvaluation]);
 
-  console.log(assessmentEvaluation);
-  console.log(fundersAssessment);
-  console.log("Gross Score: " + finalScore);
-  console.log("Level: " + level);
-
   return (
     <appContext.Provider
       value={{

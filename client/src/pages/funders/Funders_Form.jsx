@@ -36,7 +36,6 @@ export default function Funders_Form() {
       id: "company_website",
       type: "text",
       placeholder: "ex: www.companydomain.com",
-      pattern: "(https?://)?(www.)+.*",
     },
     {
       label: "Postal code",

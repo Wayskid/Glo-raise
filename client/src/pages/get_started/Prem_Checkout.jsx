@@ -29,14 +29,12 @@ export default function Prem_Checkout() {
       id: "company_name",
       type: "text",
       placeholder: "Your company name",
-      pattern: "[a-zA-Z0-9 ]+",
     },
     {
       label: "Company website",
       id: "company_website",
       type: "text",
       placeholder: "ex: www.companydomain.com",
-      pattern: "(https?://)?(www.)+.*",
     },
     {
       label: "Postal code",
