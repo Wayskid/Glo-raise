@@ -723,7 +723,7 @@ const initialState = {
       number: "14",
       qstn: "These are the forms of funding we consider",
       options: [
-        "Equity-based business capital",
+        "Equity-based capital",
         "Convertible Debt",
         "Revenue Royalties",
         "Loan (debt)",
