@@ -509,7 +509,7 @@ const initialState = {
         "Being loyal to a current supplier",
         "Following a majority trend",
         "Utilizing integrated support systems",
-        "Continuing current service agreements or subscriptions",
+        "Current service agreements or subscriptions",
         "Believing that there's not a better solution",
         "Supporting certain cultural or social norms",
         "There is nothing that needs to be given up to start using our services",
