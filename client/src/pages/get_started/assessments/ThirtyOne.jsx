@@ -23,7 +23,7 @@ export default function ThirtyOne() {
     dispatch(
       setAssessmentEvaluation({
         qstnNumber: "31A",
-        qstn: "This best describes how our stakeholders view us - Customer",
+        qstn: "This best describes how our stakeholders view us - Customers",
         answer: e.target.value,
         score: scoring(e.target.value),
       })
