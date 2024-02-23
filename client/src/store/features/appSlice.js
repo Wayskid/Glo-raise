@@ -366,7 +366,7 @@ const initialState = {
       qstn: "This best describes how our stakeholders view us",
       qstns: [
         {
-          qstn: "Customer",
+          qstn: "Customers",
           options: [
             "Essential",
             "Important",
