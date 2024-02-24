@@ -18,6 +18,7 @@ export default function Two2() {
         assessmentNumber="02"
         next="03"
         forFunders={true}
+        isMulti={true}
       />
     </div>
   );

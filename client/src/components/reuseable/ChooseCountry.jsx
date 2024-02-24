@@ -10,6 +10,7 @@ export default function ChooseCountry({
   assessment,
   next,
   forFunders,
+  isMulti,
 }) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -55,13 +56,14 @@ export default function ChooseCountry({
   }
   //Country choice
   function handleChange(e, obj) {
+    console.log(e);
     dispatch(
       setAssessmentEvaluation({
         qstnNumber: "02",
         qstn: assessment.qstn,
         answer: {
           ...getValue()?.answer,
-          [obj.name]: e.value,
+          [obj.name]: isMulti ? e.map((ctry) => ctry.value) : e.value,
         },
         score: 0,
       })
@@ -114,10 +116,18 @@ export default function ChooseCountry({
           <Select
             options={options}
             onChange={handleChange}
+            isMulti={isMulti}
             name="country"
-            value={options.find(
-              (obj) => obj.value === getValue()?.answer.country
-            )}
+            value={
+              isMulti
+                ? getValue()?.answer.country.map((obj) => ({
+                    value: obj,
+                    label: obj,
+                  }))
+                : options.find(
+                    (obj) => obj.value === getValue()?.answer.country
+                  )
+            }
             placeholder="Select Country"
             theme={(theme) => ({
               ...theme,

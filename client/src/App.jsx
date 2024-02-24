@@ -38,6 +38,7 @@ import Two2 from "./pages/funders/Two";
 import Two from "./pages/get_started/assessments/Two";
 import FortyTwo from "./pages/get_started/assessments/FortyTwo";
 import NotFound from "./pages/NotFound";
+import TwentyOne from "./pages/get_started/assessments/TwentyOne";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -58,6 +59,7 @@ export default function App() {
           <Route path=":assessmentIndex" element={<ThreeToTwentyOne />}></Route>
           <Route path="02" element={<Two />}></Route>
           <Route path="13" element={<Thirteen />}></Route>
+          <Route path="21" element={<TwentyOne />}></Route>
           <Route path="22" element={<TwentyTwo />}></Route>
           <Route path="23" element={<TwentyThree />}></Route>
           <Route path="24" element={<TwentyFour />}></Route>
