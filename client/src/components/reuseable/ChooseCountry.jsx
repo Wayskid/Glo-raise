@@ -10,7 +10,7 @@ export default function ChooseCountry({
   assessment,
   next,
   forFunders,
-  isMulti,
+  isMulti, 
 }) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
