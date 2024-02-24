@@ -207,6 +207,8 @@ export const AppContextProvider = ({ children }) => {
     }
   }, [assessmentEvaluation]);
 
+  console.log(fundersAssessment)
+
   return (
     <appContext.Provider
       value={{

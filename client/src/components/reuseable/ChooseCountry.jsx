@@ -10,7 +10,7 @@ export default function ChooseCountry({
   assessment,
   next,
   forFunders,
-  isMulti, 
+  isMulti,
 }) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -56,7 +56,6 @@ export default function ChooseCountry({
   }
   //Country choice
   function handleChange(e, obj) {
-    console.log(e);
     dispatch(
       setAssessmentEvaluation({
         qstnNumber: "02",
@@ -139,15 +138,25 @@ export default function ChooseCountry({
               },
             })}
           />
-          {getValue()?.answer.country === "United States" && (
+          {(isMulti
+            ? getValue()?.answer.country.includes("United States")
+            : getValue()?.answer.country === "United States") && (
             <Select
               options={usStates}
               placeholder="Select State"
               onChange={handleChange}
+              isMulti={isMulti}
               name="state"
-              value={usStates.find(
-                (obj) => obj.value === getValue()?.answer.state
-              )}
+              value={
+                isMulti
+                  ? getValue()?.answer?.state?.map((obj) => ({
+                      value: obj,
+                      label: obj,
+                    }))
+                  : usStates.find(
+                      (obj) => obj.value === getValue()?.answer.state
+                    )
+              }
             />
           )}
         </div>
