@@ -366,7 +366,7 @@ const initialState = {
       qstn: "This best describes how our stakeholders view us",
       qstns: [
         {
-          qstn: "Customer",
+          qstn: "Customers",
           options: [
             "Essential",
             "Important",
@@ -509,7 +509,7 @@ const initialState = {
         "Being loyal to a current supplier",
         "Following a majority trend",
         "Utilizing integrated support systems",
-        "Continuing current service agreements or subscriptions",
+        "Current service agreements or subscriptions",
         "Believing that there's not a better solution",
         "Supporting certain cultural or social norms",
         "There is nothing that needs to be given up to start using our services",
@@ -723,7 +723,7 @@ const initialState = {
       number: "14",
       qstn: "These are the forms of funding we consider",
       options: [
-        "Equity-based business capital",
+        "Equity-based capital",
         "Convertible Debt",
         "Revenue Royalties",
         "Loan (debt)",
