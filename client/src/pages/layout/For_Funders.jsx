@@ -113,8 +113,7 @@ export default function For_Funders() {
                 </svg>
               </div>
               <p className="text-xl text-center">
-                Receive a premium report to access steps to strengthen your
-                positioning.
+                Get intelligently matched with high potential Founders.
               </p>
             </div>
             <div className="grid gap-10 px-3 md:col-span-3 lg:col-span-1">
@@ -125,8 +124,7 @@ export default function For_Funders() {
                 <img src={star} alt="star" className="w-full" />
               </div>
               <p className="text-xl text-center">
-                Receive a warm connection by Glo-raise to virtually meet with
-                the Founders who match your interests.
+                Receive a warm connection by Glo-raise to virtually meet with the Founders who match your interests.
               </p>
             </div>
           </div>
