@@ -115,7 +115,7 @@ export default function ThirtyOne() {
                       name={item.qstn}
                       checked={
                         getValue(
-                          item.qstn === "Customer"
+                          item.qstn === "Customers"
                             ? "31A"
                             : item.qstn === "Employees"
                             ? "31B"
@@ -126,7 +126,7 @@ export default function ThirtyOne() {
                       }
                       value={option}
                       onChange={(e) =>
-                        item.qstn === "Customer"
+                        item.qstn === "Customers"
                           ? handleChangeA(e)
                           : item.qstn === "Employees"
                           ? handleChangeB(e)
