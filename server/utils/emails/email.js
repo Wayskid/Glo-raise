@@ -592,7 +592,7 @@ width: 100vw !important;
                                  
                             <tr>
                           <td   style="font-family:'Playfair Display', Times, Georgia, serif;font-size:26px;text-align:center;color:#ffffff;font-weight:400;line-height: 32px;">
-                        limited time just $29 ($300 value)
+                        limited time just $26 ($300 value)
                           </td>
                         </tr>   
                         
@@ -2338,7 +2338,7 @@ width: 100vw !important;
                                  
                             <tr>
                           <td   style="font-family:'Playfair Display', Times, Georgia, serif;font-size:26px;text-align:center;color:#ffffff;font-weight:400;line-height: 32px;">
-                        limited time just $29 ($300 value)
+                        limited time just $26 ($300 value)
                           </td>
                         </tr>   
                         
@@ -4164,7 +4164,7 @@ width: 100vw !important;
                                  
                             <tr>
                           <td   style="font-family:'Playfair Display', Times, Georgia, serif;font-size:26px;text-align:center;color:#ffffff;font-weight:400;line-height: 32px;">
-                        limited time just $29 ($300 value)
+                        limited time just $26 ($300 value)
                           </td>
                         </tr>   
                         
@@ -5990,7 +5990,7 @@ width: 100vw !important;
                                  
                             <tr>
                           <td   style="font-family:'Playfair Display', Times, Georgia, serif;font-size:26px;text-align:center;color:#ffffff;font-weight:400;line-height: 32px;">
-                        limited time just $29 ($300 value)
+                        limited time just $26 ($300 value)
                           </td>
                         </tr>   
                         
@@ -7816,7 +7816,7 @@ width: 100vw !important;
                                  
                             <tr>
                           <td   style="font-family:'Playfair Display', Times, Georgia, serif;font-size:26px;text-align:center;color:#ffffff;font-weight:400;line-height: 32px;">
-                        limited time just $29 ($300 value)
+                        limited time just $26 ($300 value)
                           </td>
                         </tr>   
                         
